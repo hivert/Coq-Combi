@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link href="coqdoc.css" rel="stylesheet" type="text/css"/>
+<title>Combi.LRrule.Yam_plact: Plactic class and Yamanouchi words</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Combi.LRrule.Yam_plact: Plactic class and Yamanouchi words</h1>
+
+<div class="code">
+</div>
+
+<div class="doc">
+
+</div>
+<div class="code">
+</div>
+
+<div class="doc">
+The goal of this file is to show that the Yamanouchi words of a given
+evaluation form a plactic class.
+
+<div class="paragraph"> </div>
+
+<ul class="doclist">
+<li> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Yam_plact.html#yamtab"><span class="id" type="definition">yamtab</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.HookFormula.RSident.html#Identity.Shape.sh"><span class="id" type="variable">sh</span></a></span> == the uniq Yamanouchi tableau of shape sh: the i-th line
+                 contains only i's as in: 33 2222 11111 0000000.
+
+</li>
+</ul>
+The main result is <span class="inlinecode"><span class="id" type="keyword">Corollary</span></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Yam_plact.html#yam_plactic_shape"><span class="id" type="lemma">yam_plactic_shape</span></a></span>
+
+<div class="paragraph"> </div>
+
+<span class="inlinecode"></span>
+  <span class="inlinecode"><a class="idref" href="Combi.Combi.Yamanouchi.html#is_yam"><span class="id" type="definition">is_yam</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#SetContainingBothLeft.Case.y"><span class="id" type="variable">y</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode">(</span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#SetContainingBothLeft.Case.y"><span class="id" type="variable">y</span></a></span> <span class="inlinecode">=<span class="id" type="var">Pl</span></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.congr.html#z"><span class="id" type="variable">z</span></a></span> <span class="inlinecode">↔</span> <span class="inlinecode">(<a class="idref" href="Combi.Combi.Yamanouchi.html#is_yam"><span class="id" type="definition">is_yam</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.congr.html#z"><span class="id" type="variable">z</span></a></span> <span class="inlinecode">∧</span> <span class="inlinecode"><a class="idref" href="Combi.Combi.Yamanouchi.html#evalseq"><span class="id" type="definition">evalseq</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#SetContainingBothLeft.Case.y"><span class="id" type="variable">y</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="Combi.Combi.Yamanouchi.html#evalseq"><span class="id" type="definition">evalseq</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.congr.html#z"><span class="id" type="variable">z</span></a>)).</span>
+<span class="inlinecode"></span>
+
+<div class="paragraph"> </div>
+
+We also show that for all partition sh standardization defines a bijection
+from Yamanouchi words of evaluation sh and a plactic class. In particular, it
+is surjective <span class="inlinecode"><span class="id" type="keyword">Theorem</span></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Yam_plact.html#plact_from_yam"><span class="id" type="lemma">plact_from_yam</span></a></span>:
+
+<div class="paragraph"> </div>
+
+<span class="inlinecode"></span>
+  <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#is_part"><span class="id" type="definition">is_part</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.HookFormula.RSident.html#Identity.Shape.sh"><span class="id" type="variable">sh</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.freeSchur.html#FreeSchur.Coeffs.Bij_LRsupport.ChangeUT.DefBij.w"><span class="id" type="variable">w</span></a></span> <span class="inlinecode">=<span class="id" type="var">Pl</span></span> <span class="inlinecode"><a class="idref" href="Combi.Combi.std.html#std"><span class="id" type="definition">std</span></a></span> <span class="inlinecode">(<a class="idref" href="Combi.Combi.Yamanouchi.html#hyper_yam"><span class="id" type="definition">hyper_yam</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.HookFormula.RSident.html#Identity.Shape.sh"><span class="id" type="variable">sh</span></a>)</span> <span class="inlinecode">→</span> <span class="inlinecode">{</span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#SetContainingBothLeft.Case.y"><span class="id" type="variable">y</span></a></span> <span class="inlinecode">|</span> <span class="inlinecode"><a class="idref" href="Combi.Combi.Yamanouchi.html#is_yam_of_eval"><span class="id" type="definition">is_yam_of_eval</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.HookFormula.RSident.html#Identity.Shape.sh"><span class="id" type="variable">sh</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#SetContainingBothLeft.Case.y"><span class="id" type="variable">y</span></a></span> <span class="inlinecode">&amp;</span> <span class="inlinecode"><a class="idref" href="Combi.Combi.std.html#std"><span class="id" type="definition">std</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#SetContainingBothLeft.Case.y"><span class="id" type="variable">y</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.freeSchur.html#FreeSchur.Coeffs.Bij_LRsupport.ChangeUT.DefBij.w"><span class="id" type="variable">w</span></a></span> <span class="inlinecode">}.</span>
+<span class="inlinecode"></span>
+
+</div>
+<div class="code">
+
+<br/>
+<span class="id" type="keyword">Require</span> <span class="id" type="keyword">Import</span> <span class="id" type="library">ssreflect</span> <span class="id" type="library">ssrfun</span> <span class="id" type="library">ssrbool</span> <span class="id" type="library">eqtype</span> <span class="id" type="library">ssrnat</span> <span class="id" type="library">seq</span> <span class="id" type="library">fintype</span>.<br/>
+<span class="id" type="keyword">Require</span> <span class="id" type="keyword">Import</span> <span class="id" type="library">tuple</span> <span class="id" type="library">finfun</span> <span class="id" type="library">finset</span> <span class="id" type="library">path</span> <span class="id" type="library">bigop</span>.<br/>
+
+<br/>
+<span class="id" type="keyword">Require</span> <span class="id" type="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.tools.html#"><span class="id" type="library">tools</span></a> <a class="idref" href="Combi.Combi.partition.html#"><span class="id" type="library">partition</span></a> <a class="idref" href="Combi.Combi.Yamanouchi.html#"><span class="id" type="library">Yamanouchi</span></a> <a class="idref" href="Combi.Basic.ordtype.html#"><span class="id" type="library">ordtype</span></a> <a class="idref" href="Combi.Combi.std.html#"><span class="id" type="library">std</span></a> <a class="idref" href="Combi.Combi.tableau.html#"><span class="id" type="library">tableau</span></a> <a class="idref" href="Combi.Combi.stdtab.html#"><span class="id" type="library">stdtab</span></a>.<br/>
+<span class="id" type="keyword">Require</span> <span class="id" type="keyword">Import</span> <a class="idref" href="Combi.LRrule.Schensted.html#"><span class="id" type="library">Schensted</span></a> <a class="idref" href="Combi.Basic.congr.html#"><span class="id" type="library">congr</span></a> <a class="idref" href="Combi.LRrule.plactic.html#"><span class="id" type="library">plactic</span></a> <a class="idref" href="Combi.LRrule.Greene_inv.html#"><span class="id" type="library">Greene_inv</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#"><span class="id" type="library">stdplact</span></a>.<br/>
+
+<br/>
+<span class="id" type="keyword">Set Implicit Arguments</span>.<br/>
+
+<br/>
+<span class="id" type="keyword">Open</span> <span class="id" type="keyword">Scope</span> <span class="id" type="var">N</span>.<br/>
+
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="is_part_incr_nthE"><span class="id" type="lemma">is_part_incr_nthE</span></a> <span class="id" type="var">sh</span> <span class="id" type="var">i</span> <span class="id" type="var">j</span> :<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.LRrule.Yam_plact.html#i"><span class="id" type="variable">i</span></a><span class="id" type="notation">.+1</span> <span class="id" type="notation">&lt;</span> <a class="idref" href="Combi.LRrule.Yam_plact.html#j"><span class="id" type="variable">j</span></a> → <a class="idref" href="Combi.Combi.partition.html#is_part"><span class="id" type="definition">is_part</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#sh"><span class="id" type="variable">sh</span></a> → <a class="idref" href="Combi.Combi.partition.html#is_part"><span class="id" type="definition">is_part</span></a> (<span class="id" type="definition">incr_nth</span> (<span class="id" type="definition">incr_nth</span> <a class="idref" href="Combi.LRrule.Yam_plact.html#sh"><span class="id" type="variable">sh</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#j"><span class="id" type="variable">j</span></a>) <a class="idref" href="Combi.LRrule.Yam_plact.html#i"><span class="id" type="variable">i</span></a>) →<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.Combi.partition.html#is_part"><span class="id" type="definition">is_part</span></a> (<span class="id" type="definition">incr_nth</span> <a class="idref" href="Combi.LRrule.Yam_plact.html#sh"><span class="id" type="variable">sh</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#i"><span class="id" type="variable">i</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <a class="idref" href="Combi.Combi.partition.html#is_part"><span class="id" type="definition">is_part</span></a> (<span class="id" type="definition">incr_nth</span> <a class="idref" href="Combi.LRrule.Yam_plact.html#sh"><span class="id" type="variable">sh</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#j"><span class="id" type="variable">j</span></a>).<br/>
+
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="is_part_incr_nth1E"><span class="id" type="lemma">is_part_incr_nth1E</span></a> <span class="id" type="var">sh</span> <span class="id" type="var">i</span> :<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.Combi.partition.html#is_part"><span class="id" type="definition">is_part</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#sh"><span class="id" type="variable">sh</span></a> → (<a class="idref" href="Combi.Combi.partition.html#is_part"><span class="id" type="definition">is_part</span></a> (<span class="id" type="definition">incr_nth</span> (<span class="id" type="definition">incr_nth</span> <a class="idref" href="Combi.LRrule.Yam_plact.html#sh"><span class="id" type="variable">sh</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#i"><span class="id" type="variable">i</span></a><span class="id" type="notation">.+1</span>) <a class="idref" href="Combi.LRrule.Yam_plact.html#i"><span class="id" type="variable">i</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <a class="idref" href="Combi.Combi.partition.html#is_part"><span class="id" type="definition">is_part</span></a> (<span class="id" type="definition">incr_nth</span> <a class="idref" href="Combi.LRrule.Yam_plact.html#sh"><span class="id" type="variable">sh</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#i"><span class="id" type="variable">i</span></a>)).<br/>
+
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="is_yam_plactic"><span class="id" type="lemma">is_yam_plactic</span></a> <span class="id" type="var">y</span> : <a class="idref" href="Combi.Combi.Yamanouchi.html#is_yam"><span class="id" type="definition">is_yam</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#y"><span class="id" type="variable">y</span></a> → <span class="id" type="keyword">∀</span> <span class="id" type="var">w</span>, <a class="idref" href="Combi.LRrule.Yam_plact.html#y"><span class="id" type="variable">y</span></a> <a class="idref" href="Combi.LRrule.plactic.html#::x_'=Pl'_x"><span class="id" type="notation">=</span></a><a class="idref" href="Combi.LRrule.plactic.html#::x_'=Pl'_x"><span class="id" type="notation">Pl</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#w"><span class="id" type="variable">w</span></a> → <a class="idref" href="Combi.Combi.Yamanouchi.html#is_yam"><span class="id" type="definition">is_yam</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#w"><span class="id" type="variable">w</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+<a name="lab99"></a><h1 class="section">The Yamanouchi tableau</h1>
+
+</div>
+<div class="code">
+<span class="id" type="keyword">Fixpoint</span> <a name="yamtab_rec"><span class="id" type="definition">yamtab_rec</span></a> <span class="id" type="var">i</span> <span class="id" type="var">sh</span> :=<br/>
+&nbsp;&nbsp;<span class="id" type="keyword">if</span> <a class="idref" href="Combi.LRrule.Yam_plact.html#sh"><span class="id" type="variable">sh</span></a> <span class="id" type="var">is</span> <span class="id" type="var">s0</span> <span class="id" type="notation">::</span> <span class="id" type="var">s</span> <span class="id" type="keyword">then</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" type="definition">nseq</span> <span class="id" type="var">s0</span> <a class="idref" href="Combi.LRrule.Yam_plact.html#i"><span class="id" type="variable">i</span></a> <span class="id" type="notation">::</span> <a class="idref" href="Combi.LRrule.Yam_plact.html#yamtab_rec"><span class="id" type="definition">yamtab_rec</span></a> (<a class="idref" href="Combi.LRrule.Yam_plact.html#i"><span class="id" type="variable">i</span></a><span class="id" type="notation">.+1</span>) <span class="id" type="var">s</span><br/>
+&nbsp;&nbsp;<span class="id" type="keyword">else</span> <span class="id" type="notation">[::]</span>.<br/>
+<span class="id" type="keyword">Definition</span> <a name="yamtab"><span class="id" type="definition">yamtab</span></a> := <a class="idref" href="Combi.LRrule.Yam_plact.html#yamtab_rec"><span class="id" type="definition">yamtab_rec</span></a> 0.<br/>
+
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="shape_yamtab"><span class="id" type="lemma">shape_yamtab</span></a> <span class="id" type="var">sh</span> : <span class="id" type="definition">shape</span> (<a class="idref" href="Combi.LRrule.Yam_plact.html#yamtab"><span class="id" type="definition">yamtab</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#sh"><span class="id" type="variable">sh</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#sh"><span class="id" type="variable">sh</span></a>.<br/>
+
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="to_word_yamtab"><span class="id" type="lemma">to_word_yamtab</span></a> <span class="id" type="var">sh</span> : <a class="idref" href="Combi.Combi.tableau.html#to_word"><span class="id" type="definition">to_word</span></a> (<a class="idref" href="Combi.LRrule.Yam_plact.html#yamtab"><span class="id" type="definition">yamtab</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#sh"><span class="id" type="variable">sh</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <a class="idref" href="Combi.Combi.Yamanouchi.html#hyper_yam"><span class="id" type="definition">hyper_yam</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#sh"><span class="id" type="variable">sh</span></a>.<br/>
+
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="yamtabP"><span class="id" type="lemma">yamtabP</span></a> <span class="id" type="var">sh</span> : <a class="idref" href="Combi.Combi.partition.html#is_part"><span class="id" type="definition">is_part</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#sh"><span class="id" type="variable">sh</span></a> → <a class="idref" href="Combi.Combi.tableau.html#is_tableau"><span class="id" type="definition">is_tableau</span></a> (<a class="idref" href="Combi.LRrule.Yam_plact.html#yamtab"><span class="id" type="definition">yamtab</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#sh"><span class="id" type="variable">sh</span></a>).<br/>
+
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="yamtab_rcons"><span class="id" type="lemma">yamtab_rcons</span></a> <span class="id" type="var">sh</span> <span class="id" type="var">sn</span> : <a class="idref" href="Combi.LRrule.Yam_plact.html#yamtab"><span class="id" type="definition">yamtab</span></a> (<span class="id" type="definition">rcons</span> <a class="idref" href="Combi.LRrule.Yam_plact.html#sh"><span class="id" type="variable">sh</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#sn"><span class="id" type="variable">sn</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <span class="id" type="definition">rcons</span> (<a class="idref" href="Combi.LRrule.Yam_plact.html#yamtab"><span class="id" type="definition">yamtab</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#sh"><span class="id" type="variable">sh</span></a>) (<span class="id" type="definition">nseq</span> <a class="idref" href="Combi.LRrule.Yam_plact.html#sn"><span class="id" type="variable">sn</span></a> (<span class="id" type="definition">size</span> <a class="idref" href="Combi.LRrule.Yam_plact.html#sh"><span class="id" type="variable">sh</span></a>)).<br/>
+
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="is_tableau_catl"><span class="id" type="lemma">is_tableau_catl</span></a> (<span class="id" type="var">T</span> : <a class="idref" href="Combi.Basic.ordtype.html#InhOrdType.Exports.inhOrdType"><span class="id" type="abbreviation">inhOrdType</span></a>) (<span class="id" type="var">t1</span> <span class="id" type="var">t2</span> : <span class="id" type="abbreviation">seq</span> (<span class="id" type="abbreviation">seq</span> <a class="idref" href="Combi.LRrule.Yam_plact.html#T"><span class="id" type="variable">T</span></a>)) :<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.Combi.tableau.html#is_tableau"><span class="id" type="definition">is_tableau</span></a> (<a class="idref" href="Combi.LRrule.Yam_plact.html#t1"><span class="id" type="variable">t1</span></a> <span class="id" type="notation">++</span> <a class="idref" href="Combi.LRrule.Yam_plact.html#t2"><span class="id" type="variable">t2</span></a>) → <a class="idref" href="Combi.Combi.tableau.html#is_tableau"><span class="id" type="definition">is_tableau</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#t1"><span class="id" type="variable">t1</span></a>.<br/>
+
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="is_tableau_catr"><span class="id" type="lemma">is_tableau_catr</span></a> (<span class="id" type="var">T</span> : <a class="idref" href="Combi.Basic.ordtype.html#InhOrdType.Exports.inhOrdType"><span class="id" type="abbreviation">inhOrdType</span></a>) (<span class="id" type="var">t1</span> <span class="id" type="var">t2</span> : <span class="id" type="abbreviation">seq</span> (<span class="id" type="abbreviation">seq</span> <a class="idref" href="Combi.LRrule.Yam_plact.html#T"><span class="id" type="variable">T</span></a>)) :<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.Combi.tableau.html#is_tableau"><span class="id" type="definition">is_tableau</span></a> (<a class="idref" href="Combi.LRrule.Yam_plact.html#t1"><span class="id" type="variable">t1</span></a> <span class="id" type="notation">++</span> <a class="idref" href="Combi.LRrule.Yam_plact.html#t2"><span class="id" type="variable">t2</span></a>) → <a class="idref" href="Combi.Combi.tableau.html#is_tableau"><span class="id" type="definition">is_tableau</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#t2"><span class="id" type="variable">t2</span></a>.<br/>
+ 
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="yamtab_unique"><span class="id" type="lemma">yamtab_unique</span></a> <span class="id" type="var">t</span> :<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.Combi.tableau.html#is_tableau"><span class="id" type="definition">is_tableau</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#t"><span class="id" type="variable">t</span></a> → <a class="idref" href="Combi.Combi.Yamanouchi.html#is_yam"><span class="id" type="definition">is_yam</span></a> (<a class="idref" href="Combi.Combi.tableau.html#to_word"><span class="id" type="definition">to_word</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#t"><span class="id" type="variable">t</span></a>) → <a class="idref" href="Combi.LRrule.Yam_plact.html#t"><span class="id" type="variable">t</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#yamtab"><span class="id" type="definition">yamtab</span></a> (<span class="id" type="definition">shape</span> <a class="idref" href="Combi.LRrule.Yam_plact.html#t"><span class="id" type="variable">t</span></a>).<br/>
+
+<br/>
+<span class="id" type="keyword">Corollary</span> <a name="RS_yam_RS"><span class="id" type="lemma">RS_yam_RS</span></a> <span class="id" type="var">y</span> : <a class="idref" href="Combi.Combi.Yamanouchi.html#is_yam"><span class="id" type="definition">is_yam</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#y"><span class="id" type="variable">y</span></a> → <a class="idref" href="Combi.LRrule.Schensted.html#RS"><span class="id" type="definition">RS</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#y"><span class="id" type="variable">y</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#yamtab"><span class="id" type="definition">yamtab</span></a> (<span class="id" type="definition">shape</span> (<a class="idref" href="Combi.LRrule.Schensted.html#RS"><span class="id" type="definition">RS</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#y"><span class="id" type="variable">y</span></a>)).<br/>
+
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="shape_RS_yam"><span class="id" type="lemma">shape_RS_yam</span></a> <span class="id" type="var">y</span> : <a class="idref" href="Combi.Combi.Yamanouchi.html#is_yam"><span class="id" type="definition">is_yam</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#y"><span class="id" type="variable">y</span></a> → <span class="id" type="definition">shape</span> (<a class="idref" href="Combi.LRrule.Schensted.html#RS"><span class="id" type="definition">RS</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#y"><span class="id" type="variable">y</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <a class="idref" href="Combi.Combi.Yamanouchi.html#evalseq"><span class="id" type="definition">evalseq</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#y"><span class="id" type="variable">y</span></a>.<br/>
+
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="RS_yam"><span class="id" type="lemma">RS_yam</span></a> <span class="id" type="var">y</span> : <a class="idref" href="Combi.Combi.Yamanouchi.html#is_yam"><span class="id" type="definition">is_yam</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#y"><span class="id" type="variable">y</span></a> → <a class="idref" href="Combi.LRrule.Schensted.html#RS"><span class="id" type="definition">RS</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#y"><span class="id" type="variable">y</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#yamtab"><span class="id" type="definition">yamtab</span></a> (<a class="idref" href="Combi.Combi.Yamanouchi.html#evalseq"><span class="id" type="definition">evalseq</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#y"><span class="id" type="variable">y</span></a>).<br/>
+ 
+<br/>
+<span class="id" type="keyword">Theorem</span> <a name="yam_plactic_hyper"><span class="id" type="lemma">yam_plactic_hyper</span></a> <span class="id" type="var">y</span> : <a class="idref" href="Combi.Combi.Yamanouchi.html#is_yam"><span class="id" type="definition">is_yam</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#y"><span class="id" type="variable">y</span></a> → <a class="idref" href="Combi.LRrule.Yam_plact.html#y"><span class="id" type="variable">y</span></a> <a class="idref" href="Combi.LRrule.plactic.html#::x_'=Pl'_x"><span class="id" type="notation">=</span></a><a class="idref" href="Combi.LRrule.plactic.html#::x_'=Pl'_x"><span class="id" type="notation">Pl</span></a> <a class="idref" href="Combi.Combi.Yamanouchi.html#hyper_yam"><span class="id" type="definition">hyper_yam</span></a> (<a class="idref" href="Combi.Combi.Yamanouchi.html#evalseq"><span class="id" type="definition">evalseq</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#y"><span class="id" type="variable">y</span></a>).<br/>
+
+<br/>
+<span class="id" type="keyword">Corollary</span> <a name="yam_plactic_shape"><span class="id" type="lemma">yam_plactic_shape</span></a> <span class="id" type="var">y</span> <span class="id" type="var">z</span> :<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.Combi.Yamanouchi.html#is_yam"><span class="id" type="definition">is_yam</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#y"><span class="id" type="variable">y</span></a> → ( <a class="idref" href="Combi.LRrule.Yam_plact.html#y"><span class="id" type="variable">y</span></a> <a class="idref" href="Combi.LRrule.plactic.html#::x_'=Pl'_x"><span class="id" type="notation">=</span></a><a class="idref" href="Combi.LRrule.plactic.html#::x_'=Pl'_x"><span class="id" type="notation">Pl</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#z"><span class="id" type="variable">z</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'<->'_x"><span class="id" type="notation">↔</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'<->'_x"><span class="id" type="notation">(</span></a><a class="idref" href="Combi.Combi.Yamanouchi.html#is_yam"><span class="id" type="definition">is_yam</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#z"><span class="id" type="variable">z</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'/\'_x"><span class="id" type="notation">∧</span></a> <a class="idref" href="Combi.Combi.Yamanouchi.html#evalseq"><span class="id" type="definition">evalseq</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#y"><span class="id" type="variable">y</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <a class="idref" href="Combi.Combi.Yamanouchi.html#evalseq"><span class="id" type="definition">evalseq</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#z"><span class="id" type="variable">z</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'<->'_x"><span class="id" type="notation">)</span></a>).<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+<a name="lab100"></a><h1 class="section">Yamanouchi words, standardization and plactic classes</h1>
+
+</div>
+<div class="code">
+<span class="id" type="keyword">Lemma</span> <a name="yam_std_inj"><span class="id" type="lemma">yam_std_inj</span></a> : <span class="id" type="notation">{</span><span class="id" type="keyword">in</span> <a class="idref" href="Combi.Combi.Yamanouchi.html#is_yam"><span class="id" type="definition">is_yam</span></a> <span class="id" type="notation">&amp;,</span> <span class="id" type="definition">injective</span> (@<a class="idref" href="Combi.Combi.std.html#std"><span class="id" type="definition">std</span></a> <span class="id" type="var">_</span>) <span class="id" type="notation">}</span>.<br/>
+
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="auxbijP"><span class="id" type="lemma">auxbijP</span></a> <span class="id" type="var">p</span> (<span class="id" type="var">y</span> : <a class="idref" href="Combi.Combi.Yamanouchi.html#yameval"><span class="id" type="record">yameval</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#p"><span class="id" type="variable">p</span></a>) :<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.Combi.Yamanouchi.html#is_yam_of_eval"><span class="id" type="definition">is_yam_of_eval</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#p"><span class="id" type="variable">p</span></a> (<span class="id" type="notation">(</span><a class="idref" href="Combi.LRrule.Schensted.html#RSmap"><span class="id" type="definition">RSmap</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#y"><span class="id" type="variable">y</span></a><span class="id" type="notation">).2</span>).<br/>
+
+<br/>
+<span class="id" type="keyword">Definition</span> <a name="auxbij"><span class="id" type="definition">auxbij</span></a> (<span class="id" type="var">p</span> : <a class="idref" href="Combi.Combi.partition.html#intpart"><span class="id" type="record">intpart</span></a>) (<span class="id" type="var">y</span> : <a class="idref" href="Combi.Combi.Yamanouchi.html#yameval"><span class="id" type="record">yameval</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#p"><span class="id" type="variable">p</span></a>) : <a class="idref" href="Combi.Combi.Yamanouchi.html#yameval_finType"><span class="id" type="definition">yameval_finType</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#p"><span class="id" type="variable">p</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.Combi.Yamanouchi.html#YamEval"><span class="id" type="constructor">YamEval</span></a> (<a class="idref" href="Combi.LRrule.Yam_plact.html#auxbijP"><span class="id" type="lemma">auxbijP</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#y"><span class="id" type="variable">y</span></a>).<br/>
+
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="auxbij_inj"><span class="id" type="lemma">auxbij_inj</span></a> (<span class="id" type="var">p</span> : <a class="idref" href="Combi.Combi.partition.html#intpart"><span class="id" type="record">intpart</span></a>) : <span class="id" type="definition">injective</span> (@<a class="idref" href="Combi.LRrule.Yam_plact.html#auxbij"><span class="id" type="definition">auxbij</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#p"><span class="id" type="variable">p</span></a>).<br/>
+
+<br/>
+<span class="id" type="keyword">Definition</span> <a name="auxbij_inv"><span class="id" type="definition">auxbij_inv</span></a> (<span class="id" type="var">p</span> : <a class="idref" href="Combi.Combi.partition.html#intpart"><span class="id" type="record">intpart</span></a>) := <span class="id" type="definition">invF</span> (@<a class="idref" href="Combi.LRrule.Yam_plact.html#auxbij_inj"><span class="id" type="lemma">auxbij_inj</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#p"><span class="id" type="variable">p</span></a>).<br/>
+
+<br/>
+<span class="id" type="keyword">Theorem</span> <a name="plact_from_yam"><span class="id" type="lemma">plact_from_yam</span></a> <span class="id" type="var">sh</span> <span class="id" type="var">w</span> :<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.Combi.partition.html#is_part"><span class="id" type="definition">is_part</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#sh"><span class="id" type="variable">sh</span></a> → <a class="idref" href="Combi.LRrule.Yam_plact.html#w"><span class="id" type="variable">w</span></a> <a class="idref" href="Combi.LRrule.plactic.html#::x_'=Pl'_x"><span class="id" type="notation">=</span></a><a class="idref" href="Combi.LRrule.plactic.html#::x_'=Pl'_x"><span class="id" type="notation">Pl</span></a> <a class="idref" href="Combi.Combi.std.html#std"><span class="id" type="definition">std</span></a> (<a class="idref" href="Combi.Combi.Yamanouchi.html#hyper_yam"><span class="id" type="definition">hyper_yam</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#sh"><span class="id" type="variable">sh</span></a>) → <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Specif.html#:type_scope:'{'_x_'|'_x_'&'_x_'}'"><span class="id" type="notation">{</span></a> <span class="id" type="var">y</span> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Specif.html#:type_scope:'{'_x_'|'_x_'&'_x_'}'"><span class="id" type="notation">|</span></a> <a class="idref" href="Combi.Combi.Yamanouchi.html#is_yam_of_eval"><span class="id" type="definition">is_yam_of_eval</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#sh"><span class="id" type="variable">sh</span></a> <span class="id" type="var">y</span> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Specif.html#:type_scope:'{'_x_'|'_x_'&'_x_'}'"><span class="id" type="notation">&amp;</span></a> <a class="idref" href="Combi.Combi.std.html#std"><span class="id" type="definition">std</span></a> <span class="id" type="var">y</span> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <a class="idref" href="Combi.LRrule.Yam_plact.html#w"><span class="id" type="variable">w</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Specif.html#:type_scope:'{'_x_'|'_x_'&'_x_'}'"><span class="id" type="notation">}</span></a>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link href="coqdoc.css" rel="stylesheet" type="text/css"/>
+<title>Combi.Combi.vectNK: Integer Vector of Given Sums and Sizes</title>
+</head>
+
+<body>
+
+<div id="page">
+
+<div id="header">
+</div>
+
+<div id="main">
+
+<h1 class="libtitle">Combi.Combi.vectNK: Integer Vector of Given Sums and Sizes</h1>
+
+<div class="code">
+</div>
+
+<div class="doc">
+
+</div>
+<div class="code">
+</div>
+
+<div class="doc">
+<a name="lab43"></a><h1 class="section">Integer vectors of sum n and size k</h1>
+
+
+<div class="paragraph"> </div>
+
+<ul class="doclist">
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.vectNK.html#vect_n_k"><span class="id" type="definition">vect_n_k</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.symgroup.html#n"><span class="id" type="abbreviation">n</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#GreeneInvariantsRule.k"><span class="id" type="variable">k</span></a></span> == the list of integer vectors of sum n and size k
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.vectNK.html#cut_k"><span class="id" type="definition">cut_k</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#GreeneInvariantsRule.k"><span class="id" type="variable">k</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.stdplact.html#KsuppInj.s"><span class="id" type="variable">s</span></a></span> == the list of the cutting of s in k slices (the result is of
+                 type <span class="inlinecode"><span class="id" type="library">seq</span></span> <span class="inlinecode">(<span class="id" type="library">seq</span></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.symgroup.html#Transp.T"><span class="id" type="variable">T</span></a>)</span>)
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.vectNK.html#cut3"><span class="id" type="definition">cut3</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.stdplact.html#KsuppInj.s"><span class="id" type="variable">s</span></a></span> == the list of the cutting of s in 3 slices (the result is of type
+              <span class="inlinecode"><span class="id" type="library">seq</span></span> <span class="inlinecode">(<span class="id" type="library">seq</span></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.symgroup.html#Transp.T"><span class="id" type="variable">T</span></a>)</span> <span class="inlinecode">×</span> <span class="inlinecode">(<span class="id" type="library">seq</span></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.symgroup.html#Transp.T"><span class="id" type="variable">T</span></a>)</span> <span class="inlinecode">×</span> <span class="inlinecode">(<span class="id" type="library">seq</span></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.symgroup.html#Transp.T"><span class="id" type="variable">T</span></a>)</span>)
+
+</li>
+</ul>
+
+</div>
+<div class="code">
+
+<br/>
+<span class="id" type="keyword">Require</span> <span class="id" type="keyword">Import</span> <span class="id" type="library">ssreflect</span> <span class="id" type="library">ssrbool</span> <span class="id" type="library">ssrfun</span> <span class="id" type="library">ssrnat</span> <span class="id" type="library">eqtype</span> <span class="id" type="library">seq</span>.<br/>
+<span class="id" type="keyword">Require</span> <span class="id" type="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.tools.html#"><span class="id" type="library">tools</span></a>.<br/>
+
+<br/>
+<span class="id" type="keyword">Set Implicit Arguments</span>.<br/>
+
+<br/>
+<span class="id" type="keyword">Section</span> <a name="VectNK"><span class="id" type="section">VectNK</span></a>.<br/>
+
+<br/>
+<span class="id" type="keyword">Fixpoint</span> <a name="vect_n_k"><span class="id" type="definition">vect_n_k</span></a> <span class="id" type="var">n</span> <span class="id" type="var">k</span> :=<br/>
+&nbsp;&nbsp;<span class="id" type="keyword">if</span> <a class="idref" href="Combi.Combi.vectNK.html#k"><span class="id" type="variable">k</span></a> <span class="id" type="var">is</span> <span class="id" type="var">k'</span><span class="id" type="notation">.+1</span><br/>
+&nbsp;&nbsp;<span class="id" type="keyword">then</span> <span class="id" type="definition">flatten</span> (<span class="id" type="definition">mkseq</span> (<span class="id" type="keyword">fun</span> <span class="id" type="var">i</span> ⇒ <span class="id" type="definition">map</span> (<a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#cons"><span class="id" type="constructor">cons</span></a> <a class="idref" href="Combi.Combi.vectNK.html#i"><span class="id" type="variable">i</span></a>) (<a class="idref" href="Combi.Combi.vectNK.html#vect_n_k"><span class="id" type="definition">vect_n_k</span></a> (<a class="idref" href="Combi.Combi.vectNK.html#n"><span class="id" type="variable">n</span></a><span class="id" type="notation">-</span><a class="idref" href="Combi.Combi.vectNK.html#i"><span class="id" type="variable">i</span></a>) <span class="id" type="var">k'</span>) ) <a class="idref" href="Combi.Combi.vectNK.html#n"><span class="id" type="variable">n</span></a><span class="id" type="notation">.+1</span>)<br/>
+&nbsp;&nbsp;<span class="id" type="keyword">else</span> <span class="id" type="keyword">if</span> <a class="idref" href="Combi.Combi.vectNK.html#n"><span class="id" type="variable">n</span></a> <span class="id" type="var">is</span> 0 <span class="id" type="keyword">then</span> <span class="id" type="notation">[::</span> <span class="id" type="notation">[::]</span><span class="id" type="notation">]</span> <span class="id" type="keyword">else</span> <span class="id" type="notation">[::]</span>.<br/>
+
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="vect_n_k_in"><span class="id" type="lemma">vect_n_k_in</span></a> <span class="id" type="var">n</span> <span class="id" type="var">k</span> <span class="id" type="var">s</span> : <span class="id" type="definition">sumn</span> <a class="idref" href="Combi.Combi.vectNK.html#s"><span class="id" type="variable">s</span></a> <span class="id" type="notation">==</span> <a class="idref" href="Combi.Combi.vectNK.html#n"><span class="id" type="variable">n</span></a> → <span class="id" type="definition">size</span> <a class="idref" href="Combi.Combi.vectNK.html#s"><span class="id" type="variable">s</span></a> <span class="id" type="notation">==</span> <a class="idref" href="Combi.Combi.vectNK.html#k"><span class="id" type="variable">k</span></a> → <a class="idref" href="Combi.Combi.vectNK.html#s"><span class="id" type="variable">s</span></a> <span class="id" type="notation">\</span><span class="id" type="keyword">in</span> <a class="idref" href="Combi.Combi.vectNK.html#vect_n_k"><span class="id" type="definition">vect_n_k</span></a> <a class="idref" href="Combi.Combi.vectNK.html#n"><span class="id" type="variable">n</span></a> <a class="idref" href="Combi.Combi.vectNK.html#k"><span class="id" type="variable">k</span></a>.<br/>
+
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="in_vect_n_k"><span class="id" type="lemma">in_vect_n_k</span></a> <span class="id" type="var">n</span> <span class="id" type="var">k</span> <span class="id" type="var">s</span> : <a class="idref" href="Combi.Combi.vectNK.html#s"><span class="id" type="variable">s</span></a> <span class="id" type="notation">\</span><span class="id" type="keyword">in</span> <a class="idref" href="Combi.Combi.vectNK.html#vect_n_k"><span class="id" type="definition">vect_n_k</span></a> <a class="idref" href="Combi.Combi.vectNK.html#n"><span class="id" type="variable">n</span></a> <a class="idref" href="Combi.Combi.vectNK.html#k"><span class="id" type="variable">k</span></a> → <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:bool_scope:x_'&&'_x"><span class="id" type="notation">(</span></a><span class="id" type="definition">sumn</span> <a class="idref" href="Combi.Combi.vectNK.html#s"><span class="id" type="variable">s</span></a> <span class="id" type="notation">==</span> <a class="idref" href="Combi.Combi.vectNK.html#n"><span class="id" type="variable">n</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:bool_scope:x_'&&'_x"><span class="id" type="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:bool_scope:x_'&&'_x"><span class="id" type="notation">&amp;&amp;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:bool_scope:x_'&&'_x"><span class="id" type="notation">(</span></a><span class="id" type="definition">size</span> <a class="idref" href="Combi.Combi.vectNK.html#s"><span class="id" type="variable">s</span></a> <span class="id" type="notation">==</span> <a class="idref" href="Combi.Combi.vectNK.html#k"><span class="id" type="variable">k</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:bool_scope:x_'&&'_x"><span class="id" type="notation">)</span></a>.<br/>
+
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="vect_n_kP"><span class="id" type="lemma">vect_n_kP</span></a> <span class="id" type="var">n</span> <span class="id" type="var">k</span> <span class="id" type="var">s</span> : <a class="idref" href="Combi.Combi.vectNK.html#s"><span class="id" type="variable">s</span></a> <span class="id" type="notation">\</span><span class="id" type="keyword">in</span> <a class="idref" href="Combi.Combi.vectNK.html#vect_n_k"><span class="id" type="definition">vect_n_k</span></a> <a class="idref" href="Combi.Combi.vectNK.html#n"><span class="id" type="variable">n</span></a> <a class="idref" href="Combi.Combi.vectNK.html#k"><span class="id" type="variable">k</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:bool_scope:x_'&&'_x"><span class="id" type="notation">(</span></a><span class="id" type="definition">sumn</span> <a class="idref" href="Combi.Combi.vectNK.html#s"><span class="id" type="variable">s</span></a> <span class="id" type="notation">==</span> <a class="idref" href="Combi.Combi.vectNK.html#n"><span class="id" type="variable">n</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:bool_scope:x_'&&'_x"><span class="id" type="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:bool_scope:x_'&&'_x"><span class="id" type="notation">&amp;&amp;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:bool_scope:x_'&&'_x"><span class="id" type="notation">(</span></a><span class="id" type="definition">size</span> <a class="idref" href="Combi.Combi.vectNK.html#s"><span class="id" type="variable">s</span></a> <span class="id" type="notation">==</span> <a class="idref" href="Combi.Combi.vectNK.html#k"><span class="id" type="variable">k</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:bool_scope:x_'&&'_x"><span class="id" type="notation">)</span></a>.<br/>
+
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="vect_0_k"><span class="id" type="lemma">vect_0_k</span></a> <span class="id" type="var">k</span> : <a class="idref" href="Combi.Combi.vectNK.html#vect_n_k"><span class="id" type="definition">vect_n_k</span></a> 0 <a class="idref" href="Combi.Combi.vectNK.html#k"><span class="id" type="variable">k</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <span class="id" type="notation">[::</span> <span class="id" type="definition">nseq</span> <a class="idref" href="Combi.Combi.vectNK.html#k"><span class="id" type="variable">k</span></a> 0<span class="id" type="notation">]</span>.<br/>
+ 
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="count_mem_vect_n_k_eq_1"><span class="id" type="lemma">count_mem_vect_n_k_eq_1</span></a> <span class="id" type="var">n</span> <span class="id" type="var">k</span> <span class="id" type="var">s</span> : <a class="idref" href="Combi.Combi.vectNK.html#s"><span class="id" type="variable">s</span></a> <span class="id" type="notation">\</span><span class="id" type="keyword">in</span> <a class="idref" href="Combi.Combi.vectNK.html#vect_n_k"><span class="id" type="definition">vect_n_k</span></a> <a class="idref" href="Combi.Combi.vectNK.html#n"><span class="id" type="variable">n</span></a> <a class="idref" href="Combi.Combi.vectNK.html#k"><span class="id" type="variable">k</span></a> → <span class="id" type="abbreviation">count_mem</span> <a class="idref" href="Combi.Combi.vectNK.html#s"><span class="id" type="variable">s</span></a> (<a class="idref" href="Combi.Combi.vectNK.html#vect_n_k"><span class="id" type="definition">vect_n_k</span></a> <a class="idref" href="Combi.Combi.vectNK.html#n"><span class="id" type="variable">n</span></a> <a class="idref" href="Combi.Combi.vectNK.html#k"><span class="id" type="variable">k</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> 1.<br/>
+
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="uniq_vect_n_k"><span class="id" type="lemma">uniq_vect_n_k</span></a> <span class="id" type="var">n</span> <span class="id" type="var">k</span> : <span class="id" type="definition">uniq</span> (<a class="idref" href="Combi.Combi.vectNK.html#vect_n_k"><span class="id" type="definition">vect_n_k</span></a> <a class="idref" href="Combi.Combi.vectNK.html#n"><span class="id" type="variable">n</span></a> <a class="idref" href="Combi.Combi.vectNK.html#k"><span class="id" type="variable">k</span></a>).<br/>
+
+<br/>
+<span class="id" type="keyword">End</span> <a class="idref" href="Combi.Combi.vectNK.html#VectNK"><span class="id" type="section">VectNK</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+Cutting a seq in k slices : the result is of type <span class="inlinecode"><span class="id" type="library">seq</span></span> <span class="inlinecode">(<span class="id" type="library">seq</span></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.symgroup.html#Transp.T"><span class="id" type="variable">T</span></a>)</span> 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" type="keyword">Section</span> <a name="CutK"><span class="id" type="section">CutK</span></a>.<br/>
+
+<br/>
+<span class="id" type="keyword">Variable</span> <a name="CutK.T"><span class="id" type="variable">T</span></a> : <span class="id" type="abbreviation">eqType</span>.<br/>
+<span class="id" type="keyword">Implicit</span> <span class="id" type="keyword">Type</span> (<span class="id" type="var">s</span> : <span class="id" type="abbreviation">seq</span> <a class="idref" href="Combi.Combi.vectNK.html#CutK.T"><span class="id" type="variable">T</span></a>) (<span class="id" type="var">ss</span> : <span class="id" type="abbreviation">seq</span> (<span class="id" type="abbreviation">seq</span> <a class="idref" href="Combi.Combi.vectNK.html#CutK.T"><span class="id" type="variable">T</span></a>)).<br/>
+
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="mem_shape_vect_n_k"><span class="id" type="lemma">mem_shape_vect_n_k</span></a> <span class="id" type="var">ss</span> : <span class="id" type="notation">(</span><span class="id" type="definition">shape</span> <a class="idref" href="Combi.Combi.vectNK.html#ss"><span class="id" type="variable">ss</span></a><span class="id" type="notation">)</span> <span class="id" type="notation">\</span><span class="id" type="keyword">in</span> <a class="idref" href="Combi.Combi.vectNK.html#vect_n_k"><span class="id" type="definition">vect_n_k</span></a> (<span class="id" type="definition">size</span> (<span class="id" type="definition">flatten</span> <a class="idref" href="Combi.Combi.vectNK.html#ss"><span class="id" type="variable">ss</span></a>)) (<span class="id" type="definition">size</span> <a class="idref" href="Combi.Combi.vectNK.html#ss"><span class="id" type="variable">ss</span></a>).<br/>
+ 
+<br/>
+<span class="id" type="keyword">Definition</span> <a name="cut_k"><span class="id" type="definition">cut_k</span></a> <span class="id" type="var">k</span> <span class="id" type="var">s</span> := <span class="id" type="notation">[</span><span class="id" type="notation">seq</span> <span class="id" type="definition">reshape</span> <span class="id" type="var">sh</span> <a class="idref" href="Combi.Combi.vectNK.html#s"><span class="id" type="variable">s</span></a> <span class="id" type="notation">|</span> <span class="id" type="var">sh</span> <span class="id" type="notation">&lt;-</span> <a class="idref" href="Combi.Combi.vectNK.html#vect_n_k"><span class="id" type="definition">vect_n_k</span></a> (<span class="id" type="definition">size</span> <a class="idref" href="Combi.Combi.vectNK.html#s"><span class="id" type="variable">s</span></a>) <a class="idref" href="Combi.Combi.vectNK.html#k"><span class="id" type="variable">k</span></a><span class="id" type="notation">]</span>.<br/>
+
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="cut_k_flatten"><span class="id" type="lemma">cut_k_flatten</span></a> <span class="id" type="var">ss</span> : <a class="idref" href="Combi.Combi.vectNK.html#ss"><span class="id" type="variable">ss</span></a> <span class="id" type="notation">\</span><span class="id" type="keyword">in</span> <a class="idref" href="Combi.Combi.vectNK.html#cut_k"><span class="id" type="definition">cut_k</span></a> (<span class="id" type="definition">size</span> <a class="idref" href="Combi.Combi.vectNK.html#ss"><span class="id" type="variable">ss</span></a>) (<span class="id" type="definition">flatten</span> <a class="idref" href="Combi.Combi.vectNK.html#ss"><span class="id" type="variable">ss</span></a>).<br/>
+
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="flatten_equiv_cut_k"><span class="id" type="lemma">flatten_equiv_cut_k</span></a> <span class="id" type="var">s</span> <span class="id" type="var">ss</span> : <a class="idref" href="Combi.Combi.vectNK.html#s"><span class="id" type="variable">s</span></a> <span class="id" type="notation">==</span> <span class="id" type="definition">flatten</span> <a class="idref" href="Combi.Combi.vectNK.html#ss"><span class="id" type="variable">ss</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'<->'_x"><span class="id" type="notation">↔</span></a> <a class="idref" href="Combi.Combi.vectNK.html#ss"><span class="id" type="variable">ss</span></a> <span class="id" type="notation">\</span><span class="id" type="keyword">in</span> <a class="idref" href="Combi.Combi.vectNK.html#cut_k"><span class="id" type="definition">cut_k</span></a> (<span class="id" type="definition">size</span> <a class="idref" href="Combi.Combi.vectNK.html#ss"><span class="id" type="variable">ss</span></a>) <a class="idref" href="Combi.Combi.vectNK.html#s"><span class="id" type="variable">s</span></a>.<br/>
+
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="size_cut_k"><span class="id" type="lemma">size_cut_k</span></a> <span class="id" type="var">k</span> <span class="id" type="var">s</span> <span class="id" type="var">ss</span> : <a class="idref" href="Combi.Combi.vectNK.html#ss"><span class="id" type="variable">ss</span></a> <span class="id" type="notation">\</span><span class="id" type="keyword">in</span> <span class="id" type="notation">(</span><a class="idref" href="Combi.Combi.vectNK.html#cut_k"><span class="id" type="definition">cut_k</span></a> <a class="idref" href="Combi.Combi.vectNK.html#k"><span class="id" type="variable">k</span></a> <a class="idref" href="Combi.Combi.vectNK.html#s"><span class="id" type="variable">s</span></a><span class="id" type="notation">)</span> → <span class="id" type="definition">size</span> <a class="idref" href="Combi.Combi.vectNK.html#ss"><span class="id" type="variable">ss</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'='_x"><span class="id" type="notation">=</span></a> <a class="idref" href="Combi.Combi.vectNK.html#k"><span class="id" type="variable">k</span></a>.<br/>
+
+<br/>
+<span class="id" type="keyword">End</span> <a class="idref" href="Combi.Combi.vectNK.html#CutK"><span class="id" type="section">CutK</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+Cutting a seq in 3 slices : the result is of type <span class="inlinecode"><span class="id" type="library">seq</span></span> <span class="inlinecode">(<span class="id" type="library">seq</span></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.symgroup.html#Transp.T"><span class="id" type="variable">T</span></a>)</span> <span class="inlinecode">×</span> <span class="inlinecode">(<span class="id" type="library">seq</span></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.symgroup.html#Transp.T"><span class="id" type="variable">T</span></a>)</span> <span class="inlinecode">×</span> <span class="inlinecode">(<span class="id" type="library">seq</span></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.symgroup.html#Transp.T"><span class="id" type="variable">T</span></a>)</span> 
+</div>
+<div class="code">
+
+<br/>
+<span class="id" type="keyword">Section</span> <a name="Cut3"><span class="id" type="section">Cut3</span></a>.<br/>
+
+<br/>
+<span class="id" type="keyword">Variable</span> <a name="Cut3.T"><span class="id" type="variable">T</span></a> : <span class="id" type="abbreviation">eqType</span>.<br/>
+<span class="id" type="keyword">Implicit</span> <span class="id" type="keyword">Type</span> (<span class="id" type="var">s</span> : <span class="id" type="abbreviation">seq</span> <a class="idref" href="Combi.Combi.vectNK.html#Cut3.T"><span class="id" type="variable">T</span></a>) (<span class="id" type="var">ss</span> : <span class="id" type="abbreviation">seq</span> (<span class="id" type="abbreviation">seq</span> <a class="idref" href="Combi.Combi.vectNK.html#Cut3.T"><span class="id" type="variable">T</span></a>)).<br/>
+
+<br/>
+<span class="id" type="keyword">Let</span> <a name="Cut3.match3"><span class="id" type="variable">match3</span></a> :=<br/>
+&nbsp;&nbsp;<span class="id" type="keyword">fun</span> <span class="id" type="var">ss</span> ⇒ <span class="id" type="keyword">match</span> <a class="idref" href="Combi.Combi.vectNK.html#ss"><span class="id" type="variable">ss</span></a> <span class="id" type="keyword">return</span> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:type_scope:x_'*'_x"><span class="id" type="notation">(</span></a><span class="id" type="abbreviation">seq</span> <a class="idref" href="Combi.Combi.vectNK.html#Cut3.T"><span class="id" type="variable">T</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:type_scope:x_'*'_x"><span class="id" type="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:type_scope:x_'*'_x"><span class="id" type="notation">×</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:type_scope:x_'*'_x"><span class="id" type="notation">(</span></a><span class="id" type="abbreviation">seq</span> <a class="idref" href="Combi.Combi.vectNK.html#Cut3.T"><span class="id" type="variable">T</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:type_scope:x_'*'_x"><span class="id" type="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:type_scope:x_'*'_x"><span class="id" type="notation">×</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:type_scope:x_'*'_x"><span class="id" type="notation">(</span></a><span class="id" type="abbreviation">seq</span> <a class="idref" href="Combi.Combi.vectNK.html#Cut3.T"><span class="id" type="variable">T</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:type_scope:x_'*'_x"><span class="id" type="notation">)</span></a> <span class="id" type="keyword">with</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| <span class="id" type="notation">[::</span> <span class="id" type="var">a</span><span class="id" type="notation">;</span> <span class="id" type="var">b</span><span class="id" type="notation">;</span> <span class="id" type="var">c</span><span class="id" type="notation">]</span> ⇒ <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:core_scope:'('_x_','_x_','_'..'_','_x_')'"><span class="id" type="notation">(</span></a><span class="id" type="var">a</span><a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:core_scope:'('_x_','_x_','_'..'_','_x_')'"><span class="id" type="notation">,</span></a> <span class="id" type="var">b</span><a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:core_scope:'('_x_','_x_','_'..'_','_x_')'"><span class="id" type="notation">,</span></a> <span class="id" type="var">c</span><a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:core_scope:'('_x_','_x_','_'..'_','_x_')'"><span class="id" type="notation">)</span></a> | <span class="id" type="var">_</span> ⇒ <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:core_scope:'('_x_','_x_','_'..'_','_x_')'"><span class="id" type="notation">(</span></a><span class="id" type="notation">[::]</span><a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:core_scope:'('_x_','_x_','_'..'_','_x_')'"><span class="id" type="notation">,</span></a> <span class="id" type="notation">[::]</span><a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:core_scope:'('_x_','_x_','_'..'_','_x_')'"><span class="id" type="notation">,</span></a> <span class="id" type="notation">[::]</span><a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:core_scope:'('_x_','_x_','_'..'_','_x_')'"><span class="id" type="notation">)</span></a> <span class="id" type="keyword">end</span>.<br/>
+
+<br/>
+<span class="id" type="keyword">Definition</span> <a name="cut3"><span class="id" type="definition">cut3</span></a> <span class="id" type="var">s</span> : <span class="id" type="abbreviation">seq</span> (<a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:type_scope:x_'*'_x"><span class="id" type="notation">(</span></a><span class="id" type="abbreviation">seq</span> <a class="idref" href="Combi.Combi.vectNK.html#Cut3.T"><span class="id" type="variable">T</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:type_scope:x_'*'_x"><span class="id" type="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:type_scope:x_'*'_x"><span class="id" type="notation">×</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:type_scope:x_'*'_x"><span class="id" type="notation">(</span></a><span class="id" type="abbreviation">seq</span> <a class="idref" href="Combi.Combi.vectNK.html#Cut3.T"><span class="id" type="variable">T</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:type_scope:x_'*'_x"><span class="id" type="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:type_scope:x_'*'_x"><span class="id" type="notation">×</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:type_scope:x_'*'_x"><span class="id" type="notation">(</span></a><span class="id" type="abbreviation">seq</span> <a class="idref" href="Combi.Combi.vectNK.html#Cut3.T"><span class="id" type="variable">T</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:type_scope:x_'*'_x"><span class="id" type="notation">)</span></a>) := <span class="id" type="notation">[</span><span class="id" type="notation">seq</span> <a class="idref" href="Combi.Combi.vectNK.html#Cut3.match3"><span class="id" type="variable">match3</span></a> <span class="id" type="var">ss</span> <span class="id" type="notation">|</span> <span class="id" type="var">ss</span> <span class="id" type="notation">&lt;-</span> <a class="idref" href="Combi.Combi.vectNK.html#cut_k"><span class="id" type="definition">cut_k</span></a> 3 <a class="idref" href="Combi.Combi.vectNK.html#s"><span class="id" type="variable">s</span></a><span class="id" type="notation">]</span>.<br/>
+
+<br/>
+<span class="id" type="keyword">Lemma</span> <a name="cat3_equiv_cut3"><span class="id" type="lemma">cat3_equiv_cut3</span></a> <span class="id" type="var">s</span> <span class="id" type="var">a</span> <span class="id" type="var">b</span> <span class="id" type="var">c</span> : <a class="idref" href="Combi.Combi.vectNK.html#s"><span class="id" type="variable">s</span></a> <span class="id" type="notation">==</span> <a class="idref" href="Combi.Combi.vectNK.html#a"><span class="id" type="variable">a</span></a> <span class="id" type="notation">++</span> <a class="idref" href="Combi.Combi.vectNK.html#b"><span class="id" type="variable">b</span></a> <span class="id" type="notation">++</span> <a class="idref" href="Combi.Combi.vectNK.html#c"><span class="id" type="variable">c</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Logic.html#:type_scope:x_'<->'_x"><span class="id" type="notation">↔</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:core_scope:'('_x_','_x_','_'..'_','_x_')'"><span class="id" type="notation">(</span></a><a class="idref" href="Combi.Combi.vectNK.html#a"><span class="id" type="variable">a</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:core_scope:'('_x_','_x_','_'..'_','_x_')'"><span class="id" type="notation">,</span></a> <a class="idref" href="Combi.Combi.vectNK.html#b"><span class="id" type="variable">b</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:core_scope:'('_x_','_x_','_'..'_','_x_')'"><span class="id" type="notation">,</span></a> <a class="idref" href="Combi.Combi.vectNK.html#c"><span class="id" type="variable">c</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#:core_scope:'('_x_','_x_','_'..'_','_x_')'"><span class="id" type="notation">)</span></a> <span class="id" type="notation">\</span><span class="id" type="keyword">in</span> <a class="idref" href="Combi.Combi.vectNK.html#cut3"><span class="id" type="definition">cut3</span></a> <a class="idref" href="Combi.Combi.vectNK.html#s"><span class="id" type="variable">s</span></a>.<br/>
+
+<br/>
+<span class="id" type="keyword">End</span> <a class="idref" href="Combi.Combi.vectNK.html#Cut3"><span class="id" type="section">Cut3</span></a>.<br/>
+</div>
+</div>
+
+<div id="footer">
+<hr/><a href="index.html">Index</a><hr/>This page has been generated by <a href="http://coq.inria.fr/">coqdoc</a>
+</div>
+
+</div>
+
+</body>
+</html>
