@@ -194,6 +194,7 @@ Proof.
   exact: (contra (Hlti j) Hj).
 Qed.
 
+End Valuation.
 (*
 Section Streams.
 

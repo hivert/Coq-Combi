@@ -114,6 +114,9 @@ VFILES:= theories/Basic/combclass.v\
   theories/SymGroup/symgroup.v\
   3rdparty/ALEA/Ccpo.v\
   3rdparty/ALEA/Misc.v\
+  theories/Series/invlim.v\
+  theories/Series/invps.v\
+  theories/Series/powerseries.v
 
 -include $(addsuffix .d,$(VFILES))
 .SECONDARY: $(addsuffix .d,$(VFILES))
