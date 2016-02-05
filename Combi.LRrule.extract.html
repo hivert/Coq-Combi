@@ -2,8 +2,8 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-<link href="coqdoc.css" rel="stylesheet" type="text/css"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="coqdoc.css" rel="stylesheet" type="text/css" />
 <title>Combi.LRrule.extract</title>
 </head>
 
@@ -19,47 +19,47 @@
 <h1 class="libtitle">Combi.LRrule.extract</h1>
 
 <div class="code">
-<span class="id" type="keyword">Require</span> <span class="id" type="keyword">Import</span> <span class="id" type="library">ssreflect</span> <span class="id" type="library">ssrbool</span> <span class="id" type="library">ssrfun</span> <span class="id" type="library">ssrnat</span> <span class="id" type="library">eqtype</span> <span class="id" type="library">finfun</span> <span class="id" type="library">fintype</span> <span class="id" type="library">choice</span> <span class="id" type="library">seq</span> <span class="id" type="library">tuple</span>.<br/>
-<span class="id" type="keyword">Require</span> <span class="id" type="keyword">Import</span> <span class="id" type="library">finset</span> <span class="id" type="library">perm</span>.<br/>
-<span class="id" type="keyword">Require</span> <span class="id" type="keyword">Import</span> <a class="idref" href="Combi.Combi.subseq.html#"><span class="id" type="library">subseq</span></a> <a class="idref" href="Combi.Combi.partition.html#"><span class="id" type="library">partition</span></a> <a class="idref" href="Combi.Basic.ordtype.html#"><span class="id" type="library">ordtype</span></a> <a class="idref" href="Combi.LRrule.Schensted.html#"><span class="id" type="library">Schensted</span></a> <a class="idref" href="Combi.Basic.congr.html#"><span class="id" type="library">congr</span></a> <a class="idref" href="Combi.LRrule.plactic.html#"><span class="id" type="library">plactic</span></a> <a class="idref" href="Combi.LRrule.Greene.html#"><span class="id" type="library">Greene</span></a> <a class="idref" href="Combi.LRrule.Greene_inv.html#"><span class="id" type="library">Greene_inv</span></a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="Combi.Combi.std.html#"><span class="id" type="library">std</span></a> <a class="idref" href="Combi.Combi.stdtab.html#"><span class="id" type="library">stdtab</span></a> <a class="idref" href="Combi.Combi.skewtab.html#"><span class="id" type="library">skewtab</span></a> <a class="idref" href="Combi.LRrule.therule.html#"><span class="id" type="library">therule</span></a> <a class="idref" href="Combi.LRrule.implem.html#"><span class="id" type="library">implem</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">ssreflect</span> <span class="id" title="library">ssrbool</span> <span class="id" title="library">ssrfun</span> <span class="id" title="library">ssrnat</span> <span class="id" title="library">eqtype</span> <span class="id" title="library">finfun</span> <span class="id" title="library">fintype</span> <span class="id" title="library">choice</span> <span class="id" title="library">seq</span> <span class="id" title="library">tuple</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">finset</span> <span class="id" title="library">perm</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.Combi.subseq.html#"><span class="id" title="library">subseq</span></a> <a class="idref" href="Combi.Combi.partition.html#"><span class="id" title="library">partition</span></a> <a class="idref" href="Combi.Basic.ordtype.html#"><span class="id" title="library">ordtype</span></a> <a class="idref" href="Combi.LRrule.Schensted.html#"><span class="id" title="library">Schensted</span></a> <a class="idref" href="Combi.Basic.congr.html#"><span class="id" title="library">congr</span></a> <a class="idref" href="Combi.LRrule.plactic.html#"><span class="id" title="library">plactic</span></a> <a class="idref" href="Combi.LRrule.Greene.html#"><span class="id" title="library">Greene</span></a> <a class="idref" href="Combi.LRrule.Greene_inv.html#"><span class="id" title="library">Greene_inv</span></a><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="Combi.Combi.std.html#"><span class="id" title="library">std</span></a> <a class="idref" href="Combi.Combi.stdtab.html#"><span class="id" title="library">stdtab</span></a> <a class="idref" href="Combi.Combi.skewtab.html#"><span class="id" title="library">skewtab</span></a> <a class="idref" href="Combi.LRrule.therule.html#"><span class="id" title="library">therule</span></a> <a class="idref" href="Combi.LRrule.implem.html#"><span class="id" title="library">implem</span></a>.<br/>
 
 <br/>
-<span class="id" type="keyword">Require</span> <span class="id" type="keyword">Import</span> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Arith.Wf_nat.html#"><span class="id" type="library">Wf_nat</span></a>.<br/>
-<span class="id" type="keyword">Extraction</span> <span class="id" type="keyword">Inline</span> <span class="id" type="var">Wf_nat.lt_wf_rec1</span> <span class="id" type="var">Wf_nat.lt_wf_rec</span><br/>
-&nbsp;&nbsp;<span class="id" type="var">Wf_nat.lt_wf_ind</span> <span class="id" type="var">Wf_nat.gt_wf_rec</span> <span class="id" type="var">Wf_nat.gt_wf_ind</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Arith.Wf_nat.html#"><span class="id" title="library">Wf_nat</span></a>.<br/>
+<span class="id" title="keyword">Extraction</span> <span class="id" title="keyword">Inline</span> <span class="id" title="var">Wf_nat.lt_wf_rec1</span> <span class="id" title="var">Wf_nat.lt_wf_rec</span><br/>
+&nbsp;&nbsp;<span class="id" title="var">Wf_nat.lt_wf_ind</span> <span class="id" title="var">Wf_nat.gt_wf_rec</span> <span class="id" title="var">Wf_nat.gt_wf_ind</span>.<br/>
 
 <br/>
-<span class="id" type="keyword">Extract</span> <span class="id" type="keyword">Inductive</span> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#bool"><span class="id" type="inductive">bool</span></a> ⇒ "bool" [ "true" "false" ].<br/>
+<span class="id" title="keyword">Extract</span> <span class="id" title="keyword">Inductive</span> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Datatypes.html#bool"><span class="id" title="inductive">bool</span></a> ⇒ "bool" [ "true" "false" ].<br/>
 
 <br/>
-<span class="id" type="keyword">Extract</span> <span class="id" type="keyword">Inductive</span> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#list"><span class="id" type="inductive">list</span></a> ⇒ "list" [ "[]" "(::)" ].<br/>
+<span class="id" title="keyword">Extract</span> <span class="id" title="keyword">Inductive</span> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Datatypes.html#list"><span class="id" title="inductive">list</span></a> ⇒ "list" [ "[]" "(::)" ].<br/>
 
 <br/>
-<span class="id" type="keyword">Extract</span> <span class="id" type="keyword">Inductive</span> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl5/stdlib/Coq.Init.Datatypes.html#prod"><span class="id" type="inductive">prod</span></a> ⇒ "(*)"  [ "(,)" ].<br/>
+<span class="id" title="keyword">Extract</span> <span class="id" title="keyword">Inductive</span> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Datatypes.html#prod"><span class="id" title="inductive">prod</span></a> ⇒ "(*)"  [ "(,)" ].<br/>
 
 <br/>
 
 <br/>
-<span class="id" type="keyword">Let</span> <a name="RSbijnat"><span class="id" type="variable">RSbijnat</span></a> := (@<a class="idref" href="Combi.LRrule.Schensted.html#RSbij"><span class="id" type="definition">RSbij</span></a> <a class="idref" href="Combi.Basic.ordtype.html#nat_inhOrdType"><span class="id" type="definition">nat_inhOrdType</span></a>).<br/>
-<span class="id" type="keyword">Let</span> <a name="RSbijinvnat"><span class="id" type="variable">RSbijinvnat</span></a> := (@<a class="idref" href="Combi.LRrule.Schensted.html#RSbijinv"><span class="id" type="definition">RSbijinv</span></a> <a class="idref" href="Combi.Basic.ordtype.html#nat_inhOrdType"><span class="id" type="definition">nat_inhOrdType</span></a>).<br/>
-<span class="id" type="keyword">Let</span> <a name="RStabnat"><span class="id" type="variable">RStabnat</span></a> := (@<a class="idref" href="Combi.LRrule.Schensted.html#RStab"><span class="id" type="definition">RStab</span></a> <a class="idref" href="Combi.Basic.ordtype.html#nat_inhOrdType"><span class="id" type="definition">nat_inhOrdType</span></a>).<br/>
-<span class="id" type="keyword">Let</span> <a name="RStabinvnat"><span class="id" type="variable">RStabinvnat</span></a> := (@<a class="idref" href="Combi.LRrule.Schensted.html#RStabinv"><span class="id" type="definition">RStabinv</span></a> <a class="idref" href="Combi.Basic.ordtype.html#nat_inhOrdType"><span class="id" type="definition">nat_inhOrdType</span></a>).<br/>
+<span class="id" title="keyword">Let</span> <a name="RSbijnat"><span class="id" title="variable">RSbijnat</span></a> := (@<a class="idref" href="Combi.LRrule.Schensted.html#RSbij"><span class="id" title="definition">RSbij</span></a> <a class="idref" href="Combi.Basic.ordtype.html#nat_inhOrdType"><span class="id" title="definition">nat_inhOrdType</span></a>).<br/>
+<span class="id" title="keyword">Let</span> <a name="RSbijinvnat"><span class="id" title="variable">RSbijinvnat</span></a> := (@<a class="idref" href="Combi.LRrule.Schensted.html#RSbijinv"><span class="id" title="definition">RSbijinv</span></a> <a class="idref" href="Combi.Basic.ordtype.html#nat_inhOrdType"><span class="id" title="definition">nat_inhOrdType</span></a>).<br/>
+<span class="id" title="keyword">Let</span> <a name="RStabnat"><span class="id" title="variable">RStabnat</span></a> := (@<a class="idref" href="Combi.LRrule.Schensted.html#RStab"><span class="id" title="definition">RStab</span></a> <a class="idref" href="Combi.Basic.ordtype.html#nat_inhOrdType"><span class="id" title="definition">nat_inhOrdType</span></a>).<br/>
+<span class="id" title="keyword">Let</span> <a name="RStabinvnat"><span class="id" title="variable">RStabinvnat</span></a> := (@<a class="idref" href="Combi.LRrule.Schensted.html#RStabinv"><span class="id" title="definition">RStabinv</span></a> <a class="idref" href="Combi.Basic.ordtype.html#nat_inhOrdType"><span class="id" title="definition">nat_inhOrdType</span></a>).<br/>
 
 <br/>
-<span class="id" type="keyword">Extraction</span> "src/LRrule/schensted.ml"<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" type="var">RS</span> <span class="id" type="var">RSbijnat</span> <span class="id" type="var">RSbijinvnat</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" type="var">plactcongr</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" type="var">Greene_row</span> <span class="id" type="var">Greene_col</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" type="var">is_std</span> <span class="id" type="var">std.std</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" type="var">RStabnat</span> <span class="id" type="var">RStabinvnat</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" type="var">is_stdtab</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" type="var">LRyam_coeff</span> <span class="id" type="var">LRcoeff</span> <span class="id" type="var">LRyamtab_list</span><br/>
+<span class="id" title="keyword">Extraction</span> "src/LRrule/schensted.ml"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">RS</span> <span class="id" title="var">RSbijnat</span> <span class="id" title="var">RSbijinvnat</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">plactcongr</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">Greene_row</span> <span class="id" title="var">Greene_col</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">is_std</span> <span class="id" title="var">std.std</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">RStabnat</span> <span class="id" title="var">RStabinvnat</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">is_stdtab</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">LRyam_coeff</span> <span class="id" title="var">LRcoeff</span> <span class="id" title="var">LRyamtab_list</span><br/>
 .<br/>
 
 <br/>
-<span class="id" type="keyword">Extraction</span> "src/LRrule/lrcoeff.ml"<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" type="var">LRcoeff</span> <span class="id" type="var">LRyamtab_list</span><br/>
+<span class="id" title="keyword">Extraction</span> "src/LRrule/lrcoeff.ml"<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">LRcoeff</span> <span class="id" title="var">LRyamtab_list</span><br/>
 .<br/>
 </div>
 </div>
