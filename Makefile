@@ -82,6 +82,7 @@ VFILES:= theories/Basic/combclass.v\
   theories/Combi/partition.v\
   theories/Combi/permuted.v\
   theories/Combi/skewtab.v\
+  theories/Combi/setpartition.v\
   theories/Combi/stdtab.v\
   theories/Combi/std.v\
   theories/Combi/subseq.v\
