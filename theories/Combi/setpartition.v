@@ -15,13 +15,13 @@ Section Finer.
 
   Lemma is_finerP P1 P2 :
     reflect
-      (forall s1,  s1 \in P1 -> exists s2,  s2 \in P2 /\ s1 \subset s2)
+      (forall s1,  s1 \in P1 -> exists2 s2, s2 \in P2 & s1 \subset s2)
       (is_finer P1 P2).
   Proof.
     rewrite /is_finer;  apply (iffP idP).
     - move/forall_inP => H s1 /H{H} /exists_inP [] s2 H1 H2.
       by exists s2.
-    - move=> H; apply/forall_inP => s1 /H{H} [] s2 [] H1 H2.
+    - move=> H; apply/forall_inP => s1 /H{H} [] s2 H1 H2.
       apply/exists_inP; by exists s2.
   Qed.
 
@@ -31,8 +31,8 @@ Section Finer.
   Lemma is_finer_trans : transitive is_finer.
   Proof.
     move=> P2 P1 p3 /is_finerP H12 /is_finerP H23.
-    apply/is_finerP => s1 /H12{H12} [] s2 [] /H23{H23} [] s3 [] Hs3 H23 H12.
-    exists s3; split; first exact: Hs3.
+    apply/is_finerP => s1 /H12{H12} [] s2 /H23{H23} [] s3 Hs3 H23 H12.
+    exists s3; first exact: Hs3.
     exact: (subset_trans H12 H23).
   Qed.
 
@@ -134,9 +134,10 @@ End Restriction.
 Section Defs.
 
   Variable T : finType.
+  Variable C : {set T}.
 
   Structure setpart : predArgType :=
-    SetPart {setpartval :> {set {set T}}; _ : partition setpartval setT}.
+    SetPart {setpartval :> {set {set T}}; _ : partition setpartval C}.
   Canonical tash_subType := Eval hnf in [subType for setpartval].
   Definition setpart_eqMixin := Eval hnf in [eqMixin of setpart by <:].
   Canonical setpart_eqType := Eval hnf in EqType setpart setpart_eqMixin.
@@ -152,14 +153,11 @@ Section Defs.
 
   Implicit Type P : setpart.
 
-  Lemma setpartP P : partition P setT.
+  Lemma setpartP P : partition P C.
   Proof. by case: P. Qed.
 
-  Lemma setpart_cover P x : x \in cover P.
-  Proof.
-    have := setpartP P => /and3P [] /eqP -> _ _.
-    by rewrite inE.
-  Qed.
+  Lemma setpart_cover P x : x \in C = (x \in cover P).
+  Proof. by have:= setpartP P => /and3P [] /eqP ->. Qed.
 
   Lemma setpart_inter P S1 S2 x :
     S1 \in P -> S2 \in P -> x \in S1 -> x \in S2 -> S1 = S2.
@@ -176,8 +174,8 @@ Section Defs.
     move: P1 P2 => [] P1 HP1 [] P2 HP2 /=.
     move=> /is_finerP H12 /is_finerP H21.
     apply/subsetP => s1 Hs1.
-    move/(_ s1 Hs1) : H12 => [] s2 [] Hs2 Hs12.
-    move/(_ s2 Hs2) : H21 => [] s1' [] Hs1' Hs21.
+    move/(_ s1 Hs1) : H12 => [] s2 Hs2 Hs12.
+    move/(_ s2 Hs2) : H21 => [] s1' Hs1' Hs21.
     suff H' : s1 = s1'.
       subst s1'; rewrite (_ : s1 = s2) //.
       by apply/eqP; rewrite eqEsubset Hs12 Hs21.
@@ -198,12 +196,15 @@ Section Defs.
     apply/andP; split; exact: is_finer_setpart_subset.
   Qed.
 
-  Lemma trivpartP : partition [set [set x] | x in T] [set: T].
+  Lemma trivpartP : partition [set [set x] | x in C] C.
   Proof.
     apply/and3P; split.
-    - apply/eqP/setP => x; rewrite inE /cover.
-      apply/bigcupP; exists [set x]; last by rewrite in_set1.
-      apply/imsetP; by exists x.
+    - apply/eqP/setP => x; rewrite /cover.
+      apply/idP/idP.
+      + move=> /bigcupP [] B /imsetP [] y Hy ->.
+        by rewrite in_set1 => /eqP ->.
+      + move=> Hx; apply/bigcupP; exists [set x]; last by rewrite in_set1.
+        apply/imsetP; by exists x.
     - apply/trivIsetP => A B /imsetP [] a _ -> /imsetP [] b _ -> {A B} Hab.
       rewrite -setI_eq0; apply/eqP/setP => x; rewrite !inE.
       apply negbTE; move: Hab; by apply contra => /andP [] /eqP <- /eqP ->.
@@ -215,270 +216,312 @@ Section Defs.
 
   Lemma is_finer_triv P : is_finer trivpart P.
   Proof.
-    apply/is_finerP => s /imsetP [] x _ -> {s}.
-    have:= setpart_cover P x; rewrite /cover => /bigcupP [] S HS Hx.
-    exists S; split; first by [].
+    apply/is_finerP => s /imsetP [] x Hx -> {s}.
+    move: Hx; rewrite (setpart_cover P) /cover => /bigcupP [] S HS HxS.
+    exists S; first by [].
     by apply/subsetP => y; rewrite !inE => /eqP ->.
   Qed.
 
-  Lemma fullpartP :
-    partition (if #|T| == 0 then set0 else [set [set: T]]) [set: T].
-  Proof.
-    apply/and3P; split.
-    - apply/eqP/setP => x; rewrite inE /cover.
-      case: (altP (#|T| =P 0)) => HT.
-      + exfalso; move: HT => /eqP; rewrite -cardsT cards_eq0.
-        move/eqP/setP/(_ x); by rewrite !inE.
-      + by rewrite big_set1 inE.
-    - apply/trivIsetP => A B.
-      case: (altP (#|T| =P 0)) => HT; first by rewrite inE.
-      rewrite !in_set1 => /eqP -> /eqP ->.
-      by rewrite eq_refl.
-    - case: (altP (#|T| =P 0)); first by rewrite inE.
-      by rewrite in_set1 -cardsT cards_eq0 eq_sym.
-  Qed.
-
-  Definition fullpart := SetPart fullpartP.
-
-  Lemma is_finer_full P : is_finer P fullpart.
-  Proof.
-    rewrite /fullpart; apply/is_finerP => s HS.
-    exists [set: T]; split => //=.
-    case: (altP (#|T| =P 0)) => HT.
-    - exfalso; have:= setpartP P => /and3P [] _ _ Hn0.
-      move: HT; rewrite -cardsT => /eqP; rewrite cards_eq0 => /eqP H0.
-      suff Heq0 : s = set0 by move: Hn0; rewrite -Heq0 HS.
-      have:= subsetT s; by rewrite H0 subset0 => /eqP.
-    - by rewrite in_set1.
-    Qed.
-
 End Defs.
-
-
 
 Section Card0. (* Partition of the empty set *)
 
-Variable T : finType.
-Hypothesis HcardT : #|T| = 0.
+  Variable T : finType.
 
-Lemma set_card0 : [set: T] = set0.
-Proof.
-  have H := card0_eq HcardT.
-  apply/setP => x; exfalso; by have:= H x; rewrite !inE.
-Qed.
+  Lemma part_card0_eq_set0 (P : {set {set T}}) : partition P set0 -> P = set0.
+  Proof.
+    move=> /and3P [] /eqP; rewrite /cover => Hcov _ Hn0.
+    apply/eqP; rewrite -subset0; apply/subsetP => S HS; exfalso.
+    have: S \subset \bigcup_(B in P) B by apply (bigcup_max S).
+    rewrite Hcov subset0 => /eqP HS0.
+    by move: Hn0; rewrite -HS0 HS.
+  Qed.
 
-Lemma subset_card0 (S : {set T}) : S = set0.
-Proof.
-  have H := card0_eq HcardT.
-  apply/setP => x; exfalso; by have:= H x; rewrite !inE.
-Qed.
+  Lemma part_card0 : partition set0 (@set0 T).
+  Proof.
+    apply/and3P; split.
+    - by rewrite /cover big_set0.
+    - by rewrite /trivIset /cover !big_set0 cards0.
+    - by rewrite in_set0.
+  Qed.
 
-Lemma part_card0_eq_set0 P : partition P [set: T] -> P = set0.
-Proof.
-  move=> /and3P [] _ _ Hn0.
-  apply/setP => S; rewrite inE (subset_card0 S).
-  exact: negbTE.
-Qed.
+  Let Part0 := SetPart part_card0.
 
-Lemma part_card0 : partition set0 [set: T].
-Proof.
-  apply/and3P; split.
-  - by rewrite /cover big_set0 set_card0.
-  - by rewrite /trivIset /cover !big_set0 cards0.
-  - by rewrite in_set0.
-Qed.
+  Lemma setpart0_eq_set0 (P : setpart set0) : P = Part0.
+  Proof.
+    case: P => P HP; apply/eqP;
+    by rewrite eqE /= (part_card0_eq_set0 HP).
+  Qed.
 
-Let Part0 := SetPart part_card0.
-
-Lemma setpart0_eq_set0 (P : setpart T) : P = Part0.
-Proof.
-  case: P => P HP; apply/eqP;
-  by rewrite eqE /= (part_card0_eq_set0 HP).
-Qed.
-
-Lemma enum_setpart0 : enum (setpart T) = [:: Part0 ].
-Proof.
-  move Hl : (enum _) => l.
-  case: l Hl => [|P0 [|P1 l]] Hl.
-  - exfalso.
-    have:= mem_enum (setpart T) Part0.
-    by rewrite Hl inE in_nil.
-  - by rewrite (setpart0_eq_set0 P0).
-  - exfalso.
-    rewrite (setpart0_eq_set0 P0) (setpart0_eq_set0 P1) in Hl.
-    have:= enum_uniq (setpart T); by rewrite Hl /= inE eq_refl /=.
-Qed.
+  Lemma enum_setpart0 : enum (setpart set0) = [:: Part0 ].
+  Proof.
+    move Hl : (enum _) => l.
+    case: l Hl => [|P0 [|P1 l]] Hl.
+    - exfalso.
+      have:= mem_enum (setpart set0) Part0.
+      by rewrite Hl inE in_nil.
+    - by rewrite (setpart0_eq_set0 P0).
+    - exfalso.
+      rewrite (setpart0_eq_set0 P0) (setpart0_eq_set0 P1) in Hl.
+      have:= enum_uniq (setpart (@set0 T)); by rewrite Hl /= inE eq_refl /=.
+  Qed.
 
 End Card0.
 
 
-
 Section Card1. (* Partition of a singleton *)
 
-Variable T : finType.
-Hypothesis HcardT : #|T| = 1.
+  Variable T : finType.
+  Variable C : {set T}.
+  Hypothesis HcardC : #|C| = 1.
 
-Lemma subset_card1E (S : {set T}) : (S == set0) || (S == setT).
-Proof.
-  case: (altP (S =P set0)) => [-> |]//= /set0Pn [] x Hx.
-  rewrite eqEcard subsetT /= cardsT HcardT card_gt0.
-  apply/set0Pn; by exists x.
-Qed.
+  Lemma subset_card1E (S : {set T}) :
+    S \subset C -> (S == set0) || (S == C).
+  Proof.
+    move: HcardC => /eqP/cards1P [] x HC; subst C.
+    by rewrite subset1 orbC.
+  Qed.
 
-Lemma subset_card1 (S : {set T}) : (S = set0) \/ (S = setT).
-Proof.
-  have:= subset_card1E S => /orP [] /eqP ->.
-  by left. by right.
-Qed.
+  Lemma subset_card1 (S : {set T}) : S \subset C -> (S = set0) \/ (S = C).
+  Proof. by move=> /subset_card1E /orP [] /eqP ->; [left | right]. Qed.
 
-Lemma part_card1_eq P : partition P [set: T] -> P = [set setT].
-Proof.
-  have : #|T| > 0 by rewrite HcardT.
-  move=> /card_gt0P [] x Hx.
-  move=> /and3P [] H1 _ Hn0.
-  apply/setP => S; rewrite inE.
-  case: (subset_card1 S) => [-> | HS].
-  - move: Hn0 => /negbTE ->.
-    apply esym; apply/negbTE/(introN idP) => /eqP/setP/(_ x).
-    by rewrite !inE.
-  - rewrite {S}HS eq_refl.
-    move: H1; rewrite /cover.
-    case: (altP (P =P set0)) => [-> |]/=.
-    + rewrite big_set0 !inE => /eqP/setP/(_ x).
-      by rewrite !inE.
-    + move/set0Pn => [] S.
-      have:= subset_card1 S => [[]] ->.
-      * by move: Hn0 => /negbTE ->.
-      * by move=> ->.
-Qed.
+  Lemma in_part_card1 (P : {set {set T}}) S :
+    partition P C -> S \in P -> S = C.
+  Proof.
+    move: HcardC => /eqP/cards1P [] x HC; subst C.
+    move=> /and3P [] H1 _ Hn0 HS.
+    apply/eqP; rewrite eqEsubset.
+    have: S \subset \bigcup_(B in P) B by apply (bigcup_max S).
+    move: H1; rewrite /cover => /eqP -> HSx.
+    rewrite HSx /=.
+    apply/subsetP => y; rewrite inE => /eqP Hy; subst y.
+    have: S != set0 by move: Hn0; apply contra => /eqP <-.
+    move/set0Pn => [] y Hy.
+    suff: y = x by move <-.
+    move: HSx => /subsetP/(_ y Hy).
+    by rewrite inE => /eqP.
+  Qed.
 
-Lemma part_card1 : partition [set [set: T]] [set: T].
-Proof.
-  apply/and3P; split.
-  - by rewrite /cover big_set1.
-  - by rewrite /trivIset /cover !big_set1.
-  - rewrite in_set1.
-    have : #|T| > 0 by rewrite HcardT.
-    move=> /card_gt0P [] x Hx.
-    apply/(introN idP) => /eqP/setP/(_ x).
-    by rewrite !inE.
-Qed.
+  Lemma part_card1_eq (P : {set {set T}}) : partition P C -> P = [set C].
+  Proof.
+    move=> Hpart.
+    have Hin := in_part_card1 Hpart.
+    move: Hpart => /and3P [] H1 _ Hn0.
+    apply/setP => S; rewrite inE.
+    apply/idP/idP => [/Hin -> // | /eqP HS].
+    subst S.
+    have: P != set0.
+      move: H1; apply contraL => /eqP ->.
+      by rewrite /cover big_set0 eq_sym -card_gt0 HcardC.
+    move/set0Pn => [] S HS.
+    by rewrite -(Hin S HS).
+  Qed.
 
-Let Part1 := SetPart part_card1.
+  Lemma part_card1 : partition [set C] C.
+  Proof.
+    apply/and3P; split.
+    - by rewrite /cover big_set1.
+    - by rewrite /trivIset /cover !big_set1.
+    - by rewrite in_set1 eq_sym -card_gt0 HcardC.
+  Qed.
 
-Lemma setpart1_eq_set1 (P : setpart T) : P = Part1.
-Proof.
-  case: P => P HP; apply/eqP;
-  by rewrite eqE /= (part_card1_eq HP).
-Qed.
+  Let Part1 := SetPart part_card1.
 
-Lemma enum_setpart1 : enum (setpart T) = [:: Part1 ].
-Proof.
-  move Hl : (enum _) => l.
-  case: l Hl => [|P0 [|P1 l]] Hl.
-  - exfalso.
-    have:= mem_enum (setpart T) Part1.
-    by rewrite Hl inE in_nil.
-  - by rewrite (setpart1_eq_set1 P0).
-  - exfalso.
-    rewrite (setpart1_eq_set1 P0) (setpart1_eq_set1 P1) in Hl.
-    have:= enum_uniq (setpart T); by rewrite Hl /= inE eq_refl /=.
-Qed.
+  Lemma setpart1_eq_set1 P : P = Part1.
+  Proof.
+    case: P => P HP; apply/eqP;
+                 by rewrite eqE /= (part_card1_eq HP).
+  Qed.
+
+  Lemma enum_setpart1 : enum (setpart C) = [:: Part1 ].
+  Proof.
+    move Hl : (enum _) => l.
+    case: l Hl => [|P0 [|P1 l]] Hl.
+    - exfalso.
+      have:= mem_enum (setpart C) Part1.
+        by rewrite Hl inE in_nil.
+    - by rewrite (setpart1_eq_set1 P0).
+    - exfalso.
+      rewrite (setpart1_eq_set1 P0) (setpart1_eq_set1 P1) in Hl.
+      have:= enum_uniq (setpart C); by rewrite Hl /= inE eq_refl /=.
+  Qed.
 
 End Card1.
 
+Section Full.
 
-Section Card.
+  Variable T : finType.
+  Variable C : {set T}.
 
-Variable T : finType.
-
-Definition inj_finer_setpart x0 (P : setpart T) (S : {set T}) :=
-  pblock P (odflt x0 [pick x in S]).
-
-  Lemma inj_finer_setpart_non0 x0 (P : setpart T) (S : {set T}) :
-    (inj_finer_setpart x0 P S) != set0.
+  Lemma fullpartP :
+    partition (if #|C| == 0 then set0 else [set C]) C.
   Proof.
-    rewrite /inj_finer_setpart.
-    set x := (odflt _ _).
-    have Hbl:= pblock_mem (setpart_cover P x).
-    have:= setpartP P => /and3P [] _ _.
-    by apply contra => /eqP <-.
+    apply/and3P; split.
+    - apply/eqP/setP => x; rewrite /cover.
+      case: (altP (#|C| =P 0)) => HT.
+      + by rewrite big_set0 (cards0_eq HT).
+      + by rewrite big_set1.
+    - apply/trivIsetP => A B.
+      case: (altP (#|C| =P 0)) => HT; first by rewrite inE.
+      rewrite !in_set1 => /eqP -> /eqP ->.
+      by rewrite eq_refl.
+    - case: (altP (#|C| =P 0)); first by rewrite inE.
+      rewrite in_set1; apply contra => /eqP <-.
+      by rewrite cards0.
   Qed.
 
-  Lemma inj_finer_setpartP x0 (P1 P2 : setpart T) (S : {set T}) :
-    is_finer P1 P2 -> S \in P2 -> (inj_finer_setpart x0 P1 S) \subset S.
+  Definition fullpart := SetPart fullpartP.
+
+  Lemma is_finer_full (P : setpart C) : is_finer P fullpart.
   Proof.
-    move/is_finerP => Hfin HS.
-    rewrite /inj_finer_setpart.
-    case: pickP => [/= x Hx | Habs].
-    - have:= pblock_mem (setpart_cover P1 x).
-      move=> /Hfin {Hfin} [] S2 [] HS2 Hsubs.
-      suff -> : S = S2 by [].
-      have:= setpart_cover P1 x.
-      rewrite -mem_pblock => /(subsetP Hsubs) Hx2.
-      exact: (@setpart_inter _ P2 _ _ x).
-    - exfalso.
-      have {Habs} HS0 : S = set0 by apply/setP => x; rewrite Habs inE.
-      have:= setpartP P2 => /and3P [] _ _.
-      by rewrite -HS0 HS.
+    rewrite /fullpart; apply/is_finerP => S HS /=.
+    case: (altP (#|C| =P 0)) => [/cards0_eq HC | HC].
+    - exfalso; subst C; have:= setpart0_eq_set0 P.
+      move=> /eqP; rewrite eqE /= => /eqP HP.
+      by move: HS; rewrite HP inE.
+    - exists C; first by rewrite in_set1.
+      apply/subsetP => x Hx.
+      have:= setpartP P => /and3P [] /eqP {3}<- _ _.
+      rewrite /cover; apply/bigcupP; by exists S.
+    Qed.
+
+End Full.
+
+
+Section CardInjection.
+
+  Variable T : finType.
+  Variable C : {set T}.
+
+  Implicit Type P : setpart C.
+  Implicit Type S : {set T}.
+
+  Section DefInjToFiner.
+
+    Variable c0 : T.
+    Hypothesis Hc0 : c0 \in C.
+
+    Definition inj_to_finer P S := pblock P (odflt c0 [pick x in S]).
+
+    Lemma inj_to_finer_non0 P S : S \subset C -> inj_to_finer P S != set0.
+    Proof.
+      rewrite /inj_to_finer => HS.
+      case: pickP => [/= x Hx | Hx] /=.
+      - apply/set0Pn; exists x.
+        rewrite mem_pblock -setpart_cover.
+        by move: HS => /subsetP ->.
+      - apply/set0Pn; exists c0.
+        by rewrite mem_pblock -setpart_cover.
+    Qed.
+
+    Lemma inj_to_finerP P1 P2 S :
+      is_finer P1 P2 -> S \in P2 -> inj_to_finer P1 S \subset S.
+    Proof.
+      move/is_finerP => Hfin HS.
+      rewrite /inj_to_finer.
+      case: pickP => [/= x Hx | Habs].
+      - have: S \subset \bigcup_(B in P2) B by apply (bigcup_max S).
+        move=> /subsetP/(_ _ Hx).
+        rewrite -/(cover P2) (cover_partition (setpartP P2)) => HxC.
+        have:= HxC; rewrite -{1}(cover_partition (setpartP P1)) => /pblock_mem.
+        move=> /Hfin {Hfin} [] S2 HS2 Hsubs.
+        suff -> : S = S2 by [].
+        move: HxC; rewrite (setpart_cover P1) -mem_pblock => /(subsetP Hsubs) Hx2.
+        exact: (@setpart_inter _ _ P2 _ _ x).
+      - exfalso.
+        have {Habs} HS0 : S = set0 by apply/setP => x; rewrite Habs inE.
+        have:= setpartP P2 => /and3P [] _ _.
+        by rewrite -HS0 HS.
+    Qed.
+
+    Lemma inj_to_finer_subset P1 P2 :
+      is_finer P1 P2 -> [set inj_to_finer P1 x | x in P2] \subset P1.
+    Proof.
+      move=> Hfin; apply/subsetP => S /imsetP [] S2 HS2 ->.
+      rewrite /inj_to_finer; apply pblock_mem.
+      rewrite -setpart_cover.
+      case: pickP => /= [x Hx | //].
+      have: S2 \subset \bigcup_(B in P2) B by apply (bigcup_max S2).
+      move=> /subsetP/(_ _ Hx).
+      by rewrite -/(cover P2) (cover_partition (setpartP P2)).
+    Qed.
+
+    Lemma is_finer_inj P1 P2 :
+      is_finer P1 P2 -> {in P2 &, injective (inj_to_finer P1)}.
+    Proof.
+      move=> H S1 S2 HS1 HS2 Heq.
+      have: S1 \subset C.
+        rewrite -(cover_partition (setpartP P2)) /cover.
+        exact: (bigcup_max S1).
+      move/(inj_to_finer_non0 P1) => /set0Pn [] x Hx.
+      have:= inj_to_finerP H HS1 => /subsetP/(_ _ Hx) Hx1.
+      rewrite {}Heq in Hx.
+      have:= inj_to_finerP H HS2 => /subsetP/(_ _ Hx) {Hx} Hx2.
+      exact: (@setpart_inter _ _ P2 _ _ x).
+    Qed.
+
+    End DefInjToFiner.
+
+  Lemma is_finer_card_gt P1 P2 : is_finer P1 P2 -> #|P1| >= #|P2|.
+  Proof.
+    move=> Hfin.
+    case: (set_0Vmem C) => [HC| [] c0 Hc0].
+    subst C; by rewrite (setpart0_eq_set0 P1) (setpart0_eq_set0 P2).
+    have:= is_finer_inj Hc0 Hfin => /card_in_imset <-.
+    apply subset_leqif_cards;
+    exact: inj_to_finer_subset.
   Qed.
 
-  Lemma is_finer_inj x0 (P1 P2 : setpart T) :
-    is_finer P1 P2 -> {in P2 &, injective (inj_finer_setpart x0 P1)}.
+  Lemma setpart_card P : #|P| <= #|C|.
   Proof.
-    move=> H S1 S2 HS1 HS2 Heq.
-    have:= inj_finer_setpart_non0 x0 P1 S1 => /set0Pn [] x Hx.
-    have := inj_finer_setpartP x0 H HS1 => /subsetP/(_ _ Hx) Hx1.
-    rewrite {}Heq in Hx.
-    have:= inj_finer_setpartP x0 H HS2 => /subsetP/(_ _ Hx) {Hx} Hx2.
-    exact: (@setpart_inter _ P2 _ _ x).
-  Qed.
-
-  Lemma is_finer_card (P1 P2 : setpart T) :
-    is_finer P1 P2 -> #|P1| >= #|P2|.
-  Proof.
-    move Hn : #|T| => n.
-    case: n Hn P1 P2 => [|n] Hn P1 P2.
-    - by rewrite (setpart0_eq_set0 Hn P1) (setpart0_eq_set0 Hn P2) /= cards0.
-    - have : #|T| > 0 by rewrite Hn.
-      move=> /card_gt0P [] x Hx.
-      move=> /(is_finer_inj (x0 := x))/card_in_imset <-.
-      apply subset_leqif_cards; apply/subsetP => S /imsetP [] S2 HS2 ->.
-      rewrite /inj_finer_setpart; apply pblock_mem.
-      exact: setpart_cover.
-  Qed.
-
-  Lemma setpart_card (p : setpart T) : #|p| <= #|T|.
-  Proof.
-    have:= is_finer_card (is_finer_triv p).
+    have:= is_finer_card_gt (is_finer_triv P).
     by rewrite card_imset; last exact: set1_inj.
   Qed.
 
-  Lemma is_finer_card_eq (P1 P2 : setpart T) :
-    is_finer P1 P2 -> #|P1| = #|P2| -> P1 = P2.
+  Lemma is_finer_card_eq P1 P2 : is_finer P1 P2 -> #|P1| = #|P2| -> P1 = P2.
   Proof.
-    move Hn : #|T| => n.
-    case: n Hn P1 P2 => [|n] Hn P1 P2.
-    - by rewrite (setpart0_eq_set0 Hn P1) (setpart0_eq_set0 Hn P2) /= cards0.
-    - have : #|T| > 0 by rewrite Hn.
-      move=> /card_gt0P [] x Hx.
-      move=> /(is_finer_inj (x0 := x))/card_in_imset <-.
-      admit.
-      (* apply subset_leqif_cards; apply/subsetP => S /imsetP [] S2 HS2 ->.
-      rewrite /inj_finer_setpart; apply pblock_mem.
-      exact: setpart_cover. *)
+    case: (set_0Vmem C) P1 P2 => [-> | [c0 Hc0]] P1 P2 Hfin Hcard.
+      by rewrite (setpart0_eq_set0 P1) (setpart0_eq_set0 P2).
+    have Hinj : [set inj_to_finer c0 P1 x | x in P2] = P1.
+    apply/eqP; rewrite eqEcard.
+    have:= is_finer_inj Hc0 Hfin => /card_in_imset; rewrite -Hcard => ->.
+      rewrite leqnn andbT.
+      exact: inj_to_finer_subset.
+    have /leqif_sum : forall S, S \in P2 ->
+       #|inj_to_finer c0 P1 S| <= #|S| ?=
+          iff (#|inj_to_finer c0 P1 S| == #|S|).
+      move=> S HS; split; last by [].
+      apply subset_leqif_cards; exact: (inj_to_finerP _ Hfin).
+    have:= setpartP P2 => /and3P [] /eqP Hcov2 HtrivP2 _.
+    move: HtrivP2; rewrite /trivIset => /eqP ->.
+    rewrite Hcov2.
+    rewrite -(big_imset (fun x : {set T} => #|x|) (is_finer_inj Hc0 Hfin)) /=.
+    rewrite Hinj.
+    have:= setpartP P1 => /and3P [] /eqP Hcov1 HtrivP1 _.
+      move: HtrivP1; rewrite /trivIset => /eqP ->.
+      rewrite Hcov1 => [] [] _; rewrite eq_refl => /esym/forall_inP Hall.
+      have {Hall} Hall S : S \in P2 -> inj_to_finer c0 P1 S = S.
+      move=> Hin.
+      apply/setP/(subset_cardP (eqP (Hall _ Hin))).
+      exact: (inj_to_finerP _ Hfin).
+    apply/eqP; rewrite eqE /=; rewrite -{}Hinj.
+    apply/eqP/setP => S; apply/idP/idP.
+    - move=> /imsetP [] U HU -> {S}.
+      by rewrite (Hall _ HU).
+    - move=> Hin.
+      apply/imsetP; exists S; first exact Hin.
+      apply esym; exact: Hall.
   Qed.
 
-  Lemma is_finer_card_final (P1 P2 : setpart T) :
+  Lemma is_finer_card (P1 P2 : setpart C) :
     is_finer P1 P2 -> (#|P2| <= #|P1| ?= iff (P1 == P2)).
   Proof.
-    move=> H; rewrite /leqif -pair_andP; split; first exact: is_finer_card.
+    move=> H; rewrite /leqif -pair_andP; split; first exact: is_finer_card_gt.
     apply/idP/idP; last by move/eqP ->.
     by move/eqP/esym/(is_finer_card_eq H) ->.
   Qed.
 
-End Card.
-
+End CardInjection.
 
 
 Require Import ordtype.
@@ -486,8 +529,9 @@ Require Import ordtype.
 Section RefineOrder.
 
 Variable T : finType.
+Variable C : {set T}.
 
-Fact is_finer_porder : PartOrder.axiom (fun P1 P2 : setpart T => is_finer P1 P2).
+Fact is_finer_porder : PartOrder.axiom (fun P1 P2 : setpart C => is_finer P1 P2).
 Proof.
   split.
   - move=> p; exact: is_finer_refl.
@@ -496,8 +540,7 @@ Proof.
 Qed.
 
 Definition setpart_pordMixin := PartOrder.Mixin is_finer_porder.
-Canonical setpart_pordType := Eval hnf in POrdType (setpart T) setpart_pordMixin.
+Canonical setpart_pordType := Eval hnf in POrdType (setpart C) setpart_pordMixin.
 
 End RefineOrder.
-
 
