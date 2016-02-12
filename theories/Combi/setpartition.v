@@ -4,6 +4,8 @@ Require Import bigop path finset.
 
 Set Implicit Arguments.
 Unset Strict Implicit.
+Unset Printing Implicit Defensive.
+
 
 Section Finer.
 
@@ -36,9 +38,16 @@ Section Finer.
     exact: (subset_trans H12 H23).
   Qed.
 
+  Lemma is_finer_setUl P1 P2 P :
+    is_finer P1 P -> is_finer P2 P -> is_finer (P1 :|: P2) P.
+  Proof.
+    move=> /is_finerP H1 /is_finerP H2; apply/is_finerP => S.
+    by rewrite inE => /orP [/H1 | /H2].
+  Qed.
+
 End Finer.
 
-
+Hint Resolve is_finer_refl.
 
 Section Restriction.
 
@@ -156,7 +165,7 @@ Section Defs.
   Lemma setpartP P : partition P C.
   Proof. by case: P. Qed.
 
-  Lemma setpart_cover P x : x \in C = (x \in cover P).
+  Lemma setpart_cover P : cover P = C.
   Proof. by have:= setpartP P => /and3P [] /eqP ->. Qed.
 
   Lemma setpart_inter P S1 S2 x :
@@ -217,7 +226,7 @@ Section Defs.
   Lemma is_finer_triv P : is_finer trivpart P.
   Proof.
     apply/is_finerP => s /imsetP [] x Hx -> {s}.
-    move: Hx; rewrite (setpart_cover P) /cover => /bigcupP [] S HS HxS.
+    move: Hx; rewrite -(setpart_cover P) /cover => /bigcupP [] S HS HxS.
     exists S; first by [].
     by apply/subsetP => y; rewrite !inE => /eqP ->.
   Qed.
@@ -388,7 +397,7 @@ Section Full.
 End Full.
 
 
-Section CardInjection.
+Section FinerCard.
 
   Variable T : finType.
   Variable C : {set T}.
@@ -408,10 +417,10 @@ Section CardInjection.
       rewrite /inj_to_finer => HS.
       case: pickP => [/= x Hx | Hx] /=.
       - apply/set0Pn; exists x.
-        rewrite mem_pblock -setpart_cover.
+        rewrite mem_pblock setpart_cover.
         by move: HS => /subsetP ->.
       - apply/set0Pn; exists c0.
-        by rewrite mem_pblock -setpart_cover.
+        by rewrite mem_pblock setpart_cover.
     Qed.
 
     Lemma inj_to_finerP P1 P2 S :
@@ -426,7 +435,7 @@ Section CardInjection.
         have:= HxC; rewrite -{1}(cover_partition (setpartP P1)) => /pblock_mem.
         move=> /Hfin {Hfin} [] S2 HS2 Hsubs.
         suff -> : S = S2 by [].
-        move: HxC; rewrite (setpart_cover P1) -mem_pblock => /(subsetP Hsubs) Hx2.
+        move: HxC; rewrite -(setpart_cover P1) -mem_pblock => /(subsetP Hsubs) Hx2.
         exact: (@setpart_inter _ _ P2 _ _ x).
       - exfalso.
         have {Habs} HS0 : S = set0 by apply/setP => x; rewrite Habs inE.
@@ -439,7 +448,7 @@ Section CardInjection.
     Proof.
       move=> Hfin; apply/subsetP => S /imsetP [] S2 HS2 ->.
       rewrite /inj_to_finer; apply pblock_mem.
-      rewrite -setpart_cover.
+      rewrite setpart_cover.
       case: pickP => /= [x Hx | //].
       have: S2 \subset \bigcup_(B in P2) B by apply (bigcup_max S2).
       move=> /subsetP/(_ _ Hx).
@@ -521,7 +530,338 @@ Section CardInjection.
     by move/eqP/esym/(is_finer_card_eq H) ->.
   Qed.
 
-End CardInjection.
+End FinerCard.
+
+
+
+Section GreatestLowerBound.
+
+  Variable T : finType.
+  Variable C : {set T}.
+
+  Implicit Type P : setpart C.
+  Implicit Type S : {set T}.
+
+  Definition glb P1 P2 := [set S1 :&: S2 | S1 in P1, S2 in P2] :\ set0.
+
+  Lemma glbP P1 P2 : partition (glb P1 P2) C.
+  Proof.
+    rewrite /glb; apply/and3P; split.
+    - rewrite /cover; apply/eqP/setP => x.
+      apply/idP/idP => [/bigcupP [] S | HC].
+      + rewrite !inE => /andP [] _ /imset2P [] S1 S2 HS1 _ HStmp.
+        subst S; rewrite inE => /andP [] Hx1 _.
+        rewrite -(setpart_cover P1); apply/bigcupP; by exists S1.
+      + have:= HC; rewrite -{1}(setpart_cover P1) => /bigcupP [] S1 HS1 Hx1.
+        move:  HC; rewrite -{1}(setpart_cover P2) => /bigcupP [] S2 HS2 Hx2.
+        apply/bigcupP; exists (S1 :&: S2); rewrite !inE ?Hx1 ?Hx2 //.
+        apply/andP; split; first by apply/set0Pn; exists x; rewrite inE Hx1 Hx2.
+        apply/imset2P; by exists S1 S2.
+    - apply/trivIsetP => U V; rewrite !inE.
+      move=> /andP [] HU1n0 /imset2P [] U1 U2 HU1 HU2 HU; subst U.
+      move=> /andP [] HV1n0 /imset2P [] V1 V2 HV1 HV2 HV; subst V.
+      apply contraR; rewrite -setI_eq0 => /set0Pn [] x.
+      rewrite !inE => /andP [] /andP [] xU1 xU2 /andP [] xV1 xV2.
+      rewrite (_ : U1 = V1); last exact: (setpart_inter HU1 HV1 xU1 xV1).
+      rewrite (_ : U2 = V2); last exact: (setpart_inter HU2 HV2 xU2 xV2).
+      exact: eq_refl.
+    - by rewrite !inE eq_refl.
+  Qed.
+
+  Definition glb_setpart P1 P2 := SetPart (glbP P1 P2).
+
+  Lemma glb_setpartC P1 P2 : glb_setpart P1 P2 = glb_setpart P2 P1.
+  Proof.
+    apply/eqP; rewrite eqE /=; rewrite /glb.
+    have tmp (P Q : setpart C) :
+      [set U :&: V | U in P, V in Q] \subset
+                                     [set V :&: U | V in Q, U in P].
+      apply/subsetP => x /imset2P [] U V HU HV -> {x}.
+      apply/imset2P; exists V U => //.
+      by rewrite setIC.
+    set A := (X in X :\ _); set B := (X in _ == X :\ _).
+    suff -> : A = B by [].
+    apply/eqP; by rewrite eqEsubset !tmp.
+  Qed.
+
+  Lemma is_finer_glbl P1 P2 : is_finer (glb_setpart P1 P2) P1.
+  Proof.
+    apply/is_finerP => S.
+    rewrite !inE => /andP [] _ /imset2P [] S1 S2 H1 H2 -> {S}.
+    exists S1; first by [].
+    exact: subsetIl.
+  Qed.
+
+  Lemma is_finer_glbr P1 P2 : is_finer (glb_setpart P1 P2) P2.
+  Proof. rewrite glb_setpartC; exact: is_finer_glbl. Qed.
+
+  Lemma glb_setpartP P1 P2 P :
+    is_finer P P1 -> is_finer P P2 -> is_finer P (glb_setpart P1 P2).
+  Proof.
+    move=> /is_finerP Hfin1 /is_finerP Hfin2.
+    apply/is_finerP => S HS.
+    move/(_ _ HS): Hfin1 => [] U1 H1 HU1.
+    move/(_ _ HS): Hfin2 => [] U2 H2 HU2.
+    exists (U1 :&: U2).
+    - rewrite !inE; apply/andP; split.
+      + apply/set0Pn.
+        have:= setpartP P => /and3P [] _ _ Hn0.
+        have: S != set0 by move: Hn0; apply contra => /eqP <-.
+        move/set0Pn => [] x Hx.
+        exists x; rewrite inE.
+        move: HU1 => /subsetP -> //=.
+        by move: HU2 => /subsetP ->.
+      + by apply/imset2P; exists U1 U2.
+    - by rewrite subsetI HU1 HU2.
+  Qed.
+
+End GreatestLowerBound.
+
+
+Section TrivIsetClosure.
+
+  Variable T : finType.
+
+  Implicit Types (A B : {set T}) (AB : {set T} * {set T}) (P : {set {set T}}).
+
+  Let set00 : {set T} * {set T} := (set0, set0).
+  Definition inIset P AB :=
+    [&& (AB.1 \in P), (AB.2 \in P), (AB.1 != AB.2) & (AB.1 :&: AB.2 != set0)].
+
+  Lemma inIset_ex P : exists AB, ~~ trivIset P ==> inIset P AB.
+  Proof.
+    suff: ~~ trivIset P -> [exists AB, inIset P AB].
+      by case: (trivIset _) / boolP => /= _; [exists set00|move/(_ erefl)/existsP].
+    apply contraR; rewrite negb_exists_in => /forallP hdis.
+    apply/trivIsetP => A B HA HB AB_neq; have := hdis (A,B).
+    by rewrite HA HB AB_neq /= setI_eq0 negbK.
+  Qed.
+
+  Lemma inIset_exC P : { AB | ~~ trivIset P ==> inIset P AB }.
+  Proof. exact : sigW (inIset_ex _). Qed.
+
+  Definition gen_Iset P := if trivIset P then set00 else projT1 (inIset_exC P).
+
+  Lemma gen_IsetP P : ~~ trivIset P -> inIset P (gen_Iset P).
+  Proof.
+      rewrite /gen_Iset.
+      by case: ifP => // /negbT tsn _; case: inIset_exC => x; rewrite tsn.
+  Qed.
+
+  Section Replace_byU.
+
+    Variable P : {set {set T}}.
+    Variables A B : {set T}.
+    Hypothesis HinI : inIset P (A, B).
+
+    Definition replace_byU := (A :|: B) |: P :\: [set A; B].
+
+    Lemma card_replace_byU_lt : #|replace_byU| < #|P|.
+    Proof.
+      rewrite /replace_byU; move: HinI => /and4P [] /= HA HB Hneq _.
+      rewrite {2}(_ : P = (P :\: [set A; B]) :|: [set A; B]); first last.
+        apply/setP => S; rewrite !inE.
+        case: eqP => [-> | _] //=; case: eqP => [-> | _] //=.
+        by rewrite orbF.
+      set P' := (P :\: [set A; B]).
+      rewrite cardsU [X in _ < X]cardsU cards2 Hneq cards1 /=.
+      rewrite (_ : P' :&: [set A; B] = set0); first last.
+        apply/eqP; rewrite -subset0; apply/subsetP => S.
+        rewrite !inE.
+        case: eqP => [-> | _] //=; case: eqP => [-> | _] //=.
+        by rewrite andbF.
+      rewrite cards0 subn0 addnC.
+      apply (@leq_ltn_trans (#|P'| +1)); first exact: leq_subr.
+      by rewrite [_ + 2]addnS.
+    Qed.
+
+    Lemma cover_replace_byU : cover (replace_byU) = cover P.
+    Proof.
+      move: HinI => /and4P [] /= HA HB _ _.
+      rewrite /cover/replace_byU.
+      rewrite bigcup_setU big_set1.
+      apply/setP => x; rewrite !inE.
+      case: (boolP (x \in A)) => HxA /=.
+        apply esym; apply/bigcupP; by exists A.
+      case: (boolP (x \in B)) => HxB /=.
+        apply esym; apply/bigcupP; by exists B.
+      apply/idP/idP => /bigcupP [] S.
+      - rewrite !inE negb_or => /andP [] _ HS Hx.
+        apply/bigcupP; by exists S.
+      - move=> HS Hx; apply/bigcupP; exists S; last exact Hx.
+        rewrite !inE HS andbT.
+        have /negbTE -> : S != A.
+          by move: HxA; apply contra => /eqP <-.
+        have /negbTE -> : S != B.
+          by move: HxB; apply contra => /eqP <-.
+        by [].
+    Qed.
+
+    Lemma is_finer_replace_byU : is_finer P replace_byU.
+    Proof.
+      apply/is_finerP => S HS.
+      rewrite /replace_byU.
+      case: (altP (S =P A)) => [HA | /negbTE HA].
+        subst S; exists (A :|: B); first by rewrite !inE eq_refl.
+        exact: subsetUl.
+      case: (altP (S =P B)) => [HB | /negbTE HB].
+        subst S; exists (A :|: B); first by rewrite !inE eq_refl.
+        exact: subsetUr.
+      exists S; last by [].
+      by rewrite !inE HA HB HS /= orbT.
+    Qed.
+
+    Lemma trivIset_is_finer_replace_byU Q :
+      trivIset Q -> is_finer P Q -> is_finer replace_byU Q.
+    Proof.
+      move: HinI => /and4P [] /= HA HB Hneq Hn0.
+      rewrite /replace_byU => /trivIsetP Htriv /is_finerP Hfin.
+      apply/is_finerP => S; rewrite !inE => /orP [/eqP -> |].
+      - case: (Hfin _ HA) => U HU HAU.
+        case: (Hfin _ HB) => V HV HBV.
+        have HUV : U = V.
+          apply/eqP; apply (contraR (Htriv _ _ HU HV)).
+          rewrite -setI_eq0; apply/set0Pn.
+          move: Hn0 => /set0Pn [] x; rewrite inE => /andP [] HxA HxB.
+          exists x; rewrite inE.
+          by move: HAU HBV => /subsetP -> // /subsetP ->.
+        subst V; exists U; first exact: HU.
+        rewrite -(setUid U); exact: setUSS.
+      - rewrite negb_or => /andP [] /andP [] HSA HSB /Hfin [] U HUQ HSU.
+        by exists U.
+    Qed.
+
+  End Replace_byU.
+
+
+  Definition UIset P :=
+    if trivIset P then P
+    else let: (A, B) := gen_Iset P in replace_byU P A B.
+
+  Lemma UIset_triv P : trivIset P -> UIset P = P.
+  Proof. by rewrite /UIset; case: ifP. Qed.
+
+  Lemma IUset_card_lt P : ~~ trivIset P -> #|UIset P| < #|P|.
+  Proof.
+    move=> htriv; rewrite /UIset/gen_Iset.
+    case: inIset_exC => -[A B]; rewrite !htriv /= (negbTE htriv) /=.
+    exact: card_replace_byU_lt.
+  Qed.
+
+  Fixpoint lubs_rec P n :=
+    if n is n'.+1 then
+      if trivIset P then P
+      else lubs_rec (UIset P) n'
+    else P.
+  Definition lubs P := lubs_rec P #|P|.
+
+  Lemma trivIset_lubs_rec P n : n >= #|P| -> trivIset (lubs_rec P n).
+  Proof.
+    elim: n P => [| n IHn] P //=.
+      rewrite leqn0 cards_eq0 => /eqP ->.
+      by rewrite /trivIset /cover !big_set0 cards0.
+    case: (boolP (trivIset P)) => [// | /IUset_card_lt/leq_trans H/H{H}].
+    rewrite ltnS; exact: IHn.
+  Qed.
+  Lemma trivIset_lubs P : trivIset (lubs P).
+  Proof. exact: trivIset_lubs_rec. Qed.
+
+  Lemma set0_notin_lubs P : set0 \notin P -> set0 \notin (lubs P).
+  Proof.
+    apply contra.
+    rewrite /lubs; elim: #|P| {1 3}P => [// | n IHn] {P} P /=.
+    case: (boolP (trivIset P)) => [// | Hntriv /IHn {IHn}].
+    have:= gen_IsetP Hntriv.
+    rewrite /UIset; move: Hntriv => /negbTE ->.
+    case: (gen_Iset P) => A B /and4P /= [] HA HB Hneq HAB.
+    rewrite /replace_byU !inE => /orP [].
+    - by rewrite eq_sym setU_eq0 => /andP [] /eqP <-.
+    - by rewrite negb_or => /andP [].
+  Qed.
+
+  Lemma cover_lubs P : cover (lubs P) = cover P.
+  Proof.
+    rewrite /lubs; elim: #|P| {1 3}P => [// | n IHn] {P} P /=.
+    case: (boolP (trivIset P)) => [// | Hntriv].
+    rewrite IHn.
+    have:= gen_IsetP Hntriv.
+    rewrite /UIset; move: Hntriv => /negbTE ->.
+    case: (gen_Iset P) => A B.
+    exact: cover_replace_byU.
+  Qed.
+
+  Lemma is_finer_lubs P : is_finer P (lubs P).
+  Proof.
+    rewrite /lubs; elim: #|P| {1 2}P => [| n IHn] {P} P /=.
+      exact: is_finer_refl.
+    case: (boolP (trivIset P)) => [_ | /negbTE Htriv]; first exact: is_finer_refl.
+    apply: (is_finer_trans _ (IHn _)).
+    rewrite /UIset Htriv; case: (gen_Iset P) => A B.
+    exact: is_finer_replace_byU.
+  Qed.
+
+  Lemma trivIset_is_finer_lubs P Q :
+    trivIset Q -> is_finer P Q -> is_finer (lubs P) Q.
+  Proof.
+    move=> HtrivQ.
+    rewrite /lubs; elim: #|P| {1 2}P => [// | n IHn] {P} P /=.
+    case: (boolP (trivIset P)) => [// | HntrivP].
+    have:= gen_IsetP HntrivP.
+    rewrite /UIset; move: HntrivP => /negbTE ->.
+    case: (gen_Iset P) => A B /trivIset_is_finer_replace_byU/(_ _ HtrivQ).
+    move=> H/H{H}; exact: IHn.
+  Qed.
+
+End TrivIsetClosure.
+
+
+Section LeastUpperBound.
+
+  Variable T : finType.
+  Variable C : {set T}.
+
+  Implicit Type P : setpart C.
+  Implicit Type S : {set T}.
+
+  Definition lub P1 P2 := lubs (P1 :|: P2).
+
+  Lemma lubP P1 P2 : partition (lub P1 P2) C.
+  Proof.
+    rewrite /lub; apply/and3P; split.
+    - by rewrite cover_lubs /cover bigcup_setU -!/(cover _) !setpart_cover setUid.
+    - exact: trivIset_lubs.
+    - apply set0_notin_lubs; rewrite inE negb_or.
+      have:= setpartP P1 => /and3P [] _ _ -> /=.
+      by have:= setpartP P2 => /and3P [].
+  Qed.
+
+  Definition lub_setpart P1 P2 := SetPart (lubP P1 P2).
+
+  Lemma lub_setpartC P1 P2 : lub_setpart P1 P2 = lub_setpart P2 P1.
+  Proof. by apply/eqP; rewrite eqE /= /lub setUC. Qed.
+
+  Lemma is_finer_lubl P1 P2 : is_finer P1 (lub_setpart P1 P2).
+  Proof.
+    rewrite /= /lub.
+    apply: (is_finer_trans _ (is_finer_lubs _)).
+    apply/is_finerP => S HS.
+    by exists S; first by rewrite inE HS.
+  Qed.
+
+  Lemma is_finer_lubr P1 P2 : is_finer P2 (lub_setpart P1 P2).
+  Proof. rewrite lub_setpartC; exact: is_finer_lubl. Qed.
+
+  Lemma lub_setpartP P1 P2 P :
+    is_finer P1 P -> is_finer P2 P -> is_finer (lub_setpart P1 P2) P.
+  Proof.
+    rewrite /= /lub => H1 H2.
+    apply trivIset_is_finer_lubs.
+    - by have:= setpartP P => /and3P [].
+    - exact: is_finer_setUl.
+  Qed.
+
+End LeastUpperBound.
+
 
 
 Require Import ordtype.
@@ -543,4 +883,3 @@ Definition setpart_pordMixin := PartOrder.Mixin is_finer_porder.
 Canonical setpart_pordType := Eval hnf in POrdType (setpart C) setpart_pordMixin.
 
 End RefineOrder.
-
