@@ -21,12 +21,12 @@ Section Finer.
       (is_finer P1 P2).
   Proof.
     apply (iffP forall_inP) => H s1 /H{H}.
-    - by move/exists_inP => [] s2 H1 H2; exists s2.
-    - by move=> [] s2 H1 H2; apply/exists_inP; exists s2.
+    - by move/exists_inP => [s2 H1 H2]; exists s2.
+    - by move=> [s2 H1 H2]; apply/exists_inP; exists s2.
   Qed.
 
   Lemma is_finer_refl : reflexive is_finer.
-  Proof. by move=> p; apply/is_finerP => s1 H1; exists s1. Qed.
+  Proof. by move=> p; apply/is_finerP => [s1 H1]; exists s1. Qed.
 
   Lemma is_finer_trans : transitive is_finer.
   Proof.
