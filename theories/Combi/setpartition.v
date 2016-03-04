@@ -859,7 +859,7 @@ End LeastUpperBound.
 
 
 
-Require Import ordtype.
+Require Import ordtype latticetype.
 
 Section RefineOrder.
 
@@ -877,4 +877,42 @@ Qed.
 Definition setpart_pordMixin := PartOrder.Mixin is_finer_porder.
 Canonical setpart_pordType := Eval hnf in POrdType (setpart C) setpart_pordMixin.
 
+Lemma glb_specP (P Q : setpart C) : meet_spec P Q (glb_setpart P Q).
+Proof.
+  constructor.
+  - exact: is_finer_glbl.
+  - exact: is_finer_glbr.
+  - exact: glb_setpartP.
+Qed.
+
+Lemma lub_specP (P Q : setpart C) : join_spec P Q (lub_setpart P Q).
+Proof.
+  constructor.
+  - exact: is_finer_lubl.
+  - exact: is_finer_lubr.
+  - exact: lub_setpartP.
+Qed.
+
+Definition setpart_semilatticeMixin := Semilattice.Mixin glb_specP.
+Canonical setpart_semilatticeType :=
+  Eval hnf in SemilatticeType (setpart C) setpart_semilatticeMixin.
+
+Lemma setpart_meetE2 (P Q : setpart C) : meet P Q = glb_setpart P Q.
+Proof. by []. Qed.
+
+Lemma meet_fullpart (P : setpart C) : meet (fullpart C) P = P.
+Proof.
+  apply/eqP;rewrite meetC -meet_leE.
+  exact: is_finer_full.
+Qed.
+
+Lemma meet_trivpart (P : setpart C) : meet (trivpart C) P = (trivpart C).
+Proof.
+  apply/eqP;rewrite -meet_leE.
+  exact: is_finer_triv.
+Qed.
+
 End RefineOrder.
+
+
+

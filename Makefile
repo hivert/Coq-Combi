@@ -79,6 +79,7 @@ VFILES:= theories/Basic/combclass.v\
   theories/Basic/congr.v\
   theories/Basic/ordcast.v\
   theories/Basic/ordtype.v\
+  theories/Basic/latticetype.v\
   theories/Combi/partition.v\
   theories/Combi/permuted.v\
   theories/Combi/skewtab.v\
