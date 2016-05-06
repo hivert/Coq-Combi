@@ -41,7 +41,7 @@
 </g>
 </g>
 <!-- combclass&#45;&gt;tools -->
-<g id="edge56" class="edge"><title>combclass&#45;&gt;tools</title>
+<g id="edge8" class="edge"><title>combclass&#45;&gt;tools</title>
 <path fill="none" stroke="black" d="M1132.1,-71.6966C1141.61,-63.0503 1153.27,-52.4486 1163.63,-43.027"/>
 <polygon fill="black" stroke="black" points="1166.2,-45.4209 1171.25,-36.1043 1161.49,-40.2413 1166.2,-45.4209"/>
 </g>
@@ -62,7 +62,7 @@
 </g>
 </g>
 <!-- congr&#45;&gt;permuted -->
-<g id="edge54" class="edge"><title>congr&#45;&gt;permuted</title>
+<g id="edge10" class="edge"><title>congr&#45;&gt;permuted</title>
 <path fill="none" stroke="black" d="M1508.44,-143.876C1493.14,-134.724 1474.12,-123.342 1457.65,-113.485"/>
 <polygon fill="black" stroke="black" points="1459.17,-110.32 1448.79,-108.19 1455.58,-116.327 1459.17,-110.32"/>
 </g>
@@ -75,7 +75,7 @@
 </g>
 </g>
 <!-- congr&#45;&gt;vectNK -->
-<g id="edge55" class="edge"><title>congr&#45;&gt;vectNK</title>
+<g id="edge11" class="edge"><title>congr&#45;&gt;vectNK</title>
 <path fill="none" stroke="black" d="M1545.71,-143.697C1549.7,-135.728 1554.51,-126.1 1558.93,-117.264"/>
 <polygon fill="black" stroke="black" points="1562.17,-118.614 1563.51,-108.104 1555.91,-115.483 1562.17,-118.614"/>
 </g>
@@ -96,7 +96,7 @@
 </g>
 </g>
 <!-- ordtype&#45;&gt;tools -->
-<g id="edge53" class="edge"><title>ordtype&#45;&gt;tools</title>
+<g id="edge9" class="edge"><title>ordtype&#45;&gt;tools</title>
 <path fill="none" stroke="black" d="M1248.78,-71.6966C1239.15,-63.0503 1227.33,-52.4486 1216.84,-43.027"/>
 <polygon fill="black" stroke="black" points="1218.9,-40.1786 1209.12,-36.1043 1214.23,-45.3883 1218.9,-40.1786"/>
 </g>
@@ -117,17 +117,17 @@
 </g>
 </g>
 <!-- Yamanouchi&#45;&gt;partition -->
-<g id="edge38" class="edge"><title>Yamanouchi&#45;&gt;partition</title>
+<g id="edge55" class="edge"><title>Yamanouchi&#45;&gt;partition</title>
 <path fill="none" stroke="black" d="M1013.2,-215.697C1007.56,-207.474 1000.71,-197.483 994.494,-188.421"/>
 <polygon fill="black" stroke="black" points="997.334,-186.372 988.792,-180.104 991.56,-190.331 997.334,-186.372"/>
 </g>
 <!-- partition&#45;&gt;combclass -->
-<g id="edge50" class="edge"><title>partition&#45;&gt;combclass</title>
+<g id="edge52" class="edge"><title>partition&#45;&gt;combclass</title>
 <path fill="none" stroke="black" d="M1010.33,-143.876C1028.53,-134.512 1051.25,-122.814 1070.7,-112.803"/>
 <polygon fill="black" stroke="black" points="1072.38,-115.878 1079.67,-108.19 1069.17,-109.654 1072.38,-115.878"/>
 </g>
 <!-- partition&#45;&gt;ordtype -->
-<g id="edge51" class="edge"><title>partition&#45;&gt;ordtype</title>
+<g id="edge53" class="edge"><title>partition&#45;&gt;ordtype</title>
 <path fill="none" stroke="black" d="M1017.22,-151.34C1070.46,-138.532 1164.27,-115.966 1220.85,-102.357"/>
 <polygon fill="black" stroke="black" points="1221.72,-105.748 1230.62,-100.007 1220.08,-98.9425 1221.72,-105.748"/>
 </g>
@@ -140,7 +140,7 @@
 </g>
 </g>
 <!-- partition&#45;&gt;sorted -->
-<g id="edge52" class="edge"><title>partition&#45;&gt;sorted</title>
+<g id="edge54" class="edge"><title>partition&#45;&gt;sorted</title>
 <path fill="none" stroke="black" d="M973.85,-143.697C972.417,-135.983 970.695,-126.712 969.098,-118.112"/>
 <polygon fill="black" stroke="black" points="972.507,-117.297 967.24,-108.104 965.624,-118.575 972.507,-117.297"/>
 </g>
@@ -161,7 +161,7 @@
 </g>
 </g>
 <!-- skewtab&#45;&gt;stdtab -->
-<g id="edge49" class="edge"><title>skewtab&#45;&gt;stdtab</title>
+<g id="edge51" class="edge"><title>skewtab&#45;&gt;stdtab</title>
 <path fill="none" stroke="black" d="M1092.87,-575.719C1082.53,-535.365 1053.02,-432.835 1004.06,-360 996.954,-349.425 987.433,-339.321 978.311,-330.825"/>
 <polygon fill="black" stroke="black" points="980.586,-328.164 970.805,-324.091 975.912,-333.374 980.586,-328.164"/>
 </g>
@@ -174,27 +174,27 @@
 </g>
 </g>
 <!-- std&#45;&gt;combclass -->
-<g id="edge43" class="edge"><title>std&#45;&gt;combclass</title>
+<g id="edge48" class="edge"><title>std&#45;&gt;combclass</title>
 <path fill="none" stroke="black" d="M1380.84,-154.54C1332.84,-143.151 1232.27,-119.287 1168.96,-104.264"/>
 <polygon fill="black" stroke="black" points="1169.67,-100.836 1159.14,-101.933 1168.06,-107.647 1169.67,-100.836"/>
 </g>
 <!-- std&#45;&gt;ordtype -->
-<g id="edge44" class="edge"><title>std&#45;&gt;ordtype</title>
+<g id="edge49" class="edge"><title>std&#45;&gt;ordtype</title>
 <path fill="none" stroke="black" d="M1380.74,-147.337C1361.01,-137.476 1333.98,-123.96 1311.34,-112.639"/>
 <polygon fill="black" stroke="black" points="1312.77,-109.441 1302.26,-108.099 1309.64,-115.702 1312.77,-109.441"/>
 </g>
 <!-- std&#45;&gt;permuted -->
-<g id="edge45" class="edge"><title>std&#45;&gt;permuted</title>
+<g id="edge50" class="edge"><title>std&#45;&gt;permuted</title>
 <path fill="none" stroke="black" d="M1411.03,-143.697C1412.35,-135.983 1413.94,-126.712 1415.42,-118.112"/>
 <polygon fill="black" stroke="black" points="1418.89,-118.552 1417.13,-108.104 1411.99,-117.369 1418.89,-118.552"/>
 </g>
 <!-- stdtab&#45;&gt;Yamanouchi -->
-<g id="edge46" class="edge"><title>stdtab&#45;&gt;Yamanouchi</title>
+<g id="edge44" class="edge"><title>stdtab&#45;&gt;Yamanouchi</title>
 <path fill="none" stroke="black" d="M967.85,-287.697C977.237,-279.05 988.747,-268.449 998.976,-259.027"/>
 <polygon fill="black" stroke="black" points="1001.51,-261.454 1006.49,-252.104 996.766,-256.305 1001.51,-261.454"/>
 </g>
 <!-- stdtab&#45;&gt;std -->
-<g id="edge47" class="edge"><title>stdtab&#45;&gt;std</title>
+<g id="edge45" class="edge"><title>stdtab&#45;&gt;std</title>
 <path fill="none" stroke="black" d="M980.251,-295.351C1062.16,-270.012 1283.1,-201.659 1371.13,-174.425"/>
 <polygon fill="black" stroke="black" points="1372.43,-177.688 1380.95,-171.389 1370.36,-171.001 1372.43,-177.688"/>
 </g>
@@ -207,7 +207,7 @@
 </g>
 </g>
 <!-- stdtab&#45;&gt;tableau -->
-<g id="edge48" class="edge"><title>stdtab&#45;&gt;tableau</title>
+<g id="edge46" class="edge"><title>stdtab&#45;&gt;tableau</title>
 <path fill="none" stroke="black" d="M927.805,-287.697C916.974,-278.881 903.645,-268.032 891.903,-258.474"/>
 <polygon fill="black" stroke="black" points="894.042,-255.703 884.077,-252.104 889.623,-261.132 894.042,-255.703"/>
 </g>
@@ -220,22 +220,22 @@
 </g>
 </g>
 <!-- subseq&#45;&gt;combclass -->
-<g id="edge41" class="edge"><title>subseq&#45;&gt;combclass</title>
+<g id="edge42" class="edge"><title>subseq&#45;&gt;combclass</title>
 <path fill="none" stroke="black" d="M603.883,-224.218C643.855,-213.808 712.36,-195.867 771.063,-180 828.938,-164.357 843.088,-159.271 901.063,-144 953.707,-130.133 1013.94,-115.159 1056.72,-104.677"/>
 <polygon fill="black" stroke="black" points="1057.78,-108.021 1066.66,-102.245 1056.11,-101.222 1057.78,-108.021"/>
 </g>
 <!-- subseq&#45;&gt;sorted -->
-<g id="edge42" class="edge"><title>subseq&#45;&gt;sorted</title>
+<g id="edge43" class="edge"><title>subseq&#45;&gt;sorted</title>
 <path fill="none" stroke="black" d="M601.028,-215.971C637.482,-196.469 700.268,-164.567 757.063,-144 813.293,-123.638 880.79,-107.904 923.066,-99.0433"/>
 <polygon fill="black" stroke="black" points="923.903,-102.444 932.988,-96.9931 922.487,-95.5891 923.903,-102.444"/>
 </g>
 <!-- tableau&#45;&gt;partition -->
-<g id="edge40" class="edge"><title>tableau&#45;&gt;partition</title>
+<g id="edge47" class="edge"><title>tableau&#45;&gt;partition</title>
 <path fill="none" stroke="black" d="M890.951,-215.876C905.856,-206.724 924.392,-195.342 940.445,-185.485"/>
 <polygon fill="black" stroke="black" points="942.378,-188.405 949.068,-180.19 938.715,-182.44 942.378,-188.405"/>
 </g>
 <!-- vectNK&#45;&gt;tools -->
-<g id="edge39" class="edge"><title>vectNK&#45;&gt;tools</title>
+<g id="edge56" class="edge"><title>vectNK&#45;&gt;tools</title>
 <path fill="none" stroke="black" d="M1535.02,-79.9273C1523.53,-77.2329 1510.8,-74.3706 1499.06,-72 1401.63,-52.3161 1285.95,-33.743 1227.65,-24.714"/>
 <polygon fill="black" stroke="black" points="1227.86,-21.206 1217.44,-23.1411 1226.79,-28.1242 1227.86,-21.206"/>
 </g>
@@ -256,7 +256,7 @@
 </g>
 </g>
 <!-- Erdos_Szekeres&#45;&gt;Greene_inv -->
-<g id="edge36" class="edge"><title>Erdos_Szekeres&#45;&gt;Greene_inv</title>
+<g id="edge41" class="edge"><title>Erdos_Szekeres&#45;&gt;Greene_inv</title>
 <path fill="none" stroke="black" d="M736.326,-647.876C717.244,-638.469 693.384,-626.708 673.016,-616.667"/>
 <polygon fill="black" stroke="black" points="674.451,-613.472 663.934,-612.19 671.355,-619.751 674.451,-613.472"/>
 </g>
@@ -269,12 +269,12 @@
 </g>
 </g>
 <!-- Qmeasure&#45;&gt;Ccpo -->
-<g id="edge33" class="edge"><title>Qmeasure&#45;&gt;Ccpo</title>
+<g id="edge20" class="edge"><title>Qmeasure&#45;&gt;Ccpo</title>
 <path fill="none" stroke="black" d="M222.485,-359.876C205.172,-350.181 183.392,-337.984 165.114,-327.749"/>
 <polygon fill="black" stroke="black" points="166.624,-324.583 156.188,-322.75 163.203,-330.69 166.624,-324.583"/>
 </g>
 <!-- Qmeasure&#45;&gt;Misc -->
-<g id="edge34" class="edge"><title>Qmeasure&#45;&gt;Misc</title>
+<g id="edge21" class="edge"><title>Qmeasure&#45;&gt;Misc</title>
 <path fill="none" stroke="black" d="M253.557,-359.697C253.778,-351.983 254.043,-342.712 254.288,-334.112"/>
 <polygon fill="black" stroke="black" points="257.787,-334.2 254.574,-324.104 250.79,-334 257.787,-334.2"/>
 </g>
@@ -287,7 +287,7 @@
 </g>
 </g>
 <!-- Qmeasure&#45;&gt;rat_coerce -->
-<g id="edge35" class="edge"><title>Qmeasure&#45;&gt;rat_coerce</title>
+<g id="edge22" class="edge"><title>Qmeasure&#45;&gt;rat_coerce</title>
 <path fill="none" stroke="black" d="M290.002,-359.876C310.553,-350.349 336.314,-338.407 358.152,-328.283"/>
 <polygon fill="black" stroke="black" points="359.644,-331.45 367.244,-324.068 356.7,-325.099 359.644,-331.45"/>
 </g>
@@ -308,7 +308,7 @@
 </g>
 </g>
 <!-- RSident&#45;&gt;hook -->
-<g id="edge31" class="edge"><title>RSident&#45;&gt;hook</title>
+<g id="edge18" class="edge"><title>RSident&#45;&gt;hook</title>
 <path fill="none" stroke="black" d="M344.463,-503.876C327.781,-494.225 306.814,-482.096 289.171,-471.889"/>
 <polygon fill="black" stroke="black" points="290.697,-468.728 280.288,-466.75 287.192,-474.787 290.697,-468.728"/>
 </g>
@@ -321,17 +321,17 @@
 </g>
 </g>
 <!-- RSident&#45;&gt;Schensted -->
-<g id="edge32" class="edge"><title>RSident&#45;&gt;Schensted</title>
+<g id="edge19" class="edge"><title>RSident&#45;&gt;Schensted</title>
 <path fill="none" stroke="black" d="M397.223,-503.871C431.531,-478.497 495.95,-430.854 534.534,-402.318"/>
 <polygon fill="black" stroke="black" points="536.862,-404.95 542.821,-396.189 532.7,-399.322 536.862,-404.95"/>
 </g>
 <!-- hook&#45;&gt;subseq -->
-<g id="edge27" class="edge"><title>hook&#45;&gt;subseq</title>
+<g id="edge14" class="edge"><title>hook&#45;&gt;subseq</title>
 <path fill="none" stroke="black" d="M225.86,-447.335C167.531,-443.14 33.493,-429.94 6.06299,-396 -3.99413,-383.556 0.741386,-375.089 6.06299,-360 19.73,-321.248 27.9729,-307.647 64.063,-288 143.27,-244.881 418.063,-236.829 526.025,-235.336"/>
 <polygon fill="black" stroke="black" points="526.286,-238.833 536.242,-235.207 526.198,-231.833 526.286,-238.833"/>
 </g>
 <!-- hook&#45;&gt;Qmeasure -->
-<g id="edge28" class="edge"><title>hook&#45;&gt;Qmeasure</title>
+<g id="edge15" class="edge"><title>hook&#45;&gt;Qmeasure</title>
 <path fill="none" stroke="black" d="M253.063,-431.697C253.063,-423.983 253.063,-414.712 253.063,-406.112"/>
 <polygon fill="black" stroke="black" points="256.563,-406.104 253.063,-396.104 249.563,-406.104 256.563,-406.104"/>
 </g>
@@ -344,7 +344,7 @@
 </g>
 </g>
 <!-- hook&#45;&gt;recyama -->
-<g id="edge29" class="edge"><title>hook&#45;&gt;recyama</title>
+<g id="edge16" class="edge"><title>hook&#45;&gt;recyama</title>
 <path fill="none" stroke="black" d="M280.236,-436.807C302.725,-426.716 335.2,-412.144 361.916,-400.156"/>
 <polygon fill="black" stroke="black" points="363.41,-403.322 371.101,-396.034 360.544,-396.935 363.41,-403.322"/>
 </g>
@@ -357,17 +357,17 @@
 </g>
 </g>
 <!-- hook&#45;&gt;bigallpairs -->
-<g id="edge30" class="edge"><title>hook&#45;&gt;bigallpairs</title>
+<g id="edge17" class="edge"><title>hook&#45;&gt;bigallpairs</title>
 <path fill="none" stroke="black" d="M225.982,-437.441C202.278,-427.323 167.242,-412.369 138.547,-400.121"/>
 <polygon fill="black" stroke="black" points="139.655,-396.789 129.084,-396.082 136.907,-403.227 139.655,-396.789"/>
 </g>
 <!-- recyama&#45;&gt;stdtab -->
-<g id="edge25" class="edge"><title>recyama&#45;&gt;stdtab</title>
+<g id="edge12" class="edge"><title>recyama&#45;&gt;stdtab</title>
 <path fill="none" stroke="black" d="M448.215,-367.275C459.714,-364.65 472.348,-361.989 484.063,-360 639.306,-333.64 825.989,-316.817 907.543,-310.198"/>
 <polygon fill="black" stroke="black" points="908.191,-313.657 917.879,-309.368 907.631,-306.679 908.191,-313.657"/>
 </g>
 <!-- recyama&#45;&gt;rat_coerce -->
-<g id="edge26" class="edge"><title>recyama&#45;&gt;rat_coerce</title>
+<g id="edge13" class="edge"><title>recyama&#45;&gt;rat_coerce</title>
 <path fill="none" stroke="black" d="M407.827,-359.697C407.276,-351.983 406.614,-342.712 406,-334.112"/>
 <polygon fill="black" stroke="black" points="409.488,-333.83 405.285,-324.104 402.506,-334.328 409.488,-333.83"/>
 </g>
@@ -380,7 +380,7 @@
 </g>
 </g>
 <!-- Greene&#45;&gt;ordcast -->
-<g id="edge16" class="edge"><title>Greene&#45;&gt;ordcast</title>
+<g id="edge39" class="edge"><title>Greene&#45;&gt;ordcast</title>
 <path fill="none" stroke="black" d="M660.62,-503.876C677.721,-494.596 699.045,-483.025 717.382,-473.075"/>
 <polygon fill="black" stroke="black" points="719.265,-476.035 726.385,-468.19 715.926,-469.883 719.265,-476.035"/>
 </g>
@@ -393,22 +393,22 @@
 </g>
 </g>
 <!-- Greene&#45;&gt;plactic -->
-<g id="edge17" class="edge"><title>Greene&#45;&gt;plactic</title>
+<g id="edge40" class="edge"><title>Greene&#45;&gt;plactic</title>
 <path fill="none" stroke="black" d="M626.344,-503.697C625.132,-495.983 623.675,-486.712 622.324,-478.112"/>
 <polygon fill="black" stroke="black" points="625.761,-477.44 620.751,-468.104 618.846,-478.526 625.761,-477.44"/>
 </g>
 <!-- Greene_inv&#45;&gt;Greene -->
-<g id="edge18" class="edge"><title>Greene_inv&#45;&gt;Greene</title>
+<g id="edge38" class="edge"><title>Greene_inv&#45;&gt;Greene</title>
 <path fill="none" stroke="black" d="M629.063,-575.697C629.063,-567.983 629.063,-558.712 629.063,-550.112"/>
 <polygon fill="black" stroke="black" points="632.563,-550.104 629.063,-540.104 625.563,-550.104 632.563,-550.104"/>
 </g>
 <!-- Schensted&#45;&gt;stdtab -->
-<g id="edge11" class="edge"><title>Schensted&#45;&gt;stdtab</title>
+<g id="edge36" class="edge"><title>Schensted&#45;&gt;stdtab</title>
 <path fill="none" stroke="black" d="M612.262,-368.556C687.64,-354.78 835.882,-327.686 907.879,-314.527"/>
 <polygon fill="black" stroke="black" points="908.723,-317.931 917.93,-312.69 907.464,-311.045 908.723,-317.931"/>
 </g>
 <!-- Schensted&#45;&gt;subseq -->
-<g id="edge12" class="edge"><title>Schensted&#45;&gt;subseq</title>
+<g id="edge37" class="edge"><title>Schensted&#45;&gt;subseq</title>
 <path fill="none" stroke="black" d="M566.545,-359.871C567.227,-335.67 568.48,-291.211 569.291,-262.393"/>
 <polygon fill="black" stroke="black" points="572.796,-262.284 569.579,-252.189 565.799,-262.087 572.796,-262.284"/>
 </g>
@@ -429,7 +429,7 @@
 </g>
 </g>
 <!-- Yam_plact&#45;&gt;stdplact -->
-<g id="edge3" class="edge"><title>Yam_plact&#45;&gt;stdplact</title>
+<g id="edge35" class="edge"><title>Yam_plact&#45;&gt;stdplact</title>
 <path fill="none" stroke="black" d="M734.807,-719.876C706.455,-709.149 670.01,-695.358 641.447,-684.551"/>
 <polygon fill="black" stroke="black" points="642.678,-681.274 632.086,-681.009 640.2,-687.821 642.678,-681.274"/>
 </g>
@@ -450,7 +450,7 @@
 </g>
 </g>
 <!-- extract&#45;&gt;implem -->
-<g id="edge19" class="edge"><title>extract&#45;&gt;implem</title>
+<g id="edge34" class="edge"><title>extract&#45;&gt;implem</title>
 <path fill="none" stroke="black" d="M1097.06,-1007.7C1097.06,-999.983 1097.06,-990.712 1097.06,-982.112"/>
 <polygon fill="black" stroke="black" points="1100.56,-982.104 1097.06,-972.104 1093.56,-982.104 1100.56,-982.104"/>
 </g>
@@ -463,7 +463,7 @@
 </g>
 </g>
 <!-- freeSchur&#45;&gt;Yam_plact -->
-<g id="edge8" class="edge"><title>freeSchur&#45;&gt;Yam_plact</title>
+<g id="edge31" class="edge"><title>freeSchur&#45;&gt;Yam_plact</title>
 <path fill="none" stroke="black" d="M841.793,-791.697C831.565,-782.965 819.002,-772.24 807.885,-762.75"/>
 <polygon fill="black" stroke="black" points="809.978,-759.935 800.099,-756.104 805.433,-765.259 809.978,-759.935"/>
 </g>
@@ -476,7 +476,7 @@
 </g>
 </g>
 <!-- freeSchur&#45;&gt;shuffle -->
-<g id="edge9" class="edge"><title>freeSchur&#45;&gt;shuffle</title>
+<g id="edge32" class="edge"><title>freeSchur&#45;&gt;shuffle</title>
 <path fill="none" stroke="black" d="M818.346,-797.046C770.849,-784.059 695.481,-763.45 648.495,-750.602"/>
 <polygon fill="black" stroke="black" points="649.201,-747.167 638.632,-747.906 647.355,-753.919 649.201,-747.167"/>
 </g>
@@ -489,7 +489,7 @@
 </g>
 </g>
 <!-- freeSchur&#45;&gt;sympoly -->
-<g id="edge10" class="edge"><title>freeSchur&#45;&gt;sympoly</title>
+<g id="edge33" class="edge"><title>freeSchur&#45;&gt;sympoly</title>
 <path fill="none" stroke="black" d="M872.557,-791.871C887.646,-767.244 915.588,-721.638 933.204,-692.885"/>
 <polygon fill="black" stroke="black" points="936.292,-694.545 938.532,-684.189 930.323,-690.888 936.292,-694.545"/>
 </g>
@@ -502,37 +502,37 @@
 </g>
 </g>
 <!-- implem&#45;&gt;therule -->
-<g id="edge15" class="edge"><title>implem&#45;&gt;therule</title>
+<g id="edge30" class="edge"><title>implem&#45;&gt;therule</title>
 <path fill="none" stroke="black" d="M1097.06,-935.697C1097.06,-927.983 1097.06,-918.712 1097.06,-910.112"/>
 <polygon fill="black" stroke="black" points="1100.56,-910.104 1097.06,-900.104 1093.56,-910.104 1100.56,-910.104"/>
 </g>
 <!-- plactic&#45;&gt;congr -->
-<g id="edge13" class="edge"><title>plactic&#45;&gt;congr</title>
+<g id="edge28" class="edge"><title>plactic&#45;&gt;congr</title>
 <path fill="none" stroke="black" d="M628.158,-431.91C657.762,-382.445 745.208,-241.062 792.063,-216 858.682,-180.366 1396.39,-191.479 1471.06,-180 1479.72,-178.669 1488.89,-176.686 1497.55,-174.54"/>
 <polygon fill="black" stroke="black" points="1498.63,-177.877 1507.43,-171.974 1496.87,-171.102 1498.63,-177.877"/>
 </g>
 <!-- plactic&#45;&gt;Schensted -->
-<g id="edge14" class="edge"><title>plactic&#45;&gt;Schensted</title>
+<g id="edge29" class="edge"><title>plactic&#45;&gt;Schensted</title>
 <path fill="none" stroke="black" d="M605.209,-431.697C599.038,-423.389 591.526,-413.277 584.739,-404.141"/>
 <polygon fill="black" stroke="black" points="587.542,-402.045 578.769,-396.104 581.923,-406.219 587.542,-402.045"/>
 </g>
 <!-- shuffle&#45;&gt;stdplact -->
-<g id="edge7" class="edge"><title>shuffle&#45;&gt;stdplact</title>
+<g id="edge27" class="edge"><title>shuffle&#45;&gt;stdplact</title>
 <path fill="none" stroke="black" d="M603.344,-719.697C602.132,-711.983 600.675,-702.712 599.324,-694.112"/>
 <polygon fill="black" stroke="black" points="602.761,-693.44 597.751,-684.104 595.846,-694.526 602.761,-693.44"/>
 </g>
 <!-- stdplact&#45;&gt;Greene_inv -->
-<g id="edge6" class="edge"><title>stdplact&#45;&gt;Greene_inv</title>
+<g id="edge26" class="edge"><title>stdplact&#45;&gt;Greene_inv</title>
 <path fill="none" stroke="black" d="M603.467,-647.697C607.338,-639.728 612.015,-630.1 616.306,-621.264"/>
 <polygon fill="black" stroke="black" points="619.534,-622.629 620.755,-612.104 613.238,-619.57 619.534,-622.629"/>
 </g>
 <!-- therule&#45;&gt;skewtab -->
-<g id="edge4" class="edge"><title>therule&#45;&gt;skewtab</title>
+<g id="edge24" class="edge"><title>therule&#45;&gt;skewtab</title>
 <path fill="none" stroke="black" d="M1097.06,-863.966C1097.06,-816.291 1097.06,-681.185 1097.06,-622.63"/>
 <polygon fill="black" stroke="black" points="1100.56,-622.306 1097.06,-612.306 1093.56,-622.306 1100.56,-622.306"/>
 </g>
 <!-- therule&#45;&gt;freeSchur -->
-<g id="edge5" class="edge"><title>therule&#45;&gt;freeSchur</title>
+<g id="edge25" class="edge"><title>therule&#45;&gt;freeSchur</title>
 <path fill="none" stroke="black" d="M1063.39,-870.971C1024.73,-859.454 960.798,-840.41 915.356,-826.874"/>
 <polygon fill="black" stroke="black" points="916.252,-823.489 905.669,-823.989 914.254,-830.198 916.252,-823.489"/>
 </g>
@@ -545,7 +545,7 @@
 </g>
 </g>
 <!-- Schur_basis&#45;&gt;therule -->
-<g id="edge20" class="edge"><title>Schur_basis&#45;&gt;therule</title>
+<g id="edge4" class="edge"><title>Schur_basis&#45;&gt;therule</title>
 <path fill="none" stroke="black" d="M1234.54,-935.876C1205.83,-924.833 1168.68,-910.545 1140.24,-899.605"/>
 <polygon fill="black" stroke="black" points="1141.16,-896.21 1130.57,-895.887 1138.65,-902.743 1141.16,-896.21"/>
 </g>
@@ -558,12 +558,12 @@
 </g>
 </g>
 <!-- Schur_basis&#45;&gt;antisym -->
-<g id="edge21" class="edge"><title>Schur_basis&#45;&gt;antisym</title>
+<g id="edge5" class="edge"><title>Schur_basis&#45;&gt;antisym</title>
 <path fill="none" stroke="black" d="M1288.18,-935.606C1301.07,-909.357 1323.06,-857.715 1323.06,-811 1323.06,-811 1323.06,-811 1323.06,-449 1323.06,-408.853 1327.88,-362.548 1331.41,-334.022"/>
 <polygon fill="black" stroke="black" points="1334.9,-334.373 1332.69,-324.01 1327.95,-333.487 1334.9,-334.373"/>
 </g>
 <!-- antisym&#45;&gt;sorted -->
-<g id="edge23" class="edge"><title>antisym&#45;&gt;sorted</title>
+<g id="edge2" class="edge"><title>antisym&#45;&gt;sorted</title>
 <path fill="none" stroke="black" d="M1305.33,-287.849C1238.63,-249.375 1077.11,-156.206 1002.73,-113.304"/>
 <polygon fill="black" stroke="black" points="1004.09,-110.048 993.68,-108.084 1000.59,-116.112 1004.09,-110.048"/>
 </g>
@@ -576,27 +576,27 @@
 </g>
 </g>
 <!-- antisym&#45;&gt;symgroup -->
-<g id="edge24" class="edge"><title>antisym&#45;&gt;symgroup</title>
+<g id="edge3" class="edge"><title>antisym&#45;&gt;symgroup</title>
 <path fill="none" stroke="black" d="M1372.34,-288.055C1393.37,-278.496 1419.85,-266.462 1442.26,-256.273"/>
 <polygon fill="black" stroke="black" points="1443.94,-259.356 1451.59,-252.032 1441.04,-252.983 1443.94,-259.356"/>
 </g>
 <!-- sympoly&#45;&gt;stdtab -->
-<g id="edge22" class="edge"><title>sympoly&#45;&gt;stdtab</title>
+<g id="edge1" class="edge"><title>sympoly&#45;&gt;stdtab</title>
 <path fill="none" stroke="black" d="M949.063,-647.951C949.063,-621.292 949.063,-568.115 949.063,-523 949.063,-523 949.063,-523 949.063,-449 949.063,-408.996 949.063,-362.653 949.063,-334.08"/>
 <polygon fill="black" stroke="black" points="952.563,-334.049 949.063,-324.049 945.563,-334.049 952.563,-334.049"/>
 </g>
 <!-- sorted&#45;&gt;tools -->
-<g id="edge37" class="edge"><title>sorted&#45;&gt;tools</title>
+<g id="edge23" class="edge"><title>sorted&#45;&gt;tools</title>
 <path fill="none" stroke="black" d="M995.487,-79.2668C1036.78,-66.4762 1109.2,-44.0458 1153.09,-30.4527"/>
 <polygon fill="black" stroke="black" points="1154.28,-33.7479 1162.8,-27.4458 1152.21,-27.0613 1154.28,-33.7479"/>
 </g>
 <!-- symgroup&#45;&gt;combclass -->
-<g id="edge1" class="edge"><title>symgroup&#45;&gt;combclass</title>
+<g id="edge6" class="edge"><title>symgroup&#45;&gt;combclass</title>
 <path fill="none" stroke="black" d="M1444.25,-216.684C1415.8,-206.283 1378.23,-192.464 1345.06,-180 1283.67,-156.928 1213.38,-129.872 1166.41,-111.7"/>
 <polygon fill="black" stroke="black" points="1167.63,-108.421 1157.04,-108.075 1165.1,-114.949 1167.63,-108.421"/>
 </g>
 <!-- symgroup&#45;&gt;congr -->
-<g id="edge2" class="edge"><title>symgroup&#45;&gt;congr</title>
+<g id="edge7" class="edge"><title>symgroup&#45;&gt;congr</title>
 <path fill="none" stroke="black" d="M1500.93,-215.697C1506.57,-207.474 1513.42,-197.483 1519.63,-188.421"/>
 <polygon fill="black" stroke="black" points="1522.57,-190.331 1525.33,-180.104 1516.79,-186.372 1522.57,-190.331"/>
 </g>

@@ -16,7 +16,7 @@
 
 <div id="main">
 
-<h1 class="libtitle">Combi.SSRcomplements.rat_coerce</h1>
+<h1 class="libtitle">Library Combi.SSRcomplements.rat_coerce</h1>
 
 <div class="code">
 <span class="id" title="keyword">Set Implicit Arguments</span>.<br/>
@@ -25,21 +25,20 @@
 </div>
 
 <div class="doc">
-<a name="lab51"></a><h1 class="section">Setup a coercion <span class="inlinecode"><span class="id" title="inductive">int</span></span> <span class="inlinecode">→</span> <span class="inlinecode"><span class="id" title="library">rat</span></span> and add a few simple lemmas</h1>
+<a name="lab68"></a><h1 class="section">Setup a coercion <span class="inlinecode"><span class="id" title="inductive">int</span></span> <span class="inlinecode">→</span> <span class="inlinecode"><span class="id" title="library">rat</span></span> and add a few simple lemmas</h1>
 
 </div>
 <div class="code">
 
 <br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">ssreflect</span> <span class="id" title="library">ssrfun</span> <span class="id" title="library">ssrbool</span> <span class="id" title="library">eqtype</span> <span class="id" title="library">choice</span> <span class="id" title="library">ssrnat</span> <span class="id" title="library">seq</span> <span class="id" title="library">ssrint</span> <span class="id" title="library">rat</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="library">fintype</span> <span class="id" title="library">bigop</span> <span class="id" title="library">path</span> <span class="id" title="library">ssralg</span> <span class="id" title="library">ssrnum</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">mathcomp.ssreflect.ssreflect</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Import</span> <span class="id" title="var">GRing.Theory</span>.<br/>
 <span class="id" title="keyword">Import</span> <span class="id" title="var">Num.Theory</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Definition</span> <a name="int_to_rat"><span class="id" title="definition">int_to_rat</span></a> : <span class="id" title="inductive">int</span> → <span class="id" title="record">rat</span> := <span class="id" title="definition">intmul</span> (<span class="id" title="definition">GRing.one</span> <span class="id" title="definition">rat_Ring</span>).<br/>
+<span class="id" title="keyword">Definition</span> <a name="int_to_rat"><span class="id" title="definition">int_to_rat</span></a> : <span class="id" title="inductive">int</span> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="record">rat</span> := <span class="id" title="definition">intmul</span> (<span class="id" title="definition">GRing.one</span> <span class="id" title="definition">rat_Ring</span>).<br/>
 <span class="id" title="keyword">Coercion</span> <a class="idref" href="Combi.SSRcomplements.rat_coerce.html#int_to_rat"><span class="id" title="definition">int_to_rat</span></a> : <span class="id" title="var">int</span> &gt;-&gt; <span class="id" title="var">rat</span>.<br/>
 
 <br/>
@@ -52,13 +51,13 @@
 <span class="id" title="keyword">Section</span> <a name="FieldLemmas"><span class="id" title="section">FieldLemmas</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Local</span>&nbsp;<span class="id" title="keyword">Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">ring_scope</span>.<br/>
+<span class="id" title="keyword">Local Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">ring_scope</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Lemma</span> <a name="iter_plus1"><span class="id" title="lemma">iter_plus1</span></a> <span class="id" title="var">n</span> : (<span class="id" title="definition">iter</span> <a class="idref" href="Combi.SSRcomplements.rat_coerce.html#n"><span class="id" title="variable">n</span></a> (<span class="id" title="notation">+%</span><span class="id" title="notation">R</span> (1 <span class="id" title="notation">:</span> <span class="id" title="record">rat</span>)) 0 <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.SSRcomplements.rat_coerce.html#int_to_rat"><span class="id" title="definition">int_to_rat</span></a> <a class="idref" href="Combi.SSRcomplements.rat_coerce.html#n"><span class="id" title="variable">n</span></a>)%<span class="id" title="var">R</span>.<br/>
+<span class="id" title="keyword">Lemma</span> <a name="iter_plus1"><span class="id" title="lemma">iter_plus1</span></a> <span class="id" title="var">n</span> : (<span class="id" title="definition">iter</span> <a class="idref" href="Combi.SSRcomplements.rat_coerce.html#n"><span class="id" title="variable">n</span></a> (<span class="id" title="notation">+%</span><span class="id" title="notation">R</span> (1 <span class="id" title="notation">:</span> <span class="id" title="record">rat</span>)) 0 <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.SSRcomplements.rat_coerce.html#int_to_rat"><span class="id" title="definition">int_to_rat</span></a> <a class="idref" href="Combi.SSRcomplements.rat_coerce.html#n"><span class="id" title="variable">n</span></a>)%<span class="id" title="var">R</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Lemma</span> <a name="quot_eq1"><span class="id" title="lemma">quot_eq1</span></a> (<span class="id" title="var">R</span> : <span class="id" title="abbreviation">fieldType</span>) (<span class="id" title="var">x</span> <span class="id" title="var">y</span> : <a class="idref" href="Combi.SSRcomplements.rat_coerce.html#R"><span class="id" title="variable">R</span></a>) : <a class="idref" href="Combi.SSRcomplements.rat_coerce.html#x"><span class="id" title="variable">x</span></a> <span class="id" title="notation">/</span> <a class="idref" href="Combi.SSRcomplements.rat_coerce.html#y"><span class="id" title="variable">y</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> 1 → <a class="idref" href="Combi.SSRcomplements.rat_coerce.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.4pl6/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.SSRcomplements.rat_coerce.html#y"><span class="id" title="variable">y</span></a>.<br/>
+<span class="id" title="keyword">Lemma</span> <a name="quot_eq1"><span class="id" title="lemma">quot_eq1</span></a> (<span class="id" title="var">R</span> : <span class="id" title="abbreviation">fieldType</span>) (<span class="id" title="var">x</span> <span class="id" title="var">y</span> : <a class="idref" href="Combi.SSRcomplements.rat_coerce.html#R"><span class="id" title="variable">R</span></a>) : <a class="idref" href="Combi.SSRcomplements.rat_coerce.html#x"><span class="id" title="variable">x</span></a> <span class="id" title="notation">/</span> <a class="idref" href="Combi.SSRcomplements.rat_coerce.html#y"><span class="id" title="variable">y</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> 1 <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.SSRcomplements.rat_coerce.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.SSRcomplements.rat_coerce.html#y"><span class="id" title="variable">y</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.SSRcomplements.rat_coerce.html#FieldLemmas"><span class="id" title="section">FieldLemmas</span></a>.<br/>
