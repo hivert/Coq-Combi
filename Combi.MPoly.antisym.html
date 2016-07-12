@@ -22,14 +22,14 @@
 </div>
 
 <div class="doc">
-<a name="lab121"></a><h1 class="section">Combi.MPoly.antisym : Antisymmetric polynomials and Vandermonde product</h1>
+<a name="lab120"></a><h1 class="section">Combi.MPoly.antisym : Antisymmetric polynomials and Vandermonde product</h1>
 
 </div>
 <div class="code">
 </div>
 
 <div class="doc">
-<a name="lab122"></a><h1 class="section">Antisymmetric polynomials</h1>
+<a name="lab121"></a><h1 class="section">Antisymmetric polynomials</h1>
 
 
 <div class="paragraph"> </div>
@@ -110,6 +110,7 @@ The main results are the Vandermonde determinant expansion:
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">mathcomp.ssreflect.ssreflect</span>.<br/>
 
 <br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.tools.html#"><span class="id" title="library">tools</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#"><span class="id" title="library">symgroup</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Set Implicit Arguments</span>.<br/>
@@ -136,7 +137,7 @@ The main results are the Vandermonde determinant expansion:
 </div>
 
 <div class="doc">
-<a name="lab123"></a><h2 class="section">Change of scalar in multivariate polynomials</h2>
+<a name="lab122"></a><h2 class="section">Change of scalar in multivariate polynomials</h2>
 
 </div>
 <div class="code">
@@ -164,7 +165,7 @@ The main results are the Vandermonde determinant expansion:
 </div>
 
 <div class="doc">
-<a name="lab124"></a><h2 class="section">Characteristic of multivariate polynomials</h2>
+<a name="lab123"></a><h2 class="section">Characteristic of multivariate polynomials</h2>
 
 </div>
 <div class="code">
@@ -187,7 +188,7 @@ The main results are the Vandermonde determinant expansion:
 </div>
 
 <div class="doc">
-<a name="lab125"></a><h1 class="section">Symmetric and Antisymmetric multivariate polynomials</h1>
+<a name="lab124"></a><h1 class="section">Symmetric and Antisymmetric multivariate polynomials</h1>
 
 </div>
 <div class="code">
@@ -210,7 +211,7 @@ The main results are the Vandermonde determinant expansion:
 &nbsp;&nbsp;<span class="id" title="notation">[</span><span class="id" title="notation">qualify</span> <span class="id" title="var">p</span> <span class="id" title="notation">|</span> <span class="id" title="notation">[</span><span class="id" title="keyword">∀</span> <span class="id" title="var">s</span><span class="id" title="notation">,</span> <span class="id" title="definition">msym</span> <span class="id" title="var">s</span> <span class="id" title="var">p</span> <span class="id" title="notation">==</span> <span class="id" title="notation">(</span>-1<span class="id" title="notation">)</span> <span class="id" title="notation">^+</span> <span class="id" title="var">s</span> <span class="id" title="notation">*:</span> <span class="id" title="var">p</span><span class="id" title="notation">]</span><span class="id" title="notation">]</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Fact</span> <a name="antisym_key"><span class="id" title="lemma">antisym_key</span></a> : <span class="id" title="inductive">pred_key</span> <a class="idref" href="Combi.MPoly.antisym.html#antisym"><span class="id" title="definition">antisym</span></a>.  <br/>
+<span class="id" title="keyword">Fact</span> <a name="antisym_key"><span class="id" title="lemma">antisym_key</span></a> : <span class="id" title="inductive">pred_key</span> <a class="idref" href="Combi.MPoly.antisym.html#antisym"><span class="id" title="definition">antisym</span></a>. <br/>
 <span class="id" title="keyword">Canonical</span> <span class="id" title="var">antisym_keyed</span> := <span class="id" title="definition">KeyedQualifier</span> <a class="idref" href="Combi.MPoly.antisym.html#antisym_key"><span class="id" title="lemma">antisym_key</span></a>.<br/>
 
 <br/>
@@ -287,7 +288,7 @@ The main results are the Vandermonde determinant expansion:
 </div>
 
 <div class="doc">
-<a name="lab126"></a><h1 class="section">Alternating polynomials</h1>
+<a name="lab125"></a><h1 class="section">Alternating polynomials</h1>
 
 </div>
 <div class="code">
@@ -367,7 +368,7 @@ The main results are the Vandermonde determinant expansion:
 </div>
 
 <div class="doc">
-<a name="lab127"></a><h2 class="section">Vandermonde product</h2>
+<a name="lab126"></a><h2 class="section">Vandermonde product</h2>
 
 </div>
 <div class="code">
@@ -421,10 +422,10 @@ The main results are the Vandermonde determinant expansion:
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="diffX_neq0"><span class="id" title="lemma">diffX_neq0</span></a> (<span class="id" title="var">i</span> <span class="id" title="var">j</span> : <span class="id" title="notation">'</span><span class="id" title="notation">I_n</span>) : <a class="idref" href="Combi.MPoly.antisym.html#i"><span class="id" title="variable">i</span></a> <span class="id" title="notation">!=</span> <a class="idref" href="Combi.MPoly.antisym.html#j"><span class="id" title="variable">j</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.MPoly.antisym.html#c15bcd40c8f7c52e26e4233fb5a2a2c6"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.antisym.html#c15bcd40c8f7c52e26e4233fb5a2a2c6"><span class="id" title="notation">X_i</span></a> <span class="id" title="notation">-</span> <a class="idref" href="Combi.MPoly.antisym.html#c15bcd40c8f7c52e26e4233fb5a2a2c6"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.antisym.html#c15bcd40c8f7c52e26e4233fb5a2a2c6"><span class="id" title="notation">X_j</span></a> <span class="id" title="notation">!=</span> 0.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="msuppX1"><span class="id" title="lemma">msuppX1</span></a> <span class="id" title="var">i</span> : <span class="id" title="definition">msupp</span> <a class="idref" href="Combi.MPoly.antisym.html#c15bcd40c8f7c52e26e4233fb5a2a2c6"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.antisym.html#c15bcd40c8f7c52e26e4233fb5a2a2c6"><span class="id" title="notation">X_i</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="notation">[::</span> <span class="id" title="notation">U_</span><span class="id" title="notation">(</span><a class="idref" href="Combi.MPoly.antisym.html#i"><span class="id" title="variable">i</span></a><span class="id" title="notation">)</span>%<span class="id" title="var">MM</span><span class="id" title="notation">]</span>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="vdmprod_neq0"><span class="id" title="lemma">vdmprod_neq0</span></a> : <a class="idref" href="Combi.MPoly.antisym.html#D"><span class="id" title="abbreviation">D</span></a> <span class="id" title="notation">!=</span> 0.<br/>
 
@@ -473,7 +474,7 @@ The main results are the Vandermonde determinant expansion:
 </div>
 
 <div class="doc">
-<a name="lab128"></a><h2 class="section">Vandermonde matrix and determinant</h2>
+<a name="lab127"></a><h2 class="section">Vandermonde matrix and determinant</h2>
 
 </div>
 <div class="code">
@@ -496,7 +497,7 @@ The main results are the Vandermonde determinant expansion:
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="Vandmx_antimE"><span class="id" title="lemma">Vandmx_antimE</span></a> : <a class="idref" href="Combi.MPoly.antisym.html#Vandmx"><span class="id" title="definition">Vandmx</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.antisym.html#antim"><span class="id" title="definition">antim</span></a> <span class="id" title="notation">[::]</span>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="alt_detE"><span class="id" title="lemma">alt_detE</span></a> <span class="id" title="var">s</span> : <a class="idref" href="Combi.MPoly.antisym.html#8505289b6888b99510c42c382d2fc044"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.antisym.html#8505289b6888b99510c42c382d2fc044"><span class="id" title="notation">a_</span></a><a class="idref" href="Combi.MPoly.antisym.html#8505289b6888b99510c42c382d2fc044"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.MPoly.antisym.html#s"><span class="id" title="variable">s</span></a> <span class="id" title="notation">+</span> <a class="idref" href="Combi.MPoly.antisym.html#rho"><span class="id" title="abbreviation">rho</span></a><a class="idref" href="Combi.MPoly.antisym.html#8505289b6888b99510c42c382d2fc044"><span class="id" title="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="notation">\</span><span class="id" title="notation">det</span> <span class="id" title="notation">(</span><a class="idref" href="Combi.MPoly.antisym.html#antim"><span class="id" title="definition">antim</span></a> <a class="idref" href="Combi.MPoly.antisym.html#s"><span class="id" title="variable">s</span></a><span class="id" title="notation">)</span>.<br/>
 

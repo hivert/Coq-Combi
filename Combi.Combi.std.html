@@ -22,7 +22,7 @@
 </div>
 
 <div class="doc">
-<a name="lab29"></a><h1 class="section">Combi.Combi.std : Standard Words, i.e. Permutation as Words</h1>
+<a name="lab28"></a><h1 class="section">Combi.Combi.std : Standard Words, i.e. Permutation as Words</h1>
 
 </div>
 <div class="code">
@@ -98,6 +98,7 @@ is the same as having the same standardized.
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">mathcomp.ssreflect.ssreflect</span>.<br/>
 
 <br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.tools.html#"><span class="id" title="library">tools</span></a> <a class="idref" href="Combi.Basic.combclass.html#"><span class="id" title="library">combclass</span></a> <a class="idref" href="Combi.Basic.ordtype.html#"><span class="id" title="library">ordtype</span></a> <a class="idref" href="Combi.Combi.permuted.html#"><span class="id" title="library">permuted</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Set Implicit Arguments</span>.<br/>
@@ -112,7 +113,7 @@ is the same as having the same standardized.
 </div>
 
 <div class="doc">
-<a name="lab30"></a><h1 class="section">Standard words</h1>
+<a name="lab29"></a><h1 class="section">Standard words</h1>
 
 </div>
 <div class="code">
@@ -173,7 +174,7 @@ is the same as having the same standardized.
 </div>
 
 <div class="doc">
-<a name="lab31"></a><h1 class="section">Standard words as a <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#InhOrdFinType.finType"><span class="id" title="definition">finType</span></a></span></h1>
+<a name="lab30"></a><h1 class="section">Standard words as a <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#InhOrdFinType.finType"><span class="id" title="definition">finType</span></a></span></h1>
 
 </div>
 <div class="code">
@@ -199,10 +200,10 @@ is the same as having the same standardized.
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="stdwordnP"><span class="id" title="lemma">stdwordnP</span></a> (<span class="id" title="var">s</span> : <a class="idref" href="Combi.Combi.std.html#stdwordn"><span class="id" title="record">stdwordn</span></a>) : <a class="idref" href="Combi.Combi.std.html#is_std"><span class="id" title="definition">is_std</span></a> (<span class="id" title="projection">val</span> <a class="idref" href="Combi.Combi.std.html#s"><span class="id" title="variable">s</span></a>).<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="size_sdtn"><span class="id" title="lemma">size_sdtn</span></a> (<span class="id" title="var">s</span> : <a class="idref" href="Combi.Combi.std.html#stdwordn"><span class="id" title="record">stdwordn</span></a>) : <span class="id" title="definition">size</span> (<span class="id" title="projection">val</span> <a class="idref" href="Combi.Combi.std.html#s"><span class="id" title="variable">s</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.Combi.std.html#StdCombClass.n"><span class="id" title="variable">n</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Definition</span> <a name="enum_stdwordn"><span class="id" title="definition">enum_stdwordn</span></a> := <span class="id" title="notation">[</span><span class="id" title="notation">seq</span> <a class="idref" href="Combi.Combi.std.html#wordperm"><span class="id" title="definition">wordperm</span></a> <span class="id" title="var">p</span> <span class="id" title="notation">|</span> <span class="id" title="var">p</span> <span class="id" title="notation">&lt;-</span> <span class="id" title="abbreviation">enum</span> <span class="id" title="notation">'</span><span class="id" title="notation">S_n</span><span class="id" title="notation">]</span>.<br/>
 
@@ -214,7 +215,7 @@ is the same as having the same standardized.
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="enum_stdwordn_uniq"><span class="id" title="lemma">enum_stdwordn_uniq</span></a> : <span class="id" title="definition">uniq</span> <a class="idref" href="Combi.Combi.std.html#enum_stdwordn"><span class="id" title="definition">enum_stdwordn</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Canonical</span> <span class="id" title="var">stdwordn_finMixin</span> :=<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Eval</span> <span class="id" title="tactic">hnf</span> <span class="id" title="keyword">in</span> <a class="idref" href="Combi.Basic.combclass.html#sub_uniq_finMixin"><span class="id" title="definition">sub_uniq_finMixin</span></a> <a class="idref" href="Combi.Combi.std.html#stdwordnn_subCountType"><span class="id" title="definition">stdwordnn_subCountType</span></a> <a class="idref" href="Combi.Combi.std.html#enum_stdwordn_uniq"><span class="id" title="lemma">enum_stdwordn_uniq</span></a> <a class="idref" href="Combi.Combi.std.html#enum_stdwordnE"><span class="id" title="lemma">enum_stdwordnE</span></a>.<br/>
@@ -222,7 +223,7 @@ is the same as having the same standardized.
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="card_stdwordn"><span class="id" title="lemma">card_stdwordn</span></a> : <span class="id" title="notation">#|</span><span class="id" title="notation">{:</span><a class="idref" href="Combi.Combi.std.html#stdwordn"><span class="id" title="record">stdwordn</span></a><span class="id" title="notation">}</span><span class="id" title="notation">|</span> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.Combi.std.html#StdCombClass.n"><span class="id" title="variable">n</span></a><span class="id" title="notation">`!</span>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.Combi.std.html#StdCombClass"><span class="id" title="section">StdCombClass</span></a>.<br/>
 
@@ -230,7 +231,7 @@ is the same as having the same standardized.
 </div>
 
 <div class="doc">
-<a name="lab32"></a><h1 class="section">Standardisation of a word over a totally ordered alphabet</h1>
+<a name="lab31"></a><h1 class="section">Standardisation of a word over a totally ordered alphabet</h1>
 
 </div>
 <div class="code">
@@ -254,16 +255,16 @@ is the same as having the same standardized.
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="size_std"><span class="id" title="lemma">size_std</span></a> <span class="id" title="var">s</span> : <span class="id" title="definition">size</span> (<a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a> <a class="idref" href="Combi.Combi.std.html#s"><span class="id" title="variable">s</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="definition">size</span> <a class="idref" href="Combi.Combi.std.html#s"><span class="id" title="variable">s</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="std_is_std"><span class="id" title="lemma">std_is_std</span></a> <span class="id" title="var">s</span> : <a class="idref" href="Combi.Combi.std.html#is_std"><span class="id" title="definition">is_std</span></a> (<a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a> <a class="idref" href="Combi.Combi.std.html#s"><span class="id" title="variable">s</span></a>).<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="in_std_ltn_size"><span class="id" title="lemma">in_std_ltn_size</span></a> <span class="id" title="var">s</span> <span class="id" title="var">i</span> : <a class="idref" href="Combi.Combi.std.html#i"><span class="id" title="variable">i</span></a> <span class="id" title="notation">\</span><span class="id" title="keyword">in</span> <a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a> <a class="idref" href="Combi.Combi.std.html#s"><span class="id" title="variable">s</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.Combi.std.html#i"><span class="id" title="variable">i</span></a> <span class="id" title="notation">&lt;</span> <span class="id" title="definition">size</span> <a class="idref" href="Combi.Combi.std.html#s"><span class="id" title="variable">s</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">)</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="allLtn_std_rec"><span class="id" title="lemma">allLtn_std_rec</span></a> <span class="id" title="var">s</span> : <a class="idref" href="Combi.Basic.ordtype.html#allLtn"><span class="id" title="definition">allLtn</span></a> (<a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a> <a class="idref" href="Combi.Combi.std.html#s"><span class="id" title="variable">s</span></a>) (<span class="id" title="definition">size</span> <a class="idref" href="Combi.Combi.std.html#s"><span class="id" title="variable">s</span></a>).<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="rembig_ins_std"><span class="id" title="lemma">rembig_ins_std</span></a> <span class="id" title="var">s</span> <span class="id" title="var">pos</span> :<br/>
 &nbsp;&nbsp;<a class="idref" href="Combi.Basic.ordtype.html#rembig"><span class="id" title="definition">rembig</span></a> (<span class="id" title="definition">take</span> <a class="idref" href="Combi.Combi.std.html#pos"><span class="id" title="variable">pos</span></a> (<a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a> <a class="idref" href="Combi.Combi.std.html#s"><span class="id" title="variable">s</span></a>) <span class="id" title="notation">++</span> <span class="id" title="definition">size</span> <a class="idref" href="Combi.Combi.std.html#s"><span class="id" title="variable">s</span></a> <span class="id" title="notation">::</span> <span class="id" title="definition">drop</span> <a class="idref" href="Combi.Combi.std.html#pos"><span class="id" title="variable">pos</span></a> (<a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a> <a class="idref" href="Combi.Combi.std.html#s"><span class="id" title="variable">s</span></a>)) <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a> <a class="idref" href="Combi.Combi.std.html#s"><span class="id" title="variable">s</span></a>.<br/>
@@ -287,7 +288,7 @@ is the same as having the same standardized.
 </div>
 
 <div class="doc">
-<a name="lab33"></a><h2 class="section">Inversion sets and standardization</h2>
+<a name="lab32"></a><h2 class="section">Inversion sets and standardization</h2>
 
 </div>
 <div class="code">
@@ -426,7 +427,7 @@ is the same as having the same standardized.
 </div>
 
 <div class="doc">
-<a name="lab34"></a><h2 class="section">Standardization and elementary transpositions of a word</h2>
+<a name="lab33"></a><h2 class="section">Standardization and elementary transpositions of a word</h2>
 
 </div>
 <div class="code">
@@ -445,11 +446,11 @@ is the same as having the same standardized.
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="nth_sizeu"><span class="id" title="lemma">nth_sizeu</span></a> <span class="id" title="var">u</span> <span class="id" title="var">v</span> <span class="id" title="var">a</span> <span class="id" title="var">b</span> :<br/>
 &nbsp;&nbsp;<span class="id" title="definition">nth</span> <a class="idref" href="Combi.Combi.std.html#Transp.Z"><span class="id" title="variable">Z</span></a> (<a class="idref" href="Combi.Combi.std.html#u"><span class="id" title="variable">u</span></a> <span class="id" title="notation">++</span> <span class="id" title="notation">[::</span> <a class="idref" href="Combi.Combi.std.html#a"><span class="id" title="variable">a</span></a><span class="id" title="notation">;</span> <a class="idref" href="Combi.Combi.std.html#b"><span class="id" title="variable">b</span></a><span class="id" title="notation">]</span> <span class="id" title="notation">++</span> <a class="idref" href="Combi.Combi.std.html#v"><span class="id" title="variable">v</span></a>) (<span class="id" title="definition">size</span> <a class="idref" href="Combi.Combi.std.html#u"><span class="id" title="variable">u</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.Combi.std.html#a"><span class="id" title="variable">a</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="nth_sizeu1"><span class="id" title="lemma">nth_sizeu1</span></a> <span class="id" title="var">u</span> <span class="id" title="var">v</span> <span class="id" title="var">a</span> <span class="id" title="var">b</span> :<br/>
 &nbsp;&nbsp;<span class="id" title="definition">nth</span> <a class="idref" href="Combi.Combi.std.html#Transp.Z"><span class="id" title="variable">Z</span></a> (<a class="idref" href="Combi.Combi.std.html#u"><span class="id" title="variable">u</span></a> <span class="id" title="notation">++</span> <span class="id" title="notation">[::</span> <a class="idref" href="Combi.Combi.std.html#a"><span class="id" title="variable">a</span></a><span class="id" title="notation">;</span> <a class="idref" href="Combi.Combi.std.html#b"><span class="id" title="variable">b</span></a><span class="id" title="notation">]</span> <span class="id" title="notation">++</span> <a class="idref" href="Combi.Combi.std.html#v"><span class="id" title="variable">v</span></a>) <span class="id" title="notation">(</span><span class="id" title="definition">size</span> <a class="idref" href="Combi.Combi.std.html#u"><span class="id" title="variable">u</span></a><span class="id" title="notation">).+1</span> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.Combi.std.html#b"><span class="id" title="variable">b</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="nth_sizeu2"><span class="id" title="lemma">nth_sizeu2</span></a> <span class="id" title="var">u</span> <span class="id" title="var">v</span> <span class="id" title="var">a</span> <span class="id" title="var">b</span> <span class="id" title="var">c</span> :<br/>
 &nbsp;&nbsp;<span class="id" title="definition">nth</span> <a class="idref" href="Combi.Combi.std.html#Transp.Z"><span class="id" title="variable">Z</span></a> (<a class="idref" href="Combi.Combi.std.html#u"><span class="id" title="variable">u</span></a> <span class="id" title="notation">++</span> <span class="id" title="notation">[::</span> <a class="idref" href="Combi.Combi.std.html#a"><span class="id" title="variable">a</span></a><span class="id" title="notation">;</span> <a class="idref" href="Combi.Combi.std.html#b"><span class="id" title="variable">b</span></a><span class="id" title="notation">;</span> <a class="idref" href="Combi.Combi.std.html#c"><span class="id" title="variable">c</span></a><span class="id" title="notation">]</span> <span class="id" title="notation">++</span> <a class="idref" href="Combi.Combi.std.html#v"><span class="id" title="variable">v</span></a>) <span class="id" title="notation">(</span><span class="id" title="definition">size</span> <a class="idref" href="Combi.Combi.std.html#u"><span class="id" title="variable">u</span></a><span class="id" title="notation">).+2</span> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.Combi.std.html#c"><span class="id" title="variable">c</span></a>.<br/>
@@ -480,7 +481,7 @@ is the same as having the same standardized.
 </div>
 
 <div class="doc">
-<a name="lab35"></a><h1 class="section">Inverse of a standard word</h1>
+<a name="lab34"></a><h1 class="section">Inverse of a standard word</h1>
 
 </div>
 <div class="code">
@@ -537,7 +538,7 @@ is the same as having the same standardized.
 </div>
 
 <div class="doc">
-<a name="lab36"></a><h1 class="section">inverse of the standardized of w</h1>
+<a name="lab35"></a><h1 class="section">inverse of the standardized of w</h1>
 
 </div>
 <div class="code">
@@ -575,10 +576,10 @@ is the same as having the same standardized.
 
 <br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Goal</span> <a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a> <a class="idref" href="Combi.Combi.std.html#Test.u"><span class="id" title="variable">u</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="notation">[::</span> 4<span class="id" title="notation">;</span> 0<span class="id" title="notation">;</span> 1<span class="id" title="notation">;</span> 2<span class="id" title="notation">;</span> 5<span class="id" title="notation">;</span> 3<span class="id" title="notation">]</span>.<br/>
- 
+
 <br/>
 &nbsp;&nbsp;<span class="id" title="keyword">Goal</span> <a class="idref" href="Combi.Combi.std.html#invstd"><span class="id" title="definition">invstd</span></a> (<a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a> <a class="idref" href="Combi.Combi.std.html#Test.u"><span class="id" title="variable">u</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="definition">filter</span> (<span class="id" title="definition">gtn</span> (<span class="id" title="definition">size</span> <a class="idref" href="Combi.Combi.std.html#Test.u"><span class="id" title="variable">u</span></a>)) (<a class="idref" href="Combi.Combi.std.html#invstd"><span class="id" title="definition">invstd</span></a> (<a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a> (<a class="idref" href="Combi.Combi.std.html#Test.u"><span class="id" title="variable">u</span></a> <span class="id" title="notation">++</span> <a class="idref" href="Combi.Combi.std.html#Test.v"><span class="id" title="variable">v</span></a>))).<br/>
- 
+
 <br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.Combi.std.html#Test"><span class="id" title="section">Test</span></a>.<br/>
 </div>

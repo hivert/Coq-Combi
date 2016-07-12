@@ -99,6 +99,7 @@ Sigma types of Yamanouchi words:
 </div>
 <div class="code">
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">mathcomp.ssreflect.ssreflect</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.tools.html#"><span class="id" title="library">tools</span></a> <a class="idref" href="Combi.Basic.combclass.html#"><span class="id" title="library">combclass</span></a> <a class="idref" href="Combi.Combi.partition.html#"><span class="id" title="library">partition</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Set Implicit Arguments</span>.<br/>
@@ -308,16 +309,16 @@ Remove the zeroes from a yam and decrease all the other entries by 1
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="yamevalP"><span class="id" title="lemma">yamevalP</span></a> (<span class="id" title="var">y</span> : <a class="idref" href="Combi.Combi.Yamanouchi.html#yameval"><span class="id" title="record">yameval</span></a>) : <a class="idref" href="Combi.Combi.Yamanouchi.html#is_yam"><span class="id" title="definition">is_yam</span></a> <a class="idref" href="Combi.Combi.Yamanouchi.html#y"><span class="id" title="variable">y</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="eval_yameval"><span class="id" title="lemma">eval_yameval</span></a> (<span class="id" title="var">y</span> : <a class="idref" href="Combi.Combi.Yamanouchi.html#yameval"><span class="id" title="record">yameval</span></a>) : <a class="idref" href="Combi.Combi.Yamanouchi.html#evalseq"><span class="id" title="definition">evalseq</span></a> <a class="idref" href="Combi.Combi.Yamanouchi.html#y"><span class="id" title="variable">y</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.Combi.Yamanouchi.html#YamOfEval.ev"><span class="id" title="variable">ev</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="size_yameval"><span class="id" title="lemma">size_yameval</span></a> (<span class="id" title="var">y</span> : <a class="idref" href="Combi.Combi.Yamanouchi.html#yameval"><span class="id" title="record">yameval</span></a>) : <span class="id" title="definition">size</span> <a class="idref" href="Combi.Combi.Yamanouchi.html#y"><span class="id" title="variable">y</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="definition">sumn</span> <a class="idref" href="Combi.Combi.Yamanouchi.html#YamOfEval.ev"><span class="id" title="variable">ev</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="enum_yamevalE"><span class="id" title="lemma">enum_yamevalE</span></a> : <span class="id" title="definition">map</span> <span class="id" title="projection">val</span> (<span class="id" title="abbreviation">enum</span> <span class="id" title="notation">{:</span><a class="idref" href="Combi.Combi.Yamanouchi.html#yameval"><span class="id" title="record">yameval</span></a><span class="id" title="notation">}</span>) <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.Combi.Yamanouchi.html#enum_yameval"><span class="id" title="definition">enum_yameval</span></a> <a class="idref" href="Combi.Combi.Yamanouchi.html#YamOfEval.ev"><span class="id" title="variable">ev</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.Combi.Yamanouchi.html#YamOfEval"><span class="id" title="section">YamOfEval</span></a>.<br/>
 
@@ -355,10 +356,10 @@ Remove the zeroes from a yam and decrease all the other entries by 1
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="yamnP"><span class="id" title="lemma">yamnP</span></a> (<span class="id" title="var">y</span> : <a class="idref" href="Combi.Combi.Yamanouchi.html#yamn"><span class="id" title="record">yamn</span></a>) : <a class="idref" href="Combi.Combi.Yamanouchi.html#is_yam"><span class="id" title="definition">is_yam</span></a> <a class="idref" href="Combi.Combi.Yamanouchi.html#y"><span class="id" title="variable">y</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="size_yamn"><span class="id" title="lemma">size_yamn</span></a> (<span class="id" title="var">y</span> : <a class="idref" href="Combi.Combi.Yamanouchi.html#yamn"><span class="id" title="record">yamn</span></a>) : <span class="id" title="definition">size</span> <a class="idref" href="Combi.Combi.Yamanouchi.html#y"><span class="id" title="variable">y</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.Combi.Yamanouchi.html#YamOfSize.n"><span class="id" title="variable">n</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="enum_yamnE"><span class="id" title="lemma">enum_yamnE</span></a> :<br/>
 &nbsp;&nbsp;<span class="id" title="definition">map</span> <span class="id" title="projection">val</span> (<span class="id" title="abbreviation">enum</span> <span class="id" title="notation">{:</span><a class="idref" href="Combi.Combi.Yamanouchi.html#yamn"><span class="id" title="record">yamn</span></a><span class="id" title="notation">}</span>) <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="definition">flatten</span> <span class="id" title="notation">[</span><span class="id" title="notation">seq</span> <a class="idref" href="Combi.Combi.Yamanouchi.html#enum_yameval"><span class="id" title="definition">enum_yameval</span></a> <span class="id" title="var">p</span> <span class="id" title="notation">|</span> <span class="id" title="var">p</span> <span class="id" title="notation">&lt;-</span> <a class="idref" href="Combi.Combi.partition.html#enum_partn"><span class="id" title="definition">enum_partn</span></a> <a class="idref" href="Combi.Combi.Yamanouchi.html#YamOfSize.n"><span class="id" title="variable">n</span></a><span class="id" title="notation">]</span>.<br/>

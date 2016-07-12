@@ -22,14 +22,14 @@
 </div>
 
 <div class="doc">
-<a name="lab112"></a><h1 class="section">Combi.SymGroup.symgroup : The symmetric group</h1>
+<a name="lab111"></a><h1 class="section">Combi.SymGroup.symgroup : The symmetric group</h1>
 
 </div>
 <div class="code">
 </div>
 
 <div class="doc">
-<a name="lab113"></a><h1 class="section">The symmetric group</h1>
+<a name="lab112"></a><h1 class="section">The symmetric group</h1>
 
 
 <div class="paragraph"> </div>
@@ -53,6 +53,7 @@ the symmetric groups as a Coxeter group.
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">mathcomp.ssreflect.ssreflect</span>.<br/>
 
 <br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.tools.html#"><span class="id" title="library">tools</span></a> <a class="idref" href="Combi.Combi.permuted.html#"><span class="id" title="library">permuted</span></a> <a class="idref" href="Combi.Basic.combclass.html#"><span class="id" title="library">combclass</span></a> <a class="idref" href="Combi.Basic.congr.html#"><span class="id" title="library">congr</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Set Implicit Arguments</span>.<br/>
@@ -149,13 +150,13 @@ the symmetric groups as a Coxeter group.
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="codeszP"><span class="id" title="lemma">codeszP</span></a> <span class="id" title="var">c</span> : <span class="id" title="projection">val</span> <a class="idref" href="Combi.SymGroup.symgroup.html#c"><span class="id" title="variable">c</span></a> <span class="id" title="notation">\</span><span class="id" title="notation">is</span> <span class="id" title="notation">a</span> <a class="idref" href="Combi.SymGroup.symgroup.html#code"><span class="id" title="definition">code</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="size_codesz"><span class="id" title="lemma">size_codesz</span></a> <span class="id" title="var">c</span> : <span class="id" title="definition">size</span> <a class="idref" href="Combi.SymGroup.symgroup.html#c"><span class="id" title="variable">c</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#Codes.FinType.n"><span class="id" title="variable">n</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="enum_codeszE"><span class="id" title="lemma">enum_codeszE</span></a> : <span class="id" title="definition">map</span> <span class="id" title="projection">val</span> (<span class="id" title="abbreviation">enum</span> <span class="id" title="notation">{:</span><a class="idref" href="Combi.SymGroup.symgroup.html#codesz"><span class="id" title="record">codesz</span></a><span class="id" title="notation">}</span>) <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#enum_codesz"><span class="id" title="definition">enum_codesz</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#Codes.FinType.n"><span class="id" title="variable">n</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.SymGroup.symgroup.html#Codes.FinType"><span class="id" title="section">FinType</span></a>.<br/>
 
@@ -227,7 +228,7 @@ the symmetric groups as a Coxeter group.
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="prodsV"><span class="id" title="lemma">prodsV</span></a> <span class="id" title="var">w</span> : <a class="idref" href="Combi.SymGroup.symgroup.html#40a9178dc804bb807f1de47ac545db47"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#40a9178dc804bb807f1de47ac545db47"><span class="id" title="notation">s_</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#40a9178dc804bb807f1de47ac545db47"><span class="id" title="notation">[</span></a><span class="id" title="definition">rev</span> <a class="idref" href="Combi.SymGroup.symgroup.html#w"><span class="id" title="variable">w</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#40a9178dc804bb807f1de47ac545db47"><span class="id" title="notation">]</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#40a9178dc804bb807f1de47ac545db47"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#40a9178dc804bb807f1de47ac545db47"><span class="id" title="notation">s_</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#40a9178dc804bb807f1de47ac545db47"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#w"><span class="id" title="variable">w</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#40a9178dc804bb807f1de47ac545db47"><span class="id" title="notation">]</span></a><span class="id" title="notation">^-1</span>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.SymGroup.symgroup.html#ElemTransp"><span class="id" title="section">ElemTransp</span></a>.<br/>
 
@@ -246,7 +247,7 @@ the symmetric groups as a Coxeter group.
 </div>
 
 <div class="doc">
-<a name="lab114"></a><h1 class="section">Length of a permutation</h1>
+<a name="lab113"></a><h1 class="section">Length of a permutation</h1>
 
 </div>
 <div class="code">
@@ -295,7 +296,7 @@ the symmetric groups as a Coxeter group.
 </div>
 
 <div class="doc">
-<a name="lab115"></a><h1 class="section">Dual code of a permutation</h1>
+<a name="lab114"></a><h1 class="section">Dual code of a permutation</h1>
 
 </div>
 <div class="code">
@@ -315,18 +316,18 @@ the symmetric groups as a Coxeter group.
 <span class="id" title="keyword">Lemma</span> <a name="wordcdE"><span class="id" title="lemma">wordcdE</span></a> <span class="id" title="var">c</span> :<br/>
 &nbsp;&nbsp;<a class="idref" href="Combi.SymGroup.symgroup.html#85dc067c9a1beab30f0b6d136c3acabd"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#85dc067c9a1beab30f0b6d136c3acabd"><span class="id" title="notation">s_</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#85dc067c9a1beab30f0b6d136c3acabd"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#wordcd"><span class="id" title="definition">wordcd</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#c"><span class="id" title="variable">c</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#85dc067c9a1beab30f0b6d136c3acabd"><span class="id" title="notation">]</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a><br/>
 &nbsp;&nbsp;<span class="id" title="notation">\</span><span class="id" title="notation">prod_</span><span class="id" title="notation">(</span><span class="id" title="var">i</span> <span class="id" title="notation">&lt;-</span> <span class="id" title="keyword">iota</span> 0 (<span class="id" title="definition">size</span> <a class="idref" href="Combi.SymGroup.symgroup.html#c"><span class="id" title="variable">c</span></a>)<span class="id" title="notation">)</span> <a class="idref" href="Combi.SymGroup.symgroup.html#85dc067c9a1beab30f0b6d136c3acabd"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#85dc067c9a1beab30f0b6d136c3acabd"><span class="id" title="notation">s_</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#85dc067c9a1beab30f0b6d136c3acabd"><span class="id" title="notation">[</span></a><span class="id" title="definition">rev</span> (<span class="id" title="keyword">iota</span> (<span class="id" title="var">i</span> <span class="id" title="notation">-</span> <span class="id" title="definition">nth</span> 0 <a class="idref" href="Combi.SymGroup.symgroup.html#c"><span class="id" title="variable">c</span></a> <span class="id" title="var">i</span>) (<span class="id" title="definition">nth</span> 0 <a class="idref" href="Combi.SymGroup.symgroup.html#c"><span class="id" title="variable">c</span></a> <span class="id" title="var">i</span>))<a class="idref" href="Combi.SymGroup.symgroup.html#85dc067c9a1beab30f0b6d136c3acabd"><span class="id" title="notation">]</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="size_cocode_rec"><span class="id" title="lemma">size_cocode_rec</span></a> <span class="id" title="var">m</span> <span class="id" title="var">s</span> <span class="id" title="var">c</span> : <span class="id" title="definition">size</span> (<a class="idref" href="Combi.SymGroup.symgroup.html#cocode_rec"><span class="id" title="definition">cocode_rec</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#m"><span class="id" title="variable">m</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#c"><span class="id" title="variable">c</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#s"><span class="id" title="variable">s</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#m"><span class="id" title="variable">m</span></a> <span class="id" title="notation">+</span> <span class="id" title="definition">size</span> <a class="idref" href="Combi.SymGroup.symgroup.html#c"><span class="id" title="variable">c</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="size_cocode"><span class="id" title="lemma">size_cocode</span></a> <span class="id" title="var">s</span> : <span class="id" title="definition">size</span> (<a class="idref" href="Combi.SymGroup.symgroup.html#cocode"><span class="id" title="definition">cocode</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#s"><span class="id" title="variable">s</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#Length.n"><span class="id" title="variable">n</span></a><span class="id" title="notation">.+1</span>.<br/>
- 
+
 <br/>
 </div>
 
 <div class="doc">
-<a name="lab116"></a><h2 class="section">Partial codes</h2>
+<a name="lab115"></a><h2 class="section">Partial codes</h2>
 
 </div>
 <div class="code">
@@ -386,16 +387,16 @@ the symmetric groups as a Coxeter group.
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="cocodeP"><span class="id" title="lemma">cocodeP</span></a> <span class="id" title="var">s</span> : <a class="idref" href="Combi.SymGroup.symgroup.html#cocode"><span class="id" title="definition">cocode</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#s"><span class="id" title="variable">s</span></a> <span class="id" title="notation">\</span><span class="id" title="notation">is</span> <span class="id" title="notation">a</span> <a class="idref" href="Combi.SymGroup.symgroup.html#code"><span class="id" title="definition">code</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="cocodeE"><span class="id" title="lemma">cocodeE</span></a> <span class="id" title="var">s</span> : <a class="idref" href="Combi.SymGroup.symgroup.html#s"><span class="id" title="variable">s</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#85dc067c9a1beab30f0b6d136c3acabd"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#85dc067c9a1beab30f0b6d136c3acabd"><span class="id" title="notation">s_</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#85dc067c9a1beab30f0b6d136c3acabd"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#wordcd"><span class="id" title="definition">wordcd</span></a> (<a class="idref" href="Combi.SymGroup.symgroup.html#cocode"><span class="id" title="definition">cocode</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#s"><span class="id" title="variable">s</span></a>)<a class="idref" href="Combi.SymGroup.symgroup.html#85dc067c9a1beab30f0b6d136c3acabd"><span class="id" title="notation">]</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Definition</span> <a name="canword"><span class="id" title="definition">canword</span></a> <span class="id" title="var">s</span> : <span class="id" title="abbreviation">seq</span> <span class="id" title="notation">'</span><span class="id" title="notation">I_n</span> := <span class="id" title="definition">pmap</span> <span class="id" title="definition">insub</span> (<a class="idref" href="Combi.SymGroup.symgroup.html#wordcd"><span class="id" title="definition">wordcd</span></a> (<a class="idref" href="Combi.SymGroup.symgroup.html#cocode"><span class="id" title="definition">cocode</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#s"><span class="id" title="variable">s</span></a>)).<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="canwordE"><span class="id" title="lemma">canwordE</span></a> <span class="id" title="var">s</span> : <span class="id" title="notation">[</span><span class="id" title="notation">seq</span> <span class="id" title="definition">nat_of_ord</span> <span class="id" title="var">i</span> <span class="id" title="notation">|</span> <span class="id" title="var">i</span> <span class="id" title="notation">&lt;-</span> <a class="idref" href="Combi.SymGroup.symgroup.html#canword"><span class="id" title="definition">canword</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#s"><span class="id" title="variable">s</span></a><span class="id" title="notation">]</span> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#wordcd"><span class="id" title="definition">wordcd</span></a> (<a class="idref" href="Combi.SymGroup.symgroup.html#cocode"><span class="id" title="definition">cocode</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#s"><span class="id" title="variable">s</span></a>).<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Theorem</span> <a name="canwordP"><span class="id" title="lemma">canwordP</span></a> <span class="id" title="var">s</span> : <a class="idref" href="Combi.SymGroup.symgroup.html#s"><span class="id" title="variable">s</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#85dc067c9a1beab30f0b6d136c3acabd"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#85dc067c9a1beab30f0b6d136c3acabd"><span class="id" title="notation">s_</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#85dc067c9a1beab30f0b6d136c3acabd"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#canword"><span class="id" title="definition">canword</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#s"><span class="id" title="variable">s</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#85dc067c9a1beab30f0b6d136c3acabd"><span class="id" title="notation">]</span></a>.<br/>
 
@@ -424,7 +425,7 @@ the symmetric groups as a Coxeter group.
 </div>
 
 <div class="doc">
-<a name="lab117"></a><h1 class="section">Let's do some real combinatorics !!!</h1>
+<a name="lab116"></a><h1 class="section">Let's do some real combinatorics !!!</h1>
 
 </div>
 <div class="code">
@@ -450,7 +451,7 @@ the symmetric groups as a Coxeter group.
 </div>
 
 <div class="doc">
-<a name="lab118"></a><h1 class="section">Reduced words</h1>
+<a name="lab117"></a><h1 class="section">Reduced words</h1>
 
 </div>
 <div class="code">
@@ -467,13 +468,13 @@ the symmetric groups as a Coxeter group.
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="reduced_nil"><span class="id" title="lemma">reduced_nil</span></a> : <span class="id" title="notation">[::]</span> <span class="id" title="notation">\</span><span class="id" title="notation">is</span> <a class="idref" href="Combi.SymGroup.symgroup.html#reduced"><span class="id" title="abbreviation">reduced</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Hint Resolve</span> <span class="id" title="var">reduced_nil</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="reduced_iiF"><span class="id" title="lemma">reduced_iiF</span></a> <span class="id" title="var">i</span> : <span class="id" title="notation">[::</span> <a class="idref" href="Combi.SymGroup.symgroup.html#i"><span class="id" title="variable">i</span></a><span class="id" title="notation">;</span> <a class="idref" href="Combi.SymGroup.symgroup.html#i"><span class="id" title="variable">i</span></a><span class="id" title="notation">]</span> <span class="id" title="notation">\</span><span class="id" title="notation">is</span> <a class="idref" href="Combi.SymGroup.symgroup.html#reduced"><span class="id" title="abbreviation">reduced</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Datatypes.html#false"><span class="id" title="constructor">false</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="reduced_rev"><span class="id" title="lemma">reduced_rev</span></a> <span class="id" title="var">w</span> : <a class="idref" href="Combi.SymGroup.symgroup.html#w"><span class="id" title="variable">w</span></a> <span class="id" title="notation">\</span><span class="id" title="notation">is</span> <a class="idref" href="Combi.SymGroup.symgroup.html#reduced"><span class="id" title="abbreviation">reduced</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="definition">rev</span> <a class="idref" href="Combi.SymGroup.symgroup.html#w"><span class="id" title="variable">w</span></a> <span class="id" title="notation">\</span><span class="id" title="notation">is</span> <a class="idref" href="Combi.SymGroup.symgroup.html#reduced"><span class="id" title="abbreviation">reduced</span></a>.<br/>
 
@@ -486,7 +487,7 @@ the symmetric groups as a Coxeter group.
 
 <br/>
 <span class="id" title="keyword">Theorem</span> <a name="canword_reduced"><span class="id" title="lemma">canword_reduced</span></a> <span class="id" title="var">s</span> : <a class="idref" href="Combi.SymGroup.symgroup.html#canword"><span class="id" title="definition">canword</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#s"><span class="id" title="variable">s</span></a> <span class="id" title="notation">\</span><span class="id" title="notation">is</span> <a class="idref" href="Combi.SymGroup.symgroup.html#reduced"><span class="id" title="abbreviation">reduced</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Corollary</span> <a name="lengthM"><span class="id" title="lemma">lengthM</span></a> <span class="id" title="var">u</span> <span class="id" title="var">v</span> : <a class="idref" href="Combi.SymGroup.symgroup.html#length"><span class="id" title="abbreviation">length</span></a> (<a class="idref" href="Combi.SymGroup.symgroup.html#u"><span class="id" title="variable">u</span></a> <span class="id" title="notation">×</span> <a class="idref" href="Combi.SymGroup.symgroup.html#v"><span class="id" title="variable">v</span></a>) <span class="id" title="notation">≤</span> <a class="idref" href="Combi.SymGroup.symgroup.html#length"><span class="id" title="abbreviation">length</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#u"><span class="id" title="variable">u</span></a> <span class="id" title="notation">+</span> <a class="idref" href="Combi.SymGroup.symgroup.html#length"><span class="id" title="abbreviation">length</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#v"><span class="id" title="variable">v</span></a>.<br/>
 
@@ -498,10 +499,10 @@ the symmetric groups as a Coxeter group.
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="reduced_consK"><span class="id" title="lemma">reduced_consK</span></a> <span class="id" title="var">i</span> <span class="id" title="var">u</span> : <a class="idref" href="Combi.SymGroup.symgroup.html#i"><span class="id" title="variable">i</span></a> <span class="id" title="notation">::</span> <a class="idref" href="Combi.SymGroup.symgroup.html#u"><span class="id" title="variable">u</span></a> <span class="id" title="notation">\</span><span class="id" title="notation">is</span> <a class="idref" href="Combi.SymGroup.symgroup.html#reduced"><span class="id" title="abbreviation">reduced</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#u"><span class="id" title="variable">u</span></a> <span class="id" title="notation">\</span><span class="id" title="notation">is</span> <a class="idref" href="Combi.SymGroup.symgroup.html#reduced"><span class="id" title="abbreviation">reduced</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="reduced_rconsK"><span class="id" title="lemma">reduced_rconsK</span></a> <span class="id" title="var">u</span> <span class="id" title="var">i</span> : <span class="id" title="definition">rcons</span> <a class="idref" href="Combi.SymGroup.symgroup.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#i"><span class="id" title="variable">i</span></a> <span class="id" title="notation">\</span><span class="id" title="notation">is</span> <a class="idref" href="Combi.SymGroup.symgroup.html#reduced"><span class="id" title="abbreviation">reduced</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#u"><span class="id" title="variable">u</span></a> <span class="id" title="notation">\</span><span class="id" title="notation">is</span> <a class="idref" href="Combi.SymGroup.symgroup.html#reduced"><span class="id" title="abbreviation">reduced</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="canword1"><span class="id" title="lemma">canword1</span></a> : <a class="idref" href="Combi.SymGroup.symgroup.html#canword"><span class="id" title="definition">canword</span></a> (1 <span class="id" title="notation">:</span> <span class="id" title="notation">'</span><span class="id" title="notation">S_n</span><span class="id" title="notation">.+1</span>) <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="notation">[::]</span>.<br/>
 
@@ -518,7 +519,7 @@ the symmetric groups as a Coxeter group.
 </div>
 
 <div class="doc">
-<a name="lab119"></a><h1 class="section">Braid monoid relations</h1>
+<a name="lab118"></a><h1 class="section">Braid monoid relations</h1>
 
 </div>
 <div class="code">
@@ -566,25 +567,25 @@ the symmetric groups as a Coxeter group.
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="braid_equiv"><span class="id" title="lemma">braid_equiv</span></a> : <span class="id" title="definition">equivalence_rel</span> <a class="idref" href="Combi.SymGroup.symgroup.html#braidcongr"><span class="id" title="definition">braidcongr</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="braid_refl"><span class="id" title="lemma">braid_refl</span></a> : <span class="id" title="definition">reflexive</span> <a class="idref" href="Combi.SymGroup.symgroup.html#braidcongr"><span class="id" title="definition">braidcongr</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="braidww"><span class="id" title="lemma">braidww</span></a> <span class="id" title="var">w</span> : <a class="idref" href="Combi.SymGroup.symgroup.html#braidcongr"><span class="id" title="definition">braidcongr</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#w"><span class="id" title="variable">w</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#w"><span class="id" title="variable">w</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="braid_sym"><span class="id" title="lemma">braid_sym</span></a> : <span class="id" title="definition">symmetric</span> <a class="idref" href="Combi.SymGroup.symgroup.html#braidcongr"><span class="id" title="definition">braidcongr</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="braid_ltrans"><span class="id" title="lemma">braid_ltrans</span></a> : <span class="id" title="definition">left_transitive</span> <a class="idref" href="Combi.SymGroup.symgroup.html#braidcongr"><span class="id" title="definition">braidcongr</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="braid_trans"><span class="id" title="lemma">braid_trans</span></a> : <span class="id" title="definition">transitive</span> <a class="idref" href="Combi.SymGroup.symgroup.html#braidcongr"><span class="id" title="definition">braidcongr</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="braid_is_congr"><span class="id" title="lemma">braid_is_congr</span></a> : <a class="idref" href="Combi.Basic.congr.html#congruence_rel"><span class="id" title="definition">congruence_rel</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#braidcongr"><span class="id" title="definition">braidcongr</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Definition</span> <a name="braid_cons"><span class="id" title="definition">braid_cons</span></a> := <a class="idref" href="Combi.Basic.congr.html#congr_cons"><span class="id" title="lemma">congr_cons</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#braid_is_congr"><span class="id" title="lemma">braid_is_congr</span></a>.<br/>
 <span class="id" title="keyword">Definition</span> <a name="braid_rcons"><span class="id" title="definition">braid_rcons</span></a> := <a class="idref" href="Combi.Basic.congr.html#congr_rcons"><span class="id" title="lemma">congr_rcons</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#braid_is_congr"><span class="id" title="lemma">braid_is_congr</span></a>.<br/>
@@ -594,7 +595,7 @@ the symmetric groups as a Coxeter group.
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="size_braid"><span class="id" title="lemma">size_braid</span></a> <span class="id" title="var">u</span> <span class="id" title="var">v</span> : <a class="idref" href="Combi.SymGroup.symgroup.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#f1325219127a917b7a2bf817feb40290"><span class="id" title="notation">=</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#f1325219127a917b7a2bf817feb40290"><span class="id" title="notation">Br</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="definition">size</span> <a class="idref" href="Combi.SymGroup.symgroup.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="definition">size</span> <a class="idref" href="Combi.SymGroup.symgroup.html#v"><span class="id" title="variable">v</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="braid_rev"><span class="id" title="lemma">braid_rev</span></a> <span class="id" title="var">u</span> <span class="id" title="var">v</span> : <a class="idref" href="Combi.SymGroup.symgroup.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#f1325219127a917b7a2bf817feb40290"><span class="id" title="notation">=</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#f1325219127a917b7a2bf817feb40290"><span class="id" title="notation">Br</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="definition">rev</span> <a class="idref" href="Combi.SymGroup.symgroup.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#f1325219127a917b7a2bf817feb40290"><span class="id" title="notation">=</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#f1325219127a917b7a2bf817feb40290"><span class="id" title="notation">Br</span></a> <span class="id" title="definition">rev</span> <a class="idref" href="Combi.SymGroup.symgroup.html#v"><span class="id" title="variable">v</span></a>.<br/>
 
@@ -636,7 +637,7 @@ the symmetric groups as a Coxeter group.
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="braidredE"><span class="id" title="lemma">braidredE</span></a> <span class="id" title="var">u</span> <span class="id" title="var">v</span> : <a class="idref" href="Combi.SymGroup.symgroup.html#braid_reduces"><span class="id" title="definition">braid_reduces</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#7a1d3949b26e8cde65a32e00bc4b377e"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#7a1d3949b26e8cde65a32e00bc4b377e"><span class="id" title="notation">s_</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#7a1d3949b26e8cde65a32e00bc4b377e"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#u"><span class="id" title="variable">u</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#7a1d3949b26e8cde65a32e00bc4b377e"><span class="id" title="notation">]</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#7a1d3949b26e8cde65a32e00bc4b377e"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#7a1d3949b26e8cde65a32e00bc4b377e"><span class="id" title="notation">s_</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#7a1d3949b26e8cde65a32e00bc4b377e"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#v"><span class="id" title="variable">v</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#7a1d3949b26e8cde65a32e00bc4b377e"><span class="id" title="notation">]</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.SymGroup.symgroup.html#Reduced"><span class="id" title="section">Reduced</span></a>.<br/>
 
@@ -651,7 +652,7 @@ the symmetric groups as a Coxeter group.
 </div>
 
 <div class="doc">
-<a name="lab120"></a><h1 class="section">Cocode insertion algorithm</h1>
+<a name="lab119"></a><h1 class="section">Cocode insertion algorithm</h1>
 
 </div>
 <div class="code">
@@ -771,7 +772,7 @@ the symmetric groups as a Coxeter group.
 <br/>
 <span class="id" title="keyword">Corollary</span> <a name="canword_path_npos"><span class="id" title="lemma">canword_path_npos</span></a> <span class="id" title="var">w</span> :<br/>
 &nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Specif.html#5b63cb9ed0fed82566685c66e56592e4"><span class="id" title="notation">{</span></a> <span class="id" title="var">p</span> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Specif.html#5b63cb9ed0fed82566685c66e56592e4"><span class="id" title="notation">|</span></a> <span class="id" title="definition">path</span> <a class="idref" href="Combi.SymGroup.symgroup.html#braidred"><span class="id" title="abbreviation">braidred</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#w"><span class="id" title="variable">w</span></a> <span class="id" title="var">p</span> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d82a7d96d3659d805ffe732283716822"><span class="id" title="notation">∧</span></a> <span class="id" title="definition">last</span> <a class="idref" href="Combi.SymGroup.symgroup.html#w"><span class="id" title="variable">w</span></a> <span class="id" title="var">p</span> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#canword"><span class="id" title="definition">canword</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#21064ecf3b44e1d0b4458c6dbc00882c"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#21064ecf3b44e1d0b4458c6dbc00882c"><span class="id" title="notation">s_</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#21064ecf3b44e1d0b4458c6dbc00882c"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#w"><span class="id" title="variable">w</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#21064ecf3b44e1d0b4458c6dbc00882c"><span class="id" title="notation">]</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Specif.html#5b63cb9ed0fed82566685c66e56592e4"><span class="id" title="notation">}</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.SymGroup.symgroup.html#Nnon0"><span class="id" title="section">Nnon0</span></a>.<br/>
 

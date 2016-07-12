@@ -22,7 +22,7 @@
 </div>
 
 <div class="doc">
-<a name="lab43"></a><h1 class="section">Combi.Combi.subseq : Subsequence of a sequence as a fintype</h1>
+<a name="lab42"></a><h1 class="section">Combi.Combi.subseq : Subsequence of a sequence as a fintype</h1>
 
 <div class="paragraph"> </div>
 
@@ -30,6 +30,7 @@
 </div>
 <div class="code">
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">mathcomp.ssreflect.ssreflect</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.tools.html#"><span class="id" title="library">tools</span></a> <a class="idref" href="Combi.Basic.combclass.html#"><span class="id" title="library">combclass</span></a>.<br/>
 
 <br/>
 </div>
@@ -46,7 +47,7 @@ TODO: these probably should be contributed to path.v
 </div>
 
 <div class="doc">
-<a name="lab44"></a><h2 class="section">A few lemmas about <span class="inlinecode"><span class="id" title="library">subseq</span></span> and <span class="inlinecode"><span class="id" title="definition">rcons</span></span></h2>
+<a name="lab43"></a><h2 class="section">A few lemmas about <span class="inlinecode"><span class="id" title="library">subseq</span></span> and <span class="inlinecode"><span class="id" title="definition">rcons</span></span></h2>
 
 </div>
 <div class="code">
@@ -74,7 +75,7 @@ TODO: these probably should be contributed to path.v
 </div>
 
 <div class="doc">
-<a name="lab45"></a><h2 class="section">Subsequence of a sequence as a <span class="inlinecode"><span class="id" title="library">fintype</span></span></h2>
+<a name="lab44"></a><h2 class="section">Subsequence of a sequence as a <span class="inlinecode"><span class="id" title="library">fintype</span></span></h2>
 
 <div class="paragraph"> </div>
 
@@ -131,22 +132,22 @@ We define a dependent type <span class="inlinecode"><span class="id" title="var"
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="subseqsP"><span class="id" title="lemma">subseqsP</span></a> (<span class="id" title="var">s</span> : <a class="idref" href="Combi.Combi.subseq.html#subseqs"><span class="id" title="record">subseqs</span></a>) : <span class="id" title="definition">subseq</span> <a class="idref" href="Combi.Combi.subseq.html#s"><span class="id" title="variable">s</span></a> <a class="idref" href="Combi.Combi.subseq.html#Fintype.w"><span class="id" title="variable">w</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="enum_subseqsE"><span class="id" title="lemma">enum_subseqsE</span></a> :<br/>
 &nbsp;&nbsp;<span class="id" title="definition">map</span> <span class="id" title="projection">val</span> (<span class="id" title="abbreviation">enum</span> <a class="idref" href="Combi.Combi.subseq.html#subseqs"><span class="id" title="record">subseqs</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="definition">undup</span> (<a class="idref" href="Combi.Combi.subseq.html#enum_subseqs"><span class="id" title="definition">enum_subseqs</span></a> <a class="idref" href="Combi.Combi.subseq.html#Fintype.w"><span class="id" title="variable">w</span></a>).<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="uniq_enum_subseqsE"><span class="id" title="lemma">uniq_enum_subseqsE</span></a> :<br/>
 &nbsp;&nbsp;<span class="id" title="definition">uniq</span> <a class="idref" href="Combi.Combi.subseq.html#Fintype.w"><span class="id" title="variable">w</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="definition">map</span> <span class="id" title="projection">val</span> (<span class="id" title="abbreviation">enum</span> <a class="idref" href="Combi.Combi.subseq.html#subseqs"><span class="id" title="record">subseqs</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.Combi.subseq.html#enum_subseqs"><span class="id" title="definition">enum_subseqs</span></a> <a class="idref" href="Combi.Combi.subseq.html#Fintype.w"><span class="id" title="variable">w</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">Definition</span> <a name="sub_nil"><span class="id" title="definition">sub_nil</span></a>  : <a class="idref" href="Combi.Combi.subseq.html#subseqs"><span class="id" title="record">subseqs</span></a> := <a class="idref" href="Combi.Combi.subseq.html#Subseqs"><span class="id" title="constructor">Subseqs</span></a> (<span class="id" title="lemma">sub0seq</span> <a class="idref" href="Combi.Combi.subseq.html#Fintype.w"><span class="id" title="variable">w</span></a>).<br/>
 <span class="id" title="keyword">Definition</span> <a name="sub_full"><span class="id" title="definition">sub_full</span></a> : <a class="idref" href="Combi.Combi.subseq.html#subseqs"><span class="id" title="record">subseqs</span></a> := <a class="idref" href="Combi.Combi.subseq.html#Subseqs"><span class="id" title="constructor">Subseqs</span></a> (<span class="id" title="lemma">subseq_refl</span> <a class="idref" href="Combi.Combi.subseq.html#Fintype.w"><span class="id" title="variable">w</span></a>).<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="size_le"><span class="id" title="lemma">size_le</span></a> (<span class="id" title="var">s</span> : <a class="idref" href="Combi.Combi.subseq.html#subseqs"><span class="id" title="record">subseqs</span></a>) : <span class="id" title="definition">size</span> <a class="idref" href="Combi.Combi.subseq.html#s"><span class="id" title="variable">s</span></a> <span class="id" title="notation">≤</span> <span class="id" title="definition">size</span> <a class="idref" href="Combi.Combi.subseq.html#Fintype.w"><span class="id" title="variable">w</span></a>.<br/>
- 
+
 <br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.Combi.subseq.html#Fintype"><span class="id" title="section">Fintype</span></a>.<br/>
 
@@ -157,7 +158,7 @@ We define a dependent type <span class="inlinecode"><span class="id" title="var"
 </div>
 
 <div class="doc">
-<a name="lab46"></a><h2 class="section">Relating sub sequences of <span class="inlinecode"><span class="id" title="keyword">iota</span></span> and being sorted</h2>
+<a name="lab45"></a><h2 class="section">Relating sub sequences of <span class="inlinecode"><span class="id" title="keyword">iota</span></span> and being sorted</h2>
 
 </div>
 <div class="code">
