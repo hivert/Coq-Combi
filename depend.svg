@@ -140,8 +140,8 @@
 <polygon fill="black" stroke="black" points="1572.37,-398.131 1561.96,-396.19 1568.89,-404.202 1572.37,-398.131"/>
 </g>
 <!-- cycletype -->
-<g id="node46" class="node"><title>cycletype</title>
-<g id="a_node46"><a xlink:href="Combi.SymGroup.cycletype.html" xlink:title="cycletype">
+<g id="node45" class="node"><title>cycletype</title>
+<g id="a_node45"><a xlink:href="Combi.SymGroup.cycletype.html" xlink:title="cycletype">
 <polygon fill="#dbc3b6" stroke="#dbc3b6" points="1994,-396 1908,-396 1908,-360 1994,-360 1994,-396"/>
 <text text-anchor="middle" x="1951" y="-373.6" font-family="Times,serif" font-size="18.00">cycletype</text>
 </a>
@@ -637,18 +637,18 @@
 <path fill="none" stroke="black" d="M1345.08,-575.849C1349.58,-538.832 1360.23,-451.181 1365.67,-406.386"/>
 <polygon fill="black" stroke="black" points="1369.17,-406.582 1366.91,-396.232 1362.23,-405.737 1369.17,-406.582"/>
 </g>
-<!-- commutant -->
-<g id="node44" class="node"><title>commutant</title>
-<g id="a_node44"><a xlink:href="Combi.SymGroup.commutant.html" xlink:title="commutant">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1702,-540 1604,-540 1604,-504 1702,-504 1702,-540"/>
-<text text-anchor="middle" x="1653" y="-517.6" font-family="Times,serif" font-size="18.00">commutant</text>
+<!-- permcent -->
+<g id="node46" class="node"><title>permcent</title>
+<g id="a_node46"><a xlink:href="Combi.SymGroup.permcent.html" xlink:title="permcent">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1695,-540 1611,-540 1611,-504 1695,-504 1695,-540"/>
+<text text-anchor="middle" x="1653" y="-517.6" font-family="Times,serif" font-size="18.00">permcent</text>
 </a>
 </g>
 </g>
-<!-- sympoly&#45;&gt;commutant -->
-<g id="edge4" class="edge"><title>sympoly&#45;&gt;commutant</title>
-<path fill="none" stroke="black" d="M1382.26,-584.134C1435.66,-572.077 1531.64,-550.404 1593.8,-536.368"/>
-<polygon fill="black" stroke="black" points="1594.87,-539.714 1603.85,-534.098 1593.33,-532.886 1594.87,-539.714"/>
+<!-- sympoly&#45;&gt;permcent -->
+<g id="edge4" class="edge"><title>sympoly&#45;&gt;permcent</title>
+<path fill="none" stroke="black" d="M1382.26,-584.134C1437.74,-571.606 1539.19,-548.699 1600.92,-534.761"/>
+<polygon fill="black" stroke="black" points="1601.86,-538.137 1610.84,-532.52 1600.32,-531.309 1601.86,-538.137"/>
 </g>
 <!-- ordcast&#45;&gt;tools -->
 <g id="edge38" class="edge"><title>ordcast&#45;&gt;tools</title>
@@ -681,22 +681,9 @@
 <path fill="none" stroke="black" d="M1210.81,-647.876C1236.13,-637.746 1268.28,-624.886 1294.54,-614.385"/>
 <polygon fill="black" stroke="black" points="1295.93,-617.596 1303.92,-610.632 1293.34,-611.096 1295.93,-617.596"/>
 </g>
-<!-- towerSn -->
-<g id="node50" class="node"><title>towerSn</title>
-<g id="a_node50"><a xlink:href="Combi.SymGroup.towerSn.html" xlink:title="towerSn">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="2134.5,-468 2055.5,-468 2055.5,-432 2134.5,-432 2134.5,-468"/>
-<text text-anchor="middle" x="2095" y="-445.6" font-family="Times,serif" font-size="18.00">towerSn</text>
-</a>
-</g>
-</g>
-<!-- commutant&#45;&gt;towerSn -->
-<g id="edge22" class="edge"><title>commutant&#45;&gt;towerSn</title>
-<path fill="none" stroke="black" d="M1702.43,-511.135C1715.58,-508.654 1729.81,-506.101 1743,-504 1865.6,-484.471 1897.77,-489.746 2020,-468 2028.31,-466.521 2037.1,-464.735 2045.61,-462.884"/>
-<polygon fill="black" stroke="black" points="2046.44,-466.286 2055.44,-460.696 2044.92,-459.453 2046.44,-466.286"/>
-</g>
 <!-- cycles -->
-<g id="node45" class="node"><title>cycles</title>
-<g id="a_node45"><a xlink:href="Combi.SymGroup.cycles.html" xlink:title="cycles">
+<g id="node44" class="node"><title>cycles</title>
+<g id="a_node44"><a xlink:href="Combi.SymGroup.cycles.html" xlink:title="cycles">
 <polygon fill="#dbc3b6" stroke="#dbc3b6" points="1681,-324 1619,-324 1619,-288 1681,-288 1681,-324"/>
 <text text-anchor="middle" x="1650" y="-301.6" font-family="Times,serif" font-size="18.00">cycles</text>
 </a>
@@ -726,6 +713,19 @@
 <g id="edge19" class="edge"><title>cycletype&#45;&gt;symgroup</title>
 <path fill="none" stroke="black" d="M1913.57,-359.876C1892.75,-350.349 1866.65,-338.407 1844.52,-328.283"/>
 <polygon fill="black" stroke="black" points="1845.86,-325.046 1835.31,-324.068 1842.94,-331.411 1845.86,-325.046"/>
+</g>
+<!-- towerSn -->
+<g id="node50" class="node"><title>towerSn</title>
+<g id="a_node50"><a xlink:href="Combi.SymGroup.towerSn.html" xlink:title="towerSn">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="2134.5,-468 2055.5,-468 2055.5,-432 2134.5,-432 2134.5,-468"/>
+<text text-anchor="middle" x="2095" y="-445.6" font-family="Times,serif" font-size="18.00">towerSn</text>
+</a>
+</g>
+</g>
+<!-- permcent&#45;&gt;towerSn -->
+<g id="edge22" class="edge"><title>permcent&#45;&gt;towerSn</title>
+<path fill="none" stroke="black" d="M1695.04,-512.542C1710.13,-509.643 1727.3,-506.501 1743,-504 1865.6,-484.471 1897.77,-489.746 2020,-468 2028.31,-466.521 2037.1,-464.735 2045.61,-462.884"/>
+<polygon fill="black" stroke="black" points="2046.44,-466.286 2055.44,-460.696 2044.92,-459.453 2046.44,-466.286"/>
 </g>
 <!-- reprS2 -->
 <g id="node47" class="node"><title>reprS2</title>
