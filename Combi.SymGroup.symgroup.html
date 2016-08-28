@@ -22,14 +22,14 @@
 </div>
 
 <div class="doc">
-<a name="lab111"></a><h1 class="section">Combi.SymGroup.symgroup : The symmetric group</h1>
+<a name="lab121"></a><h1 class="section">Combi.SymGroup.symgroup : The symmetric group</h1>
 
 </div>
 <div class="code">
 </div>
 
 <div class="doc">
-<a name="lab112"></a><h1 class="section">The symmetric group</h1>
+<a name="lab122"></a><h1 class="section">The symmetric group</h1>
 
 
 <div class="paragraph"> </div>
@@ -53,7 +53,7 @@ the symmetric groups as a Coxeter group.
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">mathcomp.ssreflect.ssreflect</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.tools.html#"><span class="id" title="library">tools</span></a> <a class="idref" href="Combi.Combi.permuted.html#"><span class="id" title="library">permuted</span></a> <a class="idref" href="Combi.Basic.combclass.html#"><span class="id" title="library">combclass</span></a> <a class="idref" href="Combi.Basic.congr.html#"><span class="id" title="library">congr</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.permcomp.html#"><span class="id" title="library">permcomp</span></a> <a class="idref" href="Combi.SSRcomplements.tools.html#"><span class="id" title="library">tools</span></a> <a class="idref" href="Combi.Combi.permuted.html#"><span class="id" title="library">permuted</span></a> <a class="idref" href="Combi.Basic.combclass.html#"><span class="id" title="library">combclass</span></a> <a class="idref" href="Combi.Basic.congr.html#"><span class="id" title="library">congr</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Set Implicit Arguments</span>.<br/>
@@ -69,6 +69,10 @@ the symmetric groups as a Coxeter group.
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="inordi1"><span class="id" title="lemma">inordi1</span></a> <span class="id" title="var">n</span> <span class="id" title="var">i</span> : <a class="idref" href="Combi.SymGroup.symgroup.html#i"><span class="id" title="variable">i</span></a> <span class="id" title="notation">&lt;</span> <a class="idref" href="Combi.SymGroup.symgroup.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">(</span></a>@<span class="id" title="definition">inord</span> <a class="idref" href="Combi.SymGroup.symgroup.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#i"><span class="id" title="variable">i</span></a> <span class="id" title="notation">!=</span> @<span class="id" title="definition">inord</span> <a class="idref" href="Combi.SymGroup.symgroup.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#i"><span class="id" title="variable">i</span></a><span class="id" title="notation">.+1</span><a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">)</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="permS0"><span class="id" title="lemma">permS0</span></a> (<span class="id" title="var">g</span> : <span class="id" title="notation">'</span><span class="id" title="notation">S_0</span>) : <a class="idref" href="Combi.SymGroup.symgroup.html#g"><span class="id" title="variable">g</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> 1%<span class="id" title="var">g</span>.<br/>
+ <span class="id" title="keyword">Lemma</span> <a name="permS1"><span class="id" title="lemma">permS1</span></a> (<span class="id" title="var">g</span> : <span class="id" title="notation">'</span><span class="id" title="notation">S_1</span>) : <a class="idref" href="Combi.SymGroup.symgroup.html#g"><span class="id" title="variable">g</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> 1%<span class="id" title="var">g</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Section</span> <a name="Codes"><span class="id" title="section">Codes</span></a>.<br/>
@@ -233,6 +237,9 @@ the symmetric groups as a Coxeter group.
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.SymGroup.symgroup.html#ElemTransp"><span class="id" title="section">ElemTransp</span></a>.<br/>
 
 <br/>
+<span class="id" title="keyword">Lemma</span> <a name="odd_eltr"><span class="id" title="lemma">odd_eltr</span></a> <span class="id" title="var">n</span> <span class="id" title="var">i</span> : (<a class="idref" href="Combi.SymGroup.symgroup.html#i"><span class="id" title="variable">i</span></a> <span class="id" title="notation">&lt;</span> <a class="idref" href="Combi.SymGroup.symgroup.html#n"><span class="id" title="variable">n</span></a>)%<span class="id" title="var">N</span> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="definition">odd_perm</span> (<a class="idref" href="Combi.SymGroup.symgroup.html#eltr"><span class="id" title="definition">eltr</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#i"><span class="id" title="variable">i</span></a>).<br/>
+
+<br/>
 <span class="id" title="keyword">Section</span> <a name="Length"><span class="id" title="section">Length</span></a>.<br/>
 
 <br/>
@@ -247,7 +254,7 @@ the symmetric groups as a Coxeter group.
 </div>
 
 <div class="doc">
-<a name="lab113"></a><h1 class="section">Length of a permutation</h1>
+<a name="lab123"></a><h1 class="section">Length of a permutation</h1>
 
 </div>
 <div class="code">
@@ -296,7 +303,7 @@ the symmetric groups as a Coxeter group.
 </div>
 
 <div class="doc">
-<a name="lab114"></a><h1 class="section">Dual code of a permutation</h1>
+<a name="lab124"></a><h1 class="section">Dual code of a permutation</h1>
 
 </div>
 <div class="code">
@@ -327,7 +334,7 @@ the symmetric groups as a Coxeter group.
 </div>
 
 <div class="doc">
-<a name="lab115"></a><h2 class="section">Partial codes</h2>
+<a name="lab125"></a><h2 class="section">Partial codes</h2>
 
 </div>
 <div class="code">
@@ -425,7 +432,7 @@ the symmetric groups as a Coxeter group.
 </div>
 
 <div class="doc">
-<a name="lab116"></a><h1 class="section">Let's do some real combinatorics !!!</h1>
+<a name="lab126"></a><h1 class="section">Let's do some real combinatorics !!!</h1>
 
 </div>
 <div class="code">
@@ -451,7 +458,7 @@ the symmetric groups as a Coxeter group.
 </div>
 
 <div class="doc">
-<a name="lab117"></a><h1 class="section">Reduced words</h1>
+<a name="lab127"></a><h1 class="section">Reduced words</h1>
 
 </div>
 <div class="code">
@@ -519,7 +526,7 @@ the symmetric groups as a Coxeter group.
 </div>
 
 <div class="doc">
-<a name="lab118"></a><h1 class="section">Braid monoid relations</h1>
+<a name="lab128"></a><h1 class="section">Braid monoid relations</h1>
 
 </div>
 <div class="code">
@@ -652,7 +659,7 @@ the symmetric groups as a Coxeter group.
 </div>
 
 <div class="doc">
-<a name="lab119"></a><h1 class="section">Cocode insertion algorithm</h1>
+<a name="lab129"></a><h1 class="section">Cocode insertion algorithm</h1>
 
 </div>
 <div class="code">
@@ -800,18 +807,20 @@ the symmetric groups as a Coxeter group.
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="homg_S_3"><span class="id" title="lemma">homg_S_3</span></a> :<br/>
-&nbsp;&nbsp;<span class="id" title="notation">[</span><span class="id" title="notation">set</span><span class="id" title="notation">:</span> <span class="id" title="notation">'</span><span class="id" title="notation">S_3</span><span class="id" title="notation">]</span> <span class="id" title="notation">\</span><span class="id" title="notation">homg</span> <span class="id" title="notation">Grp</span> <span class="id" title="notation">(</span> <span class="id" title="var">s0</span> <span class="id" title="notation">:</span> <span class="id" title="var">s1</span> <span class="id" title="notation">:</span> <span class="id" title="notation">(</span><span class="id" title="var">s0</span><span class="id" title="notation">^+</span>2<span class="id" title="notation">,</span> <span class="id" title="var">s1</span><span class="id" title="notation">^+</span>2<span class="id" title="notation">,</span> <span class="id" title="var">s0</span><span class="id" title="notation">×</span><span class="id" title="var">s1</span><span class="id" title="notation">×</span><span class="id" title="var">s0</span> <span class="id" title="notation">=</span> <span class="id" title="var">s1</span><span class="id" title="notation">×</span><span class="id" title="var">s0</span><span class="id" title="notation">×</span><span class="id" title="var">s1</span><span class="id" title="notation">)</span> <span class="id" title="notation">)</span>.<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.SSRcomplements.permcomp.html#b96e668287acdc2e19e4117ee37b8437"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.SSRcomplements.permcomp.html#b96e668287acdc2e19e4117ee37b8437"><span class="id" title="notation">SG_3</span></a> <span class="id" title="notation">\</span><span class="id" title="notation">homg</span> <span class="id" title="notation">Grp</span> <span class="id" title="notation">(</span> <span class="id" title="var">s0</span> <span class="id" title="notation">:</span> <span class="id" title="var">s1</span> <span class="id" title="notation">:</span> <span class="id" title="notation">(</span><span class="id" title="var">s0</span><span class="id" title="notation">^+</span>2<span class="id" title="notation">,</span> <span class="id" title="var">s1</span><span class="id" title="notation">^+</span>2<span class="id" title="notation">,</span> <span class="id" title="var">s0</span><span class="id" title="notation">×</span><span class="id" title="var">s1</span><span class="id" title="notation">×</span><span class="id" title="var">s0</span> <span class="id" title="notation">=</span> <span class="id" title="var">s1</span><span class="id" title="notation">×</span><span class="id" title="var">s0</span><span class="id" title="notation">×</span><span class="id" title="var">s1</span><span class="id" title="notation">)</span> <span class="id" title="notation">)</span>.<br/>
 
 <br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="homg_S4"><span class="id" title="lemma">homg_S4</span></a> :<br/>
-&nbsp;&nbsp;<span class="id" title="notation">[</span><span class="id" title="notation">set</span><span class="id" title="notation">:</span> <span class="id" title="notation">'</span><span class="id" title="notation">S_4</span><span class="id" title="notation">]</span> <span class="id" title="notation">\</span><span class="id" title="notation">homg</span> <span class="id" title="notation">Grp</span> <span class="id" title="notation">(</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">s1</span> <span class="id" title="notation">:</span> <span class="id" title="var">s2</span> <span class="id" title="notation">:</span> <span class="id" title="var">s3</span> <span class="id" title="notation">:</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">(</span><span class="id" title="var">s1</span><span class="id" title="notation">^+</span>2<span class="id" title="notation">,</span> <span class="id" title="var">s2</span><span class="id" title="notation">^+</span>2<span class="id" title="notation">,</span> <span class="id" title="var">s3</span><span class="id" title="notation">^+</span>2<span class="id" title="notation">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">s1</span><span class="id" title="notation">×</span><span class="id" title="var">s2</span><span class="id" title="notation">×</span><span class="id" title="var">s1</span> <span class="id" title="notation">=</span> <span class="id" title="var">s2</span><span class="id" title="notation">×</span><span class="id" title="var">s1</span><span class="id" title="notation">×</span><span class="id" title="var">s2</span><span class="id" title="notation">,</span> <span class="id" title="var">s2</span><span class="id" title="notation">×</span><span class="id" title="var">s3</span><span class="id" title="notation">×</span><span class="id" title="var">s2</span> <span class="id" title="notation">=</span> <span class="id" title="var">s3</span><span class="id" title="notation">×</span><span class="id" title="var">s2</span><span class="id" title="notation">×</span><span class="id" title="var">s3</span><span class="id" title="notation">,</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">s1</span><span class="id" title="notation">×</span><span class="id" title="var">s3</span> <span class="id" title="notation">=</span> <span class="id" title="var">s3</span><span class="id" title="notation">×</span><span class="id" title="var">s1</span><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span> <span class="id" title="notation">)</span>.<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.SSRcomplements.permcomp.html#b96e668287acdc2e19e4117ee37b8437"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.SSRcomplements.permcomp.html#b96e668287acdc2e19e4117ee37b8437"><span class="id" title="notation">SG_4</span></a> <span class="id" title="notation">\</span><span class="id" title="notation">homg</span> <span class="id" title="notation">Grp</span> <span class="id" title="notation">(</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">s1</span> <span class="id" title="notation">:</span> <span class="id" title="var">s2</span> <span class="id" title="notation">:</span> <span class="id" title="var">s3</span> <span class="id" title="notation">:</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">(</span><span class="id" title="var">s1</span><span class="id" title="notation">^+</span>2<span class="id" title="notation">,</span> <span class="id" title="var">s2</span><span class="id" title="notation">^+</span>2<span class="id" title="notation">,</span> <span class="id" title="var">s3</span><span class="id" title="notation">^+</span>2<span class="id" title="notation">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">s1</span><span class="id" title="notation">×</span><span class="id" title="var">s2</span><span class="id" title="notation">×</span><span class="id" title="var">s1</span> <span class="id" title="notation">=</span> <span class="id" title="var">s2</span><span class="id" title="notation">×</span><span class="id" title="var">s1</span><span class="id" title="notation">×</span><span class="id" title="var">s2</span><span class="id" title="notation">,</span> <span class="id" title="var">s2</span><span class="id" title="notation">×</span><span class="id" title="var">s3</span><span class="id" title="notation">×</span><span class="id" title="var">s2</span> <span class="id" title="notation">=</span> <span class="id" title="var">s3</span><span class="id" title="notation">×</span><span class="id" title="var">s2</span><span class="id" title="notation">×</span><span class="id" title="var">s3</span><span class="id" title="notation">,</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">s1</span><span class="id" title="notation">×</span><span class="id" title="var">s3</span> <span class="id" title="notation">=</span> <span class="id" title="var">s3</span><span class="id" title="notation">×</span><span class="id" title="var">s1</span><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">)</span> <span class="id" title="notation">)</span>.<br/>
+
+<br/>
 </div>
 </div>
 

@@ -25,7 +25,7 @@
 </div>
 
 <div class="doc">
-<a name="lab68"></a><h1 class="section">Various Lemmas about <span class="inlinecode"><span class="id" title="library">path</span></span> and <span class="inlinecode"><a class="idref" href="Combi.SSRcomplements.sorted.html#sorted"><span class="id" title="abbreviation">sorted</span></a></span> which are missing in MathComp</h1>
+<a name="lab75"></a><h1 class="section">Various Lemmas about <span class="inlinecode"><span class="id" title="library">path</span></span> and <span class="inlinecode"><a class="idref" href="Combi.SSRcomplements.sorted.html#sorted"><span class="id" title="abbreviation">sorted</span></a></span> which are missing in MathComp</h1>
 
 </div>
 <div class="code">
@@ -41,6 +41,26 @@ TODO: these probably should be contributed to path.v
 
 <br/>
 <span class="id" title="keyword">Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">N</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Module</span> <a name="LeqGeqOrder"><span class="id" title="module">LeqGeqOrder</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="LeqGeqOrder.geq_total"><span class="id" title="definition">geq_total</span></a> : <span class="id" title="definition">total</span> <span class="id" title="definition">geq</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> ⇒ <span class="id" title="lemma">leq_total</span> <a class="idref" href="Combi.SSRcomplements.sorted.html#y"><span class="id" title="variable">y</span></a> <a class="idref" href="Combi.SSRcomplements.sorted.html#x"><span class="id" title="variable">x</span></a>.<br/>
+<span class="id" title="keyword">Definition</span> <a name="LeqGeqOrder.geq_trans"><span class="id" title="definition">geq_trans</span></a> : <span class="id" title="definition">transitive</span> <span class="id" title="definition">geq</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">z</span> <span class="id" title="var">H1</span> <span class="id" title="var">H2</span> ⇒ <span class="id" title="lemma">leq_trans</span> <a class="idref" href="Combi.SSRcomplements.sorted.html#H2"><span class="id" title="variable">H2</span></a> <a class="idref" href="Combi.SSRcomplements.sorted.html#H1"><span class="id" title="variable">H1</span></a>.<br/>
+<span class="id" title="keyword">Definition</span> <a name="LeqGeqOrder.anti_geq"><span class="id" title="definition">anti_geq</span></a> : <span class="id" title="definition">antisymmetric</span> <span class="id" title="definition">geq</span> :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> <span class="id" title="var">H</span> ⇒ <span class="id" title="definition">esym</span> (<span class="id" title="lemma">anti_leq</span> <a class="idref" href="Combi.SSRcomplements.sorted.html#H"><span class="id" title="variable">H</span></a>).<br/>
+
+<br/>
+<span class="id" title="keyword">Hint Resolve</span> <span class="id" title="var">leq_total</span> <span class="id" title="var">leq_trans</span> <span class="id" title="var">anti_leq</span> <span class="id" title="var">geq_total</span> <span class="id" title="var">geq_trans</span> <span class="id" title="var">anti_geq</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="Combi.SSRcomplements.sorted.html#LeqGeqOrder"><span class="id" title="module">LeqGeqOrder</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Import</span> <span class="id" title="var">LeqGeqOrder</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Section</span> <a name="Sorted"><span class="id" title="section">Sorted</span></a>.<br/>
