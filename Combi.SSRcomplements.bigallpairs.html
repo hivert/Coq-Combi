@@ -19,7 +19,7 @@
 <h1 class="libtitle">Library Combi.SSRcomplements.bigallpairs</h1>
 
 <div class="code">
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">mathcomp.ssreflect.ssreflect</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="var">mathcomp.ssreflect.ssreflect</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Import</span> <span class="id" title="var">GRing.Theory</span>.<br/>
@@ -28,7 +28,7 @@
 </div>
 
 <div class="doc">
-<a name="lab60"></a><h1 class="section">Spliting a <span class="inlinecode"><span class="id" title="library">bigop</span></span> over <span class="inlinecode"><span class="id" title="var">allpairs</span></span></h1>
+<a name="lab61"></a><h1 class="section">Spliting a <span class="inlinecode"><span class="id" title="library">bigop</span></span> over <span class="inlinecode"><span class="id" title="var">allpairs</span></span></h1>
 
 </div>
 <div class="code">
@@ -40,25 +40,25 @@ TODO: it probably should be contributed to bigop.v
 <div class="code">
 
 <br/>
-<span class="id" title="keyword">Section</span> <a name="AllPairs"><span class="id" title="section">AllPairs</span></a>.<br/>
+<span class="id" title="keyword">Section</span> <span class="id" title="var">AllPairs</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">ring_scope</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Variable</span> (<a name="AllPairs.R"><span class="id" title="variable">R</span></a>: <span class="id" title="abbreviation">comRingType</span>).<br/>
-<span class="id" title="keyword">Variable</span> <a name="AllPairs.idx"><span class="id" title="variable">idx</span></a> : <a class="idref" href="Combi.SSRcomplements.bigallpairs.html#AllPairs.R"><span class="id" title="variable">R</span></a>.<br/>
-<span class="id" title="keyword">Variable</span> <a name="AllPairs.op"><span class="id" title="variable">op</span></a> : <span class="id" title="record">Monoid.com_law</span> <a class="idref" href="Combi.SSRcomplements.bigallpairs.html#AllPairs.idx"><span class="id" title="variable">idx</span></a>.<br/>
+<span class="id" title="keyword">Variable</span> (<span class="id" title="var">R</span>: <span class="id" title="var">comRingType</span>).<br/>
+<span class="id" title="keyword">Variable</span> <span class="id" title="var">idx</span> : <span class="id" title="var">R</span>.<br/>
+<span class="id" title="keyword">Variable</span> <span class="id" title="var">op</span> : <span class="id" title="var">Monoid.com_law</span> <span class="id" title="var">idx</span>.<br/>
 
 <br/>
 
 <br/>
-<span class="id" title="keyword">Lemma</span> <a name="big_allpairs"><span class="id" title="lemma">big_allpairs</span></a> <span class="id" title="var">I</span> <span class="id" title="var">J</span> (<span class="id" title="var">rI</span> : <span class="id" title="abbreviation">seq</span> <a class="idref" href="Combi.SSRcomplements.bigallpairs.html#I"><span class="id" title="variable">I</span></a>) (<span class="id" title="var">rJ</span> : <span class="id" title="abbreviation">seq</span> <a class="idref" href="Combi.SSRcomplements.bigallpairs.html#J"><span class="id" title="variable">J</span></a>) <span class="id" title="var">F</span> :<br/>
-&nbsp;&nbsp;<span class="id" title="notation">\</span><span class="id" title="notation">big</span><span class="id" title="notation">[</span><a class="idref" href="Combi.SSRcomplements.bigallpairs.html#543b172f2adbbc0134bb0bba3523a200"><span class="id" title="notation">*%</span></a><a class="idref" href="Combi.SSRcomplements.bigallpairs.html#543b172f2adbbc0134bb0bba3523a200"><span class="id" title="notation">M</span></a><span class="id" title="notation">/</span><a class="idref" href="Combi.SSRcomplements.bigallpairs.html#AllPairs.idx"><span class="id" title="variable">idx</span></a><span class="id" title="notation">]</span><span class="id" title="notation">_</span><span class="id" title="notation">(</span><span class="id" title="var">X</span> <span class="id" title="notation">&lt;-</span> <span class="id" title="notation">[</span><span class="id" title="notation">seq</span> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">(</span></a><span class="id" title="var">A</span><a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">,</span></a> <span class="id" title="var">B</span><a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">)</span></a> <span class="id" title="notation">|</span> <span class="id" title="var">A</span> <span class="id" title="notation">&lt;-</span> <a class="idref" href="Combi.SSRcomplements.bigallpairs.html#rI"><span class="id" title="variable">rI</span></a><span class="id" title="notation">,</span> <span class="id" title="var">B</span> <span class="id" title="notation">&lt;-</span> <a class="idref" href="Combi.SSRcomplements.bigallpairs.html#rJ"><span class="id" title="variable">rJ</span></a><span class="id" title="notation">]</span><span class="id" title="notation">)</span> <a class="idref" href="Combi.SSRcomplements.bigallpairs.html#F"><span class="id" title="variable">F</span></a> <span class="id" title="var">X</span> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="notation">\</span><span class="id" title="notation">big</span><span class="id" title="notation">[</span><a class="idref" href="Combi.SSRcomplements.bigallpairs.html#543b172f2adbbc0134bb0bba3523a200"><span class="id" title="notation">*%</span></a><a class="idref" href="Combi.SSRcomplements.bigallpairs.html#543b172f2adbbc0134bb0bba3523a200"><span class="id" title="notation">M</span></a><span class="id" title="notation">/</span><a class="idref" href="Combi.SSRcomplements.bigallpairs.html#AllPairs.idx"><span class="id" title="variable">idx</span></a><span class="id" title="notation">]</span><span class="id" title="notation">_</span><span class="id" title="notation">(</span><span class="id" title="var">A</span> <span class="id" title="notation">&lt;-</span> <a class="idref" href="Combi.SSRcomplements.bigallpairs.html#rI"><span class="id" title="variable">rI</span></a><span class="id" title="notation">)</span> <span class="id" title="notation">\</span><span class="id" title="notation">big</span><span class="id" title="notation">[</span><a class="idref" href="Combi.SSRcomplements.bigallpairs.html#543b172f2adbbc0134bb0bba3523a200"><span class="id" title="notation">*%</span></a><a class="idref" href="Combi.SSRcomplements.bigallpairs.html#543b172f2adbbc0134bb0bba3523a200"><span class="id" title="notation">M</span></a><span class="id" title="notation">/</span><a class="idref" href="Combi.SSRcomplements.bigallpairs.html#AllPairs.idx"><span class="id" title="variable">idx</span></a><span class="id" title="notation">]</span><span class="id" title="notation">_</span><span class="id" title="notation">(</span><span class="id" title="var">B</span> <span class="id" title="notation">&lt;-</span> <a class="idref" href="Combi.SSRcomplements.bigallpairs.html#rJ"><span class="id" title="variable">rJ</span></a><span class="id" title="notation">)</span> <a class="idref" href="Combi.SSRcomplements.bigallpairs.html#F"><span class="id" title="variable">F</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">(</span></a><span class="id" title="var">A</span><a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">,</span></a> <span class="id" title="var">B</span><a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">)</span></a>.<br/>
+<span class="id" title="keyword">Lemma</span> <span class="id" title="var">big_allpairs</span> <span class="id" title="var">I</span> <span class="id" title="var">J</span> (<span class="id" title="var">rI</span> : <span class="id" title="var">seq</span> <span class="id" title="var">I</span>) (<span class="id" title="var">rJ</span> : <span class="id" title="var">seq</span> <span class="id" title="var">J</span>) <span class="id" title="var">F</span> :<br/>
+&nbsp;&nbsp;\<span class="id" title="var">big</span>[*%<span class="id" title="var">M</span>/<span class="id" title="var">idx</span>]<span class="id" title="var">_</span>(<span class="id" title="var">X</span> &lt;- [<span class="id" title="var">seq</span> (<span class="id" title="var">A</span>, <span class="id" title="var">B</span>) | <span class="id" title="var">A</span> &lt;- <span class="id" title="var">rI</span>, <span class="id" title="var">B</span> &lt;- <span class="id" title="var">rJ</span>]) <span class="id" title="var">F</span> <span class="id" title="var">X</span> =<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;\<span class="id" title="var">big</span>[*%<span class="id" title="var">M</span>/<span class="id" title="var">idx</span>]<span class="id" title="var">_</span>(<span class="id" title="var">A</span> &lt;- <span class="id" title="var">rI</span>) \<span class="id" title="var">big</span>[*%<span class="id" title="var">M</span>/<span class="id" title="var">idx</span>]<span class="id" title="var">_</span>(<span class="id" title="var">B</span> &lt;- <span class="id" title="var">rJ</span>) <span class="id" title="var">F</span> (<span class="id" title="var">A</span>, <span class="id" title="var">B</span>).<br/>
 
 <br/>
-<span class="id" title="keyword">End</span> <a class="idref" href="Combi.SSRcomplements.bigallpairs.html#AllPairs"><span class="id" title="section">AllPairs</span></a>.<br/>
+<span class="id" title="keyword">End</span> <span class="id" title="var">AllPairs</span>.<br/>
 </div>
 </div>
 
