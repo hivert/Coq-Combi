@@ -28,7 +28,7 @@
 </div>
 
 <div class="doc">
-<a name="lab116"></a><h1 class="section">Antisymmetric polynomials</h1>
+<a name="lab126"></a><h1 class="section">Antisymmetric polynomials</h1>
 
 
 <div class="paragraph"> </div>
@@ -38,7 +38,7 @@ We start by general Polynomials stuff:
 <div class="paragraph"> </div>
 
 <ul class="doclist">
-<li> tensR == the scalar extension morphism from <span class="inlinecode">{<span class="id" title="library">mpoly</span></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#RemoveBig.Z"><span class="id" title="variable">Z</span></a>[<a class="idref" href="Combi.MPoly.sympoly.html#RatToAlgC.n"><span class="id" title="variable">n</span></a>]}</span> to <span class="inlinecode">{<span class="id" title="library">mpoly</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.sympoly.html#SchurComRingType.R"><span class="id" title="variable">R</span></a>[<a class="idref" href="Combi.MPoly.sympoly.html#RatToAlgC.n"><span class="id" title="variable">n</span></a>]}</span>
+<li> tensR == the scalar extension morphism from <span class="inlinecode">{<span class="id" title="library">mpoly</span></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#RemoveBig.Z"><span class="id" title="variable">Z</span></a>[<a class="idref" href="Combi.MPoly.Schur_basis.html#n"><span class="id" title="abbreviation">n</span></a>]}</span> to <span class="inlinecode">{<span class="id" title="library">mpoly</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SchurBasis.R"><span class="id" title="variable">R</span></a>[<a class="idref" href="Combi.MPoly.Schur_basis.html#n"><span class="id" title="abbreviation">n</span></a>]}</span>
            obtained by tensoring the coefficients rings. This is a ring
            morphism.
 
@@ -62,13 +62,13 @@ Vandermonde products and determinants:
 <li> alternpol f == the alternating sunm of the permuted of f.
 
 </li>
-<li> rho         == the multi-monomial <span class="inlinecode">[<a class="idref" href="Combi.MPoly.sympoly.html#RatToAlgC.n"><span class="id" title="variable">n</span></a>-1,</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.sympoly.html#RatToAlgC.n"><span class="id" title="variable">n</span></a>-2,</span> <span class="inlinecode">...,</span> <span class="inlinecode">1,</span> <span class="inlinecode">0]</span>
+<li> rho         == the multi-monomial <span class="inlinecode">[<a class="idref" href="Combi.MPoly.Schur_basis.html#n"><span class="id" title="abbreviation">n</span></a>-1,</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#n"><span class="id" title="abbreviation">n</span></a>-2,</span> <span class="inlinecode">...,</span> <span class="inlinecode">1,</span> <span class="inlinecode">0]</span>
 
 </li>
 <li> mpart       == the multi-monomial associated to a partition
 
 </li>
-<li> vdmprod n R == the vandermonde product in <span class="inlinecode">{<span class="id" title="library">mpoly</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.sympoly.html#SchurComRingType.R"><span class="id" title="variable">R</span></a>[<a class="idref" href="Combi.MPoly.sympoly.html#RatToAlgC.n"><span class="id" title="variable">n</span></a>]}</span>, that is the product
+<li> vdmprod n R == the vandermonde product in <span class="inlinecode">{<span class="id" title="library">mpoly</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SchurBasis.R"><span class="id" title="variable">R</span></a>[<a class="idref" href="Combi.MPoly.Schur_basis.html#n"><span class="id" title="abbreviation">n</span></a>]}</span>, that is the product
                  <tt>\prod_(i &lt; j) ('X_i - 'X_j) </tt>.
 
 <div class="paragraph"> </div>
@@ -96,7 +96,7 @@ The main results are the Vandermonde determinant expansion:
 <div class="paragraph"> </div>
 
 <ul class="doclist">
-<li> <span class="inlinecode"></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#vdmprod_alt"><span class="id" title="lemma">vdmprod_alt</span></a></span>     <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#vdmprod"><span class="id" title="definition">vdmprod</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#alternpol"><span class="id" title="definition">alternpol</span></a></span> <span class="inlinecode">'<span class="id" title="var">X_</span>[(<a class="idref" href="Combi.MPoly.antisym.html#rho"><span class="id" title="abbreviation">rho</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.sympoly.html#RatToAlgC.n"><span class="id" title="variable">n</span></a>)]</span> <span class="inlinecode"></span>
+<li> <span class="inlinecode"></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#vdmprod_alt"><span class="id" title="lemma">vdmprod_alt</span></a></span>     <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#vdmprod"><span class="id" title="definition">vdmprod</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#alternpol"><span class="id" title="definition">alternpol</span></a></span> <span class="inlinecode">'<span class="id" title="var">X_</span>[(<a class="idref" href="Combi.MPoly.Schur_basis.html#rho"><span class="id" title="abbreviation">rho</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#n"><span class="id" title="abbreviation">n</span></a>)]</span> <span class="inlinecode"></span>
 
 </li>
 <li> <span class="inlinecode"></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#Vandet_vdmprodE"><span class="id" title="lemma">Vandet_vdmprodE</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#Vandet"><span class="id" title="definition">Vandet</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#vdmprod"><span class="id" title="definition">vdmprod</span></a></span> <span class="inlinecode"></span>
@@ -109,7 +109,7 @@ The main results are the Vandermonde determinant expansion:
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">mathcomp.ssreflect.ssreflect</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.tools.html#"><span class="id" title="library">tools</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#"><span class="id" title="library">symgroup</span></a> <a class="idref" href="Combi.SSRcomplements.sorted.html#"><span class="id" title="library">sorted</span></a> <a class="idref" href="Combi.Combi.partition.html#"><span class="id" title="library">partition</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.tools.html#"><span class="id" title="library">tools</span></a> <a class="idref" href="Combi.SymGroup.presentSn.html#"><span class="id" title="library">presentSn</span></a> <a class="idref" href="Combi.SSRcomplements.sorted.html#"><span class="id" title="library">sorted</span></a> <a class="idref" href="Combi.Combi.partition.html#"><span class="id" title="library">partition</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Set Implicit Arguments</span>.<br/>
@@ -175,7 +175,7 @@ The main results are the Vandermonde determinant expansion:
 </div>
 
 <div class="doc">
-<a name="lab117"></a><h2 class="section">Change of scalar in multivariate polynomials</h2>
+<a name="lab127"></a><h2 class="section">Change of scalar in multivariate polynomials</h2>
 
 </div>
 <div class="code">
@@ -203,7 +203,7 @@ The main results are the Vandermonde determinant expansion:
 </div>
 
 <div class="doc">
-<a name="lab118"></a><h2 class="section">Characteristic of multivariate polynomials</h2>
+<a name="lab128"></a><h2 class="section">Characteristic of multivariate polynomials</h2>
 
 </div>
 <div class="code">
@@ -226,7 +226,7 @@ The main results are the Vandermonde determinant expansion:
 </div>
 
 <div class="doc">
-<a name="lab119"></a><h1 class="section">Symmetric and Antisymmetric multivariate polynomials</h1>
+<a name="lab129"></a><h1 class="section">Symmetric and Antisymmetric multivariate polynomials</h1>
 
 </div>
 <div class="code">
@@ -316,17 +316,17 @@ The main results are the Vandermonde determinant expansion:
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="issym_eltrP"><span class="id" title="lemma">issym_eltrP</span></a> <span class="id" title="var">n</span> (<span class="id" title="var">R</span> : <span class="id" title="abbreviation">ringType</span>) (<span class="id" title="var">p</span> : <span class="id" title="notation">{</span><span class="id" title="notation">mpoly</span> <a class="idref" href="Combi.MPoly.antisym.html#R"><span class="id" title="variable">R</span></a><span class="id" title="notation">[</span><a class="idref" href="Combi.MPoly.antisym.html#n"><span class="id" title="variable">n</span></a><span class="id" title="notation">.+1</span><span class="id" title="notation">]}</span>) :<br/>
-&nbsp;&nbsp;<span class="id" title="inductive">reflect</span> (<span class="id" title="keyword">∀</span> <span class="id" title="var">i</span>, <a class="idref" href="Combi.MPoly.antisym.html#i"><span class="id" title="variable">i</span></a> <span class="id" title="notation">&lt;</span> <a class="idref" href="Combi.MPoly.antisym.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="definition">msym</span> (<a class="idref" href="Combi.SymGroup.symgroup.html#eltr"><span class="id" title="definition">eltr</span></a> <a class="idref" href="Combi.MPoly.antisym.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="Combi.MPoly.antisym.html#i"><span class="id" title="variable">i</span></a>) <a class="idref" href="Combi.MPoly.antisym.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.antisym.html#p"><span class="id" title="variable">p</span></a>) (<a class="idref" href="Combi.MPoly.antisym.html#p"><span class="id" title="variable">p</span></a> <span class="id" title="notation">\</span><span class="id" title="notation">is</span> <span class="id" title="definition">symmetric</span>).<br/>
+&nbsp;&nbsp;<span class="id" title="inductive">reflect</span> (<span class="id" title="keyword">∀</span> <span class="id" title="var">i</span>, <a class="idref" href="Combi.MPoly.antisym.html#i"><span class="id" title="variable">i</span></a> <span class="id" title="notation">&lt;</span> <a class="idref" href="Combi.MPoly.antisym.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="definition">msym</span> (<a class="idref" href="Combi.SymGroup.presentSn.html#eltr"><span class="id" title="definition">eltr</span></a> <a class="idref" href="Combi.MPoly.antisym.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="Combi.MPoly.antisym.html#i"><span class="id" title="variable">i</span></a>) <a class="idref" href="Combi.MPoly.antisym.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.antisym.html#p"><span class="id" title="variable">p</span></a>) (<a class="idref" href="Combi.MPoly.antisym.html#p"><span class="id" title="variable">p</span></a> <span class="id" title="notation">\</span><span class="id" title="notation">is</span> <span class="id" title="definition">symmetric</span>).<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="isantisym_eltrP"><span class="id" title="lemma">isantisym_eltrP</span></a> <span class="id" title="var">n</span> (<span class="id" title="var">R</span> : <span class="id" title="abbreviation">ringType</span>) (<span class="id" title="var">p</span> : <span class="id" title="notation">{</span><span class="id" title="notation">mpoly</span> <a class="idref" href="Combi.MPoly.antisym.html#R"><span class="id" title="variable">R</span></a><span class="id" title="notation">[</span><a class="idref" href="Combi.MPoly.antisym.html#n"><span class="id" title="variable">n</span></a><span class="id" title="notation">.+1</span><span class="id" title="notation">]}</span>) :<br/>
-&nbsp;&nbsp;<span class="id" title="inductive">reflect</span> (<span class="id" title="keyword">∀</span> <span class="id" title="var">i</span>, <a class="idref" href="Combi.MPoly.antisym.html#i"><span class="id" title="variable">i</span></a> <span class="id" title="notation">&lt;</span> <a class="idref" href="Combi.MPoly.antisym.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="definition">msym</span> (<a class="idref" href="Combi.SymGroup.symgroup.html#eltr"><span class="id" title="definition">eltr</span></a> <a class="idref" href="Combi.MPoly.antisym.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="Combi.MPoly.antisym.html#i"><span class="id" title="variable">i</span></a>) <a class="idref" href="Combi.MPoly.antisym.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="notation">-</span> <a class="idref" href="Combi.MPoly.antisym.html#p"><span class="id" title="variable">p</span></a>) (<a class="idref" href="Combi.MPoly.antisym.html#p"><span class="id" title="variable">p</span></a> <span class="id" title="notation">\</span><span class="id" title="notation">is</span> <a class="idref" href="Combi.MPoly.antisym.html#antisym"><span class="id" title="definition">antisym</span></a>).<br/>
+&nbsp;&nbsp;<span class="id" title="inductive">reflect</span> (<span class="id" title="keyword">∀</span> <span class="id" title="var">i</span>, <a class="idref" href="Combi.MPoly.antisym.html#i"><span class="id" title="variable">i</span></a> <span class="id" title="notation">&lt;</span> <a class="idref" href="Combi.MPoly.antisym.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="definition">msym</span> (<a class="idref" href="Combi.SymGroup.presentSn.html#eltr"><span class="id" title="definition">eltr</span></a> <a class="idref" href="Combi.MPoly.antisym.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="Combi.MPoly.antisym.html#i"><span class="id" title="variable">i</span></a>) <a class="idref" href="Combi.MPoly.antisym.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="notation">-</span> <a class="idref" href="Combi.MPoly.antisym.html#p"><span class="id" title="variable">p</span></a>) (<a class="idref" href="Combi.MPoly.antisym.html#p"><span class="id" title="variable">p</span></a> <span class="id" title="notation">\</span><span class="id" title="notation">is</span> <a class="idref" href="Combi.MPoly.antisym.html#antisym"><span class="id" title="definition">antisym</span></a>).<br/>
 
 <br/>
 </div>
 
 <div class="doc">
-<a name="lab120"></a><h1 class="section">Alternating polynomials</h1>
+<a name="lab130"></a><h1 class="section">Alternating polynomials</h1>
 
 </div>
 <div class="code">
@@ -405,7 +405,7 @@ The main results are the Vandermonde determinant expansion:
 </div>
 
 <div class="doc">
-<a name="lab121"></a><h2 class="section">Vandermonde product</h2>
+<a name="lab131"></a><h2 class="section">Vandermonde product</h2>
 
 </div>
 <div class="code">
@@ -425,7 +425,7 @@ The main results are the Vandermonde determinant expansion:
 <span class="id" title="keyword">Lemma</span> <a name="predi_eltrp"><span class="id" title="lemma">predi_eltrp</span></a> <span class="id" title="var">p</span> : <a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a> <span class="id" title="notation">&lt;</span> <a class="idref" href="Combi.MPoly.antisym.html#EltrP.n"><span class="id" title="variable">n</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.MPoly.antisym.html#predi"><span class="id" title="definition">predi</span></a> <a class="idref" href="Combi.MPoly.antisym.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.MPoly.antisym.html#predi"><span class="id" title="definition">predi</span></a> (<a class="idref" href="Combi.MPoly.antisym.html#eltrp"><span class="id" title="definition">eltrp</span></a> <a class="idref" href="Combi.MPoly.antisym.html#p"><span class="id" title="variable">p</span></a>).<br/>
 
 <br/>
-<span class="id" title="keyword">Lemma</span> <a name="predi_eltrpE"><span class="id" title="lemma">predi_eltrpE</span></a> <span class="id" title="var">p</span> : <a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a> <span class="id" title="notation">&lt;</span> <a class="idref" href="Combi.MPoly.antisym.html#EltrP.n"><span class="id" title="variable">n</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.MPoly.antisym.html#predi"><span class="id" title="definition">predi</span></a> <a class="idref" href="Combi.MPoly.antisym.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.antisym.html#predi"><span class="id" title="definition">predi</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.SymGroup.symgroup.html#eltr"><span class="id" title="definition">eltr</span></a> <a class="idref" href="Combi.MPoly.antisym.html#EltrP.n"><span class="id" title="variable">n</span></a> <a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a> <a class="idref" href="Combi.MPoly.antisym.html#p"><span class="id" title="variable">p</span></a><span class="id" title="notation">.1</span><a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">,</span></a> <a class="idref" href="Combi.SymGroup.symgroup.html#eltr"><span class="id" title="definition">eltr</span></a> <a class="idref" href="Combi.MPoly.antisym.html#EltrP.n"><span class="id" title="variable">n</span></a> <a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a> <a class="idref" href="Combi.MPoly.antisym.html#p"><span class="id" title="variable">p</span></a><span class="id" title="notation">.2</span><a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">)</span></a>.<br/>
+<span class="id" title="keyword">Lemma</span> <a name="predi_eltrpE"><span class="id" title="lemma">predi_eltrpE</span></a> <span class="id" title="var">p</span> : <a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a> <span class="id" title="notation">&lt;</span> <a class="idref" href="Combi.MPoly.antisym.html#EltrP.n"><span class="id" title="variable">n</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.MPoly.antisym.html#predi"><span class="id" title="definition">predi</span></a> <a class="idref" href="Combi.MPoly.antisym.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.antisym.html#predi"><span class="id" title="definition">predi</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.SymGroup.presentSn.html#eltr"><span class="id" title="definition">eltr</span></a> <a class="idref" href="Combi.MPoly.antisym.html#EltrP.n"><span class="id" title="variable">n</span></a> <a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a> <a class="idref" href="Combi.MPoly.antisym.html#p"><span class="id" title="variable">p</span></a><span class="id" title="notation">.1</span><a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">,</span></a> <a class="idref" href="Combi.SymGroup.presentSn.html#eltr"><span class="id" title="definition">eltr</span></a> <a class="idref" href="Combi.MPoly.antisym.html#EltrP.n"><span class="id" title="variable">n</span></a> <a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a> <a class="idref" href="Combi.MPoly.antisym.html#p"><span class="id" title="variable">p</span></a><span class="id" title="notation">.2</span><a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">)</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.MPoly.antisym.html#EltrP"><span class="id" title="section">EltrP</span></a>.<br/>
@@ -506,7 +506,7 @@ The main results are the Vandermonde determinant expansion:
 </div>
 
 <div class="doc">
-<a name="lab122"></a><h2 class="section">Vandermonde matrix and determinant</h2>
+<a name="lab132"></a><h2 class="section">Vandermonde matrix and determinant</h2>
 
 </div>
 <div class="code">

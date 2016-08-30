@@ -85,7 +85,7 @@ Integer Partitions:
 <li> <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#rem_corners"><span class="id" title="definition">rem_corners</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.HookFormula.RSident.html#Identity.Shape.sh"><span class="id" title="variable">sh</span></a></span> == the list of the rows of the removable corners of sh.
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#incr_first_n"><span class="id" title="definition">incr_first_n</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.HookFormula.RSident.html#Identity.Shape.sh"><span class="id" title="variable">sh</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.sympoly.html#RatToAlgC.n"><span class="id" title="variable">n</span></a></span> == adding 1 to the n'th first part of sh,
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#incr_first_n"><span class="id" title="definition">incr_first_n</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.HookFormula.RSident.html#Identity.Shape.sh"><span class="id" title="variable">sh</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#n"><span class="id" title="abbreviation">n</span></a></span> == adding 1 to the n'th first part of sh,
                      always gives a partitions
 
 </li>
@@ -96,14 +96,14 @@ Integer Partitions:
                      first parts of sh
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#included"><span class="id" title="definition">included</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsSlice.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsSlice.t"><span class="id" title="variable">t</span></a></span> == the Ferrer's diagram of s is included in the
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#included"><span class="id" title="definition">included</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.permcent.html#PermCycles.CM.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsSlice.t"><span class="id" title="variable">t</span></a></span> == the Ferrer's diagram of s is included in the
                     Ferrer's diagram of t. This is an order.
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#diff_shape"><span class="id" title="definition">diff_shape</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsSlice.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsSlice.t"><span class="id" title="variable">t</span></a></span> == the difference of the shape s and t
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#diff_shape"><span class="id" title="definition">diff_shape</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.permcent.html#PermCycles.CM.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsSlice.t"><span class="id" title="variable">t</span></a></span> == the difference of the shape s and t
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#outer_shape"><span class="id" title="definition">outer_shape</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsSlice.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsSlice.t"><span class="id" title="variable">t</span></a></span> == add t to the shape s
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#outer_shape"><span class="id" title="definition">outer_shape</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.permcent.html#PermCycles.CM.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsSlice.t"><span class="id" title="variable">t</span></a></span> == add t to the shape s
 
 </li>
 </ul>
@@ -167,7 +167,7 @@ Sigma types for integer partitions:
 
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#intpart"><span class="id" title="record">intpart</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.sympoly.html#RatToAlgC.n"><span class="id" title="variable">n</span></a></span> == a type for <span class="inlinecode"><span class="id" title="library">seq</span></span> <span class="inlinecode">(<span class="id" title="library">seq</span></span> <span class="inlinecode"><a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>)</span> which are partitions of n;
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#intpart"><span class="id" title="record">intpart</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#n"><span class="id" title="abbreviation">n</span></a></span> == a type for <span class="inlinecode"><span class="id" title="library">seq</span></span> <span class="inlinecode">(<span class="id" title="library">seq</span></span> <span class="inlinecode"><a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>)</span> which are partitions of n;
                it is canonically a <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#InhOrdFinType.finType"><span class="id" title="definition">finType</span></a></span>
 
 </li>
@@ -197,7 +197,7 @@ Relation with set partitions:
 <div class="paragraph"> </div>
 
 <ul class="doclist">
-<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#parts_shape"><span class="id" title="definition">parts_shape</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#SubtypesDisjointUnion.P"><span class="id" title="variable">P</span></a></span> == the shape of a set partition, i.e.
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#parts_shape"><span class="id" title="definition">parts_shape</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#FinPOrdTypeTheory.P"><span class="id" title="variable">P</span></a></span> == the shape of a set partition, i.e.
                the sorted list of the cardinal of the parts
 
 </li>
@@ -205,9 +205,6 @@ Relation with set partitions:
 
 </div>
 <div class="code">
-<span class="id" title="keyword">Set Printing Universes</span>.<br/>
-
-<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">mathcomp.ssreflect.ssreflect</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.tools.html#"><span class="id" title="library">tools</span></a> <a class="idref" href="Combi.Basic.combclass.html#"><span class="id" title="library">combclass</span></a> <a class="idref" href="Combi.SSRcomplements.sorted.html#"><span class="id" title="library">sorted</span></a>.<br/>
 
@@ -1014,6 +1011,13 @@ Removing trailing zeroes
 <span class="id" title="keyword">Hint Resolve</span> <span class="id" title="var">intpartP</span> <span class="id" title="var">intpart_sorted</span> <span class="id" title="var">intpartnP</span> <span class="id" title="var">intpartn_sorted</span>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab21"></a><h1 class="section">The union of two integer partitions</h1>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="UnionPart"><span class="id" title="section">UnionPart</span></a>.<br/>
 
 <br/>
@@ -1061,6 +1065,13 @@ Removing trailing zeroes
 <br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab22"></a><h1 class="section">Shape of set partitions and integer partitions</h1>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="SetPartitionShape"><span class="id" title="section">SetPartitionShape</span></a>.<br/>
 
 <br/>
