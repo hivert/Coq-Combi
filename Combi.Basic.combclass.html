@@ -81,7 +81,7 @@ Summing <span class="inlinecode"><span class="id" title="abbreviation">count_mem
 </div>
 
 <div class="doc">
-<a name="lab93"></a><h1 class="section">Building subtype from a sequence</h1>
+<a name="lab94"></a><h1 class="section">Building subtype from a sequence</h1>
 
 
 <div class="paragraph"> </div>
@@ -94,10 +94,10 @@ Here is how to construct a fintype from a list: we are given
 <li> a type <span class="inlinecode"><a class="idref" href="Combi.SymGroup.presentSn.html#Transp.T"><span class="id" title="variable">T</span></a></span> which is a <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#InhOrdFinType.countType"><span class="id" title="definition">countType</span></a></span>
 
 </li>
-<li> a type <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#SubtypesDisjointUnion.TP"><span class="id" title="variable">TP</span></a></span> which is <span class="inlinecode"><span class="id" title="record">subCountType</span></span> of <span class="inlinecode"><a class="idref" href="Combi.SymGroup.presentSn.html#Transp.T"><span class="id" title="variable">T</span></a></span> for a predicate <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#FinPOrdTypeTheory.P"><span class="id" title="variable">P</span></a></span>.
+<li> a type <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#SubtypesDisjointUnion.TP"><span class="id" title="variable">TP</span></a></span> which is <span class="inlinecode"><span class="id" title="record">subCountType</span></span> of <span class="inlinecode"><a class="idref" href="Combi.SymGroup.presentSn.html#Transp.T"><span class="id" title="variable">T</span></a></span> for a predicate <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#IncrMap.Local.P"><span class="id" title="variable">P</span></a></span>.
 
 </li>
-<li> a list <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#SubtypeSeq.lst"><span class="id" title="variable">lst</span></a></span> of element from <span class="inlinecode"><a class="idref" href="Combi.SymGroup.presentSn.html#Transp.T"><span class="id" title="variable">T</span></a></span> whose element veryfies the predicate <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#FinPOrdTypeTheory.P"><span class="id" title="variable">P</span></a></span>.
+<li> a list <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#SubtypeSeq.lst"><span class="id" title="variable">lst</span></a></span> of element from <span class="inlinecode"><a class="idref" href="Combi.SymGroup.presentSn.html#Transp.T"><span class="id" title="variable">T</span></a></span> whose element veryfies the predicate <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#IncrMap.Local.P"><span class="id" title="variable">P</span></a></span>.
 
 </li>
 </ul>
@@ -106,15 +106,15 @@ We define three possible ways to provide <span class="inlinecode"><a class="idre
 <div class="paragraph"> </div>
 
 <ul class="doclist">
-<li> <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#sub_subFinType"><span class="id" title="definition">sub_subFinType</span></a></span> which suppose that any element verifying <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#FinPOrdTypeTheory.P"><span class="id" title="variable">P</span></a></span> appears only
+<li> <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#sub_subFinType"><span class="id" title="definition">sub_subFinType</span></a></span> which suppose that any element verifying <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#IncrMap.Local.P"><span class="id" title="variable">P</span></a></span> appears only
   once in <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#SubtypeSeq.lst"><span class="id" title="variable">lst</span></a></span>;
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#sub_uniq_subFinType"><span class="id" title="definition">sub_uniq_subFinType</span></a></span> which suppose that any element verifying <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#FinPOrdTypeTheory.P"><span class="id" title="variable">P</span></a></span> appears in
+<li> <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#sub_uniq_subFinType"><span class="id" title="definition">sub_uniq_subFinType</span></a></span> which suppose that any element verifying <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#IncrMap.Local.P"><span class="id" title="variable">P</span></a></span> appears in
   <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#SubtypeSeq.lst"><span class="id" title="variable">lst</span></a></span> and that <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#SubtypeSeq.lst"><span class="id" title="variable">lst</span></a></span> is duplicate free (<span class="inlinecode"><span class="id" title="definition">uniq</span></span>);
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#sub_undup_subFinType"><span class="id" title="definition">sub_undup_subFinType</span></a></span> which suppose that any element verifying <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#FinPOrdTypeTheory.P"><span class="id" title="variable">P</span></a></span> appears in
+<li> <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#sub_undup_subFinType"><span class="id" title="definition">sub_undup_subFinType</span></a></span> which suppose that any element verifying <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#IncrMap.Local.P"><span class="id" title="variable">P</span></a></span> appears in
   <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#SubtypeSeq.lst"><span class="id" title="variable">lst</span></a></span> and remove the duplicate elements.
 
 </li>
@@ -148,7 +148,7 @@ We define three possible ways to provide <span class="inlinecode"><a class="idre
 </div>
 
 <div class="doc">
-<a name="lab94"></a><h2 class="section">Method 1 - Each element appears only once</h2>
+<a name="lab95"></a><h2 class="section">Method 1 - Each element appears only once</h2>
 
 </div>
 <div class="code">
@@ -185,7 +185,7 @@ We define three possible ways to provide <span class="inlinecode"><a class="idre
 </div>
 
 <div class="doc">
-<a name="lab95"></a><h2 class="section">Method 2 - Each element appears and the lists is uniq</h2>
+<a name="lab96"></a><h2 class="section">Method 2 - Each element appears and the lists is uniq</h2>
 
 </div>
 <div class="code">
@@ -219,7 +219,7 @@ We define three possible ways to provide <span class="inlinecode"><a class="idre
 </div>
 
 <div class="doc">
-<a name="lab96"></a><h2 class="section">Method 3 - Each element appears, we remove the duplicates</h2>
+<a name="lab97"></a><h2 class="section">Method 3 - Each element appears, we remove the duplicates</h2>
 
 </div>
 <div class="code">
@@ -251,7 +251,7 @@ We define three possible ways to provide <span class="inlinecode"><a class="idre
 </div>
 
 <div class="doc">
-<a name="lab97"></a><h1 class="section">Finite subtype obtained as a finite the dijoint union of finite subtypes</h1>
+<a name="lab98"></a><h1 class="section">Finite subtype obtained as a finite the dijoint union of finite subtypes</h1>
 
 
 <div class="paragraph"> </div>
@@ -272,7 +272,7 @@ For the constructed type<span class="inlinecode"><a class="idref" href="Combi.Sy
 <li> a type <span class="inlinecode"><a class="idref" href="Combi.SymGroup.presentSn.html#Transp.T"><span class="id" title="variable">T</span></a></span> which is a <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#InhOrdFinType.countType"><span class="id" title="definition">countType</span></a></span>.
 
 </li>
-<li> a type <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#SubtypesDisjointUnion.TP"><span class="id" title="variable">TP</span></a></span> which is <span class="inlinecode"><span class="id" title="record">subCountType</span></span> of <span class="inlinecode"><a class="idref" href="Combi.SymGroup.presentSn.html#Transp.T"><span class="id" title="variable">T</span></a></span> for a predicate <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#FinPOrdTypeTheory.P"><span class="id" title="variable">P</span></a></span>.
+<li> a type <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#SubtypesDisjointUnion.TP"><span class="id" title="variable">TP</span></a></span> which is <span class="inlinecode"><span class="id" title="record">subCountType</span></span> of <span class="inlinecode"><a class="idref" href="Combi.SymGroup.presentSn.html#Transp.T"><span class="id" title="variable">T</span></a></span> for a predicate <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#IncrMap.Local.P"><span class="id" title="variable">P</span></a></span>.
 
 </li>
 </ul>
@@ -313,19 +313,19 @@ Together with the two following requirements:
 
 <ul class="doclist">
 <li> for all index <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#SubtypesDisjointUnion.TPi"><span class="id" title="variable">TPi</span></a></span> and <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#Inhabited.x"><span class="id" title="projection">x</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.presentSn.html#Transp.T"><span class="id" title="variable">T</span></a></span>, the statement <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#SubtypesDisjointUnion.Pi"><span class="id" title="variable">Pi</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#Inhabited.x"><span class="id" title="projection">x</span></a></span> must be
-  equivalent to <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#FinPOrdTypeTheory.P"><span class="id" title="variable">P</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#Inhabited.x"><span class="id" title="projection">x</span></a></span> <span class="inlinecode">&amp;&amp;</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span> <span class="inlinecode">==</span> <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#SubtypesDisjointUnion.FI"><span class="id" title="variable">FI</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#Inhabited.x"><span class="id" title="projection">x</span></a></span>.
+  equivalent to <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#IncrMap.Local.P"><span class="id" title="variable">P</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#Inhabited.x"><span class="id" title="projection">x</span></a></span> <span class="inlinecode">&amp;&amp;</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span> <span class="inlinecode">==</span> <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#SubtypesDisjointUnion.FI"><span class="id" title="variable">FI</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#Inhabited.x"><span class="id" title="projection">x</span></a></span>.
 
 </li>
-<li> forall <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#Inhabited.x"><span class="id" title="projection">x</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.presentSn.html#Transp.T"><span class="id" title="variable">T</span></a></span>, such that <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#FinPOrdTypeTheory.P"><span class="id" title="variable">P</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#Inhabited.x"><span class="id" title="projection">x</span></a></span> the assertion <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#SubtypesDisjointUnion.PI"><span class="id" title="variable">PI</span></a></span> <span class="inlinecode">(<a class="idref" href="Combi.Basic.combclass.html#SubtypesDisjointUnion.FI"><span class="id" title="variable">FI</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#Inhabited.x"><span class="id" title="projection">x</span></a>)</span> must holds.
+<li> forall <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#Inhabited.x"><span class="id" title="projection">x</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.presentSn.html#Transp.T"><span class="id" title="variable">T</span></a></span>, such that <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#IncrMap.Local.P"><span class="id" title="variable">P</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#Inhabited.x"><span class="id" title="projection">x</span></a></span> the assertion <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#SubtypesDisjointUnion.PI"><span class="id" title="variable">PI</span></a></span> <span class="inlinecode">(<a class="idref" href="Combi.Basic.combclass.html#SubtypesDisjointUnion.FI"><span class="id" title="variable">FI</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#Inhabited.x"><span class="id" title="projection">x</span></a>)</span> must holds.
 
 </li>
 </ul>
 From all these data <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#union_subFinType"><span class="id" title="definition">union_subFinType</span></a></span> is a <span class="inlinecode"><span class="id" title="record">subFinType</span></span> of <span class="inlinecode"><a class="idref" href="Combi.SymGroup.presentSn.html#Transp.T"><span class="id" title="variable">T</span></a></span> for the
-predicate <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#FinPOrdTypeTheory.P"><span class="id" title="variable">P</span></a></span> that is a <span class="inlinecode"><span class="id" title="record">subFinType</span></span> structure for <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#SubtypesDisjointUnion.TP"><span class="id" title="variable">TP</span></a></span>.
+predicate <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#IncrMap.Local.P"><span class="id" title="variable">P</span></a></span> that is a <span class="inlinecode"><span class="id" title="record">subFinType</span></span> structure for <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#SubtypesDisjointUnion.TP"><span class="id" title="variable">TP</span></a></span>.
 
 <div class="paragraph"> </div>
 
-See <span class="inlinecode"><a class="idref" href="Combi.HookFormula.RSident.html#stpn_subFinType"><span class="id" title="definition">stpn_subFinType</span></a></span> and <span class="inlinecode"><a class="idref" href="Combi.Combi.Yamanouchi.html#yamn_subFinType"><span class="id" title="definition">yamn_subFinType</span></a></span> for example of usage.
+See <span class="inlinecode"><a class="idref" href="Combi.HookFormula.Frobenius_ident.html#stpn_subFinType"><span class="id" title="definition">stpn_subFinType</span></a></span> and <span class="inlinecode"><a class="idref" href="Combi.Combi.Yamanouchi.html#yamn_subFinType"><span class="id" title="definition">yamn_subFinType</span></a></span> for example of usage.
 
 </div>
 <div class="code">
