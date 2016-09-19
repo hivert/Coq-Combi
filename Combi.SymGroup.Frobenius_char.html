@@ -46,16 +46,14 @@
 
 <br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.tools.html#"><span class="id" title="library">tools</span></a> <a class="idref" href="Combi.Combi.partition.html#"><span class="id" title="library">partition</span></a> <a class="idref" href="Combi.MPoly.sympoly.html#"><span class="id" title="library">sympoly</span></a>.<br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.permcomp.html#"><span class="id" title="library">permcomp</span></a> <a class="idref" href="Combi.SymGroup.presentSn.html#"><span class="id" title="library">presentSn</span></a> <a class="idref" href="Combi.SymGroup.cycles.html#"><span class="id" title="library">cycles</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#"><span class="id" title="library">cycletype</span></a> <a class="idref" href="Combi.SymGroup.towerSn.html#"><span class="id" title="library">towerSn</span></a> <a class="idref" href="Combi.SymGroup.permcent.html#"><span class="id" title="library">permcent</span></a>.<br/>
-
-<br/>
-<span class="id" title="keyword">Import</span> <span class="id" title="var">LeqGeqOrder</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.permcomp.html#"><span class="id" title="library">permcomp</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#"><span class="id" title="library">cycletype</span></a> <a class="idref" href="Combi.SymGroup.towerSn.html#"><span class="id" title="library">towerSn</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Set Implicit Arguments</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Import</span> <span class="id" title="var">GroupScope</span> <span class="id" title="var">GRing.Theory</span> <span class="id" title="var">Num.Theory</span>.<br/>
+<span class="id" title="keyword">Import</span> <span class="id" title="var">LeqGeqOrder</span>.<br/>
+<span class="id" title="keyword">Import</span> <span class="id" title="var">GroupScope</span> <span class="id" title="var">GRing.Theory</span>.<br/>
 <span class="id" title="keyword">Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">ring_scope</span>.<br/>
 
 <br/>
@@ -93,12 +91,12 @@
 
 <div class="doc">
 This cannot be written as a SSReflect <span class="inlinecode">{<span class="id" title="var">morph</span></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.Frobenius_char.html#Fchar"><span class="id" title="definition">Fchar</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#BijCard.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene.html#g"><span class="id" title="variable">g</span></a></span> <span class="inlinecode">/</span> <span class="inlinecode">...</span>  <span class="inlinecode">&gt;-&gt;</span> <span class="inlinecode">...</span> <span class="inlinecode">}</span>
-because the dependency of Fchar on the degree <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#DefsKostkaMon.n"><span class="id" title="variable">n</span></a></span>. The three <span class="inlinecode"><a class="idref" href="Combi.SymGroup.Frobenius_char.html#Fchar"><span class="id" title="definition">Fchar</span></a></span> below are
+because the dependency of Fchar on the degree <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SymsSymm.n"><span class="id" title="variable">n</span></a></span>. The three <span class="inlinecode"><a class="idref" href="Combi.SymGroup.Frobenius_char.html#Fchar"><span class="id" title="definition">Fchar</span></a></span> below are
 actually three different functions.
 
 <div class="paragraph"> </div>
 
-Note: this can be solved using a dependant record <span class="inlinecode">{<a class="idref" href="Combi.MPoly.Schur_basis.html#DefsKostkaMon.n"><span class="id" title="variable">n</span></a>;</span> <span class="inlinecode">'<span class="id" title="var">CF</span>('<span class="id" title="var">S_n</span>)}</span> with a
+Note: this can be solved using a dependant record <span class="inlinecode">{<a class="idref" href="Combi.MPoly.Schur_basis.html#SymsSymm.n"><span class="id" title="variable">n</span></a>;</span> <span class="inlinecode">'<span class="id" title="var">CF</span>('<span class="id" title="var">S_n</span>)}</span> with a
 dependent equality but I'm not sure this is really needed.
 
 <div class="paragraph"> </div>

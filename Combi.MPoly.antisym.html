@@ -50,7 +50,7 @@ We start by general Polynomials stuff:
 <div class="paragraph"> </div>
 
 <ul class="doclist">
-<li> tensR == the scalar extension morphism from <span class="inlinecode">{<span class="id" title="library">mpoly</span></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#RemoveBig.Z"><span class="id" title="variable">Z</span></a>[<a class="idref" href="Combi.MPoly.Schur_basis.html#DefsKostkaMon.n"><span class="id" title="variable">n</span></a>]}</span> to <span class="inlinecode">{<span class="id" title="library">mpoly</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SchurDec.R"><span class="id" title="variable">R</span></a>[<a class="idref" href="Combi.MPoly.Schur_basis.html#DefsKostkaMon.n"><span class="id" title="variable">n</span></a>]}</span>
+<li> tensR == the scalar extension morphism from <span class="inlinecode">{<span class="id" title="library">mpoly</span></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#RemoveBig.Z"><span class="id" title="variable">Z</span></a>[<a class="idref" href="Combi.MPoly.Schur_basis.html#SymsSymm.n"><span class="id" title="variable">n</span></a>]}</span> to <span class="inlinecode">{<span class="id" title="library">mpoly</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SymsSymm.R"><span class="id" title="variable">R</span></a>[<a class="idref" href="Combi.MPoly.Schur_basis.html#SymsSymm.n"><span class="id" title="variable">n</span></a>]}</span>
            obtained by tensoring the coefficients rings. This is a ring
            morphism.
 
@@ -74,10 +74,10 @@ Vandermonde products and determinants:
 <li> alternpol f == the alternating sunm of the permuted of f.
 
 </li>
-<li> rho         == the multi-monomial <span class="inlinecode">[<a class="idref" href="Combi.MPoly.Schur_basis.html#DefsKostkaMon.n"><span class="id" title="variable">n</span></a>-1,</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#DefsKostkaMon.n"><span class="id" title="variable">n</span></a>-2,</span> <span class="inlinecode">...,</span> <span class="inlinecode">1,</span> <span class="inlinecode">0]</span>
+<li> rho         == the multi-monomial <span class="inlinecode">[<a class="idref" href="Combi.MPoly.Schur_basis.html#SymsSymm.n"><span class="id" title="variable">n</span></a>-1,</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SymsSymm.n"><span class="id" title="variable">n</span></a>-2,</span> <span class="inlinecode">...,</span> <span class="inlinecode">1,</span> <span class="inlinecode">0]</span>
 
 </li>
-<li> vdmprod n R == the vandermonde product in <span class="inlinecode">{<span class="id" title="library">mpoly</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SchurDec.R"><span class="id" title="variable">R</span></a>[<a class="idref" href="Combi.MPoly.Schur_basis.html#DefsKostkaMon.n"><span class="id" title="variable">n</span></a>]}</span>, that is the product
+<li> vdmprod n R == the vandermonde product in <span class="inlinecode">{<span class="id" title="library">mpoly</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SymsSymm.R"><span class="id" title="variable">R</span></a>[<a class="idref" href="Combi.MPoly.Schur_basis.html#SymsSymm.n"><span class="id" title="variable">n</span></a>]}</span>, that is the product
                  <tt>\prod_(i &lt; j) ('X_i - 'X_j) </tt>.
 
 <div class="paragraph"> </div>
@@ -105,7 +105,7 @@ The main results are the Vandermonde determinant expansion:
 <div class="paragraph"> </div>
 
 <ul class="doclist">
-<li> <span class="inlinecode"></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#vdmprod_alt"><span class="id" title="lemma">vdmprod_alt</span></a></span>     <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#vdmprod"><span class="id" title="definition">vdmprod</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#alternpol"><span class="id" title="definition">alternpol</span></a></span> <span class="inlinecode">'<span class="id" title="var">X_</span>[(<a class="idref" href="Combi.MPoly.Schur_basis.html#rho"><span class="id" title="abbreviation">rho</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#DefsKostkaMon.n"><span class="id" title="variable">n</span></a>)]</span> <span class="inlinecode"></span>
+<li> <span class="inlinecode"></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#vdmprod_alt"><span class="id" title="lemma">vdmprod_alt</span></a></span>     <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#vdmprod"><span class="id" title="definition">vdmprod</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#alternpol"><span class="id" title="definition">alternpol</span></a></span> <span class="inlinecode">'<span class="id" title="var">X_</span>[(<a class="idref" href="Combi.MPoly.Schur_basis.html#rho"><span class="id" title="abbreviation">rho</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SymsSymm.n"><span class="id" title="variable">n</span></a>)]</span> <span class="inlinecode"></span>
 
 </li>
 <li> <span class="inlinecode"></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#Vandet_vdmprodE"><span class="id" title="lemma">Vandet_vdmprodE</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#Vandet"><span class="id" title="definition">Vandet</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#vdmprod"><span class="id" title="definition">vdmprod</span></a></span> <span class="inlinecode"></span>
