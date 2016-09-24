@@ -38,7 +38,7 @@ Monomials and partitions:
 <div class="paragraph"> </div>
 
 <ul class="doclist">
-<li> mpart s == the multi-monomial whose exponent are <span class="inlinecode"><a class="idref" href="Combi.SymGroup.permcent.html#PermCycles.CM.s"><span class="id" title="variable">s</span></a></span> if <span class="inlinecode"><span class="id" title="definition">size</span></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.permcent.html#PermCycles.CM.s"><span class="id" title="variable">s</span></a></span> is smaller
+<li> mpart s == the multi-monomial whose exponent are <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SymhSyms.Bijection.s"><span class="id" title="variable">s</span></a></span> if <span class="inlinecode"><span class="id" title="definition">size</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SymhSyms.Bijection.s"><span class="id" title="variable">s</span></a></span> is smaller
            than the number of variables.
 
 </li>
@@ -67,10 +67,10 @@ Vandermonde products and determinants:
 <li> alternpol f == the alternating sunm of the permuted of f.
 
 </li>
-<li> rho            == the multi-monomial <span class="inlinecode">[<a class="idref" href="Combi.MPoly.Schur_basis.html#SymmSyms.n"><span class="id" title="variable">n</span></a>-1,</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SymmSyms.n"><span class="id" title="variable">n</span></a>-2,</span> <span class="inlinecode">...,</span> <span class="inlinecode">1,</span> <span class="inlinecode">0]</span>
+<li> rho            == the multi-monomial <span class="inlinecode">[<a class="idref" href="Combi.MPoly.Schur_basis.html#SymhSyms.n"><span class="id" title="variable">n</span></a>-1,</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SymhSyms.n"><span class="id" title="variable">n</span></a>-2,</span> <span class="inlinecode">...,</span> <span class="inlinecode">1,</span> <span class="inlinecode">0]</span>
 
 </li>
-<li> Vanprod n R == the Vandermonde product in <span class="inlinecode">{<span class="id" title="library">mpoly</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SymmSyms.R"><span class="id" title="variable">R</span></a>[<a class="idref" href="Combi.MPoly.Schur_basis.html#SymmSyms.n"><span class="id" title="variable">n</span></a>]}</span>, that is the product
+<li> Vanprod n R == the Vandermonde product in <span class="inlinecode">{<span class="id" title="library">mpoly</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SymhSyms.R"><span class="id" title="variable">R</span></a>[<a class="idref" href="Combi.MPoly.Schur_basis.html#SymhSyms.n"><span class="id" title="variable">n</span></a>]}</span>, that is the product
                  <tt>\prod_(i &lt; j) ('X_i - 'X_j) </tt>.
 
 <div class="paragraph"> </div>
@@ -98,7 +98,7 @@ The main results are the Vandermonde determinant expansion:
 <div class="paragraph"> </div>
 
 <ul class="doclist">
-<li> <span class="inlinecode"></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#Vanprod_alt"><span class="id" title="lemma">Vanprod_alt</span></a></span>     <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#Vanprod"><span class="id" title="section">Vanprod</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#alternpol"><span class="id" title="definition">alternpol</span></a></span> <span class="inlinecode">'<span class="id" title="var">X_</span>[(<a class="idref" href="Combi.MPoly.Schur_basis.html#rho"><span class="id" title="abbreviation">rho</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SymmSyms.n"><span class="id" title="variable">n</span></a>)]</span> <span class="inlinecode"></span>
+<li> <span class="inlinecode"></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#Vanprod_alt"><span class="id" title="lemma">Vanprod_alt</span></a></span>     <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#Vanprod"><span class="id" title="section">Vanprod</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#alternpol"><span class="id" title="definition">alternpol</span></a></span> <span class="inlinecode">'<span class="id" title="var">X_</span>[(<a class="idref" href="Combi.MPoly.Schur_basis.html#rho"><span class="id" title="abbreviation">rho</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SymhSyms.n"><span class="id" title="variable">n</span></a>)]</span> <span class="inlinecode"></span>
 
 </li>
 <li> <span class="inlinecode"></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#Vandet_VanprodE"><span class="id" title="lemma">Vandet_VanprodE</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#Vandet"><span class="id" title="definition">Vandet</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#Vanprod"><span class="id" title="section">Vanprod</span></a></span> <span class="inlinecode"></span>
@@ -181,6 +181,9 @@ The main results are the Vandermonde determinant expansion:
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="partm_perm_eqK"><span class="id" title="lemma">partm_perm_eqK</span></a> <span class="id" title="var">m</span> : <span class="id" title="definition">perm_eq</span> <a class="idref" href="Combi.MPoly.antisym.html#m"><span class="id" title="variable">m</span></a> (<a class="idref" href="Combi.MPoly.antisym.html#mpart"><span class="id" title="definition">mpart</span></a> (<a class="idref" href="Combi.MPoly.antisym.html#partm"><span class="id" title="definition">partm</span></a> <a class="idref" href="Combi.MPoly.antisym.html#m"><span class="id" title="variable">m</span></a>)).<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="sumn_mpart"><span class="id" title="lemma">sumn_mpart</span></a> <span class="id" title="var">sh</span> : <span class="id" title="definition">size</span> <a class="idref" href="Combi.MPoly.antisym.html#sh"><span class="id" title="variable">sh</span></a> <span class="id" title="notation">≤</span> <a class="idref" href="Combi.MPoly.antisym.html#MonomPart.n"><span class="id" title="variable">n</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="definition">sumn</span> (<a class="idref" href="Combi.MPoly.antisym.html#mpart"><span class="id" title="definition">mpart</span></a> <a class="idref" href="Combi.MPoly.antisym.html#sh"><span class="id" title="variable">sh</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="definition">sumn</span> <a class="idref" href="Combi.MPoly.antisym.html#sh"><span class="id" title="variable">sh</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="sumn_partm"><span class="id" title="lemma">sumn_partm</span></a> <span class="id" title="var">m</span> : <span class="id" title="definition">sumn</span> (<a class="idref" href="Combi.MPoly.antisym.html#partm"><span class="id" title="definition">partm</span></a> <a class="idref" href="Combi.MPoly.antisym.html#m"><span class="id" title="variable">m</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="definition">mdeg</span> <a class="idref" href="Combi.MPoly.antisym.html#m"><span class="id" title="variable">m</span></a>.<br/>
