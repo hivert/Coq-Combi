@@ -38,14 +38,14 @@ Monomials and partitions:
 <div class="paragraph"> </div>
 
 <ul class="doclist">
-<li> mpart s == the multi-monomial whose exponent are <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> if <span class="inlinecode"><span class="id" title="definition">size</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> is smaller
+<li> mpart s == the multi-monomial whose exponent are <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> if <span class="inlinecode"><span class="id" title="definition">size</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> is smaller
            than the number of variables.
 
 </li>
-<li> partm m == the partition obtained by sorting the exponent of <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#BijectionExtTab.m"><span class="id" title="variable">m</span></a></span>.
+<li> partm m == the partition obtained by sorting the exponent of <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.m"><span class="id" title="variable">m</span></a></span>.
 
 </li>
-<li> m \is dominant == the exponent of <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#BijectionExtTab.m"><span class="id" title="variable">m</span></a></span> are sorted in reverse order.
+<li> m \is dominant == the exponent of <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.m"><span class="id" title="variable">m</span></a></span> are sorted in reverse order.
 
 </li>
 </ul>
@@ -67,10 +67,10 @@ Vandermonde products and determinants:
 <li> alternpol f == the alternating sunm of the permuted of f.
 
 </li>
-<li> rho            == the multi-monomial <span class="inlinecode">[<a class="idref" href="Combi.MPoly.Schur_basis.html#SymhSyms.n"><span class="id" title="variable">n</span></a>-1,</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SymhSyms.n"><span class="id" title="variable">n</span></a>-2,</span> <span class="inlinecode">...,</span> <span class="inlinecode">1,</span> <span class="inlinecode">0]</span>
+<li> rho            == the multi-monomial <span class="inlinecode">[<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a>-1,</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a>-2,</span> <span class="inlinecode">...,</span> <span class="inlinecode">1,</span> <span class="inlinecode">0]</span>
 
 </li>
-<li> Vanprod n R == the Vandermonde product in <span class="inlinecode">{<span class="id" title="library">mpoly</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SymhSyms.R"><span class="id" title="variable">R</span></a>[<a class="idref" href="Combi.MPoly.Schur_basis.html#SymhSyms.n"><span class="id" title="variable">n</span></a>]}</span>, that is the product
+<li> Vanprod n R == the Vandermonde product in <span class="inlinecode">{<span class="id" title="library">mpoly</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#MPoESymHomog.R"><span class="id" title="variable">R</span></a>[<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a>]}</span>, that is the product
                  <tt>\prod_(i &lt; j) ('X_i - 'X_j) </tt>.
 
 <div class="paragraph"> </div>
@@ -98,7 +98,7 @@ The main results are the Vandermonde determinant expansion:
 <div class="paragraph"> </div>
 
 <ul class="doclist">
-<li> <span class="inlinecode"></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#Vanprod_alt"><span class="id" title="lemma">Vanprod_alt</span></a></span>     <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#Vanprod"><span class="id" title="section">Vanprod</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#alternpol"><span class="id" title="definition">alternpol</span></a></span> <span class="inlinecode">'<span class="id" title="var">X_</span>[(<a class="idref" href="Combi.MPoly.Schur_basis.html#rho"><span class="id" title="abbreviation">rho</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SymhSyms.n"><span class="id" title="variable">n</span></a>)]</span> <span class="inlinecode"></span>
+<li> <span class="inlinecode"></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#Vanprod_alt"><span class="id" title="lemma">Vanprod_alt</span></a></span>     <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#Vanprod"><span class="id" title="section">Vanprod</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#alternpol"><span class="id" title="definition">alternpol</span></a></span> <span class="inlinecode">'<span class="id" title="var">X_</span>[(<a class="idref" href="Combi.MPoly.Schur_altdef.html#rho"><span class="id" title="abbreviation">rho</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a>)]</span> <span class="inlinecode"></span>
 
 </li>
 <li> <span class="inlinecode"></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#Vandet_VanprodE"><span class="id" title="lemma">Vandet_VanprodE</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#Vandet"><span class="id" title="definition">Vandet</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#Vanprod"><span class="id" title="section">Vanprod</span></a></span> <span class="inlinecode"></span>

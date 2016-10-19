@@ -34,7 +34,7 @@
 <div class="paragraph"> </div>
 
 We define the notion of (semistandard) Young tableau over an <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#InhOrdFinType.ordType"><span class="id" title="definition">ordType</span></a></span>
-denoted <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#MatInv.T"><span class="id" title="variable">T</span></a></span>.
+denoted <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#T"><span class="id" title="abbreviation">T</span></a></span>.
 
 <div class="paragraph"> </div>
 
@@ -47,11 +47,11 @@ denoted <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.
             this is a order.
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#is_tableau"><span class="id" title="definition">is_tableau</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> == t of type <span class="inlinecode">(<span class="id" title="library">seq</span></span> <span class="inlinecode">(<span class="id" title="library">seq</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#MatInv.T"><span class="id" title="variable">T</span></a>))</span> is a tableau that is a sequence
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#is_tableau"><span class="id" title="definition">is_tableau</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> == t of type <span class="inlinecode">(<span class="id" title="library">seq</span></span> <span class="inlinecode">(<span class="id" title="library">seq</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#T"><span class="id" title="abbreviation">T</span></a>))</span> is a tableau that is a sequence
                     of non empty rows which is sorted for the dominate order.
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#get_tab"><span class="id" title="definition">get_tab</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#PartOrder.r"><span class="id" title="projection">r</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#SetContainingBothLeft.Case.c"><span class="id" title="variable">c</span></a></span> == the element of t of coordinate (r c), or <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#inhabitant"><span class="id" title="definition">inhabitant</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#MatInv.T"><span class="id" title="variable">T</span></a></span>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#get_tab"><span class="id" title="definition">get_tab</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#PartOrder.r"><span class="id" title="projection">r</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#SetContainingBothLeft.Case.c"><span class="id" title="variable">c</span></a></span> == the element of t of coordinate (r c), or <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#inhabitant"><span class="id" title="definition">inhabitant</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#T"><span class="id" title="abbreviation">T</span></a></span>
                     if (r, c) is not is the tableau
 
 </li>
@@ -61,8 +61,8 @@ denoted <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.
 <li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#size_tab"><span class="id" title="definition">size_tab</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> == the size (number of boxes) of t
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#filter_gtnX_tab"><span class="id" title="definition">filter_gtnX_tab</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SymhSyms.n"><span class="id" title="variable">n</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> == the sub-tableau of t formed by the element smaller
-                   than <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SymhSyms.n"><span class="id" title="variable">n</span></a></span>.
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#filter_gtnX_tab"><span class="id" title="definition">filter_gtnX_tab</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> == the sub-tableau of t formed by the element smaller
+                   than <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span>.
 
 <div class="paragraph"> </div>
 

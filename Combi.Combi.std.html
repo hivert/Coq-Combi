@@ -28,15 +28,15 @@
 </div>
 
 <div class="doc">
-Standard words : words wich are permutations of <span class="inlinecode">0,</span> <span class="inlinecode">1,</span> <span class="inlinecode">...,</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SymhSyms.n"><span class="id" title="variable">n</span></a>-1</span>:
+Standard words : words wich are permutations of <span class="inlinecode">0,</span> <span class="inlinecode">1,</span> <span class="inlinecode">...,</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a>-1</span>:
 
 <div class="paragraph"> </div>
 
 <ul class="doclist">
-<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.std.html#is_std"><span class="id" title="definition">is_std</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> == s is a standard word
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.std.html#is_std"><span class="id" title="definition">is_std</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> == s is a standard word
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.std.html#is_std_of_n"><span class="id" title="definition">is_std_of_n</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SymhSyms.n"><span class="id" title="variable">n</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> == s is a standard word of size n
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.std.html#is_std_of_n"><span class="id" title="definition">is_std_of_n</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> == s is a standard word of size n
 
 </li>
 <li> <span class="inlinecode"><a class="idref" href="Combi.Combi.std.html#wordperm"><span class="id" title="definition">wordperm</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.Lead.p"><span class="id" title="variable">p</span></a></span> == the standard word associated with a permutation <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.Lead.p"><span class="id" title="variable">p</span></a></span> of <span class="inlinecode">'<span class="id" title="var">S_n</span></span>
@@ -48,7 +48,7 @@ Sigma types for standard word
 <div class="paragraph"> </div>
 
 <ul class="doclist">
-<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.std.html#stdwordn"><span class="id" title="record">stdwordn</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#SymhSyms.n"><span class="id" title="variable">n</span></a></span> == a type for <span class="inlinecode"><span class="id" title="library">seq</span></span> <span class="inlinecode"><a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a></span> which standard words size n;
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.std.html#stdwordn"><span class="id" title="record">stdwordn</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span> == a type for <span class="inlinecode"><span class="id" title="library">seq</span></span> <span class="inlinecode"><a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a></span> which standard words size n;
                   it is canonically a <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#InhOrdFinType.finType"><span class="id" title="definition">finType</span></a></span>
 
 </li>
@@ -58,7 +58,7 @@ Inversions and standardisation of a word over a totally ordered alphabet
 <div class="paragraph"> </div>
 
 <ul class="doclist">
-<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> == given a word w over an <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#InhOrdFinType.ordType"><span class="id" title="definition">ordType</span></a></span> returns the standard word with
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> == given a word w over an <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#InhOrdFinType.ordType"><span class="id" title="definition">ordType</span></a></span> returns the standard word with
              the same set of inversion (lemmas <span class="inlinecode"><a class="idref" href="Combi.Combi.std.html#stdP"><span class="id" title="lemma">stdP</span></a></span> and <span class="inlinecode"><a class="idref" href="Combi.Combi.std.html#std_eq_invP"><span class="id" title="lemma">std_eq_invP</span></a></span>)
 
 </li>
@@ -80,10 +80,10 @@ is the same as having the same standardized.
 <div class="paragraph"> </div>
 
 <ul class="doclist">
-<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.std.html#linvseq"><span class="id" title="definition">linvseq</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> == t is the left inverse of s
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.std.html#linvseq"><span class="id" title="definition">linvseq</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> == t is the left inverse of s
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.std.html#invseq"><span class="id" title="definition">invseq</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_basis.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> == s and t are inverse on of each other
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.std.html#invseq"><span class="id" title="definition">invseq</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> == s and t are inverse on of each other
 
 </li>
 <li> <span class="inlinecode"><a class="idref" href="Combi.Combi.std.html#invstd"><span class="id" title="definition">invstd</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#GreeneInvariantsRule.w"><span class="id" title="variable">w</span></a></span> == the inverse of the standardized of w that is the permutation
