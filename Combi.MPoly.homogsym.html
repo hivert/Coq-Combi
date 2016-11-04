@@ -312,11 +312,8 @@
 <span class="id" title="keyword">Section</span> <a name="HomSymField"><span class="id" title="section">HomSymField</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Import</span> <span class="id" title="var">ssrnum</span> <span class="id" title="var">Num.Theory</span>.<br/>
-
-<br/>
 <span class="id" title="keyword">Variable</span> <a name="HomSymField.n0"><span class="id" title="variable">n0</span></a> <a name="HomSymField.d"><span class="id" title="variable">d</span></a> : <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>.<br/>
-<span class="id" title="keyword">Variable</span> <a name="HomSymField.R"><span class="id" title="variable">R</span></a> : <span class="id" title="abbreviation">numFieldType</span>.<br/>
+<span class="id" title="keyword">Variable</span> <a name="HomSymField.R"><span class="id" title="variable">R</span></a> : <span class="id" title="abbreviation">fieldType</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Definition</span> <a name="symbe"><span class="id" title="definition">symbe</span></a> : <a class="idref" href="Combi.MPoly.homogsym.html#Basis"><span class="id" title="abbreviation">Basis</span></a> := <span class="id" title="notation">[</span><span class="id" title="notation">tuple</span> <span class="id" title="notation">of</span> <span class="id" title="notation">[</span><span class="id" title="notation">seq</span> <a class="idref" href="Combi.MPoly.homogsym.html#6ab98c5090ed9574ef19c3a5f6e302df"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.homogsym.html#6ab98c5090ed9574ef19c3a5f6e302df"><span class="id" title="notation">he</span></a><a class="idref" href="Combi.MPoly.homogsym.html#6ab98c5090ed9574ef19c3a5f6e302df"><span class="id" title="notation">[</span></a><span class="id" title="var">la</span><a class="idref" href="Combi.MPoly.homogsym.html#6ab98c5090ed9574ef19c3a5f6e302df"><span class="id" title="notation">]</span></a> <span class="id" title="notation">|</span> <span class="id" title="var">la</span> <span class="id" title="notation">&lt;-</span> <span class="id" title="abbreviation">enum</span> <span class="id" title="notation">{:</span> <a class="idref" href="Combi.MPoly.homogsym.html#P"><span class="id" title="abbreviation">P</span></a><span class="id" title="notation">}</span><span class="id" title="notation">]</span><span class="id" title="notation">]</span>.<br/>
@@ -374,7 +371,7 @@
 <span class="id" title="keyword">Lemma</span> <a name="symbh_basis"><span class="id" title="lemma">symbh_basis</span></a> : <span class="id" title="definition">basis_of</span> <span class="id" title="definition">fullv</span> <a class="idref" href="Combi.MPoly.homogsym.html#symbh"><span class="id" title="definition">symbh</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Lemma</span> <a name="symbp_basis"><span class="id" title="lemma">symbp_basis</span></a> : <span class="id" title="definition">basis_of</span> <span class="id" title="definition">fullv</span> <a class="idref" href="Combi.MPoly.homogsym.html#symbp"><span class="id" title="definition">symbp</span></a>.<br/>
+<span class="id" title="keyword">Lemma</span> <a name="symbp_basis"><span class="id" title="lemma">symbp_basis</span></a> : <span class="id" title="notation">[</span><span class="id" title="notation">char</span> <a class="idref" href="Combi.MPoly.homogsym.html#HomSymField.R"><span class="id" title="variable">R</span></a><span class="id" title="notation">]</span> <span class="id" title="notation">=</span><span class="id" title="notation">i</span> <span class="id" title="definition">pred0</span> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="definition">basis_of</span> <span class="id" title="definition">fullv</span> <a class="idref" href="Combi.MPoly.homogsym.html#symbp"><span class="id" title="definition">symbp</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.MPoly.homogsym.html#HomSymField"><span class="id" title="section">HomSymField</span></a>.<br/>
@@ -382,6 +379,11 @@
 <br/>
 <span class="id" title="keyword">Import</span> <span class="id" title="var">GRing.Theory</span> <span class="id" title="var">Num.Theory</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SymGroup.permcent.html#"><span class="id" title="library">permcent</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="char0_rat"><span class="id" title="lemma">char0_rat</span></a> : <span class="id" title="notation">[</span><span class="id" title="notation">char</span> <span class="id" title="record">rat</span><span class="id" title="notation">]</span> <span class="id" title="notation">=</span><span class="id" title="notation">i</span> <span class="id" title="definition">pred0</span>.<br/>
+ <span class="id" title="keyword">Lemma</span> <a name="char0_algC"><span class="id" title="lemma">char0_algC</span></a> : <span class="id" title="notation">[</span><span class="id" title="notation">char</span> <span class="id" title="abbreviation">algC</span><span class="id" title="notation">]</span> <span class="id" title="notation">=</span><span class="id" title="notation">i</span> <span class="id" title="definition">pred0</span>.<br/>
+ <span class="id" title="keyword">Hint Resolve</span> <span class="id" title="var">char0_algC</span> <span class="id" title="var">char0_rat</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Notation</span> <a name="e8409b72620bc8c52d7e7500fb1b3a07"><span class="id" title="notation">&quot;</span></a>''he'" := (<a class="idref" href="Combi.MPoly.homogsym.html#symbe"><span class="id" title="definition">symbe</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span> <span class="id" title="var">_</span>) (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 8, <span class="id" title="var">format</span> "''he'").<br/>
@@ -394,7 +396,7 @@
 <span class="id" title="keyword">Section</span> <a name="ChangeField"><span class="id" title="section">ChangeField</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Variable</span> <a name="ChangeField.R"><span class="id" title="variable">R</span></a> <a name="ChangeField.S"><span class="id" title="variable">S</span></a> : <span class="id" title="abbreviation">numFieldType</span>.<br/>
+<span class="id" title="keyword">Variable</span> <a name="ChangeField.R"><span class="id" title="variable">R</span></a> <a name="ChangeField.S"><span class="id" title="variable">S</span></a> : <span class="id" title="abbreviation">fieldType</span>.<br/>
 <span class="id" title="keyword">Variable</span> <a name="ChangeField.mor"><span class="id" title="variable">mor</span></a> : <span class="id" title="notation">{</span><span class="id" title="notation">rmorphism</span> <a class="idref" href="Combi.MPoly.homogsym.html#ChangeField.R"><span class="id" title="variable">R</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.5/stdlib/Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#ChangeField.S"><span class="id" title="variable">S</span></a><span class="id" title="notation">}</span>.<br/>
 
 <br/>
