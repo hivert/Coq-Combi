@@ -28,7 +28,7 @@
 </div>
 
 <div class="doc">
-<a name="lab68"></a><h1 class="section">A bunch of lemmas about seqs which are missing in SSReflect</h1>
+<a name="lab67"></a><h1 class="section">A bunch of lemmas about seqs which are missing in SSReflect</h1>
 
 </div>
 <div class="code">
@@ -63,7 +63,7 @@ TODO: these probably should be contributed to SSReflect itself
 </div>
 
 <div class="doc">
-<a name="lab69"></a><h2 class="section"><span class="inlinecode"><span class="id" title="definition">rcons</span></span> and <span class="inlinecode"><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a></span> related lemmas</h2>
+<a name="lab68"></a><h2 class="section"><span class="inlinecode"><span class="id" title="definition">rcons</span></span> and <span class="inlinecode"><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a></span> related lemmas</h2>
 
 </div>
 <div class="code">
@@ -114,7 +114,7 @@ TODO: these probably should be contributed to SSReflect itself
 </div>
 
 <div class="doc">
-<a name="lab70"></a><h2 class="section"><span class="inlinecode"><span class="id" title="definition">set_nth</span></span> related lemmas</h2>
+<a name="lab69"></a><h2 class="section"><span class="inlinecode"><span class="id" title="definition">set_nth</span></span> related lemmas</h2>
 
 </div>
 <div class="code">
@@ -138,7 +138,7 @@ TODO: these probably should be contributed to SSReflect itself
 </div>
 
 <div class="doc">
-<a name="lab71"></a><h2 class="section"><span class="inlinecode"><span class="id" title="definition">sumn</span></span> related lemmas</h2>
+<a name="lab70"></a><h2 class="section"><span class="inlinecode"><span class="id" title="definition">sumn</span></span> related lemmas</h2>
 
 </div>
 <div class="code">
@@ -172,7 +172,7 @@ TODO: these probably should be contributed to SSReflect itself
 </div>
 
 <div class="doc">
-<a name="lab72"></a><h2 class="section"><span class="inlinecode"><span class="id" title="keyword">iota</span></span> related lemmas</h2>
+<a name="lab71"></a><h2 class="section"><span class="inlinecode"><span class="id" title="keyword">iota</span></span> related lemmas</h2>
 
 </div>
 <div class="code">
@@ -189,7 +189,7 @@ TODO: these probably should be contributed to SSReflect itself
 </div>
 
 <div class="doc">
-<a name="lab73"></a><h2 class="section">Bigop lemmas</h2>
+<a name="lab72"></a><h2 class="section">Bigop lemmas</h2>
 
 </div>
 <div class="code">
@@ -339,6 +339,22 @@ TODO: these probably should be contributed to SSReflect itself
 
 <br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.SSRcomplements.tools.html#SeqSub"><span class="id" title="section">SeqSub</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Section</span> <a name="SetPartition"><span class="id" title="section">SetPartition</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Variable</span> <a name="SetPartition.T"><span class="id" title="variable">T</span></a> : <span class="id" title="abbreviation">finType</span>.<br/>
+<span class="id" title="keyword">Implicit</span> <span class="id" title="keyword">Types</span> (<span class="id" title="var">X</span> : <span class="id" title="notation">{</span><span class="id" title="notation">set</span> <a class="idref" href="Combi.SSRcomplements.tools.html#SetPartition.T"><span class="id" title="variable">T</span></a><span class="id" title="notation">}</span>) (<span class="id" title="var">P</span> : <span class="id" title="notation">{</span><span class="id" title="notation">set</span> <span class="id" title="notation">{</span><span class="id" title="notation">set</span> <a class="idref" href="Combi.SSRcomplements.tools.html#SetPartition.T"><span class="id" title="variable">T</span></a><span class="id" title="notation">}}</span>).<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="partition0P"><span class="id" title="lemma">partition0P</span></a> <span class="id" title="var">P</span> : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#reflect"><span class="id" title="abbreviation">reflect</span></a> (<a class="idref" href="Combi.SSRcomplements.tools.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="definition">set0</span>) (<span class="id" title="definition">partition</span> <a class="idref" href="Combi.SSRcomplements.tools.html#P"><span class="id" title="variable">P</span></a> <span class="id" title="definition">set0</span>).<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="triv_part"><span class="id" title="lemma">triv_part</span></a> <span class="id" title="var">P</span> <span class="id" title="var">X</span> : <a class="idref" href="Combi.SSRcomplements.tools.html#X"><span class="id" title="variable">X</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#46c9e8232fa09401e24f1934bb65029f"><span class="id" title="notation">\</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#46c9e8232fa09401e24f1934bb65029f"><span class="id" title="notation">in</span></a> <a class="idref" href="Combi.SSRcomplements.tools.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="definition">partition</span> <a class="idref" href="Combi.SSRcomplements.tools.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="Combi.SSRcomplements.tools.html#X"><span class="id" title="variable">X</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.SSRcomplements.tools.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="notation">[</span><span class="id" title="notation">set</span> <a class="idref" href="Combi.SSRcomplements.tools.html#X"><span class="id" title="variable">X</span></a><span class="id" title="notation">]</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">End</span> <a class="idref" href="Combi.SSRcomplements.tools.html#SetPartition"><span class="id" title="section">SetPartition</span></a>.<br/>
 </div>
 </div>
 
