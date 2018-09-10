@@ -194,7 +194,7 @@ Qed.
 
 Lemma stab_tuple_prod :
   'C[wp | pact] =
-  (\prod_(x : seq_sub w) perm_ong_group [set i | tnth w i == val x])%G.
+  (\prod_(x : seq_sub w) 'C(~:[set i | tnth w i == val x] | 'P))%G.
 Proof using.
 have Htriv : trivIset [set [set i | tnth w i == val x] | x : seq_sub w].
   apply/trivIsetP => /= X Y.
@@ -218,32 +218,33 @@ apply/eqP; rewrite bigprodGE eqEsubset; apply/andP; split.
   apply group_prod => /= u /imsetP [/= X].
   move=> /imsetP [x Hx ->{X} ->{u}]; apply/mem_gen.
   apply/bigcupP; exists x => //.
-  by rewrite inE; exact: restr_perm_on.
+  rewrite perm_onE !inE; exact: restr_perm_on.
 - rewrite gen_subG; apply/subsetP => /= s /bigcupP [/= x _] Hs.
   rewrite !inE /=; apply/subsetP => j; rewrite !inE => /eqP ->{j}.
   apply/eqP/val_inj/eq_from_tnth => /= i.
   rewrite tnth_mktuple.
   case: (boolP (tnth w i == val x)) => Hl0.
-  + move: Hs; rewrite inE => /im_perm_on/setP/(_ i).
+  + move: Hs; rewrite perm_onE inE => /im_perm_on/setP/(_ i).
     rewrite !inE Hl0 => /imsetP [/= j].
     rewrite inE => /eqP H {1}->.
     by rewrite (eqP Hl0) permK.
-  + move: Hs => /groupVr; rewrite inE /= => /out_perm -> //.
+  + move: Hs => /groupVr; rewrite /= perm_onE inE => /out_perm -> //.
     by rewrite inE.
 Qed.
 
 Lemma stab_tuple_dprod :
   'C[wp | pact] =
-  \big[dprod/1]_(x : seq_sub w) perm_ong [set i | tnth w i == val x].
+  \big[dprod/1]_(x : seq_sub w) 'C(~:[set i | tnth w i == val x] | 'P).
 Proof using.
 rewrite stab_tuple_prod; apply/esym/eqP/bigdprodYP => x /= _.
-apply/subsetP => /= s; rewrite !inE negb_and negbK => Ht.
-have {Ht} : s \in perm_ong [set i | tnth w i != val x].
+rewrite !perm_onE.
+apply/subsetP => /= s; rewrite !inE negb_and negbK => Ht /=.
+have {Ht} : s \in 'C(~:[set i | tnth w i != val x] | 'P).
   move: Ht; rewrite bigprodGE => /gen_prodgP [u [/= f Hf ->{s}]].
-  apply group_prod => j _; move/(_ j): Hf => /bigcupP [k Hk].
-  rewrite !inE /perm_on => /subset_trans; apply.
+  apply group_prod => j _; move/(_ j): Hf => /bigcupP [k Hk] /=.
+  rewrite !perm_onE !inE /perm_on => /subset_trans; apply.
   by apply/subsetP => C; rewrite !inE => /eqP ->.
-rewrite inE => on_neqi; apply/andP; split.
+rewrite perm_onE inE => on_neqi; apply/andP; split.
 - case: (altP (s =P 1)) => //=; apply contra => on_eqi.
   apply/eqP/permP => /= i; rewrite perm1.
   case: (boolP (tnth w i == val x)) => [HC | /negbTE HC].
@@ -263,7 +264,7 @@ Lemma card_stab_tuple :
 Proof using.
 rewrite -(bigdprod_card (esym stab_tuple_dprod)).
 apply eq_bigr => [[i _]] _ /=.
-rewrite card_perm_ong; congr (_)`!.
+rewrite card_astab_perm; congr (_)`!.
 rewrite -map_tnth_enum.
 rewrite cardE /enum_mem size_filter /= count_map count_filter.
 by apply eq_count => X; rewrite !inE andbC.

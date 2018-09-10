@@ -134,25 +134,19 @@ End PermComp.
 Section PermOnG.
 
 Variable T : finType.
+Implicit Type (S : {set T}).
 Implicit Type (s t c : {perm T}).
 
-Definition perm_ong S : {set {perm T}} := [set s | perm_on S s].
-Lemma group_set_perm_ong S : group_set (perm_ong S).
+Lemma perm_onE S : 'C(~:S | 'P) = [set s | perm_on S s].
 Proof using.
-apply/group_setP; split => [| s t]; rewrite !inE;
-   [exact: perm_on1 | exact: perm_onM].
-Qed.
-Canonical perm_ong_group S : {group {perm T}} := Group (group_set_perm_ong S).
-Lemma card_perm_ong S : #|perm_ong S| = #|S|`!.
-Proof using. by rewrite cardsE /= card_perm. Qed.
-
-Lemma perm_ongE S : perm_ong S = 'C(~:S | 'P).
-Proof using.
-apply/setP => s; rewrite inE; apply/idP/astabP => [Hperm x | Hstab].
-- by rewrite inE /= apermE => /out_perm; apply.
+apply/setP => s; rewrite ![RHS]inE /=; apply/astabP/idP => [Hstab | Hperm x].
 - apply/subsetP => x; rewrite unfold_in; apply contraR => H.
   by move/(_ x): Hstab; rewrite inE /= apermE => ->.
+- by rewrite inE /= apermE => /out_perm; apply.
 Qed.
+
+Lemma card_astab_perm S : #|'C(~:S | 'P)| = #|S|`!.
+Proof using. by rewrite perm_onE cardsE /= card_perm. Qed.
 
 Lemma restr_perm_commute C s : commute (restr_perm C s) s.
 Proof using.
