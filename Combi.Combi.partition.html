@@ -237,12 +237,13 @@ Relation with set partitions:
 </div>
 <div class="code">
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">mathcomp.ssreflect.ssreflect</span>.<br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.tools.html#"><span class="id" title="library">tools</span></a> <a class="idref" href="Combi.Basic.combclass.html#"><span class="id" title="library">combclass</span></a> <a class="idref" href="Combi.SSRcomplements.sorted.html#"><span class="id" title="library">sorted</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.tools.html#"><span class="id" title="library">tools</span></a> <a class="idref" href="Combi.Basic.combclass.html#"><span class="id" title="library">combclass</span></a> <a class="idref" href="Combi.SSRcomplements.sorted.html#"><span class="id" title="library">sorted</span></a> <a class="idref" href="Combi.Basic.ordtype.html#"><span class="id" title="library">ordtype</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Set Implicit Arguments</span>.<br/>
 
 <br/>
+<span class="id" title="keyword">Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">nat_scope</span>.<br/>
 <span class="id" title="keyword">Delimit</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">Combi_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">Combi</span>.<br/>
 <span class="id" title="keyword">Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">Combi_scope</span>.<br/>
 
@@ -1038,9 +1039,6 @@ Removing trailing zeroes
 <span class="id" title="keyword">Module</span> <a name="IntPartNLex"><span class="id" title="module">IntPartNLex</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.Basic.ordtype.html#"><span class="id" title="library">ordtype</span></a>.<br/>
-
-<br/>
 <span class="id" title="keyword">Definition</span> <a name="IntPartNLex.intpartnlex"><span class="id" title="definition">intpartnlex</span></a> := <a class="idref" href="Combi.Combi.partition.html#intpartn"><span class="id" title="record">intpartn</span></a>.<br/>
 
 <br/>
@@ -1251,9 +1249,6 @@ Removing trailing zeroes
 <span class="id" title="keyword">Module</span> <a name="IntPartNDom"><span class="id" title="module">IntPartNDom</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.Basic.ordtype.html#"><span class="id" title="library">ordtype</span></a>.<br/>
-
-<br/>
 <span class="id" title="keyword">Definition</span> <a name="IntPartNDom.intpartndom"><span class="id" title="definition">intpartndom</span></a> <span class="id" title="var">d</span> := <a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">P_d</span></a>.<br/>
 
 <br/>
@@ -1279,8 +1274,6 @@ Removing trailing zeroes
 
 <br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.Combi.partition.html#IntPartNDom"><span class="id" title="module">IntPartNDom</span></a>.<br/>
-
-<br/>
 
 <br/>
 </div>

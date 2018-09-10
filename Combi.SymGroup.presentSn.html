@@ -34,7 +34,7 @@
 The main goal is to show that elementary transpositions generate the symmetric
 groups as a Coxeter group. We follow the proof from Alain Lascoux "The
 Symmetric Group", unfinished notes. It is not the shortest nor the simplest,
-but it is fully explicit and algprithmic. In particular, it goes through two
+but it is fully explicit and algorithmic. In particular, it goes through two
 algorithms to
 <ul class="doclist">
 <li> compute the size-lexicographically minimal reduced word of a permutation
@@ -52,7 +52,7 @@ Here are the notion defined is this file:
 <li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.homogsym.html#HomogSymProd.c"><span class="id" title="variable">c</span></a></span> <span class="inlinecode">\<span class="id" title="keyword">is</span></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#SetContainingBothLeft.Case.a"><span class="id" title="variable">a</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.presentSn.html#code"><span class="id" title="definition">code</span></a></span> == c is a list such that <span class="inlinecode"><span class="id" title="var">c_i</span></span> <span class="inlinecode">≤</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span>.
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.presentSn.html#wordcd"><span class="id" title="definition">wordcd</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.homogsym.html#HomogSymProd.c"><span class="id" title="variable">c</span></a></span> == for a code <span class="inlinecode"><a class="idref" href="Combi.MPoly.homogsym.html#HomogSymProd.c"><span class="id" title="variable">c</span></a></span> the liset <span class="inlinecode">0,</span> <span class="inlinecode">1-<a class="idref" href="Combi.Combi.stdtab.html#c1"><span class="id" title="variable">c1</span></a>..1,</span> <span class="inlinecode">2-<a class="idref" href="Combi.Combi.stdtab.html#c2"><span class="id" title="variable">c2</span></a>,..,2,..</span>
+<li> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.presentSn.html#wordcd"><span class="id" title="definition">wordcd</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.homogsym.html#HomogSymProd.c"><span class="id" title="variable">c</span></a></span> == for a code <span class="inlinecode"><a class="idref" href="Combi.MPoly.homogsym.html#HomogSymProd.c"><span class="id" title="variable">c</span></a></span> the list <span class="inlinecode">0,</span> <span class="inlinecode">1-<a class="idref" href="Combi.Combi.stdtab.html#c1"><span class="id" title="variable">c1</span></a>..1,</span> <span class="inlinecode">2-<a class="idref" href="Combi.Combi.stdtab.html#c2"><span class="id" title="variable">c2</span></a>..2,</span> <span class="inlinecode">..</span>
 
 <div class="paragraph"> </div>
 
@@ -147,13 +147,35 @@ Here are the notion defined is this file:
 </li>
 <li> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.presentSn.html#relat_Sn"><span class="id" title="inductive">relat_Sn</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene.html#g"><span class="id" title="variable">g</span></a></span> == if <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene.html#g"><span class="id" title="variable">g</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#CFExtProdTheory.gT"><span class="id" title="variable">gT</span></a></span> for a <span class="inlinecode"><span class="id" title="abbreviation">finGroupType</span></span> <span class="inlinecode"><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Peano.html#gt"><span class="id" title="definition">gt</span></a></span>. A
                proposition which asserts that the relation of the symmetric
-               group hodls for the <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene.html#g"><span class="id" title="variable">g</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span>
+               group holds for the <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene.html#g"><span class="id" title="variable">g</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span> denoted <span class="inlinecode">'<span class="id" title="var">g_i</span></span>. Namely
+
+<div class="paragraph"> </div>
+
+<ul class="doclist">
+<li> <span class="inlinecode"><span class="id" title="keyword">∀</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a>,</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span> <span class="inlinecode">&lt;</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode">'<span class="id" title="var">g_i</span>^+2</span> <span class="inlinecode">=</span> <span class="inlinecode">1</span>
+
+</li>
+<li> <span class="inlinecode"><span class="id" title="keyword">∀</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a>,</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a>.+1</span> <span class="inlinecode">&lt;</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode">'<span class="id" title="var">g_i</span></span> <span class="inlinecode">×</span> <span class="inlinecode">'<span class="id" title="var">g_i</span>.+1</span> <span class="inlinecode">×</span> <span class="inlinecode">'<span class="id" title="var">g_i</span></span> <span class="inlinecode">=</span> <span class="inlinecode">'<span class="id" title="var">g_i</span>.+1</span> <span class="inlinecode">×</span> <span class="inlinecode">'<span class="id" title="var">g_i</span></span> <span class="inlinecode">×</span> <span class="inlinecode">'<span class="id" title="var">g_i</span>.+1</span>
+
+</li>
+<li> <span class="inlinecode"><span class="id" title="keyword">∀</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#j"><span class="id" title="variable">j</span></a>,</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a>.+1</span> <span class="inlinecode">&lt;</span> <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#j"><span class="id" title="variable">j</span></a></span> <span class="inlinecode">&lt;</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode">'<span class="id" title="var">g_i</span></span> <span class="inlinecode">×</span> <span class="inlinecode">'<span class="id" title="var">g_j</span></span> <span class="inlinecode">=</span> <span class="inlinecode">'<span class="id" title="var">g_j</span></span> <span class="inlinecode">×</span> <span class="inlinecode">'<span class="id" title="var">g_i</span></span>
+
+</li>
+</ul>
 
 </li>
 </ul>
 
 <div class="paragraph"> </div>
 
+The main result is thus <span class="inlinecode"><span class="id" title="keyword">Theorem</span></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.presentSn.html#presentation_Sn_eltr"><span class="id" title="lemma">presentation_Sn_eltr</span></a></span>:
+
+<div class="paragraph"> </div>
+
+  <span class="inlinecode"></span>
+    <span class="inlinecode"><a class="idref" href="Combi.SymGroup.presentSn.html#relat_Sn"><span class="id" title="inductive">relat_Sn</span></a></span> <span class="inlinecode">→</span>
+    <span class="inlinecode"><span class="id" title="tactic">∃</span></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#BijCard.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode">{<span class="id" title="library">morphism</span></span> <span class="inlinecode">'<span class="id" title="var">SG_n</span>.+1</span> <span class="inlinecode">&gt;-&gt;</span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#CFExtProdTheory.gT"><span class="id" title="variable">gT</span></a>},</span> <span class="inlinecode"><span class="id" title="keyword">∀</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a>,</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span> <span class="inlinecode">&lt;</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#BijCard.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">'<span class="id" title="var">s_i</span></span> <span class="inlinecode">=</span> <span class="inlinecode">'<span class="id" title="var">g_i</span>.</span>
+  <span class="inlinecode"></span>
 
 </div>
 <div class="code">

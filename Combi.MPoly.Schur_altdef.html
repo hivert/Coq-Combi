@@ -195,6 +195,7 @@ Then <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.ht
 <br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.tools.html#"><span class="id" title="library">tools</span></a> <a class="idref" href="Combi.Basic.combclass.html#"><span class="id" title="library">combclass</span></a> <a class="idref" href="Combi.Basic.ordtype.html#"><span class="id" title="library">ordtype</span></a> <a class="idref" href="Combi.SSRcomplements.sorted.html#"><span class="id" title="library">sorted</span></a> <a class="idref" href="Combi.Combi.partition.html#"><span class="id" title="library">partition</span></a> <a class="idref" href="Combi.Combi.tableau.html#"><span class="id" title="library">tableau</span></a> <a class="idref" href="Combi.Combi.skewtab.html#"><span class="id" title="library">skewtab</span></a>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SymGroup.presentSn.html#"><span class="id" title="library">presentSn</span></a> <a class="idref" href="Combi.MPoly.antisym.html#"><span class="id" title="library">antisym</span></a> <a class="idref" href="Combi.MPoly.Schur_mpoly.html#"><span class="id" title="library">Schur_mpoly</span></a> <a class="idref" href="Combi.LRrule.freeSchur.html#"><span class="id" title="library">freeSchur</span></a> <a class="idref" href="Combi.LRrule.therule.html#"><span class="id" title="library">therule</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.Combi.std.html#"><span class="id" title="library">std</span></a> <a class="idref" href="Combi.Combi.stdtab.html#"><span class="id" title="library">stdtab</span></a> <a class="idref" href="Combi.SSRcomplements.unitriginv.html#"><span class="id" title="library">unitriginv</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Set Implicit Arguments</span>.<br/>
@@ -530,9 +531,6 @@ Alternating and symmetric polynomial
 <span class="id" title="keyword">Section</span> <a name="StdKostka"><span class="id" title="section">StdKostka</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.Combi.std.html#"><span class="id" title="library">std</span></a> <a class="idref" href="Combi.Combi.stdtab.html#"><span class="id" title="library">stdtab</span></a>.<br/>
-
-<br/>
 <span class="id" title="keyword">Variables</span> (<a name="StdKostka.d"><span class="id" title="variable">d</span></a> : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>) (<a name="StdKostka.la"><span class="id" title="variable">la</span></a> : <a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">P_d</span></a>).<br/>
 
 <br/>
@@ -731,9 +729,6 @@ Alternating and symmetric polynomial
 &nbsp;&nbsp;(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 8, <span class="id" title="var">format</span> "''K' ( la ,  mu )") : <span class="id" title="var">nat_scope</span>.<br/>
 <span class="id" title="keyword">Notation</span> <a name="af35e1205353cc4a0b4c17b0d596f0eb"><span class="id" title="notation">&quot;</span></a>''K' ( la , mu )" := <span class="id" title="notation">(</span><a class="idref" href="Combi.MPoly.Schur_altdef.html#Kostka"><span class="id" title="definition">Kostka</span></a> <span class="id" title="var">la</span> <span class="id" title="var">mu</span><span class="id" title="notation">)%:</span><span class="id" title="notation">R</span><br/>
 &nbsp;&nbsp;(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 8, <span class="id" title="var">format</span> "''K' ( la ,  mu )") : <span class="id" title="var">ring_scope</span>.<br/>
-
-<br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.unitriginv.html#"><span class="id" title="library">unitriginv</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="Kostka_unitrig"><span class="id" title="lemma">Kostka_unitrig</span></a> (<span class="id" title="var">R</span> : <span class="id" title="abbreviation">comUnitRingType</span>) <span class="id" title="var">d</span> :<br/>
