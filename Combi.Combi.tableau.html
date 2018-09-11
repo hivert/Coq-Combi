@@ -28,7 +28,7 @@
 </div>
 
 <div class="doc">
-<a name="lab37"></a><h1 class="section">Young Tableaux over an <span class="inlinecode"><span class="id" title="library">ordtype</span></span></h1>
+<a name="lab49"></a><h1 class="section">Young Tableaux over an <span class="inlinecode"><span class="id" title="library">ordtype</span></span></h1>
 
 
 <div class="paragraph"> </div>
@@ -39,36 +39,58 @@ denoted <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef
 <div class="paragraph"> </div>
 
 <ul class="doclist">
-<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#is_row"><span class="id" title="abbreviation">is_row</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#PartOrder.r"><span class="id" title="projection">r</span></a></span> == r is sorted
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#is_row"><span class="id" title="abbreviation">is_row</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#PartOrder.r"><span class="id" title="projection">r</span></a></span> == <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#PartOrder.r"><span class="id" title="projection">r</span></a></span> is sorted
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#dominate"><span class="id" title="definition">dominate</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.u"><span class="id" title="variable">u</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.v"><span class="id" title="variable">v</span></a></span> == u dominate v, that is v is longer than u and
-            the i-th letter of u is strictly larger than the i-th letter of v.
-            this is a order.
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#dominate"><span class="id" title="definition">dominate</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.u"><span class="id" title="variable">u</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.v"><span class="id" title="variable">v</span></a></span> == <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.u"><span class="id" title="variable">u</span></a></span> dominate <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.v"><span class="id" title="variable">v</span></a></span>, that is <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.v"><span class="id" title="variable">v</span></a></span> is longer than <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.u"><span class="id" title="variable">u</span></a></span> and
+            the i-th letter of <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.u"><span class="id" title="variable">u</span></a></span> is strictly larger than the i-th letter of <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.v"><span class="id" title="variable">v</span></a></span>.
+            this is an order relation on <span class="inlinecode"><span class="id" title="library">seq</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#T"><span class="id" title="abbreviation">T</span></a></span>.
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#is_tableau"><span class="id" title="definition">is_tableau</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> == t of type <span class="inlinecode">(<span class="id" title="library">seq</span></span> <span class="inlinecode">(<span class="id" title="library">seq</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#T"><span class="id" title="abbreviation">T</span></a>))</span> is a tableau that is a sequence
-                    of non empty rows which is sorted for the dominate order.
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#is_tableau"><span class="id" title="definition">is_tableau</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> == <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> of type <span class="inlinecode">(<span class="id" title="library">seq</span></span> <span class="inlinecode">(<span class="id" title="library">seq</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#T"><span class="id" title="abbreviation">T</span></a>))</span> is a tableau that is a sequence
+            of non empty rows which is sorted for the dominate order.
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#get_tab"><span class="id" title="definition">get_tab</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#PartOrder.r"><span class="id" title="projection">r</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.homogsym.html#HomogSymProd.c"><span class="id" title="variable">c</span></a></span> == the element of t of coordinate (r c), or <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#inhabitant"><span class="id" title="definition">inhabitant</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#T"><span class="id" title="abbreviation">T</span></a></span>
-                    if (r, c) is not is the tableau
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#get_tab"><span class="id" title="definition">get_tab</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#PartOrder.r"><span class="id" title="projection">r</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.homogsym.html#HomogSymProd.c"><span class="id" title="variable">c</span></a></span> == the element of <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> of coordinate <span class="inlinecode">(<a class="idref" href="Combi.Basic.ordtype.html#PartOrder.r"><span class="id" title="projection">r</span></a>,</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.homogsym.html#HomogSymProd.c"><span class="id" title="variable">c</span></a>)</span>, or <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#inhabitant"><span class="id" title="definition">inhabitant</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#T"><span class="id" title="abbreviation">T</span></a></span>
+            if <span class="inlinecode">(<a class="idref" href="Combi.Basic.ordtype.html#PartOrder.r"><span class="id" title="projection">r</span></a>,</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.homogsym.html#HomogSymProd.c"><span class="id" title="variable">c</span></a>)</span> is not is the tableau
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#to_word"><span class="id" title="definition">to_word</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> == the row reading of the tableau t
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#to_word"><span class="id" title="definition">to_word</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> == the row reading of the tableau <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span>
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#size_tab"><span class="id" title="definition">size_tab</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> == the size (number of boxes) of t
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#size_tab"><span class="id" title="definition">size_tab</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> == the size (number of boxes) of <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span>
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#filter_gtnX_tab"><span class="id" title="definition">filter_gtnX_tab</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> == the sub-tableau of t formed by the element smaller
-                   than <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span>.
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#filter_gtnX_tab"><span class="id" title="definition">filter_gtnX_tab</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> == the sub-tableau of <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> formed by the element smaller
+            than <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span>.
 
 <div class="paragraph"> </div>
 
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#tabsh_reading"><span class="id" title="definition">tabsh_reading</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.HookFormula.Frobenius_ident.html#Identity.Shape.sh"><span class="id" title="variable">sh</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#GreeneInvariantsRule.w"><span class="id" title="variable">w</span></a></span> == w is the row reading of a tableau of shape sh
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#tabsh_reading"><span class="id" title="definition">tabsh_reading</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.HookFormula.Frobenius_ident.html#Identity.Shape.sh"><span class="id" title="variable">sh</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#GreeneInvariantsRule.w"><span class="id" title="variable">w</span></a></span> == <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#GreeneInvariantsRule.w"><span class="id" title="variable">w</span></a></span> is the row reading of a tableau of shape <span class="inlinecode"><a class="idref" href="Combi.HookFormula.Frobenius_ident.html#Identity.Shape.sh"><span class="id" title="variable">sh</span></a></span>
+
+</li>
+</ul>
+
+<div class="paragraph"> </div>
+
+In the following tableaux are considered on <span class="inlinecode">'<span class="id" title="var">I_n</span>.+1</span> for a given <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span>.
+
+<div class="paragraph"> </div>
+
+<ul class="doclist">
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#is_tab_of_shape"><span class="id" title="definition">is_tab_of_shape</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.HookFormula.Frobenius_ident.html#Identity.Shape.sh"><span class="id" title="variable">sh</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> == <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> is a tableau of shape <span class="inlinecode"><a class="idref" href="Combi.HookFormula.Frobenius_ident.html#Identity.Shape.sh"><span class="id" title="variable">sh</span></a></span>.
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#tabsh"><span class="id" title="record">tabsh</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.HookFormula.Frobenius_ident.html#Identity.Shape.sh"><span class="id" title="variable">sh</span></a></span> == a sigma-type for the predicate <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#is_tab_of_shape"><span class="id" title="definition">is_tab_of_shape</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.HookFormula.Frobenius_ident.html#Identity.Shape.sh"><span class="id" title="variable">sh</span></a></span> where
+            <span class="inlinecode"><a class="idref" href="Combi.HookFormula.Frobenius_ident.html#Identity.Shape.sh"><span class="id" title="variable">sh</span></a></span> is a partition of <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#StdKostka.d"><span class="id" title="variable">d</span></a></span> (type <span class="inlinecode">'<span class="id" title="var">P_d</span></span>). This is canonically
+            a <span class="inlinecode"><span class="id" title="record">subFinType</span></span>.
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#tabrowconst"><span class="id" title="definition">tabrowconst</span></a></span> <span class="inlinecode"><span class="id" title="var">pf</span></span> == if <span class="inlinecode"><span class="id" title="var">pf</span></span> is a proof that <span class="inlinecode"><span class="id" title="definition">size</span></span> <span class="inlinecode"><a class="idref" href="Combi.HookFormula.Frobenius_ident.html#Identity.Shape.sh"><span class="id" title="variable">sh</span></a></span> <span class="inlinecode">≤</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a>.+1</span> then
+            construct the tableau (of type <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#tabsh"><span class="id" title="record">tabsh</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.HookFormula.Frobenius_ident.html#Identity.Shape.sh"><span class="id" title="variable">sh</span></a></span>) whose i-th row
+            contains only <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span>'s as elements of <span class="inlinecode">'<span class="id" title="var">I_n</span>.+1</span>.
 
 </li>
 </ul>
@@ -93,7 +115,7 @@ denoted <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef
 </div>
 
 <div class="doc">
-<a name="lab38"></a><h2 class="section">Specialization of sorted Lemmas</h2>
+<a name="lab50"></a><h2 class="section">Specialization of sorted Lemmas</h2>
 
 </div>
 <div class="code">
@@ -135,7 +157,7 @@ denoted <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef
 </div>
 
 <div class="doc">
-<a name="lab39"></a><h2 class="section">Dominance order for rows</h2>
+<a name="lab51"></a><h2 class="section">Dominance order for rows</h2>
 
 </div>
 <div class="code">
@@ -192,7 +214,7 @@ denoted <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef
 </div>
 
 <div class="doc">
-<a name="lab40"></a><h1 class="section">Tableaux : definition and basic properties</h1>
+<a name="lab52"></a><h1 class="section">Tableaux : definition and basic properties</h1>
 
 </div>
 <div class="code">
@@ -333,6 +355,13 @@ denoted <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef
 <br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab53"></a><h2 class="section">Row reading of tableaux</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="TableauReading"><span class="id" title="section">TableauReading</span></a>.<br/>
 
 <br/>
@@ -352,6 +381,13 @@ denoted <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.Combi.tableau.html#TableauReading"><span class="id" title="section">TableauReading</span></a>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab54"></a><h2 class="section">Sigma type for tableaux</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="FinType"><span class="id" title="section">FinType</span></a>.<br/>
 
 <br/>
@@ -362,7 +398,7 @@ denoted <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef
 <span class="id" title="keyword">Variable</span> <a name="FinType.sh"><span class="id" title="variable">sh</span></a> : <a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">P_d</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Definition</span> <a name="is_tab_of_shape"><span class="id" title="definition">is_tab_of_shape</span></a> <span class="id" title="var">sh</span> :=<br/>
+<span class="id" title="keyword">Definition</span> <a name="is_tab_of_shape"><span class="id" title="definition">is_tab_of_shape</span></a> (<span class="id" title="var">sh</span> : <span class="id" title="abbreviation">seq</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>) :=<br/>
 &nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#880a9790dece461a678db8aa0c091f63"><span class="id" title="notation">[</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#880a9790dece461a678db8aa0c091f63"><span class="id" title="notation">pred</span></a> <span class="id" title="var">t</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#880a9790dece461a678db8aa0c091f63"><span class="id" title="notation">|</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#49ac24efa716d8b0ee8943bc1d1769a9"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.Combi.tableau.html#is_tableau"><span class="id" title="definition">is_tableau</span></a> (<span class="id" title="var">T</span> := <a class="idref" href="Combi.Basic.ordtype.html#d701c4296e6fd9306ddbc36d28ce9b4a"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.Basic.ordtype.html#d701c4296e6fd9306ddbc36d28ce9b4a"><span class="id" title="notation">inhOrdType</span></a> <a class="idref" href="Combi.Basic.ordtype.html#d701c4296e6fd9306ddbc36d28ce9b4a"><span class="id" title="notation">of</span></a> <span class="id" title="notation">'</span><span class="id" title="notation">I_n</span><span class="id" title="notation">.+1</span><a class="idref" href="Combi.Basic.ordtype.html#d701c4296e6fd9306ddbc36d28ce9b4a"><span class="id" title="notation">]</span></a>) <a class="idref" href="Combi.Combi.tableau.html#t"><span class="id" title="variable">t</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#49ac24efa716d8b0ee8943bc1d1769a9"><span class="id" title="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#49ac24efa716d8b0ee8943bc1d1769a9"><span class="id" title="notation">&amp;&amp;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#49ac24efa716d8b0ee8943bc1d1769a9"><span class="id" title="notation">(</span></a><span class="id" title="definition">shape</span> <a class="idref" href="Combi.Combi.tableau.html#t"><span class="id" title="variable">t</span></a> <span class="id" title="notation">==</span> <a class="idref" href="Combi.Combi.tableau.html#sh"><span class="id" title="variable">sh</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#49ac24efa716d8b0ee8943bc1d1769a9"><span class="id" title="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#880a9790dece461a678db8aa0c091f63"><span class="id" title="notation">]</span></a>.<br/>
 
 <br/>
@@ -428,6 +464,13 @@ denoted <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef
 <span class="id" title="keyword">Hint Resolve</span> <span class="id" title="var">tabshP</span>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab55"></a><h2 class="section">Tableaux and increasing maps</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="IncrMap"><span class="id" title="section">IncrMap</span></a>.<br/>
 
 <br/>

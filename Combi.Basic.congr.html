@@ -25,13 +25,10 @@
 
 </div>
 <div class="code">
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">mathcomp.ssreflect.ssreflect</span>.<br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.funind.Recdef.html#"><span class="id" title="library">Recdef</span></a>.<br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.permcomp.html#"><span class="id" title="library">permcomp</span></a> <a class="idref" href="Combi.Combi.permuted.html#"><span class="id" title="library">permuted</span></a> <a class="idref" href="Combi.Combi.multinomial.html#"><span class="id" title="library">multinomial</span></a> <a class="idref" href="Combi.Combi.vectNK.html#"><span class="id" title="library">vectNK</span></a>.<br/>
 </div>
 
 <div class="doc">
-<a name="lab91"></a><h1 class="section">Equivalence and congruence closure of a rewriting rule on words</h1>
+<a name="lab107"></a><h1 class="section">Equivalence and congruence closure of a rewriting rule on words</h1>
 
 
 <div class="paragraph"> </div>
@@ -62,7 +59,7 @@ congruence closure as well as its congruence classes. We therefore suppose
 that equivalence classes are <i>finite</i>. This also ensure that the generated
 equivalence relation is decidable by bounding the length of the rewriting
 paths. Concretely, this is done by requiring that <span class="inlinecode"><a class="idref" href="Combi.Basic.congr.html#InvarContHom.rule"><span class="id" title="variable">rule</span></a></span> is included in a
-refexive relation <span class="inlinecode"><a class="idref" href="Combi.Basic.congr.html#invar"><span class="id" title="projection">invar</span></a></span> which is invariant by rewriting rule, that is:
+reflexive relation <span class="inlinecode"><a class="idref" href="Combi.Basic.congr.html#invar"><span class="id" title="projection">invar</span></a></span> which is invariant by rewriting rule, that is:
 
 <div class="paragraph"> </div>
 
@@ -147,6 +144,11 @@ the congruence transitive closure of rule. The main results here are
 
 </div>
 <div class="code">
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">mathcomp.ssreflect.ssreflect</span>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.funind.Recdef.html#"><span class="id" title="library">Recdef</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.permcomp.html#"><span class="id" title="library">permcomp</span></a> <a class="idref" href="Combi.Combi.permuted.html#"><span class="id" title="library">permuted</span></a> <a class="idref" href="Combi.Combi.multinomial.html#"><span class="id" title="library">multinomial</span></a> <a class="idref" href="Combi.Combi.vectNK.html#"><span class="id" title="library">vectNK</span></a>.<br/>
+
+<br/>
 
 <br/>
 <span class="id" title="keyword">Set Implicit Arguments</span>.<br/>
@@ -155,7 +157,7 @@ the congruence transitive closure of rule. The main results here are
 </div>
 
 <div class="doc">
-<a name="lab92"></a><h2 class="section">Transitive closure of a rule with finite classes</h2>
+<a name="lab108"></a><h2 class="section">Transitive closure of a rule with finite classes</h2>
   Since we only need to contruct it and not to compute with it, we use a     simple but extremely inefficient algorithm                               
 </div>
 <div class="code">
@@ -260,7 +262,7 @@ This is a very unefficient transitive closure algorithm
 </div>
 
 <div class="doc">
-<a name="lab93"></a><h2 class="section">Deals with the dependance of invar on x</h2>
+<a name="lab109"></a><h2 class="section">Deals with the dependance of invar on x</h2>
 
 </div>
 <div class="code">
@@ -325,7 +327,7 @@ This is a very unefficient transitive closure algorithm
 </div>
 
 <div class="doc">
-<a name="lab94"></a><h2 class="section">Basic facts on congruences:</h2>
+<a name="lab110"></a><h2 class="section">Basic facts on congruences:</h2>
  equivalence of various definitions and immediate consequences             
 </div>
 <div class="code">
@@ -362,7 +364,7 @@ This is a very unefficient transitive closure algorithm
 </div>
 
 <div class="doc">
-<a name="lab95"></a><h2 class="section">Congruence closure of a bounded rule</h2>
+<a name="lab111"></a><h2 class="section">Congruence closure of a bounded rule</h2>
 
 </div>
 <div class="code">
@@ -481,7 +483,7 @@ This is a very unefficient transitive closure algorithm
 </div>
 
 <div class="doc">
-<a name="lab96"></a><h1 class="section">Multi-homogeneous congruence rules</h1>
+<a name="lab112"></a><h1 class="section">Multi-homogeneous congruence rules</h1>
 
 </div>
 <div class="code">
@@ -526,7 +528,7 @@ This is a very unefficient transitive closure algorithm
 </div>
 
 <div class="doc">
-<a name="lab97"></a><h1 class="section">Homogeneous congruence rules on a finite type</h1>
+<a name="lab113"></a><h1 class="section">Homogeneous congruence rules on a finite type</h1>
 
 </div>
 <div class="code">
@@ -534,7 +536,7 @@ This is a very unefficient transitive closure algorithm
 
 <br/>
 <span class="id" title="keyword">Variable</span> <a name="InvarContHom.Alph"><span class="id" title="variable">Alph</span></a> : <span class="id" title="abbreviation">finType</span>.<br/>
-<span class="id" title="keyword">Notation</span> <a name="word"><span class="id" title="abbreviation">word</span></a> := (<span class="id" title="definition">seq_eqType</span> <a class="idref" href="Combi.Basic.congr.html#InvarContHom.Alph"><span class="id" title="variable">Alph</span></a>).<br/>
+<span class="id" title="keyword">Notation</span> <a name="word"><span class="id" title="abbreviation">word</span></a> := (<span class="id" title="abbreviation">seq</span> <a class="idref" href="Combi.Basic.congr.html#InvarContHom.Alph"><span class="id" title="variable">Alph</span></a>).<br/>
 
 <br/>
 <span class="id" title="keyword">Variable</span> <a name="InvarContHom.rule"><span class="id" title="variable">rule</span></a> : <a class="idref" href="Combi.Basic.congr.html#word"><span class="id" title="abbreviation">word</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="abbreviation">seq</span> <a class="idref" href="Combi.Basic.congr.html#word"><span class="id" title="abbreviation">word</span></a>.<br/>

@@ -28,7 +28,7 @@
 </div>
 
 <div class="doc">
-<a name="lab26"></a><h1 class="section">Skew tableau and yamanouchi words:</h1>
+<a name="lab27"></a><h1 class="section">Skew tableau and skew yamanouchi words:</h1>
 
 
 <div class="paragraph"> </div>
@@ -65,8 +65,6 @@
 
 </div>
 <div class="code">
-
-<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">mathcomp.ssreflect.ssreflect</span>.<br/>
 
 <br/>
@@ -76,6 +74,13 @@
 <span class="id" title="keyword">Set Implicit Arguments</span>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab28"></a><h2 class="section">Skew Yamanouchi words</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">N</span>.<br/>
 <span class="id" title="keyword">Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">Combi</span>.<br/>
 
@@ -125,6 +130,13 @@
 &nbsp;&nbsp;<a class="idref" href="Combi.Combi.partition.html#is_part"><span class="id" title="definition">is_part</span></a> <a class="idref" href="Combi.Combi.skewtab.html#sha"><span class="id" title="variable">sha</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.Combi.skewtab.html#is_skew_yam"><span class="id" title="definition">is_skew_yam</span></a> <a class="idref" href="Combi.Combi.skewtab.html#sha"><span class="id" title="variable">sha</span></a> <a class="idref" href="Combi.Combi.skewtab.html#shb"><span class="id" title="variable">shb</span></a> <a class="idref" href="Combi.Combi.skewtab.html#y"><span class="id" title="variable">y</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.Combi.partition.html#included"><span class="id" title="definition">included</span></a> <a class="idref" href="Combi.Combi.skewtab.html#sha"><span class="id" title="variable">sha</span></a> <a class="idref" href="Combi.Combi.skewtab.html#shb"><span class="id" title="variable">shb</span></a>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab29"></a><h2 class="section">Skew tableaux</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="Dominate"><span class="id" title="section">Dominate</span></a>.<br/>
 
 <br/>
@@ -208,6 +220,13 @@
 &nbsp;&nbsp;<a class="idref" href="Combi.Combi.skewtab.html#skew_reshape"><span class="id" title="definition">skew_reshape</span></a> <a class="idref" href="Combi.Combi.skewtab.html#inner"><span class="id" title="variable">inner</span></a> (<a class="idref" href="Combi.Combi.partition.html#outer_shape"><span class="id" title="definition">outer_shape</span></a> <a class="idref" href="Combi.Combi.skewtab.html#inner"><span class="id" title="variable">inner</span></a> (<span class="id" title="definition">shape</span> <a class="idref" href="Combi.Combi.skewtab.html#t"><span class="id" title="variable">t</span></a>)) (<a class="idref" href="Combi.Combi.tableau.html#to_word"><span class="id" title="definition">to_word</span></a> <a class="idref" href="Combi.Combi.skewtab.html#t"><span class="id" title="variable">t</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.Combi.skewtab.html#t"><span class="id" title="variable">t</span></a>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab30"></a><h2 class="section">Horizontal and vertical border strips</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Fixpoint</span> <a name="hb_strip"><span class="id" title="definition">hb_strip</span></a> <span class="id" title="var">inner</span> <span class="id" title="var">outer</span> :=<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">if</span> <a class="idref" href="Combi.Combi.skewtab.html#inner"><span class="id" title="variable">inner</span></a> <span class="id" title="keyword">is</span> <span class="id" title="var">inn0</span> <span class="id" title="notation">::</span> <span class="id" title="var">inn</span> <span class="id" title="keyword">then</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">if</span> <a class="idref" href="Combi.Combi.skewtab.html#outer"><span class="id" title="variable">outer</span></a> <span class="id" title="keyword">is</span> <span class="id" title="var">out0</span> <span class="id" title="notation">::</span> <span class="id" title="var">out</span> <span class="id" title="keyword">then</span><br/>
@@ -292,6 +311,13 @@
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.Combi.skewtab.html#Dominate"><span class="id" title="section">Dominate</span></a>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab31"></a><h2 class="section">Skewing and joining tableaux</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="FilterLeqGeq"><span class="id" title="section">FilterLeqGeq</span></a>.<br/>
 
 <br/>
@@ -395,6 +421,13 @@
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.Combi.skewtab.html#FilterLeqGeq"><span class="id" title="section">FilterLeqGeq</span></a>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab32"></a><h2 class="section">Standardisation of a tableau</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="EqInvSkewTab"><span class="id" title="section">EqInvSkewTab</span></a>.<br/>
 
 <br/>
