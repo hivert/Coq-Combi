@@ -28,11 +28,53 @@
 </div>
 
 <div class="doc">
-<a name="lab1"></a><h1 class="section">Integer Compositions</h1>
+<a name="lab1"></a><h1 class="section">Integer Compositions.</h1>
 
 
 <div class="paragraph"> </div>
 
+<ul class="doclist">
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.composition.html#is_comp"><span class="id" title="definition">is_comp</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> == <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> is a composition, ie. <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> doesn't contains any 0
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.composition.html#intcomp"><span class="id" title="record">intcomp</span></a></span> == a sigma type for <span class="inlinecode"><a class="idref" href="Combi.Combi.composition.html#is_comp"><span class="id" title="definition">is_comp</span></a></span>
+
+<div class="paragraph"> </div>
+
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.composition.html#is_comp_of_n"><span class="id" title="definition">is_comp_of_n</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Combi.composition.html#sm"><span class="id" title="variable">sm</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> == <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> is a composition of sum <span class="inlinecode"><a class="idref" href="Combi.Combi.composition.html#sm"><span class="id" title="variable">sm</span></a></span>
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.composition.html#intcompn"><span class="id" title="record">intcompn</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Combi.composition.html#sm"><span class="id" title="variable">sm</span></a></span> == a sigma type for the predicate <span class="inlinecode"><a class="idref" href="Combi.Combi.composition.html#is_comp_of_n"><span class="id" title="definition">is_comp_of_n</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Combi.composition.html#sm"><span class="id" title="variable">sm</span></a></span>.
+               this is canonically a <span class="inlinecode"><span class="id" title="record">subFinType</span></span>
+
+<div class="paragraph"> </div>
+
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.composition.html#rowcomp"><span class="id" title="definition">rowcomp</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#StdKostka.d"><span class="id" title="variable">d</span></a></span> == the trivial composition
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.composition.html#rowcompn"><span class="id" title="definition">rowcompn</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#StdKostka.d"><span class="id" title="variable">d</span></a></span> == the trivial composition as a <span class="inlinecode"><a class="idref" href="Combi.Combi.composition.html#intcompn"><span class="id" title="record">intcompn</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#StdKostka.d"><span class="id" title="variable">d</span></a></span>
+
+<div class="paragraph"> </div>
+
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.composition.html#colcomp"><span class="id" title="definition">colcomp</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#StdKostka.d"><span class="id" title="variable">d</span></a></span> == the composition <span class="inlinecode">[::</span> <span class="inlinecode">1;</span> <span class="inlinecode">1;</span> <span class="inlinecode">...]</span>
+
+</li>
+<li> <span class="inlinecode"><span class="id" title="var">colcompn</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#StdKostka.d"><span class="id" title="variable">d</span></a></span> == the composition <span class="inlinecode">[::</span> <span class="inlinecode">1;</span> <span class="inlinecode">1;</span> <span class="inlinecode">...]</span> as a <span class="inlinecode"><a class="idref" href="Combi.Combi.composition.html#intcompn"><span class="id" title="record">intcompn</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#StdKostka.d"><span class="id" title="variable">d</span></a></span>
+
+<div class="paragraph"> </div>
+
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.composition.html#partn_of_compn"><span class="id" title="definition">partn_of_compn</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.homogsym.html#HomogSymProd.c"><span class="id" title="variable">c</span></a></span> == the partition in 'P_n associated with <span class="inlinecode"><a class="idref" href="Combi.MPoly.homogsym.html#HomogSymProd.c"><span class="id" title="variable">c</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="Combi.Combi.composition.html#intcompn"><span class="id" title="record">intcompn</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span>
+
+</li>
+</ul>
 
 </div>
 <div class="code">
@@ -46,8 +88,7 @@
 </div>
 
 <div class="doc">
-<a name="lab2"></a><h1 class="section">Integer Composition</h1>
-<a name="lab3"></a><h2 class="section">Definitions and basic properties</h2>
+<a name="lab2"></a><h2 class="section">Definitions and basic properties</h2>
 
 </div>
 <div class="code">
@@ -78,12 +119,10 @@ Compositions and sumn
 </div>
 
 <div class="doc">
-<a name="lab4"></a><h1 class="section">Sigma Types for Compositions</h1>
+<a name="lab3"></a><h1 class="section">Sigma Types for Compositions</h1>
 
 </div>
 <div class="code">
-
-<br/>
 <span class="id" title="keyword">Structure</span> <a name="intcomp"><span class="id" title="record">intcomp</span></a> : <span class="id" title="keyword">Type</span> := <a name="IntComp"><span class="id" title="constructor">IntComp</span></a> {<a name="cval"><span class="id" title="projection">cval</span></a> :&gt; <span class="id" title="abbreviation">seq</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>; <span class="id" title="var">_</span> : <a class="idref" href="Combi.Combi.composition.html#is_comp"><span class="id" title="definition">is_comp</span></a> <a class="idref" href="Combi.Combi.composition.html#cval"><span class="id" title="method">cval</span></a>}.<br/>
 <span class="id" title="keyword">Canonical</span> <span class="id" title="var">intcomp_subType</span> := <span class="id" title="keyword">Eval</span> <span class="id" title="tactic">hnf</span> <span class="id" title="tactic">in</span> <span class="id" title="notation">[</span><span class="id" title="notation">subType</span> <span class="id" title="notation">for</span> <a class="idref" href="Combi.Combi.composition.html#cval"><span class="id" title="projection">cval</span></a><span class="id" title="notation">]</span>.<br/>
 <span class="id" title="keyword">Definition</span> <a name="intcomp_eqMixin"><span class="id" title="definition">intcomp_eqMixin</span></a> := <span class="id" title="keyword">Eval</span> <span class="id" title="tactic">hnf</span> <span class="id" title="tactic">in</span> <span class="id" title="notation">[</span><span class="id" title="notation">eqMixin</span> <span class="id" title="notation">of</span> <a class="idref" href="Combi.Combi.composition.html#intcomp"><span class="id" title="record">intcomp</span></a> <span class="id" title="notation">by</span> <span class="id" title="notation">&lt;:]</span>.<br/>
@@ -204,12 +243,12 @@ Compositions and sumn
 <br/>
 <span class="id" title="keyword">Definition</span> <a name="rowcomp"><span class="id" title="definition">rowcomp</span></a> <span class="id" title="var">d</span> := <span class="id" title="keyword">if</span> <a class="idref" href="Combi.Combi.composition.html#d"><span class="id" title="variable">d</span></a> <span class="id" title="keyword">is</span> <span class="id" title="var">_</span><span class="id" title="notation">.+1</span> <span class="id" title="keyword">then</span> <span class="id" title="notation">[::</span> <a class="idref" href="Combi.Combi.composition.html#d"><span class="id" title="variable">d</span></a><span class="id" title="notation">]</span> <span class="id" title="keyword">else</span> <span class="id" title="notation">[::]</span>.<br/>
 <span class="id" title="keyword">Fact</span> <a name="rowcompnP"><span class="id" title="lemma">rowcompnP</span></a> <span class="id" title="var">d</span> : <a class="idref" href="Combi.Combi.composition.html#is_comp_of_n"><span class="id" title="definition">is_comp_of_n</span></a> <a class="idref" href="Combi.Combi.composition.html#d"><span class="id" title="variable">d</span></a> (<a class="idref" href="Combi.Combi.composition.html#rowcomp"><span class="id" title="definition">rowcomp</span></a> <a class="idref" href="Combi.Combi.composition.html#d"><span class="id" title="variable">d</span></a>).<br/>
- <span class="id" title="keyword">Definition</span> <a name="rowcompn"><span class="id" title="definition">rowcompn</span></a> <span class="id" title="var">d</span> : <a class="idref" href="Combi.Combi.composition.html#intcompn"><span class="id" title="record">intcompn</span></a> <a class="idref" href="Combi.Combi.composition.html#d"><span class="id" title="variable">d</span></a> := <a class="idref" href="Combi.Combi.composition.html#IntCompN"><span class="id" title="constructor">IntCompN</span></a> (<a class="idref" href="Combi.Combi.composition.html#rowcompnP"><span class="id" title="lemma">rowcompnP</span></a> <a class="idref" href="Combi.Combi.composition.html#d"><span class="id" title="variable">d</span></a>).<br/>
+ <span class="id" title="keyword">Canonical</span> <span class="id" title="var">rowcompn</span> <span class="id" title="var">d</span> : <a class="idref" href="Combi.Combi.composition.html#intcompn"><span class="id" title="record">intcompn</span></a> <a class="idref" href="Combi.Combi.composition.html#d"><span class="id" title="variable">d</span></a> := <a class="idref" href="Combi.Combi.composition.html#IntCompN"><span class="id" title="constructor">IntCompN</span></a> (<a class="idref" href="Combi.Combi.composition.html#rowcompnP"><span class="id" title="lemma">rowcompnP</span></a> <a class="idref" href="Combi.Combi.composition.html#d"><span class="id" title="variable">d</span></a>).<br/>
 
 <br/>
 <span class="id" title="keyword">Definition</span> <a name="colcomp"><span class="id" title="definition">colcomp</span></a> <span class="id" title="var">d</span> := <span class="id" title="definition">nseq</span> <a class="idref" href="Combi.Combi.composition.html#d"><span class="id" title="variable">d</span></a> 1%<span class="id" title="var">N</span>.<br/>
 <span class="id" title="keyword">Fact</span> <a name="colcompnP"><span class="id" title="lemma">colcompnP</span></a> <span class="id" title="var">d</span> : <a class="idref" href="Combi.Combi.composition.html#is_comp_of_n"><span class="id" title="definition">is_comp_of_n</span></a> <a class="idref" href="Combi.Combi.composition.html#d"><span class="id" title="variable">d</span></a> (<a class="idref" href="Combi.Combi.composition.html#colcomp"><span class="id" title="definition">colcomp</span></a> <a class="idref" href="Combi.Combi.composition.html#d"><span class="id" title="variable">d</span></a>).<br/>
- <span class="id" title="keyword">Definition</span> <a name="colcompn"><span class="id" title="definition">colcompn</span></a> <span class="id" title="var">d</span> : <a class="idref" href="Combi.Combi.composition.html#intcompn"><span class="id" title="record">intcompn</span></a> <a class="idref" href="Combi.Combi.composition.html#d"><span class="id" title="variable">d</span></a> := <a class="idref" href="Combi.Combi.composition.html#IntCompN"><span class="id" title="constructor">IntCompN</span></a> (<a class="idref" href="Combi.Combi.composition.html#colcompnP"><span class="id" title="lemma">colcompnP</span></a> <a class="idref" href="Combi.Combi.composition.html#d"><span class="id" title="variable">d</span></a>).<br/>
+ <span class="id" title="keyword">Canonical</span> <span class="id" title="var">colcompn</span> <span class="id" title="var">d</span> : <a class="idref" href="Combi.Combi.composition.html#intcompn"><span class="id" title="record">intcompn</span></a> <a class="idref" href="Combi.Combi.composition.html#d"><span class="id" title="variable">d</span></a> := <a class="idref" href="Combi.Combi.composition.html#IntCompN"><span class="id" title="constructor">IntCompN</span></a> (<a class="idref" href="Combi.Combi.composition.html#colcompnP"><span class="id" title="lemma">colcompnP</span></a> <a class="idref" href="Combi.Combi.composition.html#d"><span class="id" title="variable">d</span></a>).<br/>
 
 <br/>
 

@@ -31,7 +31,7 @@
 </div>
 
 <div class="doc">
-<a name="lab22"></a><h1 class="section">The list of the permuted tuple of a given tuple</h1>
+<a name="lab21"></a><h1 class="section">The list of the permuted tuple of a given tuple</h1>
 
 
 <div class="paragraph"> </div>
@@ -87,7 +87,7 @@ as a multinomial <span class="inlinecode"><a class="idref" href="Combi.Combi.per
 </div>
 
 <div class="doc">
-<a name="lab23"></a><h2 class="section">Enumeration of the permutation of a tuple</h2>
+<a name="lab22"></a><h2 class="section">Enumeration of the permutation of a tuple</h2>
 
 </div>
 <div class="code">
@@ -142,7 +142,7 @@ as a multinomial <span class="inlinecode"><a class="idref" href="Combi.Combi.per
 </div>
 
 <div class="doc">
-<a name="lab24"></a><h2 class="section">Permutation of a tuple as a fintype</h2>
+<a name="lab23"></a><h2 class="section">Permutation of a tuple as a fintype</h2>
 
 </div>
 <div class="code">
@@ -194,7 +194,7 @@ as a multinomial <span class="inlinecode"><a class="idref" href="Combi.Combi.per
 </div>
 
 <div class="doc">
-<a name="lab25"></a><h1 class="section">Action of <span class="inlinecode">'<span class="id" title="var">S_n</span></span> on permuted for and <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a>.-<span class="id" title="library">tuple</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#T"><span class="id" title="abbreviation">T</span></a></span>.</h1>
+<a name="lab24"></a><h1 class="section">Action of <span class="inlinecode">'<span class="id" title="var">S_n</span></span> on permuted for and <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a>.-<span class="id" title="library">tuple</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#T"><span class="id" title="abbreviation">T</span></a></span>.</h1>
 
 
 <div class="paragraph"> </div>
@@ -234,6 +234,13 @@ type <span class="inlinecode"><a class="idref" href="Combi.Combi.permuted.html#p
 &nbsp;&nbsp;<span class="id" title="notation">[</span><span class="id" title="notation">transitive</span> <span class="id" title="notation">[</span><span class="id" title="notation">set</span><span class="id" title="notation">:</span> <span class="id" title="notation">'</span><span class="id" title="notation">S_n</span><span class="id" title="notation">]</span><span class="id" title="notation">,</span> <span class="id" title="notation">on</span> <span class="id" title="notation">[</span><span class="id" title="notation">set</span><span class="id" title="notation">:</span> <a class="idref" href="Combi.Combi.permuted.html#permuted"><span class="id" title="record">permuted</span></a> <a class="idref" href="Combi.Combi.permuted.html#ActOnTuple.w"><span class="id" title="variable">w</span></a><span class="id" title="notation">]</span> <span class="id" title="notation">|</span> <a class="idref" href="Combi.Combi.permuted.html#pact"><span class="id" title="abbreviation">pact</span></a><span class="id" title="notation">]</span>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab25"></a><h2 class="section">The stabilizer of a tuple under permutation</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Lemma</span> <a name="stab_tuple_prod"><span class="id" title="lemma">stab_tuple_prod</span></a> :<br/>
 &nbsp;&nbsp;<span class="id" title="notation">'</span><span class="id" title="notation">C</span><span class="id" title="notation">[</span><a class="idref" href="Combi.Combi.permuted.html#wp"><span class="id" title="abbreviation">wp</span></a> <span class="id" title="notation">|</span> <a class="idref" href="Combi.Combi.permuted.html#pact"><span class="id" title="abbreviation">pact</span></a><span class="id" title="notation">]</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a><br/>
 &nbsp;&nbsp;(<span class="id" title="notation">\</span><span class="id" title="notation">prod_</span><span class="id" title="notation">(</span><span class="id" title="var">x</span> <span class="id" title="notation">:</span> <span class="id" title="record">seq_sub</span> <a class="idref" href="Combi.Combi.permuted.html#ActOnTuple.w"><span class="id" title="variable">w</span></a><span class="id" title="notation">)</span> <a class="idref" href="Combi.SSRcomplements.permcomp.html#perm_ong_group"><span class="id" title="definition">perm_ong_group</span></a> <span class="id" title="notation">[</span><span class="id" title="notation">set</span> <span class="id" title="var">i</span> <span class="id" title="notation">|</span> <span class="id" title="definition">tnth</span> <a class="idref" href="Combi.Combi.permuted.html#ActOnTuple.w"><span class="id" title="variable">w</span></a> <a class="idref" href="Combi.Combi.permuted.html#i"><span class="id" title="variable">i</span></a> <span class="id" title="notation">==</span> <span class="id" title="projection">val</span> <a class="idref" href="Combi.Combi.permuted.html#x"><span class="id" title="variable">x</span></a><span class="id" title="notation">]</span>)%<span class="id" title="var">G</span>.<br/>

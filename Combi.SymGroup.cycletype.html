@@ -25,6 +25,128 @@
 
 </div>
 <div class="code">
+</div>
+
+<div class="doc">
+<a name="lab122"></a><h1 class="section">Cycle type and conjugacy classes in the symmetric groups</h1>
+
+
+<div class="paragraph"> </div>
+
+This files deals with cycle type of permutations. We define the following
+notions, where <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> is a permutation over a finite type <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#T"><span class="id" title="abbreviation">T</span></a></span>:
+
+<div class="paragraph"> </div>
+
+<ul class="doclist">
+<li> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#canpcycle"><span class="id" title="definition">canpcycle</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#Inhabited.x"><span class="id" title="projection">x</span></a></span> == a chosen canonical element in the cycle of <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#Inhabited.x"><span class="id" title="projection">x</span></a></span>
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#indpcycle"><span class="id" title="definition">indpcycle</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#Inhabited.x"><span class="id" title="projection">x</span></a></span> == the position of <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#Inhabited.x"><span class="id" title="projection">x</span></a></span> in its cycle wrt <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#canpcycle"><span class="id" title="definition">canpcycle</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#Inhabited.x"><span class="id" title="projection">x</span></a></span>
+
+</li>
+</ul>
+
+<div class="paragraph"> </div>
+
+<a name="lab123"></a><h3 class="section">Cycle maps:</h3>
+
+
+<div class="paragraph"> </div>
+
+<ul class="doclist">
+<li> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#pcycles_map"><span class="id" title="record">pcycles_map</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> == if <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> and <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> are respectively two permutations of
+              two fintype <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.U"><span class="id" title="variable">U</span></a></span> and <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.V"><span class="id" title="variable">V</span></a></span>, then <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#pcycles_map"><span class="id" title="record">pcycles_map</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> is a record for
+              maps <span class="inlinecode">{<span class="id" title="tactic">set</span></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.U"><span class="id" title="variable">U</span></a>}</span> <span class="inlinecode">→</span> <span class="inlinecode">{<span class="id" title="tactic">set</span></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.V"><span class="id" title="variable">V</span></a>}</span>, sending cycles of <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> of a given size
+              to cycles of <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> of the same size.
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#cymap"><span class="id" title="definition">cymap</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#P"><span class="id" title="abbreviation">P</span></a></span> == if <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#P"><span class="id" title="abbreviation">P</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#pcycles_map"><span class="id" title="record">pcycles_map</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> then <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#cymap"><span class="id" title="definition">cymap</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#P"><span class="id" title="abbreviation">P</span></a></span> is a map <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.U"><span class="id" title="variable">U</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.V"><span class="id" title="variable">V</span></a></span>
+              which commute with <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> and <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span>:
+
+<div class="paragraph"> </div>
+
+              <span class="inlinecode"></span> <span class="inlinecode"><span class="id" title="keyword">Lemma</span></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#cymapP"><span class="id" title="lemma">cymapP</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#Inhabited.x"><span class="id" title="projection">x</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#cymap"><span class="id" title="definition">cymap</span></a></span> <span class="inlinecode">(<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#Inhabited.x"><span class="id" title="projection">x</span></a>)</span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> <span class="inlinecode">(<a class="idref" href="Combi.SymGroup.cycletype.html#cymap"><span class="id" title="definition">cymap</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#Inhabited.x"><span class="id" title="projection">x</span></a>).</span> <span class="inlinecode"></span>
+
+<div class="paragraph"> </div>
+
+              moreover, <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#cymap"><span class="id" title="definition">cymap</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#P"><span class="id" title="abbreviation">P</span></a></span> sends canonical to canonical <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#canpcycle_cymap"><span class="id" title="lemma">canpcycle_cymap</span></a></span>.
+
+</li>
+</ul>
+
+<div class="paragraph"> </div>
+
+<a name="lab124"></a><h3 class="section">Cycle Type:</h3>
+
+
+<div class="paragraph"> </div>
+
+<ul class="doclist">
+<li> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#cycle_type"><span class="id" title="definition">cycle_type</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> == the cycle typle of <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> as a <span class="inlinecode">'<span class="id" title="var">P_</span>#|<a class="idref" href="Combi.MPoly.Schur_altdef.html#T"><span class="id" title="abbreviation">T</span></a>|</span>.
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#conjbij"><span class="id" title="definition">conjbij</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> <span class="inlinecode"><span class="id" title="var">pf</span></span> == if <span class="inlinecode"><span class="id" title="var">pf</span></span> <span class="inlinecode">:</span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#cycle_type"><span class="id" title="definition">cycle_type</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#cycle_type"><span class="id" title="definition">cycle_type</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span>, a bijection <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.U"><span class="id" title="variable">U</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.V"><span class="id" title="variable">V</span></a></span>
+              which commute with <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> and <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span>
+
+</li>
+</ul>
+
+<div class="paragraph"> </div>
+
+The main results here is Theorem <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#conj_permP"><span class="id" title="lemma">conj_permP</span></a></span> which says that
+two permutations are conjugate if and only if they have the same cycle type:
+
+<div class="paragraph"> </div>
+
+ <span class="inlinecode"></span> <span class="inlinecode"><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#reflect"><span class="id" title="abbreviation">reflect</span></a></span> <span class="inlinecode">(<span class="id" title="tactic">∃</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.homogsym.html#HomogSymProd.c"><span class="id" title="variable">c</span></a>,</span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode">(<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode">^</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.homogsym.html#HomogSymProd.c"><span class="id" title="variable">c</span></a>)%<a class="idref" href="Combi.LRrule.Greene.html#g"><span class="id" title="variable">g</span></a>)</span> <span class="inlinecode">(<a class="idref" href="Combi.SymGroup.cycletype.html#cycle_type"><span class="id" title="definition">cycle_type</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode">==</span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#cycle_type"><span class="id" title="definition">cycle_type</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a>).</span> <span class="inlinecode"></span>
+
+<div class="paragraph"> </div>
+
+We moreover show that there exists permutations in each partitions:
+
+<div class="paragraph"> </div>
+
+<ul class="doclist">
+<li> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#perm_of_pcycle"><span class="id" title="definition">perm_of_pcycle</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Combi.std.html#C"><span class="id" title="variable">C</span></a></span> == a cyclic permutation with support <span class="inlinecode"><a class="idref" href="Combi.Combi.std.html#C"><span class="id" title="variable">C</span></a></span>
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#perm_of_setpart"><span class="id" title="definition">perm_of_setpart</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#P"><span class="id" title="abbreviation">P</span></a></span> == a permutation whose cycle supports are the part of
+              the set partition <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#P"><span class="id" title="abbreviation">P</span></a></span>
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#permCT"><span class="id" title="definition">permCT</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.Lead.p"><span class="id" title="variable">p</span></a></span> == a permutation of cycle type <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.Lead.p"><span class="id" title="variable">p</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><span class="id" title="var">P_</span>#|<a class="idref" href="Combi.MPoly.Schur_altdef.html#T"><span class="id" title="abbreviation">T</span></a>|</span>.
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#classCT"><span class="id" title="definition">classCT</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.Lead.p"><span class="id" title="variable">p</span></a></span> == the set of permutations of cycle type <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.Lead.p"><span class="id" title="variable">p</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><span class="id" title="var">P_</span>#|<a class="idref" href="Combi.MPoly.Schur_altdef.html#T"><span class="id" title="abbreviation">T</span></a>|</span>.
+
+</li>
+</ul>
+
+<div class="paragraph"> </div>
+
+<a name="lab125"></a><h3 class="section">Central functions:</h3>
+
+
+<div class="paragraph"> </div>
+
+<ul class="doclist">
+<li> <span class="inlinecode">'1<span class="id" title="var">_</span>[<a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.Lead.p"><span class="id" title="variable">p</span></a>]</span> == the class function associated to <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.Lead.p"><span class="id" title="variable">p</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode"><span class="id" title="var">P_</span>#|<a class="idref" href="Combi.MPoly.Schur_altdef.html#T"><span class="id" title="abbreviation">T</span></a>|</span>.
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#partnCT"><span class="id" title="definition">partnCT</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.Lead.p"><span class="id" title="variable">p</span></a></span> == cast a <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.Lead.p"><span class="id" title="variable">p</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode">'<span class="id" title="var">P_</span>#|'<span class="id" title="var">I_n</span>|</span> to a <span class="inlinecode">'<span class="id" title="var">P_n</span></span>.
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#cycle_typeSn"><span class="id" title="definition">cycle_typeSn</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> == the cycle type in <span class="inlinecode">'<span class="id" title="var">P_n</span></span> of a permutations in <span class="inlinecode">'<span class="id" title="var">S_n</span></span>.
+
+</li>
+</ul>
+
+<div class="paragraph"> </div>
+
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">mathcomp.ssreflect.ssreflect</span>.<br/>
 
 <br/>
@@ -75,6 +197,13 @@
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.SymGroup.cycletype.html#CanPCycle"><span class="id" title="section">CanPCycle</span></a>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab126"></a><h1 class="section">Cycle maps</h1>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="PCycleBijection"><span class="id" title="section">PCycleBijection</span></a>.<br/>
 
 <br/>
@@ -122,12 +251,6 @@
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.SymGroup.cycletype.html#PCycleBijection"><span class="id" title="section">PCycleBijection</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Fact</span> <a name="pcycles_stab_id"><span class="id" title="lemma">pcycles_stab_id</span></a> (<span class="id" title="var">U</span> : <span class="id" title="abbreviation">finType</span>) (<span class="id" title="var">s</span> : <span class="id" title="notation">{</span><span class="id" title="notation">perm</span> <a class="idref" href="Combi.SymGroup.cycletype.html#U"><span class="id" title="variable">U</span></a><span class="id" title="notation">}</span>) :<br/>
-&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#id"><span class="id" title="abbreviation">id</span></a> <span class="id" title="notation">@:</span> <span class="id" title="definition">pcycles</span> <a class="idref" href="Combi.SymGroup.cycletype.html#s"><span class="id" title="variable">s</span></a> <span class="id" title="notation">\</span><span class="id" title="notation">subset</span> <span class="id" title="definition">pcycles</span> <a class="idref" href="Combi.SymGroup.cycletype.html#s"><span class="id" title="variable">s</span></a>.<br/>
-<span class="id" title="keyword">Definition</span> <a name="CMid"><span class="id" title="definition">CMid</span></a> (<span class="id" title="var">U</span> : <span class="id" title="abbreviation">finType</span>) (<span class="id" title="var">s</span> : <span class="id" title="notation">{</span><span class="id" title="notation">perm</span> <a class="idref" href="Combi.SymGroup.cycletype.html#U"><span class="id" title="variable">U</span></a><span class="id" title="notation">}</span>) :=<br/>
-&nbsp;&nbsp;@<a class="idref" href="Combi.SymGroup.cycletype.html#PCycleMap"><span class="id" title="constructor">PCycleMap</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#U"><span class="id" title="variable">U</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#U"><span class="id" title="variable">U</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#s"><span class="id" title="variable">s</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#s"><span class="id" title="variable">s</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#id"><span class="id" title="abbreviation">id</span></a> (<a class="idref" href="Combi.SymGroup.cycletype.html#pcycles_stab_id"><span class="id" title="lemma">pcycles_stab_id</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#s"><span class="id" title="variable">s</span></a>) (<span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> <span class="id" title="var">_</span> ⇒ <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#erefl"><span class="id" title="abbreviation">erefl</span></a> <span class="id" title="notation">#|</span><a class="idref" href="Combi.SymGroup.cycletype.html#x"><span class="id" title="variable">x</span></a><span class="id" title="notation">|</span>).<br/>
-
-<br/>
 <span class="id" title="keyword">Lemma</span> <a name="cymapE"><span class="id" title="lemma">cymapE</span></a> (<span class="id" title="var">U</span> <span class="id" title="var">V</span> : <span class="id" title="abbreviation">finType</span>) (<span class="id" title="var">s</span> : <span class="id" title="notation">{</span><span class="id" title="notation">perm</span> <a class="idref" href="Combi.SymGroup.cycletype.html#U"><span class="id" title="variable">U</span></a><span class="id" title="notation">}</span>) (<span class="id" title="var">t</span> : <span class="id" title="notation">{</span><span class="id" title="notation">perm</span> <a class="idref" href="Combi.SymGroup.cycletype.html#V"><span class="id" title="variable">V</span></a><span class="id" title="notation">}</span>)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<span class="id" title="var">CM1</span> <span class="id" title="var">CM2</span> : <a class="idref" href="Combi.SymGroup.cycletype.html#pcycles_map"><span class="id" title="record">pcycles_map</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#s"><span class="id" title="variable">s</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#t"><span class="id" title="variable">t</span></a>) :<br/>
 &nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#5c59b35a0b51db520cf1fba473ecf127"><span class="id" title="notation">{</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#5c59b35a0b51db520cf1fba473ecf127"><span class="id" title="notation">in</span></a> <span class="id" title="definition">pcycles</span> <a class="idref" href="Combi.SymGroup.cycletype.html#s"><span class="id" title="variable">s</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#5c59b35a0b51db520cf1fba473ecf127"><span class="id" title="notation">,</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#CM1"><span class="id" title="variable">CM1</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#2500d48ed8e862ccfda98a44dff88963"><span class="id" title="notation">=1</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#CM2"><span class="id" title="variable">CM2</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#5c59b35a0b51db520cf1fba473ecf127"><span class="id" title="notation">}</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#cymap"><span class="id" title="definition">cymap</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#CM1"><span class="id" title="variable">CM1</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#2500d48ed8e862ccfda98a44dff88963"><span class="id" title="notation">=1</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#cymap"><span class="id" title="definition">cymap</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#CM2"><span class="id" title="variable">CM2</span></a>.<br/>
@@ -150,6 +273,13 @@
 &nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#5c59b35a0b51db520cf1fba473ecf127"><span class="id" title="notation">{</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#5c59b35a0b51db520cf1fba473ecf127"><span class="id" title="notation">in</span></a> <span class="id" title="definition">pcycles</span> <a class="idref" href="Combi.SymGroup.cycletype.html#u"><span class="id" title="variable">u</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#5c59b35a0b51db520cf1fba473ecf127"><span class="id" title="notation">,</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#cancel"><span class="id" title="definition">cancel</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#CM"><span class="id" title="variable">CM</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#CMi"><span class="id" title="variable">CMi</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#5c59b35a0b51db520cf1fba473ecf127"><span class="id" title="notation">}</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#cancel"><span class="id" title="definition">cancel</span></a> (<a class="idref" href="Combi.SymGroup.cycletype.html#cymap"><span class="id" title="definition">cymap</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#CM"><span class="id" title="variable">CM</span></a>) (<a class="idref" href="Combi.SymGroup.cycletype.html#cymap"><span class="id" title="definition">cymap</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#CMi"><span class="id" title="variable">CMi</span></a>).<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab127"></a><h1 class="section">Cycle type and conjugacy classes</h1>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="CycleTypeConj"><span class="id" title="section">CycleTypeConj</span></a>.<br/>
 
 <br/>
@@ -210,11 +340,6 @@
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.SymGroup.cycletype.html#CycleTypeConj"><span class="id" title="section">CycleTypeConj</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Definition</span> <a name="fibered_part"><span class="id" title="definition">fibered_part</span></a> (<span class="id" title="var">T</span> : <span class="id" title="abbreviation">finType</span>) (<span class="id" title="var">P</span> : <span class="id" title="notation">{</span><span class="id" title="notation">set</span> <span class="id" title="notation">{</span><span class="id" title="notation">set</span> <a class="idref" href="Combi.SymGroup.cycletype.html#T"><span class="id" title="variable">T</span></a><span class="id" title="notation">}}</span>) :=<br/>
-&nbsp;&nbsp;<a class="idref" href="Combi.Combi.fibered_set.html#FiberedSet"><span class="id" title="constructor">FiberedSet</span></a> <span class="id" title="definition">set0</span> <a class="idref" href="Combi.SymGroup.cycletype.html#P"><span class="id" title="variable">P</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> ⇒ <a class="idref" href="Combi.SSRcomplements.tools.html#0f8a849556dd371ddb1f8db48b8f39bc"><span class="id" title="notation">#{</span></a><a class="idref" href="Combi.SymGroup.cycletype.html#x"><span class="id" title="variable">x</span></a><a class="idref" href="Combi.SSRcomplements.tools.html#0f8a849556dd371ddb1f8db48b8f39bc"><span class="id" title="notation">}</span></a>).<br/>
-
-<br/>
-<span class="id" title="keyword">Definition</span> <a name="slpcycles"><span class="id" title="definition">slpcycles</span></a> (<span class="id" title="var">T</span> : <span class="id" title="abbreviation">finType</span>) (<span class="id" title="var">s</span> : <span class="id" title="notation">{</span><span class="id" title="notation">perm</span> <a class="idref" href="Combi.SymGroup.cycletype.html#T"><span class="id" title="variable">T</span></a><span class="id" title="notation">}</span>) := <a class="idref" href="Combi.SymGroup.cycletype.html#fibered_part"><span class="id" title="definition">fibered_part</span></a> (<span class="id" title="definition">pcycles</span> <a class="idref" href="Combi.SymGroup.cycletype.html#s"><span class="id" title="variable">s</span></a>).<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="fiber_slpcycleE"><span class="id" title="lemma">fiber_slpcycleE</span></a> (<span class="id" title="var">T</span> : <span class="id" title="abbreviation">finType</span>) (<span class="id" title="var">s</span> : <span class="id" title="notation">{</span><span class="id" title="notation">perm</span> <a class="idref" href="Combi.SymGroup.cycletype.html#T"><span class="id" title="variable">T</span></a><span class="id" title="notation">}</span>) <span class="id" title="var">i</span> :<br/>
@@ -239,6 +364,9 @@
 &nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#5c59b35a0b51db520cf1fba473ecf127"><span class="id" title="notation">{</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#5c59b35a0b51db520cf1fba473ecf127"><span class="id" title="notation">in</span></a> <span class="id" title="definition">pcycles</span> <a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.s"><span class="id" title="variable">s</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#5c59b35a0b51db520cf1fba473ecf127"><span class="id" title="notation">,</span></a> <span class="id" title="keyword">∀</span> <span class="id" title="var">C</span>, <span class="id" title="notation">#|</span><a class="idref" href="Combi.Combi.fibered_set.html#fbbij"><span class="id" title="definition">fbbij</span></a> (<span class="id" title="var">U</span> := <a class="idref" href="Combi.SymGroup.cycletype.html#slpcycles"><span class="id" title="definition">slpcycles</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.s"><span class="id" title="variable">s</span></a>) (<a class="idref" href="Combi.SymGroup.cycletype.html#slpcycles"><span class="id" title="definition">slpcycles</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a>) <a class="idref" href="Combi.SymGroup.cycletype.html#C"><span class="id" title="variable">C</span></a><span class="id" title="notation">|</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="notation">#|</span><a class="idref" href="Combi.SymGroup.cycletype.html#C"><span class="id" title="variable">C</span></a><span class="id" title="notation">|</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#5c59b35a0b51db520cf1fba473ecf127"><span class="id" title="notation">}</span></a>.<br/>
 <span class="id" title="keyword">Definition</span> <a name="conjbij"><span class="id" title="definition">conjbij</span></a> := <a class="idref" href="Combi.SymGroup.cycletype.html#cymap"><span class="id" title="definition">cymap</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#CMbij"><span class="id" title="definition">CMbij</span></a>.<br/>
 
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="conjbijP"><span class="id" title="lemma">conjbijP</span></a> <span class="id" title="var">x</span> : <a class="idref" href="Combi.SymGroup.cycletype.html#conjbij"><span class="id" title="definition">conjbij</span></a> (<a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.s"><span class="id" title="variable">s</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#x"><span class="id" title="variable">x</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a> (<a class="idref" href="Combi.SymGroup.cycletype.html#conjbij"><span class="id" title="definition">conjbij</span></a> <a class="idref" href="Combi.SymGroup.cycletype.html#x"><span class="id" title="variable">x</span></a>).<br/>
+ 
 <br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber"><span class="id" title="section">DefsFiber</span></a>.<br/>
 
@@ -359,6 +487,13 @@
 <span class="id" title="keyword">Local Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">ring_scope</span>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab128"></a><h1 class="section">Cycle indicator</h1>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="CycleType.CFunIndicator"><span class="id" title="section">CFunIndicator</span></a>.<br/>
 
 <br/>
@@ -389,6 +524,13 @@
 <span class="id" title="keyword">Local Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">ring_scope</span>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab129"></a><h2 class="section">Central function for <span class="inlinecode">'<span class="id" title="var">S_n</span></span></h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="Sn"><span class="id" title="section">Sn</span></a>.<br/>
 
 <br/>
