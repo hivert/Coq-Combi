@@ -28,7 +28,7 @@
 </div>
 
 <div class="doc">
-<a name="lab107"></a><h1 class="section">Equivalence and congruence closure of a rewriting rule on words</h1>
+<a name="lab109"></a><h1 class="section">Equivalence and congruence closure of a rewriting rule on words</h1>
 
 
 <div class="paragraph"> </div>
@@ -157,7 +157,7 @@ the congruence transitive closure of rule. The main results here are
 </div>
 
 <div class="doc">
-<a name="lab108"></a><h2 class="section">Transitive closure of a rule with finite classes</h2>
+<a name="lab110"></a><h2 class="section">Transitive closure of a rule with finite classes</h2>
   Since we only need to contruct it and not to compute with it, we use a     simple but extremely inefficient algorithm                               
 </div>
 <div class="code">
@@ -231,7 +231,7 @@ This is a very unefficient transitive closure algorithm
 <span class="id" title="keyword">Lemma</span> <a name="subset_s_trans_s"><span class="id" title="lemma">subset_s_trans_s</span></a> <span class="id" title="var">s</span> : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#53295d8f18390300c5a24f66e0bcda98"><span class="id" title="notation">{</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#53295d8f18390300c5a24f66e0bcda98"><span class="id" title="notation">subset</span></a> <a class="idref" href="Combi.Basic.congr.html#s"><span class="id" title="variable">s</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#53295d8f18390300c5a24f66e0bcda98"><span class="id" title="notation">≤</span></a> <a class="idref" href="Combi.Basic.congr.html#trans"><span class="id" title="lemma">trans</span></a> <a class="idref" href="Combi.Basic.congr.html#s"><span class="id" title="variable">s</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#53295d8f18390300c5a24f66e0bcda98"><span class="id" title="notation">}</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">CoInductive</span> <a name="rewrite_path"><span class="id" title="inductive">rewrite_path</span></a> <span class="id" title="var">x</span> <span class="id" title="var">y</span> : <span class="id" title="keyword">Prop</span> :=<br/>
+<span class="id" title="keyword">Variant</span> <a name="rewrite_path"><span class="id" title="inductive">rewrite_path</span></a> <span class="id" title="var">x</span> <span class="id" title="var">y</span> : <span class="id" title="keyword">Prop</span> :=<br/>
 &nbsp;&nbsp;<a name="Rew"><span class="id" title="constructor">Rew</span></a> : <span class="id" title="keyword">∀</span> <span class="id" title="var">l</span>, <span class="id" title="definition">path</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#5df54fbf388f0469d229ebdc80a20642"><span class="id" title="notation">[</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#5df54fbf388f0469d229ebdc80a20642"><span class="id" title="notation">rel</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#5df54fbf388f0469d229ebdc80a20642"><span class="id" title="notation">of</span></a> <a class="idref" href="Combi.Basic.congr.html#Transitive.rule"><span class="id" title="variable">rule</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#5df54fbf388f0469d229ebdc80a20642"><span class="id" title="notation">]</span></a> <a class="idref" href="Combi.Basic.congr.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="Combi.Basic.congr.html#l"><span class="id" title="variable">l</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.Basic.congr.html#y"><span class="id" title="variable">y</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="definition">last</span> <a class="idref" href="Combi.Basic.congr.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="Combi.Basic.congr.html#l"><span class="id" title="variable">l</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.Basic.congr.html#rewrite_path"><span class="id" title="inductive">rewrite_path</span></a> <a class="idref" href="Combi.Basic.congr.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="Combi.Basic.congr.html#y"><span class="id" title="variable">y</span></a>.<br/>
 
 <br/>
@@ -262,7 +262,7 @@ This is a very unefficient transitive closure algorithm
 </div>
 
 <div class="doc">
-<a name="lab109"></a><h2 class="section">Deals with the dependance of invar on x</h2>
+<a name="lab111"></a><h2 class="section">Deals with the dependance of invar on x</h2>
 
 </div>
 <div class="code">
@@ -327,7 +327,7 @@ This is a very unefficient transitive closure algorithm
 </div>
 
 <div class="doc">
-<a name="lab110"></a><h2 class="section">Basic facts on congruences:</h2>
+<a name="lab112"></a><h2 class="section">Basic facts on congruences:</h2>
  equivalence of various definitions and immediate consequences             
 </div>
 <div class="code">
@@ -364,7 +364,7 @@ This is a very unefficient transitive closure algorithm
 </div>
 
 <div class="doc">
-<a name="lab111"></a><h2 class="section">Congruence closure of a bounded rule</h2>
+<a name="lab113"></a><h2 class="section">Congruence closure of a bounded rule</h2>
 
 </div>
 <div class="code">
@@ -447,7 +447,7 @@ This is a very unefficient transitive closure algorithm
 <span class="id" title="keyword">Lemma</span> <a name="gencongr_invar"><span class="id" title="lemma">gencongr_invar</span></a> <span class="id" title="var">u</span> <span class="id" title="var">v</span> : <a class="idref" href="Combi.Basic.congr.html#gencongr"><span class="id" title="definition">gencongr</span></a> <a class="idref" href="Combi.Basic.congr.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="Combi.Basic.congr.html#v"><span class="id" title="variable">v</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.Basic.congr.html#invar"><span class="id" title="projection">invar</span></a> <a class="idref" href="Combi.Basic.congr.html#CongruenceClosure.inv"><span class="id" title="variable">inv</span></a> <a class="idref" href="Combi.Basic.congr.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="Combi.Basic.congr.html#v"><span class="id" title="variable">v</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">CoInductive</span> <a name="Generated_EquivCongruence"><span class="id" title="inductive">Generated_EquivCongruence</span></a> (<span class="id" title="var">grel</span> : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#rel"><span class="id" title="definition">rel</span></a> <a class="idref" href="Combi.Basic.congr.html#word"><span class="id" title="abbreviation">word</span></a>) :=<br/>
+<span class="id" title="keyword">Variant</span> <a name="Generated_EquivCongruence"><span class="id" title="inductive">Generated_EquivCongruence</span></a> (<span class="id" title="var">grel</span> : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#rel"><span class="id" title="definition">rel</span></a> <a class="idref" href="Combi.Basic.congr.html#word"><span class="id" title="abbreviation">word</span></a>) :=<br/>
 &nbsp;&nbsp;<a name="GenCongr"><span class="id" title="constructor">GenCongr</span></a> : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#equivalence_rel"><span class="id" title="definition">equivalence_rel</span></a> <a class="idref" href="Combi.Basic.congr.html#grel"><span class="id" title="variable">grel</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="Combi.Basic.congr.html#congruence_rel"><span class="id" title="definition">congruence_rel</span></a> <a class="idref" href="Combi.Basic.congr.html#grel"><span class="id" title="variable">grel</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">(</span></a> <span class="id" title="keyword">∀</span> <span class="id" title="var">u</span> <span class="id" title="var">v</span>, <a class="idref" href="Combi.Basic.congr.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#46c9e8232fa09401e24f1934bb65029f"><span class="id" title="notation">\</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#46c9e8232fa09401e24f1934bb65029f"><span class="id" title="notation">in</span></a> <a class="idref" href="Combi.Basic.congr.html#CongruenceClosure.rule"><span class="id" title="variable">rule</span></a> <a class="idref" href="Combi.Basic.congr.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.Basic.congr.html#grel"><span class="id" title="variable">grel</span></a> <a class="idref" href="Combi.Basic.congr.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="Combi.Basic.congr.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a><br/>
@@ -483,7 +483,7 @@ This is a very unefficient transitive closure algorithm
 </div>
 
 <div class="doc">
-<a name="lab112"></a><h1 class="section">Multi-homogeneous congruence rules</h1>
+<a name="lab114"></a><h1 class="section">Multi-homogeneous congruence rules</h1>
 
 </div>
 <div class="code">
@@ -528,7 +528,7 @@ This is a very unefficient transitive closure algorithm
 </div>
 
 <div class="doc">
-<a name="lab113"></a><h1 class="section">Homogeneous congruence rules on a finite type</h1>
+<a name="lab115"></a><h1 class="section">Homogeneous congruence rules on a finite type</h1>
 
 </div>
 <div class="code">

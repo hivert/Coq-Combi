@@ -28,7 +28,8 @@
 </div>
 
 <div class="doc">
-Definition of Schur polynomials as quotient of alternant and Kostka numbers
+<a name="lab217"></a><h1 class="section">Definition of Schur polynomials as quotient of alternant and Kostka numbers</h1>
+
 
 <div class="paragraph"> </div>
 
@@ -71,7 +72,7 @@ We define the following notions:
 
 <div class="paragraph"> </div>
 
-***** Kostka numbers:
+Kostka numbers:
 
 <div class="paragraph"> </div>
 
@@ -89,7 +90,7 @@ We define the following notions:
 
 </li>
 <li> <span class="inlinecode">'<span class="id" title="var">K</span>(<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a>,</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.mu"><span class="id" title="variable">mu</span></a>)</span>      == the Kostka number associated to <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> and <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.mu"><span class="id" title="variable">mu</span></a></span>
-           as a <span class="inlinecode"><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a></span> in <span class="inlinecode"><span class="id" title="var">nat_scope</span></span> and as an element of <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#MPoESymHomog.R"><span class="id" title="variable">R</span></a></span> (inferred from
+           as a <span class="inlinecode"><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a></span> in <span class="inlinecode"><span class="id" title="var">nat_scope</span></span> and as an element of <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#RingSchurSym.R"><span class="id" title="variable">R</span></a></span> (inferred from
            the context) in <span class="inlinecode"><span class="id" title="var">ring_scope</span></span>.
 
 </li>
@@ -110,7 +111,7 @@ We define the following notions:
 
 <div class="paragraph"> </div>
 
-***** Kostka numbers and standard tableaux:
+Kostka numbers and standard tableaux:
 
 <div class="paragraph"> </div>
 
@@ -131,7 +132,7 @@ In this section, we fix two nat <span class="inlinecode"><a class="idref" href="
 
 <div class="paragraph"> </div>
 
-***** Extension of tableaux:
+Extension of tableaux:
 
 <div class="paragraph"> </div>
 
@@ -217,30 +218,9 @@ Alternating and symmetric polynomial
 <span class="id" title="keyword">Section</span> <a name="Alternant"><span class="id" title="section">Alternant</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Variable</span> <a name="Alternant.n"><span class="id" title="variable">n</span></a> : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>.<br/>
-<span class="id" title="keyword">Variable</span> <a name="Alternant.R"><span class="id" title="variable">R</span></a> : <span class="id" title="abbreviation">comRingType</span>.<br/>
+<span class="id" title="keyword">Variables</span> (<a name="Alternant.n"><span class="id" title="variable">n</span></a> : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>) (<a name="Alternant.R"><span class="id" title="variable">R</span></a> : <span class="id" title="abbreviation">comRingType</span>).<br/>
 
 <br/>
-
-<br/>
-<span class="id" title="keyword">Lemma</span> <a name="rho_uniq"><span class="id" title="lemma">rho_uniq</span></a> : <span class="id" title="definition">uniq</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#rho"><span class="id" title="abbreviation">rho</span></a>.<br/>
-
-<br/>
-<span class="id" title="keyword">Lemma</span> <a name="mcoeff_alt"><span class="id" title="lemma">mcoeff_alt</span></a> (<span class="id" title="var">m</span> : <span class="id" title="notation">'</span><span class="id" title="notation">X_</span><span class="id" title="notation">{1</span>..<a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.n"><span class="id" title="variable">n</span></a><span class="id" title="notation">}</span>) : <span class="id" title="definition">uniq</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#m"><span class="id" title="variable">m</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="notation">(</span><a class="idref" href="Combi.MPoly.Schur_altdef.html#c2daeea47b35ab07ac4cff899fd9be41"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#c2daeea47b35ab07ac4cff899fd9be41"><span class="id" title="notation">a_m</span></a><span class="id" title="notation">)@</span><span class="id" title="notation">_m</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> 1.<br/>
-
-<br/>
-<span class="id" title="keyword">Lemma</span> <a name="alt_uniq_non0"><span class="id" title="lemma">alt_uniq_non0</span></a> (<span class="id" title="var">m</span> : <span class="id" title="notation">'</span><span class="id" title="notation">X_</span><span class="id" title="notation">{1</span>..<a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.n"><span class="id" title="variable">n</span></a><span class="id" title="notation">}</span>) : <span class="id" title="definition">uniq</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#m"><span class="id" title="variable">m</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#c2daeea47b35ab07ac4cff899fd9be41"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#c2daeea47b35ab07ac4cff899fd9be41"><span class="id" title="notation">a_m</span></a> <span class="id" title="notation">!=</span> 0.<br/>
-
-<br/>
-<span class="id" title="keyword">Lemma</span> <a name="alt_rho_non0"><span class="id" title="lemma">alt_rho_non0</span></a> : <a class="idref" href="Combi.MPoly.Schur_altdef.html#c2daeea47b35ab07ac4cff899fd9be41"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#c2daeea47b35ab07ac4cff899fd9be41"><span class="id" title="notation">a_rho</span></a> <span class="id" title="notation">!=</span> 0.<br/>
-
-<br/>
-<span class="id" title="keyword">Lemma</span> <a name="alt_alternate"><span class="id" title="lemma">alt_alternate</span></a> (<span class="id" title="var">m</span> : <span class="id" title="notation">'</span><span class="id" title="notation">X_</span><span class="id" title="notation">{1</span>..<a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.n"><span class="id" title="variable">n</span></a><span class="id" title="notation">}</span>) (<span class="id" title="var">i</span> <span class="id" title="var">j</span> : <span class="id" title="notation">'</span><span class="id" title="notation">I_n</span>) :<br/>
-&nbsp;&nbsp;<a class="idref" href="Combi.MPoly.Schur_altdef.html#i"><span class="id" title="variable">i</span></a> <span class="id" title="notation">!=</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#j"><span class="id" title="variable">j</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#m"><span class="id" title="variable">m</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#i"><span class="id" title="variable">i</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#m"><span class="id" title="variable">m</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#j"><span class="id" title="variable">j</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#c2daeea47b35ab07ac4cff899fd9be41"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#c2daeea47b35ab07ac4cff899fd9be41"><span class="id" title="notation">a_m</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> 0.<br/>
-
-<br/>
-<span class="id" title="keyword">Lemma</span> <a name="alt_add1_0"><span class="id" title="lemma">alt_add1_0</span></a> (<span class="id" title="var">m</span> : <span class="id" title="notation">'</span><span class="id" title="notation">X_</span><span class="id" title="notation">{1</span>..<a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.n"><span class="id" title="variable">n</span></a><span class="id" title="notation">}</span>) <span class="id" title="var">i</span> :<br/>
-&nbsp;&nbsp;<span class="id" title="notation">(</span><span class="id" title="definition">nth</span> 0%<span class="id" title="var">N</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#m"><span class="id" title="variable">m</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#i"><span class="id" title="variable">i</span></a><span class="id" title="notation">).+1</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="definition">nth</span> 0%<span class="id" title="var">N</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#m"><span class="id" title="variable">m</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#i"><span class="id" title="variable">i</span></a><span class="id" title="notation">.+1</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#c2daeea47b35ab07ac4cff899fd9be41"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#c2daeea47b35ab07ac4cff899fd9be41"><span class="id" title="notation">a_</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#c2daeea47b35ab07ac4cff899fd9be41"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#m"><span class="id" title="variable">m</span></a> <span class="id" title="notation">+</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#rho"><span class="id" title="abbreviation">rho</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#c2daeea47b35ab07ac4cff899fd9be41"><span class="id" title="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> 0.<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="alt_syme"><span class="id" title="lemma">alt_syme</span></a> (<span class="id" title="var">m</span> : <span class="id" title="notation">'</span><span class="id" title="notation">X_</span><span class="id" title="notation">{1</span>..<a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.n"><span class="id" title="variable">n</span></a><span class="id" title="notation">}</span>) <span class="id" title="var">k</span> :<br/>
@@ -259,7 +239,7 @@ Alternating and symmetric polynomial
 <br/>
 
 <br/>
-<span class="id" title="keyword">Lemma</span> <a name="hasincr0"><span class="id" title="lemma">hasincr0</span></a> : <a class="idref" href="Combi.MPoly.Schur_altdef.html#hasincr"><span class="id" title="definition">hasincr</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#c2daeea47b35ab07ac4cff899fd9be41"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#c2daeea47b35ab07ac4cff899fd9be41"><span class="id" title="notation">a_</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#c2daeea47b35ab07ac4cff899fd9be41"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.MPoly.antisym.html#mpart"><span class="id" title="definition">mpart</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.HasIncr.la"><span class="id" title="variable">la</span></a> <span class="id" title="notation">+</span> <span class="id" title="definition">mesym1</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.HasIncr.h"><span class="id" title="variable">h</span></a> <span class="id" title="notation">+</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#rho"><span class="id" title="abbreviation">rho</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#c2daeea47b35ab07ac4cff899fd9be41"><span class="id" title="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> 0%<span class="id" title="var">R</span>.<br/>
+<span class="id" title="keyword">Lemma</span> <a name="hasincr0"><span class="id" title="lemma">hasincr0</span></a> : <a class="idref" href="Combi.MPoly.Schur_altdef.html#hasincr"><span class="id" title="definition">hasincr</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#c2daeea47b35ab07ac4cff899fd9be41"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#c2daeea47b35ab07ac4cff899fd9be41"><span class="id" title="notation">a_</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#c2daeea47b35ab07ac4cff899fd9be41"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.MPoly.antisym.html#mpart"><span class="id" title="definition">mpart</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.HasIncr.la"><span class="id" title="variable">la</span></a> <span class="id" title="notation">+</span> <span class="id" title="definition">mesym1</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.HasIncr.h"><span class="id" title="variable">h</span></a> <span class="id" title="notation">+</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#rho"><span class="id" title="abbreviation">rho</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#c2daeea47b35ab07ac4cff899fd9be41"><span class="id" title="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#8f9364556521ebb498093f28eea2240f"><span class="id" title="notation">=</span></a> 0%<span class="id" title="var">R</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#8f9364556521ebb498093f28eea2240f"><span class="id" title="notation">:&gt;</span></a> <span class="id" title="notation">{</span><span class="id" title="notation">mpoly</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.R"><span class="id" title="variable">R</span></a><span class="id" title="notation">[</span><a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.n"><span class="id" title="variable">n</span></a><span class="id" title="notation">]}</span>.<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="not_hasincr_part"><span class="id" title="lemma">not_hasincr_part</span></a> :<br/>
@@ -312,7 +292,7 @@ Alternating and symmetric polynomial
 </div>
 
 <div class="doc">
-<a name="lab202"></a><h1 class="section">Piery's rule for alternating polynomials</h1>
+<a name="lab218"></a><h1 class="section">Piery's rule for alternating polynomials</h1>
 
 </div>
 <div class="code">
@@ -339,7 +319,7 @@ Alternating and symmetric polynomial
 </div>
 
 <div class="doc">
-<a name="lab203"></a><h1 class="section">Jacobi's definition of schur function</h1>
+<a name="lab219"></a><h1 class="section">Jacobi's definition of schur function</h1>
 
 </div>
 <div class="code">
@@ -371,7 +351,7 @@ Alternating and symmetric polynomial
 </div>
 
 <div class="doc">
-<a name="lab204"></a><h2 class="section">Schur polynomials are symmetric</h2>
+<a name="lab220"></a><h2 class="section">Schur polynomials are symmetric at last</h2>
 
 </div>
 <div class="code">
@@ -400,29 +380,16 @@ Alternating and symmetric polynomial
 <span class="id" title="keyword">Theorem</span> <a name="Schur_sym"><span class="id" title="lemma">Schur_sym</span></a> <span class="id" title="var">d</span> (<span class="id" title="var">la</span> : <a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">P_d</span></a>) : <a class="idref" href="Combi.MPoly.Schur_altdef.html#633bc6d9a9b9cf3fa5f78b143b421318"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#633bc6d9a9b9cf3fa5f78b143b421318"><span class="id" title="notation">s_la</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#e6408d45e92e642f7d1652448339ba09"><span class="id" title="notation">\</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#e6408d45e92e642f7d1652448339ba09"><span class="id" title="notation">is</span></a> <span class="id" title="definition">symmetric</span>.<br/>
 
 <br/>
+<span class="id" title="keyword">Lemma</span> <a name="Schur_homog"><span class="id" title="lemma">Schur_homog</span></a> (<span class="id" title="var">d</span> : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>) (<span class="id" title="var">la</span> : <a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">P_d</span></a>) : <a class="idref" href="Combi.MPoly.Schur_altdef.html#633bc6d9a9b9cf3fa5f78b143b421318"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#633bc6d9a9b9cf3fa5f78b143b421318"><span class="id" title="notation">s_la</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#e6408d45e92e642f7d1652448339ba09"><span class="id" title="notation">\</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#e6408d45e92e642f7d1652448339ba09"><span class="id" title="notation">is</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#d"><span class="id" title="variable">d</span></a><span class="id" title="notation">.-</span><span class="id" title="notation">homog</span>.<br/>
+
+<br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#RingSchurSym"><span class="id" title="section">RingSchurSym</span></a>.<br/>
-
-<br/>
-<span class="id" title="keyword">Section</span> <a name="MPoESymHomog"><span class="id" title="section">MPoESymHomog</span></a>.<br/>
-
-<br/>
-<span class="id" title="keyword">Variable</span> (<a name="MPoESymHomog.n0"><span class="id" title="variable">n0</span></a> : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>) (<a name="MPoESymHomog.R"><span class="id" title="variable">R</span></a> : <span class="id" title="abbreviation">ringType</span>).<br/>
-
-<br/>
-<span class="id" title="keyword">Implicit</span> <span class="id" title="keyword">Types</span> <span class="id" title="var">p</span> <span class="id" title="var">q</span> <span class="id" title="var">r</span> : <span class="id" title="notation">{</span><span class="id" title="notation">mpoly</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#MPoESymHomog.R"><span class="id" title="variable">R</span></a><span class="id" title="notation">[</span><a class="idref" href="Combi.MPoly.Schur_altdef.html#n"><span class="id" title="abbreviation">n</span></a><span class="id" title="notation">]}</span>.<br/>
-<span class="id" title="keyword">Implicit</span> <span class="id" title="keyword">Type</span> <span class="id" title="var">m</span> : <span class="id" title="notation">'</span><span class="id" title="notation">X_</span><span class="id" title="notation">{1</span>..<a class="idref" href="Combi.MPoly.Schur_altdef.html#n"><span class="id" title="abbreviation">n</span></a><span class="id" title="notation">}</span>.<br/>
-
-<br/>
-<span class="id" title="keyword">Lemma</span> <a name="Schur_homog"><span class="id" title="lemma">Schur_homog</span></a> (<span class="id" title="var">d</span> : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>) (<span class="id" title="var">la</span> : <a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">P_d</span></a>) : <a class="idref" href="Combi.MPoly.Schur_mpoly.html#Schur"><span class="id" title="definition">Schur</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#MPoESymHomog.n0"><span class="id" title="variable">n0</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#MPoESymHomog.R"><span class="id" title="variable">R</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#e6408d45e92e642f7d1652448339ba09"><span class="id" title="notation">\</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#e6408d45e92e642f7d1652448339ba09"><span class="id" title="notation">is</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#d"><span class="id" title="variable">d</span></a><span class="id" title="notation">.-</span><span class="id" title="notation">homog</span>.<br/>
-
-<br/>
-<span class="id" title="keyword">End</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#MPoESymHomog"><span class="id" title="section">MPoESymHomog</span></a>.<br/>
 
 <br/>
 </div>
 
 <div class="doc">
-<a name="lab205"></a><h1 class="section">Kostka numbers</h1>
+<a name="lab221"></a><h1 class="section">Kostka numbers</h1>
 
 </div>
 <div class="code">
@@ -509,7 +476,7 @@ Alternating and symmetric polynomial
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="Kostka_size0"><span class="id" title="lemma">Kostka_size0</span></a> <span class="id" title="var">la</span> <span class="id" title="var">mu</span> :<br/>
-&nbsp;&nbsp;<span class="id" title="definition">size</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a> <span class="id" title="notation">&gt;</span> <span class="id" title="definition">size</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#Kostka"><span class="id" title="definition">Kostka</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> 0.<br/>
+&nbsp;&nbsp;<span class="id" title="definition">size</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a> <span class="id" title="notation">&gt;</span> <span class="id" title="definition">size</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#5459809254cea2bd3a1b18c99a266b1d"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#5459809254cea2bd3a1b18c99a266b1d"><span class="id" title="notation">K</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#5459809254cea2bd3a1b18c99a266b1d"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#5459809254cea2bd3a1b18c99a266b1d"><span class="id" title="notation">,</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#5459809254cea2bd3a1b18c99a266b1d"><span class="id" title="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> 0.<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="Kostka_partdom"><span class="id" title="lemma">Kostka_partdom</span></a> (<span class="id" title="var">la</span> <span class="id" title="var">mu</span> : <a class="idref" href="Combi.MPoly.Schur_altdef.html#P"><span class="id" title="abbreviation">P</span></a>) : <a class="idref" href="Combi.MPoly.Schur_altdef.html#5459809254cea2bd3a1b18c99a266b1d"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#5459809254cea2bd3a1b18c99a266b1d"><span class="id" title="notation">K</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#5459809254cea2bd3a1b18c99a266b1d"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#5459809254cea2bd3a1b18c99a266b1d"><span class="id" title="notation">,</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#5459809254cea2bd3a1b18c99a266b1d"><span class="id" title="notation">)</span></a> <span class="id" title="notation">!=</span> 0 <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a> <a class="idref" href="Combi.Basic.ordtype.html#731e6bbdf62df205ef6d3f5878e379a2"><span class="id" title="notation">≤</span></a><a class="idref" href="Combi.Basic.ordtype.html#731e6bbdf62df205ef6d3f5878e379a2"><span class="id" title="notation">A</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a>.<br/>
@@ -518,16 +485,25 @@ Alternating and symmetric polynomial
 <span class="id" title="keyword">Lemma</span> <a name="Kostka0"><span class="id" title="lemma">Kostka0</span></a> (<span class="id" title="var">la</span> <span class="id" title="var">mu</span> : <a class="idref" href="Combi.MPoly.Schur_altdef.html#P"><span class="id" title="abbreviation">P</span></a>) : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#4b80c70cdb231351c5e129ba61f7f956"><span class="id" title="notation">~~</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#4b80c70cdb231351c5e129ba61f7f956"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a> <a class="idref" href="Combi.Basic.ordtype.html#731e6bbdf62df205ef6d3f5878e379a2"><span class="id" title="notation">≤</span></a><a class="idref" href="Combi.Basic.ordtype.html#731e6bbdf62df205ef6d3f5878e379a2"><span class="id" title="notation">A</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#4b80c70cdb231351c5e129ba61f7f956"><span class="id" title="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#5459809254cea2bd3a1b18c99a266b1d"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#5459809254cea2bd3a1b18c99a266b1d"><span class="id" title="notation">K</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#5459809254cea2bd3a1b18c99a266b1d"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#5459809254cea2bd3a1b18c99a266b1d"><span class="id" title="notation">,</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#5459809254cea2bd3a1b18c99a266b1d"><span class="id" title="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> 0.<br/>
 
 <br/>
-<span class="id" title="keyword">Lemma</span> <a name="count_nseq"><span class="id" title="lemma">count_nseq</span></a> (<span class="id" title="var">T</span> : <span class="id" title="abbreviation">eqType</span>) (<span class="id" title="var">P</span> : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#pred"><span class="id" title="definition">pred</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#T"><span class="id" title="variable">T</span></a>) <span class="id" title="var">n</span> <span class="id" title="var">x</span> :<br/>
-&nbsp;&nbsp;<span class="id" title="definition">count</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#P"><span class="id" title="variable">P</span></a> (<span class="id" title="definition">nseq</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#x"><span class="id" title="variable">x</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="notation">(</span><a class="idref" href="Combi.MPoly.Schur_altdef.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#x"><span class="id" title="variable">x</span></a><span class="id" title="notation">)</span> <span class="id" title="notation">×</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#n"><span class="id" title="variable">n</span></a>.<br/>
-
-<br/>
 <span class="id" title="keyword">Lemma</span> <a name="Kostka_diag"><span class="id" title="lemma">Kostka_diag</span></a> <span class="id" title="var">la</span> : <a class="idref" href="Combi.MPoly.Schur_altdef.html#5459809254cea2bd3a1b18c99a266b1d"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#5459809254cea2bd3a1b18c99a266b1d"><span class="id" title="notation">K</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#5459809254cea2bd3a1b18c99a266b1d"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#5459809254cea2bd3a1b18c99a266b1d"><span class="id" title="notation">,</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#5459809254cea2bd3a1b18c99a266b1d"><span class="id" title="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> 1.<br/>
 
 <br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#Kostka"><span class="id" title="section">Kostka</span></a>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab222"></a><h2 class="section">Comverting between standard tableau and tableau over 'I_n.</h2>
+
+
+<div class="paragraph"> </div>
+
+The type <span class="inlinecode"><a class="idref" href="Combi.Combi.stdtab.html#stdtabsh"><span class="id" title="record">stdtabsh</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.HookFormula.Frobenius_ident.html#Identity.Shape.sh"><span class="id" title="variable">sh</span></a></span> is a subtype of <span class="inlinecode"><span class="id" title="library">seq</span></span> <span class="inlinecode"><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a></span> whereas <span class="inlinecode"><a class="idref" href="Combi.Combi.tableau.html#tabsh"><span class="id" title="record">tabsh</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.HookFormula.Frobenius_ident.html#Identity.Shape.sh"><span class="id" title="variable">sh</span></a></span> is a subtype
+of <span class="inlinecode"><span class="id" title="library">seq</span></span> <span class="inlinecode">'<span class="id" title="var">I_n</span>.+1</span>. We provide two conversion functions <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#tabnat_of_ord"><span class="id" title="definition">tabnat_of_ord</span></a></span> and
+<span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#tabord_of_nat"><span class="id" title="definition">tabord_of_nat</span></a></span> 
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="StdKostka"><span class="id" title="section">StdKostka</span></a>.<br/>
 
 <br/>
@@ -591,9 +567,6 @@ Alternating and symmetric polynomial
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#StdKostka"><span class="id" title="section">StdKostka</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Lemma</span> <a name="sumn_rcons"><span class="id" title="lemma">sumn_rcons</span></a> <span class="id" title="var">s</span> <span class="id" title="var">sm</span> : (<span class="id" title="definition">sumn</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#s"><span class="id" title="variable">s</span></a> <span class="id" title="notation">+</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#sm"><span class="id" title="variable">sm</span></a>)%<span class="id" title="var">N</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="definition">sumn</span> (<span class="id" title="definition">rcons</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#s"><span class="id" title="variable">s</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#sm"><span class="id" title="variable">sm</span></a>).<br/>
- 
-<br/>
 <span class="id" title="keyword">Definition</span> <a name="eqeval"><span class="id" title="definition">eqeval</span></a> <span class="id" title="var">n</span> (<span class="id" title="var">t</span> : (<span class="id" title="abbreviation">seq</span> (<span class="id" title="abbreviation">seq</span> <span class="id" title="notation">'</span><span class="id" title="notation">I_n</span><span class="id" title="notation">.+1</span>))) (<span class="id" title="var">la</span> : <span class="id" title="abbreviation">seq</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>) :=<br/>
 &nbsp;&nbsp;<a class="idref" href="Combi.MPoly.Schur_altdef.html#eval"><span class="id" title="definition">eval</span></a> (<a class="idref" href="Combi.Combi.tableau.html#to_word"><span class="id" title="definition">to_word</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#t"><span class="id" title="variable">t</span></a>) <span class="id" title="notation">==</span> <a class="idref" href="Combi.MPoly.antisym.html#mpart"><span class="id" title="definition">mpart</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a>.<br/>
 
@@ -604,6 +577,13 @@ Alternating and symmetric polynomial
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="Combi.MPoly.Schur_altdef.html#eqeval"><span class="id" title="definition">eqeval</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#t"><span class="id" title="variable">t</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a>).<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab223"></a><h1 class="section">Restricting and extending tableaux</h1>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="BijectionExtTab"><span class="id" title="section">BijectionExtTab</span></a>.<br/>
 
 <br/>
@@ -692,6 +672,13 @@ Alternating and symmetric polynomial
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab"><span class="id" title="section">BijectionExtTab</span></a>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab224"></a><h1 class="section">Recursive computation of Kostka numbers</h1>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="KostkaRec"><span class="id" title="section">KostkaRec</span></a>.<br/>
 
 <br/>
@@ -704,13 +691,19 @@ Alternating and symmetric polynomial
 &nbsp;&nbsp;<span class="id" title="notation">\</span><span class="id" title="notation">sum_</span><span class="id" title="notation">(</span><span class="id" title="var">nu</span> <span class="id" title="notation">:</span> <a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">P_</span></a><a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">(</span></a><span class="id" title="definition">sumn</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a><a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">)</span></a> <span class="id" title="notation">|</span> <a class="idref" href="Combi.Combi.skewtab.html#hb_strip"><span class="id" title="definition">hb_strip</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#nu"><span class="id" title="variable">nu</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a><span class="id" title="notation">)</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#Kostka"><span class="id" title="definition">Kostka</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#nu"><span class="id" title="variable">nu</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Fixpoint</span> <a name="Kostka_rec"><span class="id" title="definition">Kostka_rec</span></a> <span class="id" title="var">la</span> <span class="id" title="var">mu</span> : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a> :=<br/>
+<span class="id" title="keyword">Fixpoint</span> <a name="Kostka_rec"><span class="id" title="definition">Kostka_rec</span></a> (<span class="id" title="var">la</span> <span class="id" title="var">mu</span> : <span class="id" title="abbreviation">seq</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>) : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a> :=<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">if</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a> <span class="id" title="keyword">is</span> <span class="id" title="var">m</span> <span class="id" title="notation">::</span> <span class="id" title="var">mu</span> <span class="id" title="keyword">then</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="definition">sumn</span> <span class="id" title="notation">[</span><span class="id" title="notation">seq</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#Kostka_rec"><span class="id" title="definition">Kostka_rec</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#nu"><span class="id" title="variable">nu</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a> <span class="id" title="notation">|</span> <span class="id" title="var">nu</span> <span class="id" title="notation">&lt;-</span> <a class="idref" href="Combi.Combi.partition.html#enum_partn"><span class="id" title="definition">enum_partn</span></a> (<span class="id" title="definition">sumn</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a>) <span class="id" title="notation">&amp;</span> <a class="idref" href="Combi.Combi.skewtab.html#hb_strip"><span class="id" title="definition">hb_strip</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#nu"><span class="id" title="variable">nu</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a><span class="id" title="notation">]</span><br/>
 &nbsp;&nbsp;<span class="id" title="keyword">else</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a> <span class="id" title="notation">==</span> <span class="id" title="notation">[::]</span>.<br/>
 
 <br/>
-
+<span class="id" title="keyword">Example</span> <a name="Kostka_expl1"><span class="id" title="definition">Kostka_expl1</span></a> :<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.MPoly.Schur_altdef.html#Kostka_rec"><span class="id" title="definition">Kostka_rec</span></a> <span class="id" title="notation">[::</span> 4<span class="id" title="notation">;</span> 3<span class="id" title="notation">]</span> <span class="id" title="notation">[::</span> 3<span class="id" title="notation">;</span> 2<span class="id" title="notation">;</span> 2<span class="id" title="notation">]</span> <span class="id" title="notation">==</span> 2.<br/>
+ <span class="id" title="keyword">Example</span> <a name="Kostka_expl2"><span class="id" title="definition">Kostka_expl2</span></a> :<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.MPoly.Schur_altdef.html#Kostka_rec"><span class="id" title="definition">Kostka_rec</span></a> <span class="id" title="notation">[::</span> 4<span class="id" title="notation">;</span> 3<span class="id" title="notation">;</span> 1<span class="id" title="notation">]</span> <span class="id" title="notation">[::</span> 3<span class="id" title="notation">;</span> 2<span class="id" title="notation">;</span> 2<span class="id" title="notation">;</span> 1<span class="id" title="notation">]</span> <span class="id" title="notation">==</span> 5.<br/>
+ <span class="id" title="keyword">Example</span> <a name="Kostka_expl3"><span class="id" title="definition">Kostka_expl3</span></a> :<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.MPoly.Schur_altdef.html#Kostka_rec"><span class="id" title="definition">Kostka_rec</span></a> <span class="id" title="notation">[::</span> 4<span class="id" title="notation">;</span> 4<span class="id" title="notation">;</span> 3<span class="id" title="notation">;</span> 1<span class="id" title="notation">]</span> <span class="id" title="notation">[::</span> 3<span class="id" title="notation">;</span> 3<span class="id" title="notation">;</span> 2<span class="id" title="notation">;</span> 2<span class="id" title="notation">;</span> 1<span class="id" title="notation">;</span> 1<span class="id" title="notation">]</span> <span class="id" title="notation">==</span> 25.<br/>
+ 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="Kostka_rec_size0"><span class="id" title="lemma">Kostka_rec_size0</span></a> <span class="id" title="var">la</span> <span class="id" title="var">mu</span> :<br/>
 &nbsp;&nbsp;<span class="id" title="definition">size</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a> <span class="id" title="notation">&gt;</span> <span class="id" title="definition">size</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#Kostka_rec"><span class="id" title="definition">Kostka_rec</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> 0.<br/>
@@ -718,8 +711,6 @@ Alternating and symmetric polynomial
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="Kostka_recE"><span class="id" title="lemma">Kostka_recE</span></a> <span class="id" title="var">d</span> (<span class="id" title="var">la</span> : <a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">P_d</span></a>) <span class="id" title="var">mu</span> :<br/>
 &nbsp;&nbsp;<span class="id" title="definition">sumn</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#d"><span class="id" title="variable">d</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#Kostka_rec"><span class="id" title="definition">Kostka_rec</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#Kostka"><span class="id" title="definition">Kostka</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a>.<br/>
-
-<br/>
 
 <br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.MPoly.Schur_altdef.html#KostkaRec"><span class="id" title="section">KostkaRec</span></a>.<br/>
@@ -738,7 +729,7 @@ Alternating and symmetric polynomial
 </div>
 
 <div class="doc">
-<a name="lab206"></a><h2 class="section">Inverse Kostka numbers</h2>
+<a name="lab225"></a><h2 class="section">Inverse Kostka numbers</h2>
 
 </div>
 <div class="code">

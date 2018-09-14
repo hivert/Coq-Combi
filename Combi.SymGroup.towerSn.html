@@ -28,38 +28,106 @@
 </div>
 
 <div class="doc">
-<a name="lab169"></a><h1 class="section">The Tower of the Symmetric Groups</h1>
+<a name="lab164"></a><h1 class="section">The Tower of the Symmetric Groups</h1>
 
+
+<div class="paragraph"> </div>
+
+External product of class functions:
+
+<div class="paragraph"> </div>
+
+We fix two groups <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#CFExtProdTheory.G"><span class="id" title="variable">G</span></a></span> and <span class="inlinecode"><a class="idref" href="Combi.MPoly.sympoly.html#ChangeBasis.HandE.H"><span class="id" title="variable">H</span></a></span>. Then we define:
 
 <div class="paragraph"> </div>
 
 <ul class="doclist">
 <li> <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#BijCard.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">\<span class="id" title="var">ox</span></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene.html#g"><span class="id" title="variable">g</span></a></span> = <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#cfextprod"><span class="id" title="definition">cfextprod</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene.html#g"><span class="id" title="variable">g</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.HasIncr.h"><span class="id" title="variable">h</span></a></span>  == the external product of class function,
-                that is a term of type <span class="inlinecode">'<span class="id" title="var">CF</span>(<span class="id" title="definition">setX</span></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#CFExtProdTheory.G"><span class="id" title="variable">G</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.sympoly.html#ChangeBasis.HandE.H"><span class="id" title="variable">H</span></a>)</span> when <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene.html#g"><span class="id" title="variable">g</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode">'<span class="id" title="var">CF</span>(<a class="idref" href="Combi.SymGroup.towerSn.html#CFExtProdTheory.G"><span class="id" title="variable">G</span></a>)</span> and
+                defined by <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#BijCard.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">\<span class="id" title="var">ox</span></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene.html#g"><span class="id" title="variable">g</span></a></span> <span class="inlinecode">(<a class="idref" href="Combi.LRrule.plactic.html#IncrMap.u"><span class="id" title="variable">u</span></a>,</span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.v"><span class="id" title="variable">v</span></a>)</span> <span class="inlinecode">:=</span> <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#BijCard.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.u"><span class="id" title="variable">u</span></a></span> <span class="inlinecode">×</span> <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#BijCard.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.v"><span class="id" title="variable">v</span></a></span> for <span class="inlinecode">(<a class="idref" href="Combi.LRrule.plactic.html#IncrMap.u"><span class="id" title="variable">u</span></a>,</span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.v"><span class="id" title="variable">v</span></a>)</span> <span class="inlinecode"><span class="id" title="tactic">in</span></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#CFExtProdTheory.G"><span class="id" title="variable">G</span></a></span> <span class="inlinecode">×</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.sympoly.html#ChangeBasis.HandE.H"><span class="id" title="variable">H</span></a></span>.
+                It is of of type <span class="inlinecode">'<span class="id" title="var">CF</span>(<span class="id" title="definition">setX</span></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#CFExtProdTheory.G"><span class="id" title="variable">G</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.sympoly.html#ChangeBasis.HandE.H"><span class="id" title="variable">H</span></a>)</span> when <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene.html#g"><span class="id" title="variable">g</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode">'<span class="id" title="var">CF</span>(<a class="idref" href="Combi.SymGroup.towerSn.html#CFExtProdTheory.G"><span class="id" title="variable">G</span></a>)</span> and
                 <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.HasIncr.h"><span class="id" title="variable">h</span></a></span> <span class="inlinecode">:</span> <span class="inlinecode">'<span class="id" title="var">CF</span>(<a class="idref" href="Combi.MPoly.sympoly.html#ChangeBasis.HandE.H"><span class="id" title="variable">H</span></a>)</span>.
 
 </li>
 <li> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#cfextprodr"><span class="id" title="abbreviation">cfextprodr</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene.html#g"><span class="id" title="variable">g</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.HasIncr.h"><span class="id" title="variable">h</span></a></span> == <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#cfextprod"><span class="id" title="definition">cfextprod</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.HasIncr.h"><span class="id" title="variable">h</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene.html#g"><span class="id" title="variable">g</span></a></span>
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#extprod_repr"><span class="id" title="definition">extprod_repr</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#P"><span class="id" title="abbreviation">P</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#CoverSurgery.Q"><span class="id" title="variable">Q</span></a></span> == the external product of matrix representation.
+<li> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#extprod_repr"><span class="id" title="definition">extprod_repr</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#CFExtProdTheory.ReprExtProd.rG"><span class="id" title="variable">rG</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#CFExtProdTheory.ReprExtProd.rH"><span class="id" title="variable">rH</span></a></span> == the external product (tensor product) of matrix
+                representation. Its character is the external product of the
+                character of <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#CFExtProdTheory.ReprExtProd.rG"><span class="id" title="variable">rG</span></a></span> and <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#CFExtProdTheory.ReprExtProd.rH"><span class="id" title="variable">rH</span></a></span>.
+
+</li>
+</ul>
 
 <div class="paragraph"> </div>
 
 
-</li>
+<div class="paragraph"> </div>
+
+The tower of the symmetric groups
+
+<div class="paragraph"> </div>
+
+<ul class="doclist">
 <li> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#tinj"><span class="id" title="definition">tinj</span></a></span>     == the tower injection morphism : 'S_m * 'S_n -&gt; 'S(m + n)
 
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#BijCard.f"><span class="id" title="variable">f</span></a></span> <span class="inlinecode">\<a class="idref" href="ALEA.Ccpo.html#o"><span class="id" title="variable">o</span></a>^</span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene.html#g"><span class="id" title="variable">g</span></a></span>  == the image along tinj of external product of f g.
+
+</li>
+</ul>
+
+<div class="paragraph"> </div>
+
+Induction and restriction of class functions
+
+<div class="paragraph"> </div>
+
+<ul class="doclist">
+<li> <span class="inlinecode">'<span class="id" title="var">z_p</span></span> == <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#zcoeff"><span class="id" title="definition">zcoeff</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.LeadingMonomial.p"><span class="id" title="variable">p</span></a></span> == The cardinality of the centralizer of any
+                permutation of cycle type <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.LeadingMonomial.p"><span class="id" title="variable">p</span></a></span> in <span class="inlinecode"><span class="id" title="library">algC</span></span>, that is
+                <span class="inlinecode">#|'<span class="id" title="var">S_k</span>|</span> <span class="inlinecode">/</span> <span class="inlinecode">#|<a class="idref" href="ALEA.Misc.html#class"><span class="id" title="definition">class</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.LeadingMonomial.p"><span class="id" title="variable">p</span></a>|</span>.
+
+</li>
+<li> <span class="inlinecode">'1<span class="id" title="var">z_p</span></span> = <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#ncfuniCT"><span class="id" title="definition">ncfuniCT</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.LeadingMonomial.p"><span class="id" title="variable">p</span></a></span> == the normalized cycle indicator class function
+                for cycle type <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.LeadingMonomial.p"><span class="id" title="variable">p</span></a></span>.
+
+</li>
+</ul>
+
+<div class="paragraph"> </div>
+
+The two main results are:
+
+<div class="paragraph"> </div>
+
+<ul class="doclist">
+<li> Theorem <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#cfuni_Res"><span class="id" title="lemma">cfuni_Res</span></a></span> which expands the restriction to <span class="inlinecode">'<span class="id" title="var">S_m</span></span> <span class="inlinecode">×</span> <span class="inlinecode">'<span class="id" title="var">S_n</span></span>
+  of the cycle indicator class function <span class="inlinecode">'1<span class="id" title="var">_</span>[<a class="idref" href="Combi.LRrule.Schensted.html#NonEmpty.Bump.l"><span class="id" title="variable">l</span></a>]</span>:
+
+<div class="paragraph"> </div>
+
+  <span class="inlinecode"></span>
+    <span class="inlinecode">'<span class="id" title="var">Res</span>[<a class="idref" href="Combi.SymGroup.towerSn.html#tinj"><span class="id" title="definition">tinj</span></a></span> <span class="inlinecode">@*</span> <span class="inlinecode">('<span class="id" title="var">dom</span></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#tinj"><span class="id" title="definition">tinj</span></a>)]</span> <span class="inlinecode">'1<span class="id" title="var">_</span>[<a class="idref" href="Combi.LRrule.Schensted.html#NonEmpty.Bump.l"><span class="id" title="variable">l</span></a>]</span> <span class="inlinecode">=</span>
+    <span class="inlinecode">\<span class="id" title="var">sum_</span>(<a class="idref" href="Combi.SymGroup.towerSn.html#pp"><span class="id" title="variable">pp</span></a></span> <span class="inlinecode">|</span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Schensted.html#NonEmpty.Bump.l"><span class="id" title="variable">l</span></a></span> <span class="inlinecode">==</span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#pp"><span class="id" title="variable">pp</span></a>.1</span> <span class="inlinecode">+|+</span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#pp"><span class="id" title="variable">pp</span></a>.2)</span> <span class="inlinecode">'1<span class="id" title="var">_</span>[<a class="idref" href="Combi.SymGroup.towerSn.html#pp"><span class="id" title="variable">pp</span></a>.1]</span> <span class="inlinecode">\<a class="idref" href="ALEA.Ccpo.html#o"><span class="id" title="variable">o</span></a>^</span> <span class="inlinecode">'1<span class="id" title="var">_</span>[<a class="idref" href="Combi.SymGroup.towerSn.html#pp"><span class="id" title="variable">pp</span></a>.2].</span>
+  <span class="inlinecode"></span>
+
+<div class="paragraph"> </div>
+
+  by Frobenius duality it implies:
+
 <div class="paragraph"> </div>
 
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#zcoeff"><span class="id" title="definition">zcoeff</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.Lead.p"><span class="id" title="variable">p</span></a></span> == The cardinality of the centralizator of any permutation of
-                cycle type <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.Lead.p"><span class="id" title="variable">p</span></a></span> in <span class="inlinecode"><span class="id" title="library">algC</span></span>, that is <span class="inlinecode">#|'<span class="id" title="var">S_k</span>|</span> <span class="inlinecode">/</span> <span class="inlinecode">#|<a class="idref" href="ALEA.Misc.html#class"><span class="id" title="definition">class</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.Lead.p"><span class="id" title="variable">p</span></a>|</span>.
+<li> Theorem <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#ncfuniCT_Ind"><span class="id" title="lemma">ncfuniCT_Ind</span></a></span> which expands the induction of two normalized
+  cycle indicator class functions
 
-</li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.towerSn.html#ncfuniCT"><span class="id" title="definition">ncfuniCT</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.Lead.p"><span class="id" title="variable">p</span></a></span> == the normalized indicator class function for cycle type <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.Lead.p"><span class="id" title="variable">p</span></a></span>.
- 
+<div class="paragraph"> </div>
+
+  <span class="inlinecode"></span>
+    <span class="inlinecode">'<span class="id" title="var">Ind</span>['<span class="id" title="var">SG_</span>(<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.m"><span class="id" title="variable">m</span></a></span> <span class="inlinecode">+</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a>)]</span> <span class="inlinecode">('1<span class="id" title="var">z_</span>[<a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.LeadingMonomial.p"><span class="id" title="variable">p</span></a>]</span> <span class="inlinecode">\<a class="idref" href="ALEA.Ccpo.html#o"><span class="id" title="variable">o</span></a>^</span> <span class="inlinecode">'1<span class="id" title="var">z_</span>[<a class="idref" href="Combi.Combi.partition.html#q"><span class="id" title="variable">q</span></a>])</span> <span class="inlinecode">=</span> <span class="inlinecode">'1<span class="id" title="var">z_</span>[<a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.LeadingMonomial.p"><span class="id" title="variable">p</span></a></span> <span class="inlinecode">+|+</span> <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#q"><span class="id" title="variable">q</span></a>].</span>
+  <span class="inlinecode"></span>
+
 </li>
 </ul>
 
@@ -110,7 +178,7 @@
 </div>
 
 <div class="doc">
-<a name="lab170"></a><h1 class="section">External product of class functions</h1>
+<a name="lab165"></a><h1 class="section">External product of class functions</h1>
 
 </div>
 <div class="code">
@@ -209,7 +277,7 @@
 </div>
 
 <div class="doc">
-<a name="lab171"></a><h1 class="section">Injection morphism of the tower of the symmetric groups</h1>
+<a name="lab166"></a><h1 class="section">Injection morphism of the tower of the symmetric groups</h1>
 
 </div>
 <div class="code">
@@ -270,13 +338,11 @@
 <br/>
 
 <br/>
-<span class="id" title="keyword">Notation</span> <a name="5d55a41a29ee1dc4aaed78fcb78a3248"><span class="id" title="notation">&quot;</span></a>f \o^ g" := (<span class="id" title="definition">cfIsom</span> (<a class="idref" href="Combi.SymGroup.towerSn.html#isom_tinj"><span class="id" title="lemma">isom_tinj</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>) (<a class="idref" href="Combi.SymGroup.towerSn.html#cfextprod"><span class="id" title="definition">cfextprod</span></a> <span class="id" title="var">f</span> <span class="id" title="var">g</span>)) (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 40).<br/>
-
-<br/>
 </div>
 
 <div class="doc">
-The tower is associative (upto isomorphism) with unit 
+<a name="lab167"></a><h2 class="section">The tower is associative (upto isomorphism) with unit</h2>
+
 </div>
 <div class="code">
 <span class="id" title="keyword">Section</span> <a name="Assoc"><span class="id" title="section">Assoc</span></a>.<br/>
@@ -301,13 +367,15 @@ The tower is associative (upto isomorphism) with unit
 &nbsp;&nbsp;<a class="idref" href="Combi.SymGroup.towerSn.html#tinj"><span class="id" title="definition">tinj</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#tinj"><span class="id" title="definition">tinj</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#s"><span class="id" title="variable">s</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">,</span></a> <a class="idref" href="Combi.SymGroup.towerSn.html#t"><span class="id" title="variable">t</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">),</span></a> <a class="idref" href="Combi.SymGroup.towerSn.html#u"><span class="id" title="variable">u</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.SSRcomplements.permcomp.html#cast_perm"><span class="id" title="definition">cast_perm</span></a> (<span class="id" title="lemma">addnA</span> <a class="idref" href="Combi.SymGroup.towerSn.html#Assoc.m"><span class="id" title="variable">m</span></a> <a class="idref" href="Combi.SymGroup.towerSn.html#Assoc.n"><span class="id" title="variable">n</span></a> <a class="idref" href="Combi.SymGroup.towerSn.html#Assoc.p"><span class="id" title="variable">p</span></a>) (<a class="idref" href="Combi.SymGroup.towerSn.html#tinj"><span class="id" title="definition">tinj</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#s"><span class="id" title="variable">s</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">,</span></a> <a class="idref" href="Combi.SymGroup.towerSn.html#tinj"><span class="id" title="definition">tinj</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#t"><span class="id" title="variable">t</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">,</span></a> <a class="idref" href="Combi.SymGroup.towerSn.html#u"><span class="id" title="variable">u</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">))</span></a>).<br/>
 
 <br/>
-
-<br/>
 <span class="id" title="keyword">Lemma</span> <a name="cycle_type_tinjC"><span class="id" title="lemma">cycle_type_tinjC</span></a> (<span class="id" title="var">s</span> : <span class="id" title="notation">'</span><span class="id" title="notation">S_m</span>) (<span class="id" title="var">t</span> : <span class="id" title="notation">'</span><span class="id" title="notation">S_n</span>) :<br/>
-&nbsp;&nbsp;<a class="idref" href="Combi.SymGroup.towerSn.html#ct"><span class="id" title="abbreviation">ct</span></a> (<a class="idref" href="Combi.SymGroup.towerSn.html#tinj"><span class="id" title="definition">tinj</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#s"><span class="id" title="variable">s</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">,</span></a> <a class="idref" href="Combi.SymGroup.towerSn.html#t"><span class="id" title="variable">t</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">)</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.SymGroup.towerSn.html#ct"><span class="id" title="abbreviation">ct</span></a> (<a class="idref" href="Combi.SSRcomplements.permcomp.html#cast_perm"><span class="id" title="definition">cast_perm</span></a> (<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#esym"><span class="id" title="definition">esym</span></a> (<span class="id" title="lemma">addnC</span> <a class="idref" href="Combi.SymGroup.towerSn.html#Assoc.m"><span class="id" title="variable">m</span></a> <a class="idref" href="Combi.SymGroup.towerSn.html#Assoc.n"><span class="id" title="variable">n</span></a>)) (<a class="idref" href="Combi.SymGroup.towerSn.html#tinj"><span class="id" title="definition">tinj</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#t"><span class="id" title="variable">t</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">,</span></a> <a class="idref" href="Combi.SymGroup.towerSn.html#s"><span class="id" title="variable">s</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">)</span></a>)).<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.SymGroup.cycletype.html#cycle_typeSn"><span class="id" title="definition">cycle_typeSn</span></a> (<a class="idref" href="Combi.SymGroup.towerSn.html#tinj"><span class="id" title="definition">tinj</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#s"><span class="id" title="variable">s</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">,</span></a> <a class="idref" href="Combi.SymGroup.towerSn.html#t"><span class="id" title="variable">t</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">)</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a><br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.SymGroup.cycletype.html#cycle_typeSn"><span class="id" title="definition">cycle_typeSn</span></a> (<a class="idref" href="Combi.SSRcomplements.permcomp.html#cast_perm"><span class="id" title="definition">cast_perm</span></a> (<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#esym"><span class="id" title="definition">esym</span></a> (<span class="id" title="lemma">addnC</span> <a class="idref" href="Combi.SymGroup.towerSn.html#Assoc.m"><span class="id" title="variable">m</span></a> <a class="idref" href="Combi.SymGroup.towerSn.html#Assoc.n"><span class="id" title="variable">n</span></a>)) (<a class="idref" href="Combi.SymGroup.towerSn.html#tinj"><span class="id" title="definition">tinj</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#t"><span class="id" title="variable">t</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">,</span></a> <a class="idref" href="Combi.SymGroup.towerSn.html#s"><span class="id" title="variable">s</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#44400027531d4bc3f586a1997dc874c0"><span class="id" title="notation">)</span></a>)).<br/>
 
 <br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.SymGroup.towerSn.html#Assoc"><span class="id" title="section">Assoc</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a name="5d55a41a29ee1dc4aaed78fcb78a3248"><span class="id" title="notation">&quot;</span></a>f \o^ g" := (<span class="id" title="definition">cfIsom</span> (<a class="idref" href="Combi.SymGroup.towerSn.html#isom_tinj"><span class="id" title="lemma">isom_tinj</span></a> <span class="id" title="var">_</span> <span class="id" title="var">_</span>) (<span class="id" title="var">f</span> <a class="idref" href="Combi.SymGroup.towerSn.html#243c80ab1f4b08ae5a1e3b383877bc0a"><span class="id" title="notation">\</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#243c80ab1f4b08ae5a1e3b383877bc0a"><span class="id" title="notation">ox</span></a> <span class="id" title="var">g</span>)) (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 40).<br/>
 
 <br/>
 <span class="id" title="keyword">Local Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">ring_scope</span>.<br/>
@@ -316,7 +384,7 @@ The tower is associative (upto isomorphism) with unit
 </div>
 
 <div class="doc">
-<a name="lab172"></a><h1 class="section">Restriction formula</h1>
+<a name="lab168"></a><h1 class="section">Restriction formula</h1>
 
 </div>
 <div class="code">
@@ -341,7 +409,7 @@ The tower is associative (upto isomorphism) with unit
 </div>
 
 <div class="doc">
-<a name="lab173"></a><h1 class="section">Induction formula</h1>
+<a name="lab169"></a><h1 class="section">Induction formula</h1>
 
 </div>
 <div class="code">
@@ -387,6 +455,7 @@ The normalized cycle type indicator basis
 &nbsp;&nbsp;<span class="id" title="notation">#|</span><a class="idref" href="Combi.SymGroup.towerSn.html#b96e668287acdc2e19e4117ee37b8437"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#b96e668287acdc2e19e4117ee37b8437"><span class="id" title="notation">SG_k</span></a><span class="id" title="notation">|</span><span class="id" title="notation">%:</span><span class="id" title="notation">R</span> <span class="id" title="notation">/</span> <span class="id" title="notation">#|</span><a class="idref" href="Combi.SymGroup.cycletype.html#classCT"><span class="id" title="definition">classCT</span></a> <a class="idref" href="Combi.SymGroup.towerSn.html#p"><span class="id" title="variable">p</span></a><span class="id" title="notation">|</span><span class="id" title="notation">%:</span><span class="id" title="notation">R</span>.<br/>
 
 <br/>
+<span class="id" title="keyword">Notation</span> <a name="f30e0fc7be8811bf079efbd648835160"><span class="id" title="notation">&quot;</span></a>''z_' p" := (<a class="idref" href="Combi.SymGroup.towerSn.html#zcoeff"><span class="id" title="definition">zcoeff</span></a> <span class="id" title="var">p</span>) (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 2, <span class="id" title="var">format</span> "''z_' p").<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="zcoeffE"><span class="id" title="lemma">zcoeffE</span></a> <span class="id" title="var">k</span> (<span class="id" title="var">l</span> : <a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">P_k</span></a>) : <a class="idref" href="Combi.SymGroup.towerSn.html#zcoeff"><span class="id" title="definition">zcoeff</span></a> <a class="idref" href="Combi.SymGroup.towerSn.html#l"><span class="id" title="variable">l</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="notation">(</span><a class="idref" href="Combi.SymGroup.permcent.html#zcard"><span class="id" title="definition">zcard</span></a> <a class="idref" href="Combi.SymGroup.towerSn.html#l"><span class="id" title="variable">l</span></a><span class="id" title="notation">)%:</span><span class="id" title="notation">R</span>.<br/>
@@ -401,6 +470,7 @@ The normalized cycle type indicator basis
 <span class="id" title="keyword">Definition</span> <a name="ncfuniCT"><span class="id" title="definition">ncfuniCT</span></a> (<span class="id" title="var">k</span> : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>) (<span class="id" title="var">p</span> : <a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">P_k</span></a>) := <a class="idref" href="Combi.SymGroup.towerSn.html#f30e0fc7be8811bf079efbd648835160"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#f30e0fc7be8811bf079efbd648835160"><span class="id" title="notation">z_p</span></a> <span class="id" title="notation">*:</span> <a class="idref" href="Combi.SymGroup.cycletype.html#2b2784475c6e49a872aa83177025f98f"><span class="id" title="notation">'1</span></a><a class="idref" href="Combi.SymGroup.cycletype.html#2b2784475c6e49a872aa83177025f98f"><span class="id" title="notation">_</span></a><a class="idref" href="Combi.SymGroup.cycletype.html#2b2784475c6e49a872aa83177025f98f"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#p"><span class="id" title="variable">p</span></a><a class="idref" href="Combi.SymGroup.cycletype.html#2b2784475c6e49a872aa83177025f98f"><span class="id" title="notation">]</span></a>.<br/>
 
 <br/>
+<span class="id" title="keyword">Notation</span> <a name="d3faceea9b5a0c10215d84df43d3e674"><span class="id" title="notation">&quot;</span></a>''1z_[' p ]" := (<a class="idref" href="Combi.SymGroup.towerSn.html#ncfuniCT"><span class="id" title="definition">ncfuniCT</span></a> <span class="id" title="var">p</span>)  (<span class="id" title="var">format</span> "''1z_[' p ]").<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="ncfuniCT_gen"><span class="id" title="lemma">ncfuniCT_gen</span></a> <span class="id" title="var">k</span> (<span class="id" title="var">f</span> : <span class="id" title="notation">'</span><span class="id" title="notation">CF</span><span class="id" title="notation">(</span><a class="idref" href="Combi.SymGroup.towerSn.html#b96e668287acdc2e19e4117ee37b8437"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#b96e668287acdc2e19e4117ee37b8437"><span class="id" title="notation">SG_k</span></a><span class="id" title="notation">)</span>) :<br/>
@@ -413,7 +483,7 @@ The normalized cycle type indicator basis
 </div>
 
 <div class="doc">
-Application of Frobenius duality : cfdot_Res_r 
+Application of Frobenius duality : <span class="inlinecode"><span class="id" title="definition">cfdot_Res_r</span></span> 
 </div>
 <div class="code">
 <span class="id" title="keyword">Lemma</span> <a name="cfdot_Ind_cfuniCT"><span class="id" title="lemma">cfdot_Ind_cfuniCT</span></a> <span class="id" title="var">p</span> <span class="id" title="var">q</span> (<span class="id" title="var">l</span> : <a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">P_</span></a><a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#Induction.m"><span class="id" title="variable">m</span></a> <span class="id" title="notation">+</span> <a class="idref" href="Combi.SymGroup.towerSn.html#Induction.n"><span class="id" title="variable">n</span></a><a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">)</span></a>) :<br/>
@@ -426,11 +496,15 @@ Application of Frobenius duality : cfdot_Res_r
 &nbsp;&nbsp;<span class="id" title="notation">(</span><a class="idref" href="Combi.SymGroup.towerSn.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="Combi.Combi.partition.html#6c43cbaa0be33ce66047e4ce7e031a36"><span class="id" title="notation">+|+</span></a> <a class="idref" href="Combi.SymGroup.towerSn.html#q"><span class="id" title="variable">q</span></a> <span class="id" title="notation">==</span> <a class="idref" href="Combi.SymGroup.towerSn.html#l"><span class="id" title="variable">l</span></a><span class="id" title="notation">)%:</span><span class="id" title="notation">R</span> <span class="id" title="notation">×</span> <a class="idref" href="Combi.SymGroup.towerSn.html#f30e0fc7be8811bf079efbd648835160"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#f30e0fc7be8811bf079efbd648835160"><span class="id" title="notation">z_l</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Theorem</span> <a name="Ind_ncfuniCT"><span class="id" title="lemma">Ind_ncfuniCT</span></a> <span class="id" title="var">p</span> <span class="id" title="var">q</span> :<br/>
+<span class="id" title="keyword">Theorem</span> <a name="ncfuniCT_Ind"><span class="id" title="lemma">ncfuniCT_Ind</span></a> <span class="id" title="var">p</span> <span class="id" title="var">q</span> :<br/>
 &nbsp;&nbsp;<span class="id" title="notation">'</span><span class="id" title="notation">Ind</span><span class="id" title="notation">[</span><a class="idref" href="Combi.SymGroup.towerSn.html#b96e668287acdc2e19e4117ee37b8437"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#b96e668287acdc2e19e4117ee37b8437"><span class="id" title="notation">SG_</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#b96e668287acdc2e19e4117ee37b8437"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#Induction.m"><span class="id" title="variable">m</span></a> <span class="id" title="notation">+</span> <a class="idref" href="Combi.SymGroup.towerSn.html#Induction.n"><span class="id" title="variable">n</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#b96e668287acdc2e19e4117ee37b8437"><span class="id" title="notation">)</span></a><span class="id" title="notation">]</span> (<a class="idref" href="Combi.SymGroup.towerSn.html#d3faceea9b5a0c10215d84df43d3e674"><span class="id" title="notation">'1</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#d3faceea9b5a0c10215d84df43d3e674"><span class="id" title="notation">z_</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#d3faceea9b5a0c10215d84df43d3e674"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#p"><span class="id" title="variable">p</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#d3faceea9b5a0c10215d84df43d3e674"><span class="id" title="notation">]</span></a> <a class="idref" href="Combi.SymGroup.towerSn.html#5d55a41a29ee1dc4aaed78fcb78a3248"><span class="id" title="notation">\</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#5d55a41a29ee1dc4aaed78fcb78a3248"><span class="id" title="notation">o</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#5d55a41a29ee1dc4aaed78fcb78a3248"><span class="id" title="notation">^</span></a> <a class="idref" href="Combi.SymGroup.towerSn.html#d3faceea9b5a0c10215d84df43d3e674"><span class="id" title="notation">'1</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#d3faceea9b5a0c10215d84df43d3e674"><span class="id" title="notation">z_</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#d3faceea9b5a0c10215d84df43d3e674"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#q"><span class="id" title="variable">q</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#d3faceea9b5a0c10215d84df43d3e674"><span class="id" title="notation">]</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.SymGroup.towerSn.html#d3faceea9b5a0c10215d84df43d3e674"><span class="id" title="notation">'1</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#d3faceea9b5a0c10215d84df43d3e674"><span class="id" title="notation">z_</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#d3faceea9b5a0c10215d84df43d3e674"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="Combi.Combi.partition.html#6c43cbaa0be33ce66047e4ce7e031a36"><span class="id" title="notation">+|+</span></a> <a class="idref" href="Combi.SymGroup.towerSn.html#q"><span class="id" title="variable">q</span></a><a class="idref" href="Combi.SymGroup.towerSn.html#d3faceea9b5a0c10215d84df43d3e674"><span class="id" title="notation">]</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.SymGroup.towerSn.html#Induction"><span class="id" title="section">Induction</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Notation</span> <a name="f08c93e688dc37e8ffcdab2eb70afe7d"><span class="id" title="notation">&quot;</span></a>''z_' p" := (<a class="idref" href="Combi.SymGroup.towerSn.html#zcoeff"><span class="id" title="definition">zcoeff</span></a> <span class="id" title="var">p</span>) (<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 2, <span class="id" title="var">format</span> "''z_' p").<br/>
+<span class="id" title="keyword">Notation</span> <a name="c652f5900c0e8c505ada64a5fc318065"><span class="id" title="notation">&quot;</span></a>''1z_[' p ]" := (<a class="idref" href="Combi.SymGroup.towerSn.html#ncfuniCT"><span class="id" title="definition">ncfuniCT</span></a> <span class="id" title="var">p</span>)  (<span class="id" title="var">format</span> "''1z_[' p ]").<br/>
 
 <br/>
 <span class="id" title="keyword">Hint Resolve</span> <span class="id" title="var">neq0zcoeff</span>.<br/>

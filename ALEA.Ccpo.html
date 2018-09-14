@@ -22,7 +22,7 @@
 </div>
 
 <div class="doc">
-<a name="lab207"></a><h1 class="section">Ccpo.v: Specification and properties of a cpo</h1>
+<a name="lab226"></a><h1 class="section">Ccpo.v: Specification and properties of a cpo</h1>
 
 </div>
 <div class="code">
@@ -45,7 +45,7 @@
 </div>
 
 <div class="doc">
-<a name="lab208"></a><h2 class="section">Ordered type</h2>
+<a name="lab227"></a><h2 class="section">Ordered type</h2>
 
 </div>
 <div class="code">
@@ -217,7 +217,7 @@ Equivalence of orders
 </div>
 
 <div class="doc">
-<a name="lab209"></a><h2 class="section">Definition and properties of <span class="inlinecode"></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#Inhabited.x"><span class="id" title="projection">x</span></a></span> <span class="inlinecode">&lt;</span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#SetContainingBothLeft.Case.y"><span class="id" title="variable">y</span></a></span> <span class="inlinecode"></span></h2>
+<a name="lab228"></a><h2 class="section">Definition and properties of <span class="inlinecode"></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#Inhabited.x"><span class="id" title="projection">x</span></a></span> <span class="inlinecode">&lt;</span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#SetContainingBothLeft.Case.y"><span class="id" title="variable">y</span></a></span> <span class="inlinecode"></span></h2>
 
 </div>
 <div class="code">
@@ -285,7 +285,7 @@ Equivalence of orders
 </div>
 
 <div class="doc">
-<a name="lab210"></a><h3 class="section">Dual order</h3>
+<a name="lab229"></a><h3 class="section">Dual order</h3>
 
 <div class="paragraph"> </div>
 
@@ -300,13 +300,12 @@ Equivalence of orders
 <span class="id" title="keyword">Defined</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Implicit Arguments</span> <a class="idref" href="ALEA.Ccpo.html#Iord"><span class="id" title="definition">Iord</span></a> [[<span class="id" title="var">o</span>]].<br/>
 
 <br/>
 </div>
 
 <div class="doc">
-<a name="lab211"></a><h3 class="section">Order on functions</h3>
+<a name="lab230"></a><h3 class="section">Order on functions</h3>
 
 </div>
 <div class="code">
@@ -314,7 +313,6 @@ Equivalence of orders
 <br/>
 <span class="id" title="keyword">Definition</span> <a name="fun_ext"><span class="id" title="definition">fun_ext</span></a> <span class="id" title="var">A</span> <span class="id" title="var">B</span> (<span class="id" title="var">R</span>:<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Relations.Relation_Definitions.html#relation"><span class="id" title="definition">relation</span></a> <a class="idref" href="ALEA.Ccpo.html#B"><span class="id" title="variable">B</span></a>) : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Relations.Relation_Definitions.html#relation"><span class="id" title="definition">relation</span></a> (<a class="idref" href="ALEA.Ccpo.html#A"><span class="id" title="variable">A</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="ALEA.Ccpo.html#B"><span class="id" title="variable">B</span></a>) := <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="keyword">fun</span> <span class="id" title="var">f</span> <span class="id" title="var">g</span> ⇒ <span class="id" title="keyword">∀</span> <span class="id" title="var">x</span>, <a class="idref" href="ALEA.Ccpo.html#R"><span class="id" title="variable">R</span></a> (<a class="idref" href="ALEA.Ccpo.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="ALEA.Ccpo.html#x"><span class="id" title="variable">x</span></a>) (<a class="idref" href="ALEA.Ccpo.html#g"><span class="id" title="variable">g</span></a> <a class="idref" href="ALEA.Ccpo.html#x"><span class="id" title="variable">x</span></a>).<br/>
-<span class="id" title="keyword">Implicit Arguments</span> <a class="idref" href="ALEA.Ccpo.html#fun_ext"><span class="id" title="definition">fun_ext</span></a> [<span class="id" title="var">B</span>].<br/>
 
 <br/>
 </div>
@@ -351,11 +349,11 @@ Equivalence of orders
 </div>
 
 <div class="doc">
-<a name="lab212"></a><h2 class="section">Monotonicity</h2>
+<a name="lab231"></a><h2 class="section">Monotonicity</h2>
 
 <div class="paragraph"> </div>
 
-<a name="lab213"></a><h3 class="section">Definition and properties</h3>
+<a name="lab232"></a><h3 class="section">Definition and properties</h3>
 
 </div>
 <div class="code">
@@ -407,7 +405,7 @@ Equivalence of orders
 </div>
 
 <div class="doc">
-<a name="lab214"></a><h3 class="section">Type of monotonic functions</h3>
+<a name="lab233"></a><h3 class="section">Type of monotonic functions</h3>
 
 </div>
 <div class="code">
@@ -420,8 +418,6 @@ Equivalence of orders
 <br/>
 
 <br/>
-<span class="id" title="keyword">Implicit Arguments</span> <a class="idref" href="ALEA.Ccpo.html#mon"><span class="id" title="constructor">mon</span></a> [[<span class="id" title="var">Oa</span>] [<span class="id" title="var">o1</span>] [<span class="id" title="var">Ob</span>] [<span class="id" title="var">o2</span>] [<span class="id" title="var">fmonotonic</span>]].<br/>
-<span class="id" title="keyword">Implicit Arguments</span> <a class="idref" href="ALEA.Ccpo.html#fmon"><span class="id" title="record">fmon</span></a> [[<span class="id" title="var">o1</span>] [<span class="id" title="var">o2</span>]].<br/>
 
 <br/>
 <span class="id" title="keyword">Hint Resolve</span> @<a class="idref" href="ALEA.Ccpo.html#fmonotonic"><span class="id" title="projection">fmonotonic</span></a>.<br/>
@@ -489,7 +485,7 @@ Equivalence of orders
 </div>
 
 <div class="doc">
-<a name="lab215"></a><h3 class="section">Monotonicity and dual order</h3>
+<a name="lab234"></a><h3 class="section">Monotonicity and dual order</h3>
 
 </div>
 <div class="code">
@@ -549,7 +545,7 @@ Equivalence of orders
 </div>
 
 <div class="doc">
-<a name="lab216"></a><h3 class="section">Monotonicity and equality</h3>
+<a name="lab235"></a><h3 class="section">Monotonicity and equality</h3>
 
 </div>
 <div class="code">
@@ -572,7 +568,7 @@ Equivalence of orders
 </div>
 
 <div class="doc">
-<a name="lab217"></a><h3 class="section">Monotonic functions with 2 arguments</h3>
+<a name="lab236"></a><h3 class="section">Monotonic functions with 2 arguments</h3>
 
 </div>
 <div class="code">
@@ -713,7 +709,7 @@ Equivalence of orders
 </div>
 
 <div class="doc">
-<a name="lab218"></a><h3 class="section">Strict monotonicity</h3>
+<a name="lab237"></a><h3 class="section">Strict monotonicity</h3>
 
 </div>
 <div class="code">
@@ -726,8 +722,8 @@ Equivalence of orders
 </div>
 
 <div class="doc">
-<a name="lab219"></a><h2 class="section">Sequences</h2>
-<a name="lab220"></a><h3 class="section">Usual order on natural numbers</h3>
+<a name="lab238"></a><h2 class="section">Sequences</h2>
+<a name="lab239"></a><h3 class="section">Usual order on natural numbers</h3>
 
 </div>
 <div class="code">
@@ -861,7 +857,7 @@ Equivalence of orders
 </div>
 
 <div class="doc">
-<a name="lab221"></a><h3 class="section">Monotonicity and functions</h3>
+<a name="lab240"></a><h3 class="section">Monotonicity and functions</h3>
 <ul class="doclist">
 <li>  (shift f x) n = f n x 
 </li>
@@ -1173,7 +1169,6 @@ Equivalence of orders
 &nbsp;&nbsp;&nbsp;<a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">(</span></a><a class="idref" href="ALEA.Ccpo.html#Ob"><span class="id" title="variable">Ob</span></a> <a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">-</span></a><a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">m</span></a><a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">&gt;</span></a> <a class="idref" href="ALEA.Ccpo.html#Oc"><span class="id" title="variable">Oc</span></a><a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">)</span></a> <a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">-</span></a><a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">m</span></a><a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">&gt;</span></a> <a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">(</span></a><a class="idref" href="ALEA.Ccpo.html#Oa"><span class="id" title="variable">Oa</span></a> <a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">-</span></a><a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">m</span></a><a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">&gt;</span></a> <a class="idref" href="ALEA.Ccpo.html#Ob"><span class="id" title="variable">Ob</span></a><a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">)</span></a> <a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">-</span></a><a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">m</span></a><a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">&gt;</span></a> <a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">(</span></a><a class="idref" href="ALEA.Ccpo.html#Oa"><span class="id" title="variable">Oa</span></a> <a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">-</span></a><a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">m</span></a><a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">&gt;</span></a> <a class="idref" href="ALEA.Ccpo.html#Oc"><span class="id" title="variable">Oc</span></a><a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">)</span></a> := <a class="idref" href="ALEA.Ccpo.html#mon2"><span class="id" title="definition">mon2</span></a> (@<a class="idref" href="ALEA.Ccpo.html#comp"><span class="id" title="definition">comp</span></a> <a class="idref" href="ALEA.Ccpo.html#Oa"><span class="id" title="variable">Oa</span></a> <span class="id" title="var">_</span> <a class="idref" href="ALEA.Ccpo.html#Ob"><span class="id" title="variable">Ob</span></a> <span class="id" title="var">_</span> <a class="idref" href="ALEA.Ccpo.html#Oc"><span class="id" title="variable">Oc</span></a> <span class="id" title="var">_</span>).<br/>
 
 <br/>
-<span class="id" title="keyword">Implicit Arguments</span> <a class="idref" href="ALEA.Ccpo.html#fcomp"><span class="id" title="definition">fcomp</span></a> [[<span class="id" title="var">o1</span>] [<span class="id" title="var">o2</span>] [<span class="id" title="var">o3</span>]].<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="fcomp_simpl"><span class="id" title="lemma">fcomp_simpl</span></a> : <span class="id" title="keyword">∀</span> `{<span class="id" title="var">o1</span>:<a class="idref" href="ALEA.Ccpo.html#ord"><span class="id" title="class">ord</span></a> <span class="id" title="var">Oa</span>} `{<span class="id" title="var">o2</span>:<a class="idref" href="ALEA.Ccpo.html#ord"><span class="id" title="class">ord</span></a> <span class="id" title="var">Ob</span>} `{<span class="id" title="var">o3</span>:<a class="idref" href="ALEA.Ccpo.html#ord"><span class="id" title="class">ord</span></a> <span class="id" title="var">Oc</span>} <br/>
@@ -1185,7 +1180,6 @@ Equivalence of orders
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="ALEA.Ccpo.html#7226dd4cd784419825a0a0064415c8eb"><span class="id" title="notation">(</span></a><a class="idref" href="ALEA.Ccpo.html#fcomp"><span class="id" title="definition">fcomp</span></a> <a class="idref" href="ALEA.Ccpo.html#Oa"><span class="id" title="variable">Oa</span></a> (<a class="idref" href="ALEA.Ccpo.html#Ob"><span class="id" title="variable">Ob</span></a> <a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">-</span></a><a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">m</span></a><a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">&gt;</span></a> <a class="idref" href="ALEA.Ccpo.html#Oc"><span class="id" title="variable">Oc</span></a>) (<a class="idref" href="ALEA.Ccpo.html#Ob"><span class="id" title="variable">Ob</span></a> <a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">-</span></a><a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">m</span></a><a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">&gt;</span></a> <a class="idref" href="ALEA.Ccpo.html#Od"><span class="id" title="variable">Od</span></a>)<a class="idref" href="ALEA.Ccpo.html#7226dd4cd784419825a0a0064415c8eb"><span class="id" title="notation">)@(</span></a><a class="idref" href="ALEA.Ccpo.html#fcomp"><span class="id" title="definition">fcomp</span></a> <a class="idref" href="ALEA.Ccpo.html#Ob"><span class="id" title="variable">Ob</span></a> <a class="idref" href="ALEA.Ccpo.html#Oc"><span class="id" title="variable">Oc</span></a> <a class="idref" href="ALEA.Ccpo.html#Od"><span class="id" title="variable">Od</span></a><a class="idref" href="ALEA.Ccpo.html#7226dd4cd784419825a0a0064415c8eb"><span class="id" title="notation">)</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Implicit Arguments</span> <a class="idref" href="ALEA.Ccpo.html#fcomp2"><span class="id" title="definition">fcomp2</span></a> [[<span class="id" title="var">o1</span>] [<span class="id" title="var">o2</span>] [<span class="id" title="var">o3</span>] [<span class="id" title="var">o4</span>]].<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="fcomp2_simpl"><span class="id" title="lemma">fcomp2_simpl</span></a> : <span class="id" title="keyword">∀</span> `{<span class="id" title="var">o1</span>:<a class="idref" href="ALEA.Ccpo.html#ord"><span class="id" title="class">ord</span></a> <span class="id" title="var">Oa</span>} `{<span class="id" title="var">o2</span>:<a class="idref" href="ALEA.Ccpo.html#ord"><span class="id" title="class">ord</span></a> <span class="id" title="var">Ob</span>} `{<span class="id" title="var">o3</span>:<a class="idref" href="ALEA.Ccpo.html#ord"><span class="id" title="class">ord</span></a> <span class="id" title="var">Oc</span>} `{<span class="id" title="var">o4</span>:<a class="idref" href="ALEA.Ccpo.html#ord"><span class="id" title="class">ord</span></a> <span class="id" title="var">Od</span>}<br/>
@@ -1204,21 +1198,17 @@ Equivalence of orders
 </div>
 
 <div class="doc">
-<a name="lab222"></a><h2 class="section">Abstract relational notion of lubs</h2>
+<a name="lab241"></a><h2 class="section">Abstract relational notion of lubs</h2>
 
 </div>
 <div class="code">
 <span class="id" title="keyword">Record</span> <a name="islub"><span class="id" title="record">islub</span></a> <span class="id" title="var">O</span> (<span class="id" title="var">o</span>:<a class="idref" href="ALEA.Ccpo.html#ord"><span class="id" title="class">ord</span></a> <a class="idref" href="ALEA.Ccpo.html#O"><span class="id" title="variable">O</span></a>) <span class="id" title="var">I</span> (<span class="id" title="var">f</span>:<a class="idref" href="ALEA.Ccpo.html#I"><span class="id" title="variable">I</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="ALEA.Ccpo.html#O"><span class="id" title="variable">O</span></a>) (<span class="id" title="var">x</span>:<a class="idref" href="ALEA.Ccpo.html#O"><span class="id" title="variable">O</span></a>) : <span class="id" title="keyword">Prop</span> := <a name="mk_islub"><span class="id" title="constructor">mk_islub</span></a><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ <a name="le_islub"><span class="id" title="projection">le_islub</span></a> : <span class="id" title="keyword">∀</span> <span class="id" title="var">i</span>,  <a class="idref" href="ALEA.Ccpo.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="ALEA.Ccpo.html#i"><span class="id" title="variable">i</span></a> <a class="idref" href="ALEA.Ccpo.html#dba7db93d55489591fe57cc67a51c41e"><span class="id" title="notation"> &le; </span></a> <a class="idref" href="ALEA.Ccpo.html#x"><span class="id" title="variable">x</span></a>;<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a name="islub_le"><span class="id" title="projection">islub_le</span></a> : <span class="id" title="keyword">∀</span> <span class="id" title="var">y</span>, <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">(</span></a><span class="id" title="keyword">∀</span>  <span class="id" title="var">i</span>,  <a class="idref" href="ALEA.Ccpo.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="ALEA.Ccpo.html#i"><span class="id" title="variable">i</span></a> <a class="idref" href="ALEA.Ccpo.html#dba7db93d55489591fe57cc67a51c41e"><span class="id" title="notation"> &le; </span></a> <a class="idref" href="ALEA.Ccpo.html#y"><span class="id" title="variable">y</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="ALEA.Ccpo.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="ALEA.Ccpo.html#dba7db93d55489591fe57cc67a51c41e"><span class="id" title="notation"> &le; </span></a> <a class="idref" href="ALEA.Ccpo.html#y"><span class="id" title="variable">y</span></a>}.<br/>
-<span class="id" title="keyword">Implicit Arguments</span> <a class="idref" href="ALEA.Ccpo.html#islub"><span class="id" title="record">islub</span></a> [<span class="id" title="var">O</span> <span class="id" title="var">o</span> <span class="id" title="var">I</span>].<br/>
-<span class="id" title="keyword">Implicit Arguments</span> <a class="idref" href="ALEA.Ccpo.html#le_islub"><span class="id" title="projection">le_islub</span></a> [<span class="id" title="var">O</span> <span class="id" title="var">o</span> <span class="id" title="var">I</span> <span class="id" title="var">f</span> <span class="id" title="var">x</span>].<br/>
-<span class="id" title="keyword">Implicit Arguments</span> <a class="idref" href="ALEA.Ccpo.html#islub_le"><span class="id" title="projection">islub_le</span></a> [<span class="id" title="var">O</span> <span class="id" title="var">o</span> <span class="id" title="var">I</span> <span class="id" title="var">f</span> <span class="id" title="var">x</span>].<br/>
 
 <br/>
 <span class="id" title="keyword">Definition</span> <a name="isglb"><span class="id" title="definition">isglb</span></a> <span class="id" title="var">O</span> (<span class="id" title="var">o</span>:<a class="idref" href="ALEA.Ccpo.html#ord"><span class="id" title="class">ord</span></a> <a class="idref" href="ALEA.Ccpo.html#O"><span class="id" title="variable">O</span></a>) <span class="id" title="var">I</span> (<span class="id" title="var">f</span>:<a class="idref" href="ALEA.Ccpo.html#I"><span class="id" title="variable">I</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="ALEA.Ccpo.html#O"><span class="id" title="variable">O</span></a>) (<span class="id" title="var">x</span>:<a class="idref" href="ALEA.Ccpo.html#O"><span class="id" title="variable">O</span></a>) : <span class="id" title="keyword">Prop</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:= <a class="idref" href="ALEA.Ccpo.html#islub"><span class="id" title="record">islub</span></a> (<span class="id" title="var">o</span>:=<a class="idref" href="ALEA.Ccpo.html#Iord"><span class="id" title="definition">Iord</span></a> <a class="idref" href="ALEA.Ccpo.html#O"><span class="id" title="variable">O</span></a>) <a class="idref" href="ALEA.Ccpo.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="ALEA.Ccpo.html#x"><span class="id" title="variable">x</span></a>.<br/>
-<span class="id" title="keyword">Implicit Arguments</span> <a class="idref" href="ALEA.Ccpo.html#isglb"><span class="id" title="definition">isglb</span></a> [<span class="id" title="var">O</span> <span class="id" title="var">o</span> <span class="id" title="var">I</span>].<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="le_isglb"><span class="id" title="lemma">le_isglb</span></a> <span class="id" title="var">O</span> (<span class="id" title="var">o</span>:<a class="idref" href="ALEA.Ccpo.html#ord"><span class="id" title="class">ord</span></a> <a class="idref" href="ALEA.Ccpo.html#O"><span class="id" title="variable">O</span></a>) <span class="id" title="var">I</span> (<span class="id" title="var">f</span>:<a class="idref" href="ALEA.Ccpo.html#I"><span class="id" title="variable">I</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="ALEA.Ccpo.html#O"><span class="id" title="variable">O</span></a>) (<span class="id" title="var">x</span>:<a class="idref" href="ALEA.Ccpo.html#O"><span class="id" title="variable">O</span></a>) :<br/>
@@ -1227,8 +1217,6 @@ Equivalence of orders
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="isglb_le"><span class="id" title="lemma">isglb_le</span></a> <span class="id" title="var">O</span> (<span class="id" title="var">o</span>:<a class="idref" href="ALEA.Ccpo.html#ord"><span class="id" title="class">ord</span></a> <a class="idref" href="ALEA.Ccpo.html#O"><span class="id" title="variable">O</span></a>) <span class="id" title="var">I</span> (<span class="id" title="var">f</span>:<a class="idref" href="ALEA.Ccpo.html#I"><span class="id" title="variable">I</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="ALEA.Ccpo.html#O"><span class="id" title="variable">O</span></a>) (<span class="id" title="var">x</span>:<a class="idref" href="ALEA.Ccpo.html#O"><span class="id" title="variable">O</span></a>) :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="ALEA.Ccpo.html#isglb"><span class="id" title="definition">isglb</span></a> <a class="idref" href="ALEA.Ccpo.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="ALEA.Ccpo.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">∀</span> <span class="id" title="var">y</span>, <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">(</span></a><span class="id" title="keyword">∀</span> <span class="id" title="var">i</span>,  <a class="idref" href="ALEA.Ccpo.html#y"><span class="id" title="variable">y</span></a> <a class="idref" href="ALEA.Ccpo.html#dba7db93d55489591fe57cc67a51c41e"><span class="id" title="notation"> &le; </span></a> <a class="idref" href="ALEA.Ccpo.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="ALEA.Ccpo.html#i"><span class="id" title="variable">i</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="ALEA.Ccpo.html#y"><span class="id" title="variable">y</span></a> <a class="idref" href="ALEA.Ccpo.html#dba7db93d55489591fe57cc67a51c41e"><span class="id" title="notation"> &le; </span></a> <a class="idref" href="ALEA.Ccpo.html#x"><span class="id" title="variable">x</span></a>.<br/>
-<span class="id" title="keyword">Implicit Arguments</span> <a class="idref" href="ALEA.Ccpo.html#le_isglb"><span class="id" title="lemma">le_isglb</span></a> [<span class="id" title="var">O</span> <span class="id" title="var">o</span> <span class="id" title="var">I</span> <span class="id" title="var">f</span> <span class="id" title="var">x</span>].<br/>
-<span class="id" title="keyword">Implicit Arguments</span> <a class="idref" href="ALEA.Ccpo.html#isglb_le"><span class="id" title="lemma">isglb_le</span></a> [<span class="id" title="var">O</span> <span class="id" title="var">o</span> <span class="id" title="var">I</span> <span class="id" title="var">f</span> <span class="id" title="var">x</span>].<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="mk_isglb"><span class="id" title="lemma">mk_isglb</span></a> <span class="id" title="var">O</span> (<span class="id" title="var">o</span>:<a class="idref" href="ALEA.Ccpo.html#ord"><span class="id" title="class">ord</span></a> <a class="idref" href="ALEA.Ccpo.html#O"><span class="id" title="variable">O</span></a>) <span class="id" title="var">I</span> (<span class="id" title="var">f</span>:<a class="idref" href="ALEA.Ccpo.html#I"><span class="id" title="variable">I</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="ALEA.Ccpo.html#O"><span class="id" title="variable">O</span></a>) (<span class="id" title="var">x</span>:<a class="idref" href="ALEA.Ccpo.html#O"><span class="id" title="variable">O</span></a>) : <br/>
@@ -1327,7 +1315,7 @@ Equivalence of orders
 </div>
 
 <div class="doc">
-<a name="lab223"></a><h2 class="section">Basic operators of omega-cpos</h2>
+<a name="lab242"></a><h2 class="section">Basic operators of omega-cpos</h2>
 <ul class="doclist">
 <li> Constant : <span class="inlinecode">0</span> 
 <ul class="doclist">
@@ -1348,7 +1336,7 @@ Equivalence of orders
 </div>
 
 <div class="doc">
-<a name="lab224"></a><h3 class="section">Definition of cpos</h3>
+<a name="lab243"></a><h3 class="section">Definition of cpos</h3>
 
 </div>
 <div class="code">
@@ -1359,7 +1347,6 @@ Equivalence of orders
 &nbsp;&nbsp;&nbsp;<a name="lub_le"><span class="id" title="projection">lub_le</span></a> : <span class="id" title="keyword">∀</span> (<span class="id" title="var">f</span> : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a> <a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">-</span></a><a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">m</span></a><a class="idref" href="ALEA.Ccpo.html#7258a06b7cc3ff71143414b3cdfba3d3"><span class="id" title="notation">&gt;</span></a> <a class="idref" href="ALEA.Ccpo.html#D"><span class="id" title="variable">D</span></a>) (<span class="id" title="var">x</span>:<a class="idref" href="ALEA.Ccpo.html#D"><span class="id" title="variable">D</span></a>), <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">(</span></a><span class="id" title="keyword">∀</span> <span class="id" title="var">n</span>, <a class="idref" href="ALEA.Ccpo.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="ALEA.Ccpo.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="ALEA.Ccpo.html#dba7db93d55489591fe57cc67a51c41e"><span class="id" title="notation"> &le; </span></a> <a class="idref" href="ALEA.Ccpo.html#x"><span class="id" title="variable">x</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="ALEA.Ccpo.html#lub"><span class="id" title="method">lub</span></a> <a class="idref" href="ALEA.Ccpo.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="ALEA.Ccpo.html#dba7db93d55489591fe57cc67a51c41e"><span class="id" title="notation"> &le; </span></a> <a class="idref" href="ALEA.Ccpo.html#x"><span class="id" title="variable">x</span></a>}.<br/>
 
 <br/>
-<span class="id" title="keyword">Implicit Arguments</span> <a class="idref" href="ALEA.Ccpo.html#cpo"><span class="id" title="class">cpo</span></a> [[<span class="id" title="var">o</span>]].<br/>
 
 <br/>
 <span class="id" title="keyword">Notation</span> <a name="d8e9b5bf3af4e15a8feb214082cf242e"><span class="id" title="notation">&quot;</span></a>0" := <a class="idref" href="ALEA.Ccpo.html#D0"><span class="id" title="method">D0</span></a> : <span class="id" title="var">O_scope</span>.<br/>
@@ -1386,7 +1373,7 @@ Equivalence of orders
 </div>
 
 <div class="doc">
-<a name="lab225"></a><h3 class="section">Least upper bounds</h3>
+<a name="lab244"></a><h3 class="section">Least upper bounds</h3>
 
 </div>
 <div class="code">
@@ -1514,7 +1501,7 @@ Equivalence of orders
 </div>
 
 <div class="doc">
-<a name="lab226"></a><h3 class="section">Functional cpos</h3>
+<a name="lab245"></a><h3 class="section">Functional cpos</h3>
 
 </div>
 <div class="code">
@@ -1537,7 +1524,7 @@ Equivalence of orders
 </div>
 
 <div class="doc">
-<a name="lab227"></a><h2 class="section">Cpo of monotonic functions</h2>
+<a name="lab246"></a><h2 class="section">Cpo of monotonic functions</h2>
 
 </div>
 <div class="code">
@@ -1592,7 +1579,7 @@ Link between lubs on ordinary functions and monotonic functions
 </div>
 
 <div class="doc">
-<a name="lab228"></a><h2 class="section">Continuity</h2>
+<a name="lab247"></a><h2 class="section">Continuity</h2>
 
 </div>
 <div class="code">
@@ -1645,7 +1632,6 @@ Link between lubs on ordinary functions and monotonic functions
 <div class="code">
 <span class="id" title="keyword">Instance</span> <a name="cont0"><span class="id" title="instance">cont0</span></a>  `{<span class="id" title="var">c1</span>:<a class="idref" href="ALEA.Ccpo.html#cpo"><span class="id" title="class">cpo</span></a> <span class="id" title="var">D1</span>} `{<span class="id" title="var">c2</span>:<a class="idref" href="ALEA.Ccpo.html#cpo"><span class="id" title="class">cpo</span></a> <span class="id" title="var">D2</span>} : <a class="idref" href="ALEA.Ccpo.html#continuous"><span class="id" title="class">continuous</span></a> (<a class="idref" href="ALEA.Ccpo.html#mon"><span class="id" title="constructor">mon</span></a> (<a class="idref" href="ALEA.Ccpo.html#cte"><span class="id" title="definition">cte</span></a> <a class="idref" href="ALEA.Ccpo.html#D1"><span class="id" title="variable">D1</span></a> (0:<a class="idref" href="ALEA.Ccpo.html#D2"><span class="id" title="variable">D2</span></a>))).<br/>
 <span class="id" title="keyword">Qed</span>.<br/>
-<span class="id" title="keyword">Implicit Arguments</span> <a class="idref" href="ALEA.Ccpo.html#cont0"><span class="id" title="instance">cont0</span></a> [].<br/>
 
 <br/>
 </div>
@@ -1668,7 +1654,7 @@ Link between lubs on ordinary functions and monotonic functions
 </div>
 
 <div class="doc">
-<a name="lab229"></a><h3 class="section">Continuity</h3>
+<a name="lab248"></a><h3 class="section">Continuity</h3>
 
 </div>
 <div class="code">
@@ -1788,7 +1774,7 @@ Link between lubs on ordinary functions and monotonic functions
 </div>
 
 <div class="doc">
-<a name="lab230"></a><h2 class="section">Cpo of continuous functions</h2>
+<a name="lab249"></a><h2 class="section">Cpo of continuous functions</h2>
 
 </div>
 <div class="code">
@@ -1805,8 +1791,6 @@ Link between lubs on ordinary functions and monotonic functions
 
 <br/>
 <span class="id" title="keyword">Hint Resolve</span> @<a class="idref" href="ALEA.Ccpo.html#fcontinuous"><span class="id" title="projection">fcontinuous</span></a>.<br/>
-<span class="id" title="keyword">Implicit Arguments</span> <a class="idref" href="ALEA.Ccpo.html#fcont"><span class="id" title="record">fcont</span></a> [[<span class="id" title="var">o</span>][<span class="id" title="var">c1</span>] [<span class="id" title="var">o0</span>][<span class="id" title="var">c2</span>]].<br/>
-<span class="id" title="keyword">Implicit Arguments</span> <a class="idref" href="ALEA.Ccpo.html#cont"><span class="id" title="constructor">cont</span></a> [[<span class="id" title="var">D1</span>][<span class="id" title="var">o</span>][<span class="id" title="var">c1</span>] [<span class="id" title="var">D2</span>][<span class="id" title="var">o0</span>][<span class="id" title="var">c2</span>] [<span class="id" title="var">fcontinuous</span>]].<br/>
 
 <br/>
 
@@ -2083,7 +2067,7 @@ Link between lubs on ordinary functions and monotonic functions
 </div>
 
 <div class="doc">
-<a name="lab231"></a><h2 class="section">Fixpoints</h2>
+<a name="lab250"></a><h2 class="section">Fixpoints</h2>
 
 </div>
 <div class="code">
@@ -2216,7 +2200,7 @@ Link between lubs on ordinary functions and monotonic functions
 </div>
 
 <div class="doc">
-<a name="lab232"></a><h3 class="section">Iteration of functional</h3>
+<a name="lab251"></a><h3 class="section">Iteration of functional</h3>
 
 </div>
 <div class="code">
@@ -2252,7 +2236,7 @@ Link between lubs on ordinary functions and monotonic functions
 </div>
 
 <div class="doc">
-<a name="lab233"></a><h3 class="section">Induction principle</h3>
+<a name="lab252"></a><h3 class="section">Induction principle</h3>
 
 </div>
 <div class="code">
@@ -2309,7 +2293,7 @@ Link between lubs on ordinary functions and monotonic functions
 </div>
 
 <div class="doc">
-<a name="lab234"></a><h3 class="section">Function for conditionnal choice defined as a morphism</h3>
+<a name="lab253"></a><h3 class="section">Function for conditionnal choice defined as a morphism</h3>
 
 </div>
 <div class="code">
