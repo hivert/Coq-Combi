@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="coqdoc.css" rel="stylesheet" type="text/css" />
-<title>Combi.LRrule.stdplact</title>
+<title>Combi.LRrule.stdplact: Plactic congruences and standardization</title>
 </head>
 
 <body>
@@ -16,16 +16,57 @@
 
 <div id="main">
 
-<h1 class="libtitle">Library Combi.LRrule.stdplact</h1>
+<h1 class="libtitle">Library Combi.LRrule.stdplact: Plactic congruences and standardization</h1>
 
+<div class="code">
+</div>
+
+<div class="doc">
+
+</div>
+<div class="code">
+</div>
+
+<div class="doc">
+<a name="lab117"></a><h1 class="section">Plactic congruences and standardization</h1>
+
+
+<div class="paragraph"> </div>
+
+The goal of this file is to show a few important properties of plactic
+congruence related to standardisation.
+
+<div class="paragraph"> </div>
+
+The first one is easy: it says that standardization preserve plactic congruence.
+This is Theorem <span class="inlinecode"><a class="idref" href="Combi.LRrule.stdplact.html#std_plact"><span class="id" title="lemma">std_plact</span></a></span> and is stated as <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.u"><span class="id" title="variable">u</span></a></span> <span class="inlinecode">=<span class="id" title="var">Pl</span></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.v"><span class="id" title="variable">v</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.u"><span class="id" title="variable">u</span></a></span> <span class="inlinecode">=<span class="id" title="var">Pl</span></span> <span class="inlinecode"><a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.v"><span class="id" title="variable">v</span></a>.</span>
+
+<div class="paragraph"> </div>
+
+The next series of results relates the result of the RS map applied on
+<span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.u"><span class="id" title="variable">u</span></a></span> and <span class="inlinecode"><a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.u"><span class="id" title="variable">u</span></a></span>:
+<ul class="doclist">
+<li> the insertion tableau have the same shape: Theorem <span class="inlinecode"><a class="idref" href="Combi.LRrule.stdplact.html#shape_RS_std"><span class="id" title="lemma">shape_RS_std</span></a></span>;
+
+</li>
+<li> the recording tableau are equal: Theorem <span class="inlinecode"><a class="idref" href="Combi.LRrule.stdplact.html#RSmap_std"><span class="id" title="lemma">RSmap_std</span></a></span> and <span class="inlinecode"><a class="idref" href="Combi.LRrule.stdplact.html#RStabmap_std"><span class="id" title="lemma">RStabmap_std</span></a></span>.
+
+</li>
+</ul>
+
+<div class="paragraph"> </div>
+
+And finally, inverting a standard word amount to exchange the insertion and
+the recording tableaux: Theorem <span class="inlinecode"><a class="idref" href="Combi.LRrule.stdplact.html#invseqRSPQE"><span class="id" title="lemma">invseqRSPQE</span></a></span>, and Corollaries <span class="inlinecode"><a class="idref" href="Combi.LRrule.stdplact.html#invseqRSE"><span class="id" title="lemma">invseqRSE</span></a></span>,
+<span class="inlinecode"><a class="idref" href="Combi.LRrule.stdplact.html#invstdRSE"><span class="id" title="lemma">invstdRSE</span></a></span>, <span class="inlinecode"><a class="idref" href="Combi.LRrule.stdplact.html#RSTabmapstdE"><span class="id" title="lemma">RSTabmapstdE</span></a></span> and <span class="inlinecode"><a class="idref" href="Combi.LRrule.stdplact.html#RSinvstdE"><span class="id" title="lemma">RSinvstdE</span></a></span>.
+ 
+</div>
 <div class="code">
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">mathcomp.ssreflect.ssreflect</span>.<br/>
 
 <br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.tools.html#"><span class="id" title="library">tools</span></a> <a class="idref" href="Combi.Basic.combclass.html#"><span class="id" title="library">combclass</span></a> <a class="idref" href="Combi.SSRcomplements.ordcast.html#"><span class="id" title="library">ordcast</span></a> <a class="idref" href="Combi.Combi.partition.html#"><span class="id" title="library">partition</span></a> <a class="idref" href="Combi.Combi.Yamanouchi.html#"><span class="id" title="library">Yamanouchi</span></a> <a class="idref" href="Combi.Basic.ordtype.html#"><span class="id" title="library">ordtype</span></a> <a class="idref" href="Combi.Combi.std.html#"><span class="id" title="library">std</span></a> <a class="idref" href="Combi.Combi.tableau.html#"><span class="id" title="library">tableau</span></a> <a class="idref" href="Combi.Combi.stdtab.html#"><span class="id" title="library">stdtab</span></a>.<br/>
-
-<br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.sorted.html#"><span class="id" title="library">sorted</span></a> <a class="idref" href="Combi.LRrule.Schensted.html#"><span class="id" title="library">Schensted</span></a> <a class="idref" href="Combi.Basic.congr.html#"><span class="id" title="library">congr</span></a> <a class="idref" href="Combi.LRrule.plactic.html#"><span class="id" title="library">plactic</span></a> <a class="idref" href="Combi.LRrule.Greene.html#"><span class="id" title="library">Greene</span></a> <a class="idref" href="Combi.LRrule.Greene_inv.html#"><span class="id" title="library">Greene_inv</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.tools.html#"><span class="id" title="library">tools</span></a> <a class="idref" href="Combi.Basic.combclass.html#"><span class="id" title="library">combclass</span></a> <a class="idref" href="Combi.SSRcomplements.ordcast.html#"><span class="id" title="library">ordcast</span></a> <a class="idref" href="Combi.Combi.partition.html#"><span class="id" title="library">partition</span></a> <a class="idref" href="Combi.Combi.Yamanouchi.html#"><span class="id" title="library">Yamanouchi</span></a> <a class="idref" href="Combi.Basic.ordtype.html#"><span class="id" title="library">ordtype</span></a> <a class="idref" href="Combi.Combi.std.html#"><span class="id" title="library">std</span></a> <a class="idref" href="Combi.Combi.tableau.html#"><span class="id" title="library">tableau</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.Combi.stdtab.html#"><span class="id" title="library">stdtab</span></a> <a class="idref" href="Combi.SSRcomplements.sorted.html#"><span class="id" title="library">sorted</span></a> <a class="idref" href="Combi.LRrule.Schensted.html#"><span class="id" title="library">Schensted</span></a> <a class="idref" href="Combi.Basic.congr.html#"><span class="id" title="library">congr</span></a> <a class="idref" href="Combi.LRrule.plactic.html#"><span class="id" title="library">plactic</span></a> <a class="idref" href="Combi.LRrule.Greene.html#"><span class="id" title="library">Greene</span></a> <a class="idref" href="Combi.LRrule.Greene_inv.html#"><span class="id" title="library">Greene_inv</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Set Implicit Arguments</span>.<br/>
@@ -34,6 +75,13 @@
 <span class="id" title="keyword">Import</span> <span class="id" title="var">OrdNotations</span>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab118"></a><h2 class="section">Plactic congruence and standardization</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="StdRS"><span class="id" title="section">StdRS</span></a>.<br/>
 
 <br/>
@@ -55,14 +103,22 @@
 <span class="id" title="keyword">Theorem</span> <a name="std_plact"><span class="id" title="lemma">std_plact</span></a> <span class="id" title="var">u</span> <span class="id" title="var">v</span> : <a class="idref" href="Combi.LRrule.stdplact.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="Combi.LRrule.plactic.html#3bd355ac5dea8980a706d3bd27eef52d"><span class="id" title="notation">=</span></a><a class="idref" href="Combi.LRrule.plactic.html#3bd355ac5dea8980a706d3bd27eef52d"><span class="id" title="notation">Pl</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="Combi.LRrule.plactic.html#3bd355ac5dea8980a706d3bd27eef52d"><span class="id" title="notation">=</span></a><a class="idref" href="Combi.LRrule.plactic.html#3bd355ac5dea8980a706d3bd27eef52d"><span class="id" title="notation">Pl</span></a> <a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#v"><span class="id" title="variable">v</span></a>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab119"></a><h2 class="section">Robinson-Schensted correspondence and standardization</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Lemma</span> <a name="cast_enum"><span class="id" title="lemma">cast_enum</span></a> <span class="id" title="var">u</span> (<span class="id" title="var">S</span> : <span class="id" title="notation">{</span><span class="id" title="notation">set</span> <span class="id" title="notation">'</span><span class="id" title="notation">I_</span><span class="id" title="notation">(</span><span class="id" title="definition">size</span> <a class="idref" href="Combi.LRrule.stdplact.html#u"><span class="id" title="variable">u</span></a><span class="id" title="notation">)</span><span class="id" title="notation">}</span>) :<br/>
 &nbsp;&nbsp;<span class="id" title="abbreviation">enum</span> (<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#mem"><span class="id" title="definition">mem</span></a> (<a class="idref" href="Combi.SSRcomplements.ordcast.html#cast_set"><span class="id" title="definition">cast_set</span></a> (<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#esym"><span class="id" title="definition">esym</span></a> (<a class="idref" href="Combi.Combi.std.html#size_std"><span class="id" title="lemma">size_std</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#u"><span class="id" title="variable">u</span></a>)) <a class="idref" href="Combi.LRrule.stdplact.html#S"><span class="id" title="variable">S</span></a>)) <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a><br/>
 &nbsp;&nbsp;<span class="id" title="definition">map</span> (<span class="id" title="definition">cast_ord</span> (<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#esym"><span class="id" title="definition">esym</span></a> (<a class="idref" href="Combi.Combi.std.html#size_std"><span class="id" title="lemma">size_std</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#u"><span class="id" title="variable">u</span></a>))) (<span class="id" title="abbreviation">enum</span> (<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#mem"><span class="id" title="definition">mem</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#S"><span class="id" title="variable">S</span></a>)).<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="sorted_std_extract"><span class="id" title="lemma">sorted_std_extract</span></a> <span class="id" title="var">u</span> (<span class="id" title="var">S</span> : <span class="id" title="notation">{</span><span class="id" title="notation">set</span> <span class="id" title="notation">'</span><span class="id" title="notation">I_</span><span class="id" title="notation">(</span><span class="id" title="definition">size</span> <a class="idref" href="Combi.LRrule.stdplact.html#u"><span class="id" title="variable">u</span></a><span class="id" title="notation">)</span><span class="id" title="notation">}</span>) :<br/>
-&nbsp;&nbsp;&nbsp;<span class="id" title="definition">sorted</span> <a class="idref" href="Combi.Basic.ordtype.html#leqX"><span class="id" title="definition">leqX</span></a> (<a class="idref" href="Combi.LRrule.Greene.html#extractpred"><span class="id" title="definition">extractpred</span></a> (<span class="id" title="definition">in_tuple</span> <a class="idref" href="Combi.LRrule.stdplact.html#u"><span class="id" title="variable">u</span></a>) (<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#mem"><span class="id" title="definition">mem</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#S"><span class="id" title="variable">S</span></a>)) <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a><br/>
-&nbsp;&nbsp;&nbsp;<span class="id" title="definition">sorted</span> <a class="idref" href="Combi.Basic.ordtype.html#leqX"><span class="id" title="definition">leqX</span></a> (<a class="idref" href="Combi.LRrule.Greene.html#extractpred"><span class="id" title="definition">extractpred</span></a> (<span class="id" title="definition">in_tuple</span> (<a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#u"><span class="id" title="variable">u</span></a>)) (<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#mem"><span class="id" title="definition">mem</span></a> (<a class="idref" href="Combi.SSRcomplements.ordcast.html#cast_set"><span class="id" title="definition">cast_set</span></a> (<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#esym"><span class="id" title="definition">esym</span></a> (<a class="idref" href="Combi.Combi.std.html#size_std"><span class="id" title="lemma">size_std</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#u"><span class="id" title="variable">u</span></a>)) <a class="idref" href="Combi.LRrule.stdplact.html#S"><span class="id" title="variable">S</span></a>))).<br/>
+&nbsp;&nbsp;<span class="id" title="definition">sorted</span> <a class="idref" href="Combi.Basic.ordtype.html#leqX"><span class="id" title="definition">leqX</span></a> (<a class="idref" href="Combi.LRrule.Greene.html#extractpred"><span class="id" title="definition">extractpred</span></a> (<span class="id" title="definition">in_tuple</span> <a class="idref" href="Combi.LRrule.stdplact.html#u"><span class="id" title="variable">u</span></a>) (<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#mem"><span class="id" title="definition">mem</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#S"><span class="id" title="variable">S</span></a>)) <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a><br/>
+&nbsp;&nbsp;<span class="id" title="definition">sorted</span> <a class="idref" href="Combi.Basic.ordtype.html#leqX"><span class="id" title="definition">leqX</span></a> (<a class="idref" href="Combi.LRrule.Greene.html#extractpred"><span class="id" title="definition">extractpred</span></a> (<span class="id" title="definition">in_tuple</span> (<a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#u"><span class="id" title="variable">u</span></a>))<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#mem"><span class="id" title="definition">mem</span></a> (<a class="idref" href="Combi.SSRcomplements.ordcast.html#cast_set"><span class="id" title="definition">cast_set</span></a> (<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#esym"><span class="id" title="definition">esym</span></a> (<a class="idref" href="Combi.Combi.std.html#size_std"><span class="id" title="lemma">size_std</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#u"><span class="id" title="variable">u</span></a>)) <a class="idref" href="Combi.LRrule.stdplact.html#S"><span class="id" title="variable">S</span></a>))).<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="ksupp_inj_std"><span class="id" title="lemma">ksupp_inj_std</span></a> <span class="id" title="var">u</span> <span class="id" title="var">k</span> : <a class="idref" href="Combi.LRrule.Greene.html#ksupp_inj"><span class="id" title="definition">ksupp_inj</span></a> <a class="idref" href="Combi.Basic.ordtype.html#leqX"><span class="id" title="definition">leqX</span></a> <a class="idref" href="Combi.Basic.ordtype.html#leqX"><span class="id" title="definition">leqX</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#k"><span class="id" title="variable">k</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#u"><span class="id" title="variable">u</span></a> (<a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#u"><span class="id" title="variable">u</span></a>).<br/>
@@ -80,12 +136,21 @@
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.LRrule.stdplact.html#StdRS"><span class="id" title="section">StdRS</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Theorem</span> <a name="RSmap_std"><span class="id" title="lemma">RSmap_std</span></a> (<span class="id" title="var">T</span> : <a class="idref" href="Combi.Basic.ordtype.html#InhOrdType.Exports.inhOrdType"><span class="id" title="abbreviation">inhOrdType</span></a>) (<span class="id" title="var">w</span> : <span class="id" title="abbreviation">seq</span> <a class="idref" href="Combi.LRrule.stdplact.html#T"><span class="id" title="variable">T</span></a>) : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#f4827404159513e7fd691b60b7877737"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.LRrule.Schensted.html#RSmap"><span class="id" title="definition">RSmap</span></a> (<a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#w"><span class="id" title="variable">w</span></a>)<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#f4827404159513e7fd691b60b7877737"><span class="id" title="notation">).2</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#f4827404159513e7fd691b60b7877737"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.LRrule.Schensted.html#RSmap"><span class="id" title="definition">RSmap</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#w"><span class="id" title="variable">w</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#f4827404159513e7fd691b60b7877737"><span class="id" title="notation">).2</span></a>.<br/>
+<span class="id" title="keyword">Theorem</span> <a name="RSmap_std"><span class="id" title="lemma">RSmap_std</span></a> (<span class="id" title="var">T</span> : <a class="idref" href="Combi.Basic.ordtype.html#InhOrdType.Exports.inhOrdType"><span class="id" title="abbreviation">inhOrdType</span></a>) (<span class="id" title="var">w</span> : <span class="id" title="abbreviation">seq</span> <a class="idref" href="Combi.LRrule.stdplact.html#T"><span class="id" title="variable">T</span></a>) :<br/>
+&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#f4827404159513e7fd691b60b7877737"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.LRrule.Schensted.html#RSmap"><span class="id" title="definition">RSmap</span></a> (<a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#w"><span class="id" title="variable">w</span></a>)<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#f4827404159513e7fd691b60b7877737"><span class="id" title="notation">).2</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#f4827404159513e7fd691b60b7877737"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.LRrule.Schensted.html#RSmap"><span class="id" title="definition">RSmap</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#w"><span class="id" title="variable">w</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#f4827404159513e7fd691b60b7877737"><span class="id" title="notation">).2</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Corollary</span> <a name="RStabmap_std"><span class="id" title="lemma">RStabmap_std</span></a> (<span class="id" title="var">T</span> : <a class="idref" href="Combi.Basic.ordtype.html#InhOrdType.Exports.inhOrdType"><span class="id" title="abbreviation">inhOrdType</span></a>) (<span class="id" title="var">w</span> : <span class="id" title="abbreviation">seq</span> <a class="idref" href="Combi.LRrule.stdplact.html#T"><span class="id" title="variable">T</span></a>) : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#f4827404159513e7fd691b60b7877737"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.LRrule.Schensted.html#RStabmap"><span class="id" title="definition">RStabmap</span></a> (<a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#w"><span class="id" title="variable">w</span></a>)<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#f4827404159513e7fd691b60b7877737"><span class="id" title="notation">).2</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#f4827404159513e7fd691b60b7877737"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.LRrule.Schensted.html#RStabmap"><span class="id" title="definition">RStabmap</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#w"><span class="id" title="variable">w</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#f4827404159513e7fd691b60b7877737"><span class="id" title="notation">).2</span></a>.<br/>
+<span class="id" title="keyword">Corollary</span> <a name="RStabmap_std"><span class="id" title="lemma">RStabmap_std</span></a> (<span class="id" title="var">T</span> : <a class="idref" href="Combi.Basic.ordtype.html#InhOrdType.Exports.inhOrdType"><span class="id" title="abbreviation">inhOrdType</span></a>) (<span class="id" title="var">w</span> : <span class="id" title="abbreviation">seq</span> <a class="idref" href="Combi.LRrule.stdplact.html#T"><span class="id" title="variable">T</span></a>) :<br/>
+&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#f4827404159513e7fd691b60b7877737"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.LRrule.Schensted.html#RStabmap"><span class="id" title="definition">RStabmap</span></a> (<a class="idref" href="Combi.Combi.std.html#std"><span class="id" title="definition">std</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#w"><span class="id" title="variable">w</span></a>)<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#f4827404159513e7fd691b60b7877737"><span class="id" title="notation">).2</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#f4827404159513e7fd691b60b7877737"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.LRrule.Schensted.html#RStabmap"><span class="id" title="definition">RStabmap</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#w"><span class="id" title="variable">w</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#f4827404159513e7fd691b60b7877737"><span class="id" title="notation">).2</span></a>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab120"></a><h2 class="section">Robinson-Schensted correspondence and inversion</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="KsuppInj"><span class="id" title="section">KsuppInj</span></a>.<br/>
 
 <br/>
@@ -97,13 +162,9 @@
 <span class="id" title="keyword">Let</span> <a name="KsuppInj.Hinvts"><span class="id" title="variable">Hinvts</span></a> : <a class="idref" href="Combi.Combi.std.html#linvseq"><span class="id" title="definition">linvseq</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#KsuppInj.t"><span class="id" title="variable">t</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#KsuppInj.s"><span class="id" title="variable">s</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Definition</span> <a name="val2pos"><span class="id" title="definition">val2pos</span></a> :=<br/>
-&nbsp;&nbsp;<span class="id" title="keyword">fun</span> (<span class="id" title="var">i</span> : <span class="id" title="notation">'</span><span class="id" title="notation">I_</span><span class="id" title="notation">(</span><span class="id" title="definition">size</span> <a class="idref" href="Combi.LRrule.stdplact.html#KsuppInj.s"><span class="id" title="variable">s</span></a><span class="id" title="notation">)</span>) ⇒ <span class="id" title="constructor">Ordinal</span> (<a class="idref" href="Combi.Combi.std.html#linvseq_ltn_szt"><span class="id" title="lemma">linvseq_ltn_szt</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#KsuppInj.Hinvst"><span class="id" title="variable">Hinvst</span></a> (<span class="id" title="lemma">ltn_ord</span> <a class="idref" href="Combi.LRrule.stdplact.html#i"><span class="id" title="variable">i</span></a>)).<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="val2posE"><span class="id" title="lemma">val2posE</span></a> : <span class="id" title="projection">val</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#1b4394c5c1740ef3dc9e4224084970bb"><span class="id" title="notation">\</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#1b4394c5c1740ef3dc9e4224084970bb"><span class="id" title="notation">o</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#val2pos"><span class="id" title="definition">val2pos</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#2500d48ed8e862ccfda98a44dff88963"><span class="id" title="notation">=1</span></a> <span class="id" title="definition">nth</span> (<span class="id" title="definition">size</span> <a class="idref" href="Combi.LRrule.stdplact.html#KsuppInj.t"><span class="id" title="variable">t</span></a>) <a class="idref" href="Combi.LRrule.stdplact.html#KsuppInj.s"><span class="id" title="variable">s</span></a>.<br/>
-
-<br/>
 <span class="id" title="keyword">Lemma</span> <a name="val2pos_inj"><span class="id" title="lemma">val2pos_inj</span></a> : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#injective"><span class="id" title="definition">injective</span></a> <a class="idref" href="Combi.LRrule.stdplact.html#val2pos"><span class="id" title="definition">val2pos</span></a>.<br/>
 
 <br/>

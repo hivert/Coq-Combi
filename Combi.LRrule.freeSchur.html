@@ -28,15 +28,15 @@
 </div>
 
 <div class="doc">
-<a name="lab63"></a><h1 class="section">Free Schur functions</h1>
+<a name="lab67"></a><h1 class="section">Free Schur functions</h1>
 
 
 <div class="paragraph"> </div>
 
-This is the core of the proof of the Littewood-Richardson rule. The main goal
-of this file is to lift the multiplication of Schur multivariate polynomials
-to the non commutative setting. This allows to prove a non-commutative
-version of the LR rule by double set inclusion.
+This file is the second step to the proof of the Littewood-Richardson rule.
+We translate theorem <span class="inlinecode"><a class="idref" href="Combi.LRrule.shuffle.html#LRtriple_cat_equiv"><span class="id" title="lemma">LRtriple_cat_equiv</span></a></span> in a algebraic setting. Specifically,
+the main goal of this file is to lift the multiplication of Schur multivariate
+polynomials to the non commutative setting.
 
 <div class="paragraph"> </div>
 
@@ -53,7 +53,7 @@ version of the LR rule by double set inclusion.
                       type <span class="inlinecode"><a class="idref" href="Combi.LRrule.freeSchur.html#homlang"><span class="id" title="abbreviation">homlang</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#StdKostka.d"><span class="id" title="variable">d</span></a></span>.
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.LRrule.freeSchur.html#catlang"><span class="id" title="definition">catlang</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#Swap.Swap.l1"><span class="id" title="variable">l1</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.shuffle.html#l2"><span class="id" title="variable">l2</span></a></span> == the concatenation of homogeneous language: given
+<li> <span class="inlinecode"><a class="idref" href="Combi.LRrule.freeSchur.html#catlang"><span class="id" title="definition">catlang</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#Swap.Swap.l1"><span class="id" title="variable">l1</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SSRcomplements.tools.html#l2"><span class="id" title="variable">l2</span></a></span> == the concatenation of homogeneous language: given
                       <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#s1"><span class="id" title="variable">s1</span></a></span> of degree <span class="inlinecode"><a class="idref" href="Combi.LRrule.therule.html#LR.d1"><span class="id" title="variable">d1</span></a></span> and <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#s2"><span class="id" title="variable">s2</span></a></span> of degree <span class="inlinecode"><a class="idref" href="Combi.LRrule.therule.html#LR.d2"><span class="id" title="variable">d2</span></a></span> return an
                       homogeneous language of degree <span class="inlinecode"><a class="idref" href="Combi.LRrule.therule.html#LR.d1"><span class="id" title="variable">d1</span></a></span> <span class="inlinecode">+</span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.therule.html#LR.d2"><span class="id" title="variable">d2</span></a></span>.
 
@@ -88,8 +88,15 @@ The free Littlewood-Richardson rule:
 <ul class="doclist">
 <li> <span class="inlinecode"><a class="idref" href="Combi.LRrule.freeSchur.html#LRsupport"><span class="id" title="definition">LRsupport</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.freeSchur.html#FreeSchur.FreeLRrule.Q1"><span class="id" title="variable">Q1</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.freeSchur.html#FreeSchur.FreeLRrule.Q2"><span class="id" title="variable">Q2</span></a></span> == the set of standard Littlewood-Richardson Q-tableau in
                       the product of the free Schur function indexed by <span class="inlinecode"><a class="idref" href="Combi.LRrule.freeSchur.html#FreeSchur.FreeLRrule.Q1"><span class="id" title="variable">Q1</span></a></span>
-                      and <span class="inlinecode"><a class="idref" href="Combi.LRrule.freeSchur.html#FreeSchur.FreeLRrule.Q2"><span class="id" title="variable">Q2</span></a></span>. The main result here is the free LR rule
-                      <span class="inlinecode"><a class="idref" href="Combi.LRrule.freeSchur.html#free_LR_rule"><span class="id" title="lemma">free_LR_rule</span></a></span>:
+                      and <span class="inlinecode"><a class="idref" href="Combi.LRrule.freeSchur.html#FreeSchur.FreeLRrule.Q2"><span class="id" title="variable">Q2</span></a></span>, that is the set of <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#CoverSurgery.Q"><span class="id" title="variable">Q</span></a></span> which forms a <span class="inlinecode"><a class="idref" href="Combi.LRrule.shuffle.html#LRtriple"><span class="id" title="inductive">LRtriple</span></a></span>
+                      with <span class="inlinecode"><a class="idref" href="Combi.LRrule.freeSchur.html#FreeSchur.FreeLRrule.Q1"><span class="id" title="variable">Q1</span></a></span> and <span class="inlinecode"><a class="idref" href="Combi.LRrule.freeSchur.html#FreeSchur.FreeLRrule.Q2"><span class="id" title="variable">Q2</span></a></span>.
+
+</li>
+</ul>
+
+<div class="paragraph"> </div>
+
+The main result here is the free LR rule <span class="inlinecode"><a class="idref" href="Combi.LRrule.freeSchur.html#free_LR_rule"><span class="id" title="lemma">free_LR_rule</span></a></span>:
 
 <div class="paragraph"> </div>
 
@@ -99,8 +106,11 @@ The free Littlewood-Richardson rule:
 
 <div class="paragraph"> </div>
 
+We then go back to commutative Schur polynomials:
 
-</li>
+<div class="paragraph"> </div>
+
+<ul class="doclist">
 <li> <span class="inlinecode"><a class="idref" href="Combi.LRrule.freeSchur.html#hyper_stdtab"><span class="id" title="definition">hyper_stdtab</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.HookFormula.Frobenius_ident.html#Identity.Shape.sh"><span class="id" title="variable">sh</span></a></span> == the hyper standard tableau of shape sh as a <span class="inlinecode"><span class="id" title="library">seq</span></span> <span class="inlinecode">(<span class="id" title="library">seq</span></span> <span class="inlinecode"><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>)</span>.
 
 </li>
@@ -164,7 +174,7 @@ Invariance with the choice of Q1 and Q2:
 </div>
 
 <div class="doc">
-<a name="lab64"></a><h1 class="section">Commutative image of an homogeneous langage</h1>
+<a name="lab68"></a><h1 class="section">Commutative image of an homogeneous langage</h1>
 
 </div>
 <div class="code">
@@ -211,7 +221,7 @@ Invariance with the choice of Q1 and Q2:
 </div>
 
 <div class="doc">
-<a name="lab65"></a><h2 class="section">Row reading of tableau</h2>
+<a name="lab69"></a><h2 class="section">Row reading of tableau</h2>
 
 </div>
 <div class="code">
@@ -241,7 +251,7 @@ Invariance with the choice of Q1 and Q2:
 </div>
 
 <div class="doc">
-<a name="lab66"></a><h1 class="section">Free Schur function : lifting Schur function is the free algebra</h1>
+<a name="lab70"></a><h1 class="section">Free Schur function : lifting Schur function is the free algebra</h1>
 
 </div>
 <div class="code">
@@ -301,7 +311,7 @@ Invariance with the choice of Q1 and Q2:
 </div>
 
 <div class="doc">
-<a name="lab67"></a><h2 class="section">Noncommutative lifting of Schur polynomials</h2>
+<a name="lab71"></a><h2 class="section">Noncommutative lifting of Schur polynomials</h2>
 
 </div>
 <div class="code">
@@ -312,7 +322,7 @@ Invariance with the choice of Q1 and Q2:
 </div>
 
 <div class="doc">
-<a name="lab68"></a><h2 class="section">Commutative immage of freeSchur language</h2>
+<a name="lab72"></a><h2 class="section">Commutative immage of freeSchur language</h2>
 
 </div>
 <div class="code">
@@ -323,7 +333,7 @@ Invariance with the choice of Q1 and Q2:
 </div>
 
 <div class="doc">
-<a name="lab69"></a><h1 class="section">The free Littlewood-Richardson rule</h1>
+<a name="lab73"></a><h1 class="section">The free Littlewood-Richardson rule</h1>
 
 </div>
 <div class="code">
@@ -339,6 +349,16 @@ Invariance with the choice of Q1 and Q2:
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="free_LR_rule"><span class="id" title="lemma">free_LR_rule</span></a> :<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.LRrule.freeSchur.html#catlang"><span class="id" title="definition">catlang</span></a> (<a class="idref" href="Combi.LRrule.freeSchur.html#freeSchur"><span class="id" title="definition">freeSchur</span></a> <a class="idref" href="Combi.LRrule.freeSchur.html#FreeSchur.FreeLRrule.Q1"><span class="id" title="variable">Q1</span></a>) (<a class="idref" href="Combi.LRrule.freeSchur.html#freeSchur"><span class="id" title="definition">freeSchur</span></a> <a class="idref" href="Combi.LRrule.freeSchur.html#FreeSchur.FreeLRrule.Q2"><span class="id" title="variable">Q2</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="notation">\</span><span class="id" title="notation">bigcup_</span><span class="id" title="notation">(</span><span class="id" title="var">Q</span> <span class="id" title="notation">in</span> <a class="idref" href="Combi.LRrule.freeSchur.html#LRsupport"><span class="id" title="definition">LRsupport</span></a><span class="id" title="notation">)</span> <a class="idref" href="Combi.LRrule.freeSchur.html#freeSchur"><span class="id" title="definition">freeSchur</span></a> <a class="idref" href="Combi.LRrule.freeSchur.html#Q"><span class="id" title="variable">Q</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+Alternative proof from <span class="inlinecode"><a class="idref" href="Combi.LRrule.shuffle.html#LRrule_langQ"><span class="id" title="lemma">LRrule_langQ</span></a></span> 
+</div>
+<div class="code">
+<span class="id" title="keyword">Lemma</span> <a name="free_LR_rule_alternate"><span class="id" title="lemma">free_LR_rule_alternate</span></a> :<br/>
 &nbsp;&nbsp;<a class="idref" href="Combi.LRrule.freeSchur.html#catlang"><span class="id" title="definition">catlang</span></a> (<a class="idref" href="Combi.LRrule.freeSchur.html#freeSchur"><span class="id" title="definition">freeSchur</span></a> <a class="idref" href="Combi.LRrule.freeSchur.html#FreeSchur.FreeLRrule.Q1"><span class="id" title="variable">Q1</span></a>) (<a class="idref" href="Combi.LRrule.freeSchur.html#freeSchur"><span class="id" title="definition">freeSchur</span></a> <a class="idref" href="Combi.LRrule.freeSchur.html#FreeSchur.FreeLRrule.Q2"><span class="id" title="variable">Q2</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="notation">\</span><span class="id" title="notation">bigcup_</span><span class="id" title="notation">(</span><span class="id" title="var">Q</span> <span class="id" title="notation">in</span> <a class="idref" href="Combi.LRrule.freeSchur.html#LRsupport"><span class="id" title="definition">LRsupport</span></a><span class="id" title="notation">)</span> <a class="idref" href="Combi.LRrule.freeSchur.html#freeSchur"><span class="id" title="definition">freeSchur</span></a> <a class="idref" href="Combi.LRrule.freeSchur.html#Q"><span class="id" title="variable">Q</span></a>.<br/>
 
 <br/>
@@ -391,7 +411,7 @@ Passing to commutative image in the free LR rule
 </div>
 
 <div class="doc">
-<a name="lab70"></a><h2 class="section">Invariance with respect to choice of the Q-Tableau</h2>
+<a name="lab74"></a><h2 class="section">Invariance with respect to choice of the Q-Tableau</h2>
 
 </div>
 <div class="code">
@@ -519,7 +539,7 @@ Passing to commutative image in the free LR rule
 </div>
 
 <div class="doc">
-<a name="lab71"></a><h2 class="section">Conjugating tableaux in the free LR rule</h2>
+<a name="lab75"></a><h2 class="section">Conjugating tableaux in the free LR rule</h2>
 
 </div>
 <div class="code">
