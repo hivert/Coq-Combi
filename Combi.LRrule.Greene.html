@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="coqdoc.css" rel="stylesheet" type="text/css" />
-<title>Combi.LRrule.Greene: Greene's subsequence numbers</title>
+<title>Combi.LRrule.Greene: Greene's monotone subsequence numbers</title>
 </head>
 
 <body>
@@ -16,7 +16,7 @@
 
 <div id="main">
 
-<h1 class="libtitle">Library Combi.LRrule.Greene: Greene's subsequence numbers</h1>
+<h1 class="libtitle">Library Combi.LRrule.Greene: Greene's monotone subsequence numbers</h1>
 
 <div class="code">
 </div>
@@ -28,7 +28,7 @@
 </div>
 
 <div class="doc">
-<a name="lab76"></a><h1 class="section">Greene's subsequence numbers</h1>
+<a name="lab76"></a><h1 class="section">Greene's monotone subsequences numbers</h1>
 
 
 <div class="paragraph"> </div>
@@ -77,11 +77,31 @@ Then we define:
 
 <div class="paragraph"> </div>
 
-We now suppose that <span class="inlinecode"><a class="idref" href="Combi.Basic.congr.html#InvarContHom.Alph"><span class="id" title="variable">Alph</span></a></span> is canonically ordered.
+We now suppose that <span class="inlinecode"><a class="idref" href="Combi.Basic.congr.html#InvarContHom.Alph"><span class="id" title="variable">Alph</span></a></span> is canonically ordered. Moreover <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> is a tableau
+on <span class="inlinecode"><a class="idref" href="Combi.Basic.congr.html#InvarContHom.Alph"><span class="id" title="variable">Alph</span></a></span>. Then
 
 <div class="paragraph"> </div>
 
 <ul class="doclist">
+<li> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene.html#tabrows"><span class="id" title="definition">tabrows</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> == the sequence of the supports in the row-reading of <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> of
+      the rows of <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span>
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene.html#tabcols"><span class="id" title="definition">tabcols</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> == the sequence of the supports in the row-reading of <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> of
+      the columns of <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span>
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene.html#tabrowsk"><span class="id" title="definition">tabrowsk</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.HasIncr.k"><span class="id" title="variable">k</span></a></span> == the sequence of the supports in the row-reading of <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> of
+      the <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.HasIncr.k"><span class="id" title="variable">k</span></a></span> first rows of <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span>
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene.html#tabcolsk"><span class="id" title="definition">tabcolsk</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.HasIncr.k"><span class="id" title="variable">k</span></a></span> == the sequence of the supports in the row-reading of <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span> of
+      the <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.HasIncr.k"><span class="id" title="variable">k</span></a></span> first columns of <span class="inlinecode"><a class="idref" href="Combi.SymGroup.cycletype.html#DefsFiber.t"><span class="id" title="variable">t</span></a></span>
+
+<div class="paragraph"> </div>
+
+
+</li>
 <li> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene.html#Greene_row"><span class="id" title="definition">Greene_row</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.HasIncr.k"><span class="id" title="variable">k</span></a></span> == Greene number for nondecreasing subsequence
 
 </li>
@@ -89,10 +109,20 @@ We now suppose that <span class="inlinecode"><a class="idref" href="Combi.Basic.
 
 <div class="paragraph"> </div>
 
- 
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene.html#ksupp_inj"><span class="id" title="definition">ksupp_inj</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene.html#GreeneInj.R1"><span class="id" title="variable">R1</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene.html#GreeneInj.R2"><span class="id" title="variable">R2</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.HasIncr.k"><span class="id" title="variable">k</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Combi.skewtab.html#u1"><span class="id" title="variable">u1</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Combi.skewtab.html#u2"><span class="id" title="variable">u2</span></a></span> == for each <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.HasIncr.k"><span class="id" title="variable">k</span></a></span>-support for <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene.html#GreeneInj.R1"><span class="id" title="variable">R1</span></a></span> of <span class="inlinecode"><a class="idref" href="Combi.Combi.skewtab.html#u1"><span class="id" title="variable">u1</span></a></span> there
+      exists a <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.HasIncr.k"><span class="id" title="variable">k</span></a></span>-support for <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene.html#GreeneInj.R2"><span class="id" title="variable">R2</span></a></span> of <span class="inlinecode"><a class="idref" href="Combi.Combi.skewtab.html#u2"><span class="id" title="variable">u2</span></a></span> of the same size.
+
 </li>
 </ul>
 
+<div class="paragraph"> </div>
+
+
+<div class="paragraph"> </div>
+
+ 
 </div>
 <div class="code">
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">mathcomp.ssreflect.ssreflect</span>.<br/>
@@ -314,6 +344,13 @@ We now suppose that <span class="inlinecode"><a class="idref" href="Combi.Basic.
 &nbsp;&nbsp;<a class="idref" href="Combi.LRrule.Greene.html#Greene_rel_t"><span class="id" title="definition">Greene_rel_t</span></a> <a class="idref" href="Combi.LRrule.Greene.html#leT"><span class="id" title="variable">leT</span></a> <a class="idref" href="Combi.LRrule.Greene.html#u"><span class="id" title="variable">u</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#2500d48ed8e862ccfda98a44dff88963"><span class="id" title="notation">=1</span></a> <a class="idref" href="Combi.LRrule.Greene.html#Greene_rel_t"><span class="id" title="definition">Greene_rel_t</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">x</span> <span class="id" title="var">y</span> ⇒ <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#49ac24efa716d8b0ee8943bc1d1769a9"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.LRrule.Greene.html#x"><span class="id" title="variable">x</span></a> <span class="id" title="notation">!=</span> <a class="idref" href="Combi.LRrule.Greene.html#y"><span class="id" title="variable">y</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#49ac24efa716d8b0ee8943bc1d1769a9"><span class="id" title="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#49ac24efa716d8b0ee8943bc1d1769a9"><span class="id" title="notation">&amp;&amp;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#49ac24efa716d8b0ee8943bc1d1769a9"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.LRrule.Greene.html#leT"><span class="id" title="variable">leT</span></a> <a class="idref" href="Combi.LRrule.Greene.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="Combi.LRrule.Greene.html#y"><span class="id" title="variable">y</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#49ac24efa716d8b0ee8943bc1d1769a9"><span class="id" title="notation">)</span></a>) <a class="idref" href="Combi.LRrule.Greene.html#u"><span class="id" title="variable">u</span></a>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab80"></a><h2 class="section">Greene's number of a concatenation</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="GreeneCat"><span class="id" title="section">GreeneCat</span></a>.<br/>
 
 <br/>
@@ -384,7 +421,8 @@ We now suppose that <span class="inlinecode"><a class="idref" href="Combi.Basic.
 <span class="id" title="keyword">Definition</span> <a name="Greene_rel"><span class="id" title="definition">Greene_rel</span></a> <span class="id" title="var">u</span> := <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#0bba0687209e799f52ace6d4b2c6d64a"><span class="id" title="notation">[</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#0bba0687209e799f52ace6d4b2c6d64a"><span class="id" title="notation">fun</span></a> <span class="id" title="var">k</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#0bba0687209e799f52ace6d4b2c6d64a"><span class="id" title="notation">⇒</span></a> <a class="idref" href="Combi.LRrule.Greene.html#Greene_rel_t"><span class="id" title="definition">Greene_rel_t</span></a> <a class="idref" href="Combi.LRrule.Greene.html#GreeneSeq.R"><span class="id" title="variable">R</span></a> (<span class="id" title="definition">in_tuple</span> <a class="idref" href="Combi.LRrule.Greene.html#u"><span class="id" title="variable">u</span></a>) <a class="idref" href="Combi.LRrule.Greene.html#k"><span class="id" title="variable">k</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#0bba0687209e799f52ace6d4b2c6d64a"><span class="id" title="notation">]</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Lemma</span> <a name="Greene_rel_cat"><span class="id" title="lemma">Greene_rel_cat</span></a> <span class="id" title="var">k</span> <span class="id" title="var">v</span> <span class="id" title="var">w</span> : <a class="idref" href="Combi.LRrule.Greene.html#Greene_rel"><span class="id" title="definition">Greene_rel</span></a> (<a class="idref" href="Combi.LRrule.Greene.html#v"><span class="id" title="variable">v</span></a> <span class="id" title="notation">++</span> <a class="idref" href="Combi.LRrule.Greene.html#w"><span class="id" title="variable">w</span></a>) <a class="idref" href="Combi.LRrule.Greene.html#k"><span class="id" title="variable">k</span></a> <span class="id" title="notation">≤</span> <a class="idref" href="Combi.LRrule.Greene.html#Greene_rel"><span class="id" title="definition">Greene_rel</span></a> <a class="idref" href="Combi.LRrule.Greene.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="Combi.LRrule.Greene.html#k"><span class="id" title="variable">k</span></a> <span class="id" title="notation">+</span> <a class="idref" href="Combi.LRrule.Greene.html#Greene_rel"><span class="id" title="definition">Greene_rel</span></a> <a class="idref" href="Combi.LRrule.Greene.html#w"><span class="id" title="variable">w</span></a> <a class="idref" href="Combi.LRrule.Greene.html#k"><span class="id" title="variable">k</span></a>.<br/>
+<span class="id" title="keyword">Lemma</span> <a name="Greene_rel_cat"><span class="id" title="lemma">Greene_rel_cat</span></a> <span class="id" title="var">k</span> <span class="id" title="var">v</span> <span class="id" title="var">w</span> :<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.LRrule.Greene.html#Greene_rel"><span class="id" title="definition">Greene_rel</span></a> (<a class="idref" href="Combi.LRrule.Greene.html#v"><span class="id" title="variable">v</span></a> <span class="id" title="notation">++</span> <a class="idref" href="Combi.LRrule.Greene.html#w"><span class="id" title="variable">w</span></a>) <a class="idref" href="Combi.LRrule.Greene.html#k"><span class="id" title="variable">k</span></a> <span class="id" title="notation">≤</span> <a class="idref" href="Combi.LRrule.Greene.html#Greene_rel"><span class="id" title="definition">Greene_rel</span></a> <a class="idref" href="Combi.LRrule.Greene.html#v"><span class="id" title="variable">v</span></a> <a class="idref" href="Combi.LRrule.Greene.html#k"><span class="id" title="variable">k</span></a> <span class="id" title="notation">+</span> <a class="idref" href="Combi.LRrule.Greene.html#Greene_rel"><span class="id" title="definition">Greene_rel</span></a> <a class="idref" href="Combi.LRrule.Greene.html#w"><span class="id" title="variable">w</span></a> <a class="idref" href="Combi.LRrule.Greene.html#k"><span class="id" title="variable">k</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Let</span> <a name="GreeneSeq.negR"><span class="id" title="variable">negR</span></a> := (<span class="id" title="keyword">fun</span> <span class="id" title="var">a</span> <span class="id" title="var">b</span> ⇒ <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#4b80c70cdb231351c5e129ba61f7f956"><span class="id" title="notation">~~(</span></a><a class="idref" href="Combi.LRrule.Greene.html#GreeneSeq.R"><span class="id" title="variable">R</span></a> <a class="idref" href="Combi.LRrule.Greene.html#a"><span class="id" title="variable">a</span></a> <a class="idref" href="Combi.LRrule.Greene.html#b"><span class="id" title="variable">b</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#4b80c70cdb231351c5e129ba61f7f956"><span class="id" title="notation">)</span></a>).<br/>
@@ -409,6 +447,13 @@ We now suppose that <span class="inlinecode"><a class="idref" href="Combi.Basic.
 &nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#injective"><span class="id" title="definition">injective</span></a> <a class="idref" href="Combi.LRrule.Greene.html#F"><span class="id" title="variable">F</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="notation">#|</span><span class="id" title="definition">cover</span> <a class="idref" href="Combi.LRrule.Greene.html#P"><span class="id" title="variable">P</span></a><span class="id" title="notation">|</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="notation">#|</span><span class="id" title="definition">cover</span> <span class="id" title="notation">[</span><span class="id" title="notation">set</span> <a class="idref" href="Combi.LRrule.Greene.html#F"><span class="id" title="variable">F</span></a> <span class="id" title="notation">@:</span> <a class="idref" href="Combi.LRrule.Greene.html#S"><span class="id" title="variable">S</span></a> <span class="id" title="notation">|</span> <span class="id" title="var">S</span> <span class="id" title="notation">:</span> <span class="id" title="notation">{</span><span class="id" title="notation">set</span> <a class="idref" href="Combi.LRrule.Greene.html#T1"><span class="id" title="variable">T1</span></a><span class="id" title="notation">}</span> <span class="id" title="notation">in</span> <a class="idref" href="Combi.LRrule.Greene.html#P"><span class="id" title="variable">P</span></a><span class="id" title="notation">]</span><span class="id" title="notation">|</span>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab81"></a><h2 class="section">Injection of k-supports</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="GreeneInj"><span class="id" title="section">GreeneInj</span></a>.<br/>
 
 <br/>
@@ -461,7 +506,7 @@ We now suppose that <span class="inlinecode"><a class="idref" href="Combi.Basic.
 </div>
 
 <div class="doc">
-<a name="lab80"></a><h1 class="section">Greene number for tableaux</h1>
+<a name="lab82"></a><h1 class="section">Greene number for tableaux</h1>
 
 </div>
 <div class="code">
@@ -486,6 +531,10 @@ We now suppose that <span class="inlinecode"><a class="idref" href="Combi.Basic.
 &nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#2322037eff9ef74f2498eb6baf8b6c77"><span class="id" title="notation">[</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#2322037eff9ef74f2498eb6baf8b6c77"><span class="id" title="notation">fun</span></a> <span class="id" title="var">s</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#2322037eff9ef74f2498eb6baf8b6c77"><span class="id" title="notation">:</span></a> <span class="id" title="notation">{</span><span class="id" title="notation">set</span> <span class="id" title="notation">'</span><span class="id" title="notation">I_</span><span class="id" title="notation">(</span><span class="id" title="definition">sumn</span> (<span class="id" title="definition">shape</span> <a class="idref" href="Combi.LRrule.Greene.html#t"><span class="id" title="variable">t</span></a>)<span class="id" title="notation">)</span><span class="id" title="notation">}</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#2322037eff9ef74f2498eb6baf8b6c77"><span class="id" title="notation">⇒</span></a> <span class="id" title="notation">(</span><span class="id" title="definition">cast_ord</span> (<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#esym"><span class="id" title="definition">esym</span></a> (<a class="idref" href="Combi.Combi.tableau.html#size_to_word"><span class="id" title="lemma">size_to_word</span></a> <a class="idref" href="Combi.LRrule.Greene.html#t"><span class="id" title="variable">t</span></a>))<span class="id" title="notation">)</span> <span class="id" title="notation">@:</span> <a class="idref" href="Combi.LRrule.Greene.html#s"><span class="id" title="variable">s</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#2322037eff9ef74f2498eb6baf8b6c77"><span class="id" title="notation">]</span></a>.<br/>
 
 <br/>
+<span class="id" title="keyword">Definition</span> <a name="tabrows"><span class="id" title="definition">tabrows</span></a> <span class="id" title="var">t</span> := <span class="id" title="definition">map</span> (<a class="idref" href="Combi.LRrule.Greene.html#GreeneRec.cast_set_tab"><span class="id" title="variable">cast_set_tab</span></a> <a class="idref" href="Combi.LRrule.Greene.html#t"><span class="id" title="variable">t</span></a>) (<a class="idref" href="Combi.LRrule.Greene.html#shrows"><span class="id" title="definition">shrows</span></a> (<span class="id" title="definition">shape</span> <a class="idref" href="Combi.LRrule.Greene.html#t"><span class="id" title="variable">t</span></a>)).<br/>
+<span class="id" title="keyword">Definition</span> <a name="tabcols"><span class="id" title="definition">tabcols</span></a> <span class="id" title="var">t</span> := <span class="id" title="definition">map</span> (<a class="idref" href="Combi.LRrule.Greene.html#GreeneRec.cast_set_tab"><span class="id" title="variable">cast_set_tab</span></a> <a class="idref" href="Combi.LRrule.Greene.html#t"><span class="id" title="variable">t</span></a>) (<a class="idref" href="Combi.LRrule.Greene.html#shcols"><span class="id" title="definition">shcols</span></a> (<span class="id" title="definition">shape</span> <a class="idref" href="Combi.LRrule.Greene.html#t"><span class="id" title="variable">t</span></a>)).<br/>
+<span class="id" title="keyword">Definition</span> <a name="tabrowsk"><span class="id" title="definition">tabrowsk</span></a> <span class="id" title="var">t</span> := <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#0bba0687209e799f52ace6d4b2c6d64a"><span class="id" title="notation">[</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#0bba0687209e799f52ace6d4b2c6d64a"><span class="id" title="notation">fun</span></a> <span class="id" title="var">k</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#0bba0687209e799f52ace6d4b2c6d64a"><span class="id" title="notation">⇒</span></a> <span class="id" title="definition">take</span> <a class="idref" href="Combi.LRrule.Greene.html#k"><span class="id" title="variable">k</span></a> (<a class="idref" href="Combi.LRrule.Greene.html#tabrows"><span class="id" title="definition">tabrows</span></a> <a class="idref" href="Combi.LRrule.Greene.html#t"><span class="id" title="variable">t</span></a>)<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#0bba0687209e799f52ace6d4b2c6d64a"><span class="id" title="notation">]</span></a>.<br/>
+<span class="id" title="keyword">Definition</span> <a name="tabcolsk"><span class="id" title="definition">tabcolsk</span></a> <span class="id" title="var">t</span> := <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#0bba0687209e799f52ace6d4b2c6d64a"><span class="id" title="notation">[</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#0bba0687209e799f52ace6d4b2c6d64a"><span class="id" title="notation">fun</span></a> <span class="id" title="var">k</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#0bba0687209e799f52ace6d4b2c6d64a"><span class="id" title="notation">⇒</span></a> <span class="id" title="definition">take</span> <a class="idref" href="Combi.LRrule.Greene.html#k"><span class="id" title="variable">k</span></a> (<a class="idref" href="Combi.LRrule.Greene.html#tabcols"><span class="id" title="definition">tabcols</span></a> <a class="idref" href="Combi.LRrule.Greene.html#t"><span class="id" title="variable">t</span></a>)<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrfun.html#0bba0687209e799f52ace6d4b2c6d64a"><span class="id" title="notation">]</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="size_shcols_cons"><span class="id" title="lemma">size_shcols_cons</span></a> <span class="id" title="var">s0</span> <span class="id" title="var">sh</span> : <span class="id" title="definition">size</span> (<a class="idref" href="Combi.LRrule.Greene.html#shcols"><span class="id" title="definition">shcols</span></a> (<a class="idref" href="Combi.LRrule.Greene.html#s0"><span class="id" title="variable">s0</span></a> <span class="id" title="notation">::</span> <a class="idref" href="Combi.LRrule.Greene.html#sh"><span class="id" title="variable">sh</span></a>)) <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.LRrule.Greene.html#s0"><span class="id" title="variable">s0</span></a>.<br/>
