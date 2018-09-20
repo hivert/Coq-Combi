@@ -10,7 +10,7 @@
 <title>depend</title>
 <!-- Ccpo -->
 <g id="node1" class="node"><title>Ccpo</title>
-<g id="a_node1"><a xlink:href="3rdparty.ALEA.Ccpo.html" xlink:title="Ccpo">
+<g id="a_node1"><a xlink:href="ALEA.Ccpo.html" xlink:title="Ccpo">
 <polygon fill="#dbc3b6" stroke="#dbc3b6" points="1838,-252 1782,-252 1782,-216 1838,-216 1838,-252"/>
 <text text-anchor="middle" x="1810" y="-229.6" font-family="Times,serif" font-size="18.00">Ccpo</text>
 </a>
@@ -18,7 +18,7 @@
 </g>
 <!-- Misc -->
 <g id="node2" class="node"><title>Misc</title>
-<g id="a_node2"><a xlink:href="3rdparty.ALEA.Misc.html" xlink:title="Misc">
+<g id="a_node2"><a xlink:href="ALEA.Misc.html" xlink:title="Misc">
 <polygon fill="#dbc3b6" stroke="#dbc3b6" points="1964,-252 1910,-252 1910,-216 1964,-216 1964,-252"/>
 <text text-anchor="middle" x="1937" y="-229.6" font-family="Times,serif" font-size="18.00">Misc</text>
 </a>
@@ -26,7 +26,7 @@
 </g>
 <!-- Qmeasure -->
 <g id="node3" class="node"><title>Qmeasure</title>
-<g id="a_node3"><a xlink:href="3rdparty.ALEA.Qmeasure.html" xlink:title="Qmeasure">
+<g id="a_node3"><a xlink:href="ALEA.Qmeasure.html" xlink:title="Qmeasure">
 <polygon fill="#dbc3b6" stroke="#dbc3b6" points="1854.5,-324 1765.5,-324 1765.5,-288 1854.5,-288 1854.5,-324"/>
 <text text-anchor="middle" x="1810" y="-301.6" font-family="Times,serif" font-size="18.00">Qmeasure</text>
 </a>
