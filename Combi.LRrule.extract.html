@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="coqdoc.css" rel="stylesheet" type="text/css" />
-<title>Combi.LRrule.extract</title>
+<title>Combi.LRrule.extract: Extracting the implementation to OCaml</title>
 </head>
 
 <body>
@@ -16,8 +16,27 @@
 
 <div id="main">
 
-<h1 class="libtitle">Library Combi.LRrule.extract</h1>
+<h1 class="libtitle">Library Combi.LRrule.extract: Extracting the implementation to OCaml</h1>
 
+<div class="code">
+</div>
+
+<div class="doc">
+
+</div>
+<div class="code">
+</div>
+
+<div class="doc">
+<a name="lab69"></a><h1 class="section">A certified OCaml implementation</h1>
+
+
+<div class="paragraph"> </div>
+
+We extract to OCaml the implementation of the Robinson-Schensted correspondance
+and The Littlewood-Richardson Rule.
+ 
+</div>
 <div class="code">
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">mathcomp.ssreflect.ssreflect</span>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.Combi.subseq.html#"><span class="id" title="library">subseq</span></a> <a class="idref" href="Combi.Combi.partition.html#"><span class="id" title="library">partition</span></a> <a class="idref" href="Combi.Basic.ordtype.html#"><span class="id" title="library">ordtype</span></a> <a class="idref" href="Combi.LRrule.Schensted.html#"><span class="id" title="library">Schensted</span></a> <a class="idref" href="Combi.Basic.congr.html#"><span class="id" title="library">congr</span></a> <a class="idref" href="Combi.LRrule.plactic.html#"><span class="id" title="library">plactic</span></a> <a class="idref" href="Combi.LRrule.Greene.html#"><span class="id" title="library">Greene</span></a> <a class="idref" href="Combi.LRrule.Greene_inv.html#"><span class="id" title="library">Greene_inv</span></a><br/>
@@ -48,6 +67,13 @@
 <br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab70"></a><h2 class="section">The Robinson-Schensted correspondance</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Extraction</span> "src/LRrule/schensted.ml"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">RS</span> <span class="id" title="var">RSbijnat</span> <span class="id" title="var">RSbijinvnat</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">plactcongr</span><br/>
@@ -59,6 +85,13 @@
 .<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab71"></a><h2 class="section">The Littlewood-Richardson Rule</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Extraction</span> "src/LRrule/lrcoeff.ml"<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="id" title="var">LRcoeff</span> <span class="id" title="var">LRyamtab_list</span><br/>
 .<br/>

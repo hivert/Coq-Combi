@@ -4,7 +4,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="coqdoc.css" rel="stylesheet" type="text/css" />
-<title>Combi.SSRcomplements.tools: Missing SSReflect sequence related lemmas</title>
+<title>Combi.SSRcomplements.tools: Missing SSReflect sequence and set lemmas</title>
 </head>
 
 <body>
@@ -16,7 +16,7 @@
 
 <div id="main">
 
-<h1 class="libtitle">Library Combi.SSRcomplements.tools: Missing SSReflect sequence related lemmas</h1>
+<h1 class="libtitle">Library Combi.SSRcomplements.tools: Missing SSReflect sequence and set lemmas</h1>
 
 <div class="code">
 </div>
@@ -28,14 +28,17 @@
 </div>
 
 <div class="doc">
-<a name="lab135"></a><h1 class="section">A bunch of lemmas about seqs which are missing in SSReflect</h1>
+<a name="lab171"></a><h1 class="section">A bunch of lemmas about seqs and sets which are missing in SSReflect</h1>
 
-</div>
-<div class="code">
-</div>
 
-<div class="doc">
-TODO: these probably should be contributed to SSReflect itself            
+<div class="paragraph"> </div>
+
+No new notions are defined here.
+
+<div class="paragraph"> </div>
+
+TODO: these probably should be contributed to SSReflect itself
+
 </div>
 <div class="code">
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <span class="id" title="library">mathcomp.ssreflect.ssreflect</span>.<br/>
@@ -63,7 +66,7 @@ TODO: these probably should be contributed to SSReflect itself
 </div>
 
 <div class="doc">
-<a name="lab136"></a><h2 class="section"><span class="inlinecode"><span class="id" title="definition">rcons</span></span> and <span class="inlinecode"><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a></span> related lemmas</h2>
+<a name="lab172"></a><h2 class="section"><span class="inlinecode"><span class="id" title="definition">rcons</span></span> and <span class="inlinecode"><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#cons"><span class="id" title="constructor">cons</span></a></span> related lemmas</h2>
 
 </div>
 <div class="code">
@@ -114,7 +117,7 @@ TODO: these probably should be contributed to SSReflect itself
 </div>
 
 <div class="doc">
-<a name="lab137"></a><h2 class="section"><span class="inlinecode"><span class="id" title="definition">set_nth</span></span> related lemmas</h2>
+<a name="lab173"></a><h2 class="section"><span class="inlinecode"><span class="id" title="definition">set_nth</span></span> related lemmas</h2>
 
 </div>
 <div class="code">
@@ -138,7 +141,7 @@ TODO: these probably should be contributed to SSReflect itself
 </div>
 
 <div class="doc">
-<a name="lab138"></a><h2 class="section"><span class="inlinecode"><span class="id" title="definition">sumn</span></span> related lemmas</h2>
+<a name="lab174"></a><h2 class="section"><span class="inlinecode"><span class="id" title="definition">sumn</span></span> related lemmas</h2>
 
 </div>
 <div class="code">
@@ -170,7 +173,7 @@ TODO: these probably should be contributed to SSReflect itself
 </div>
 
 <div class="doc">
-<a name="lab139"></a><h2 class="section"><span class="inlinecode"><span class="id" title="keyword">iota</span></span> related lemmas</h2>
+<a name="lab175"></a><h2 class="section"><span class="inlinecode"><span class="id" title="keyword">iota</span></span> related lemmas</h2>
 
 </div>
 <div class="code">
@@ -187,7 +190,7 @@ TODO: these probably should be contributed to SSReflect itself
 </div>
 
 <div class="doc">
-<a name="lab140"></a><h2 class="section">Bigop lemmas</h2>
+<a name="lab176"></a><h2 class="section">Bigop lemmas</h2>
 
 </div>
 <div class="code">
@@ -200,7 +203,14 @@ TODO: these probably should be contributed to SSReflect itself
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="big_nat_widen0"><span class="id" title="lemma">big_nat_widen0</span></a> <span class="id" title="var">a</span> <span class="id" title="var">b</span> <span class="id" title="var">c</span> <span class="id" title="var">F</span> :<br/>
-&nbsp;&nbsp;<a class="idref" href="Combi.SSRcomplements.tools.html#b"><span class="id" title="variable">b</span></a> <span class="id" title="notation">≤</span> <a class="idref" href="Combi.SSRcomplements.tools.html#c"><span class="id" title="variable">c</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="notation">\</span><span class="id" title="notation">big</span><span class="id" title="notation">[</span><a class="idref" href="Combi.SSRcomplements.tools.html#BigInterv.op"><span class="id" title="variable">op</span></a><span class="id" title="notation">/</span><a class="idref" href="Combi.SSRcomplements.tools.html#BigInterv.idx"><span class="id" title="variable">idx</span></a><span class="id" title="notation">]</span><span class="id" title="notation">_</span><span class="id" title="notation">(</span><a class="idref" href="Combi.SSRcomplements.tools.html#a"><span class="id" title="variable">a</span></a> <span class="id" title="notation">≤</span> <span class="id" title="var">i</span> <span class="id" title="notation">&lt;</span> <a class="idref" href="Combi.SSRcomplements.tools.html#b"><span class="id" title="variable">b</span></a><span class="id" title="notation">)</span> <a class="idref" href="Combi.SSRcomplements.tools.html#F"><span class="id" title="variable">F</span></a> <a class="idref" href="Combi.SSRcomplements.tools.html#i"><span class="id" title="variable">i</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="notation">\</span><span class="id" title="notation">big</span><span class="id" title="notation">[</span><a class="idref" href="Combi.SSRcomplements.tools.html#BigInterv.op"><span class="id" title="variable">op</span></a><span class="id" title="notation">/</span><a class="idref" href="Combi.SSRcomplements.tools.html#BigInterv.idx"><span class="id" title="variable">idx</span></a><span class="id" title="notation">]</span><span class="id" title="notation">_</span><span class="id" title="notation">(</span>0 <span class="id" title="notation">≤</span> <span class="id" title="var">i</span> <span class="id" title="notation">&lt;</span> <a class="idref" href="Combi.SSRcomplements.tools.html#c"><span class="id" title="variable">c</span></a> <span class="id" title="notation">|</span> <a class="idref" href="Combi.SSRcomplements.tools.html#a"><span class="id" title="variable">a</span></a> <span class="id" title="notation">≤</span> <a class="idref" href="Combi.SSRcomplements.tools.html#i"><span class="id" title="variable">i</span></a> <span class="id" title="notation">&lt;</span> <a class="idref" href="Combi.SSRcomplements.tools.html#b"><span class="id" title="variable">b</span></a><span class="id" title="notation">)</span> <a class="idref" href="Combi.SSRcomplements.tools.html#F"><span class="id" title="variable">F</span></a> <a class="idref" href="Combi.SSRcomplements.tools.html#i"><span class="id" title="variable">i</span></a>.<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.SSRcomplements.tools.html#b"><span class="id" title="variable">b</span></a> <span class="id" title="notation">≤</span> <a class="idref" href="Combi.SSRcomplements.tools.html#c"><span class="id" title="variable">c</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a><br/>
+&nbsp;&nbsp;<span class="id" title="notation">\</span><span class="id" title="notation">big</span><span class="id" title="notation">[</span><a class="idref" href="Combi.SSRcomplements.tools.html#BigInterv.op"><span class="id" title="variable">op</span></a><span class="id" title="notation">/</span><a class="idref" href="Combi.SSRcomplements.tools.html#BigInterv.idx"><span class="id" title="variable">idx</span></a><span class="id" title="notation">]</span><span class="id" title="notation">_</span><span class="id" title="notation">(</span><a class="idref" href="Combi.SSRcomplements.tools.html#a"><span class="id" title="variable">a</span></a> <span class="id" title="notation">≤</span> <span class="id" title="var">i</span> <span class="id" title="notation">&lt;</span> <a class="idref" href="Combi.SSRcomplements.tools.html#b"><span class="id" title="variable">b</span></a><span class="id" title="notation">)</span> <a class="idref" href="Combi.SSRcomplements.tools.html#F"><span class="id" title="variable">F</span></a> <a class="idref" href="Combi.SSRcomplements.tools.html#i"><span class="id" title="variable">i</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a><br/>
+&nbsp;&nbsp;<span class="id" title="notation">\</span><span class="id" title="notation">big</span><span class="id" title="notation">[</span><a class="idref" href="Combi.SSRcomplements.tools.html#BigInterv.op"><span class="id" title="variable">op</span></a><span class="id" title="notation">/</span><a class="idref" href="Combi.SSRcomplements.tools.html#BigInterv.idx"><span class="id" title="variable">idx</span></a><span class="id" title="notation">]</span><span class="id" title="notation">_</span><span class="id" title="notation">(</span>0 <span class="id" title="notation">≤</span> <span class="id" title="var">i</span> <span class="id" title="notation">&lt;</span> <a class="idref" href="Combi.SSRcomplements.tools.html#c"><span class="id" title="variable">c</span></a> <span class="id" title="notation">|</span> <a class="idref" href="Combi.SSRcomplements.tools.html#a"><span class="id" title="variable">a</span></a> <span class="id" title="notation">≤</span> <a class="idref" href="Combi.SSRcomplements.tools.html#i"><span class="id" title="variable">i</span></a> <span class="id" title="notation">&lt;</span> <a class="idref" href="Combi.SSRcomplements.tools.html#b"><span class="id" title="variable">b</span></a><span class="id" title="notation">)</span> <a class="idref" href="Combi.SSRcomplements.tools.html#F"><span class="id" title="variable">F</span></a> <a class="idref" href="Combi.SSRcomplements.tools.html#i"><span class="id" title="variable">i</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="big_nat_0cond"><span class="id" title="lemma">big_nat_0cond</span></a> <span class="id" title="var">n</span> <span class="id" title="var">f</span> :<br/>
+&nbsp;&nbsp;<span class="id" title="notation">\</span><span class="id" title="notation">big</span><span class="id" title="notation">[</span><a class="idref" href="Combi.SSRcomplements.tools.html#BigInterv.op"><span class="id" title="variable">op</span></a><span class="id" title="notation">/</span><a class="idref" href="Combi.SSRcomplements.tools.html#BigInterv.idx"><span class="id" title="variable">idx</span></a><span class="id" title="notation">]</span><span class="id" title="notation">_</span><span class="id" title="notation">(</span>0 <span class="id" title="notation">≤</span> <span class="id" title="var">i</span> <span class="id" title="notation">&lt;</span> <a class="idref" href="Combi.SSRcomplements.tools.html#n"><span class="id" title="variable">n</span></a><span class="id" title="notation">)</span> <a class="idref" href="Combi.SSRcomplements.tools.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="Combi.SSRcomplements.tools.html#i"><span class="id" title="variable">i</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a><br/>
+&nbsp;&nbsp;<span class="id" title="notation">\</span><span class="id" title="notation">big</span><span class="id" title="notation">[</span><a class="idref" href="Combi.SSRcomplements.tools.html#BigInterv.op"><span class="id" title="variable">op</span></a><span class="id" title="notation">/</span><a class="idref" href="Combi.SSRcomplements.tools.html#BigInterv.idx"><span class="id" title="variable">idx</span></a><span class="id" title="notation">]</span><span class="id" title="notation">_</span><span class="id" title="notation">(</span>0 <span class="id" title="notation">≤</span> <span class="id" title="var">i</span> <span class="id" title="notation">&lt;</span> <a class="idref" href="Combi.SSRcomplements.tools.html#n"><span class="id" title="variable">n</span></a> <span class="id" title="notation">|</span> (<a class="idref" href="Combi.SSRcomplements.tools.html#i"><span class="id" title="variable">i</span></a> <span class="id" title="notation">&lt;</span> <a class="idref" href="Combi.SSRcomplements.tools.html#n"><span class="id" title="variable">n</span></a>)%<span class="id" title="var">N</span><span class="id" title="notation">)</span> <a class="idref" href="Combi.SSRcomplements.tools.html#f"><span class="id" title="variable">f</span></a> <a class="idref" href="Combi.SSRcomplements.tools.html#i"><span class="id" title="variable">i</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.SSRcomplements.tools.html#BigInterv"><span class="id" title="section">BigInterv</span></a>.<br/>
@@ -213,18 +223,21 @@ TODO: these probably should be contributed to SSReflect itself
 <span class="id" title="keyword">Section</span> <a name="Enum"><span class="id" title="section">Enum</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Variable</span> <a name="Enum.T"><span class="id" title="variable">T</span></a>: <span class="id" title="abbreviation">finType</span>.<br/>
+<span class="id" title="keyword">Variable</span> <a name="Enum.T"><span class="id" title="variable">T</span></a> : <span class="id" title="abbreviation">finType</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="setU1E"><span class="id" title="lemma">setU1E</span></a> (<span class="id" title="var">x</span> : <a class="idref" href="Combi.SSRcomplements.tools.html#Enum.T"><span class="id" title="variable">T</span></a>) (<span class="id" title="var">S</span> : <span class="id" title="notation">{</span><span class="id" title="notation">set</span> <a class="idref" href="Combi.SSRcomplements.tools.html#Enum.T"><span class="id" title="variable">T</span></a><span class="id" title="notation">}</span>) : <a class="idref" href="Combi.SSRcomplements.tools.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#46c9e8232fa09401e24f1934bb65029f"><span class="id" title="notation">\</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#46c9e8232fa09401e24f1934bb65029f"><span class="id" title="notation">in</span></a> <a class="idref" href="Combi.SSRcomplements.tools.html#S"><span class="id" title="variable">S</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.SSRcomplements.tools.html#x"><span class="id" title="variable">x</span></a> <span class="id" title="notation">|:</span> <a class="idref" href="Combi.SSRcomplements.tools.html#S"><span class="id" title="variable">S</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.SSRcomplements.tools.html#S"><span class="id" title="variable">S</span></a>.<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="enum_eq0P"><span class="id" title="lemma">enum_eq0P</span></a> (<span class="id" title="var">S</span> : <span class="id" title="notation">{</span><span class="id" title="notation">set</span> <a class="idref" href="Combi.SSRcomplements.tools.html#Enum.T"><span class="id" title="variable">T</span></a><span class="id" title="notation">}</span>):<br/>
+&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#reflect"><span class="id" title="abbreviation">reflect</span></a> (<span class="id" title="abbreviation">enum</span> <a class="idref" href="Combi.SSRcomplements.tools.html#S"><span class="id" title="variable">S</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="notation">[::]</span>) (<a class="idref" href="Combi.SSRcomplements.tools.html#S"><span class="id" title="variable">S</span></a> <span class="id" title="notation">==</span> <span class="id" title="definition">set0</span>).<br/>
 
 <br/>
 <span class="id" title="keyword">Variables</span> (<a name="Enum.R"><span class="id" title="variable">R</span></a> : <span class="id" title="keyword">Type</span>) (<a name="Enum.idx"><span class="id" title="variable">idx</span></a> : <a class="idref" href="Combi.SSRcomplements.tools.html#R"><span class="id" title="variable">R</span></a>) (<a name="Enum.op"><span class="id" title="variable">op</span></a> : <a class="idref" href="Combi.SSRcomplements.tools.html#R"><span class="id" title="variable">R</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.SSRcomplements.tools.html#R"><span class="id" title="variable">R</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.SSRcomplements.tools.html#R"><span class="id" title="variable">R</span></a>) (<a name="Enum.F"><span class="id" title="variable">F</span></a> : <a class="idref" href="Combi.SSRcomplements.tools.html#Enum.T"><span class="id" title="variable">T</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.SSRcomplements.tools.html#R"><span class="id" title="variable">R</span></a>).<br/>
 
 <br/>
-<span class="id" title="keyword">Lemma</span> <a name="enum_eq0P"><span class="id" title="lemma">enum_eq0P</span></a> (<span class="id" title="var">s</span> : <span class="id" title="notation">{</span><span class="id" title="notation">set</span> <a class="idref" href="Combi.SSRcomplements.tools.html#Enum.T"><span class="id" title="variable">T</span></a><span class="id" title="notation">}</span>):<br/>
-&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#reflect"><span class="id" title="abbreviation">reflect</span></a> (<span class="id" title="abbreviation">enum</span> <a class="idref" href="Combi.SSRcomplements.tools.html#s"><span class="id" title="variable">s</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="notation">[::]</span>) (<a class="idref" href="Combi.SSRcomplements.tools.html#s"><span class="id" title="variable">s</span></a> <span class="id" title="notation">==</span> <span class="id" title="definition">set0</span>).<br/>
-
-<br/>
-<span class="id" title="keyword">Lemma</span> <a name="big_enum"><span class="id" title="lemma">big_enum</span></a> (<span class="id" title="var">S</span> : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#pred"><span class="id" title="definition">pred</span></a> <a class="idref" href="Combi.SSRcomplements.tools.html#Enum.T"><span class="id" title="variable">T</span></a>) :<br/>
-&nbsp;&nbsp;<span class="id" title="notation">\</span><span class="id" title="notation">big</span><span class="id" title="notation">[</span><a class="idref" href="Combi.SSRcomplements.tools.html#Enum.op"><span class="id" title="variable">op</span></a><span class="id" title="notation">/</span><a class="idref" href="Combi.SSRcomplements.tools.html#Enum.idx"><span class="id" title="variable">idx</span></a><span class="id" title="notation">]</span><span class="id" title="notation">_</span><span class="id" title="notation">(</span><span class="id" title="var">s</span> <span class="id" title="notation">in</span> <a class="idref" href="Combi.SSRcomplements.tools.html#S"><span class="id" title="variable">S</span></a><span class="id" title="notation">)</span> <a class="idref" href="Combi.SSRcomplements.tools.html#Enum.F"><span class="id" title="variable">F</span></a> <a class="idref" href="Combi.SSRcomplements.tools.html#s"><span class="id" title="variable">s</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="notation">\</span><span class="id" title="notation">big</span><span class="id" title="notation">[</span><a class="idref" href="Combi.SSRcomplements.tools.html#Enum.op"><span class="id" title="variable">op</span></a><span class="id" title="notation">/</span><a class="idref" href="Combi.SSRcomplements.tools.html#Enum.idx"><span class="id" title="variable">idx</span></a><span class="id" title="notation">]</span><span class="id" title="notation">_</span><span class="id" title="notation">(</span><span class="id" title="var">s</span> <span class="id" title="notation">&lt;-</span> <span class="id" title="abbreviation">enum</span> <a class="idref" href="Combi.SSRcomplements.tools.html#S"><span class="id" title="variable">S</span></a><span class="id" title="notation">)</span> <a class="idref" href="Combi.SSRcomplements.tools.html#Enum.F"><span class="id" title="variable">F</span></a> <a class="idref" href="Combi.SSRcomplements.tools.html#s"><span class="id" title="variable">s</span></a>.<br/>
+<span class="id" title="keyword">Lemma</span> <a name="big_enum"><span class="id" title="lemma">big_enum</span></a> (<span class="id" title="var">P</span> : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#pred"><span class="id" title="definition">pred</span></a> <a class="idref" href="Combi.SSRcomplements.tools.html#Enum.T"><span class="id" title="variable">T</span></a>) :<br/>
+&nbsp;&nbsp;<span class="id" title="notation">\</span><span class="id" title="notation">big</span><span class="id" title="notation">[</span><a class="idref" href="Combi.SSRcomplements.tools.html#Enum.op"><span class="id" title="variable">op</span></a><span class="id" title="notation">/</span><a class="idref" href="Combi.SSRcomplements.tools.html#Enum.idx"><span class="id" title="variable">idx</span></a><span class="id" title="notation">]</span><span class="id" title="notation">_</span><span class="id" title="notation">(</span><span class="id" title="var">x</span> <span class="id" title="notation">in</span> <a class="idref" href="Combi.SSRcomplements.tools.html#P"><span class="id" title="variable">P</span></a><span class="id" title="notation">)</span> <a class="idref" href="Combi.SSRcomplements.tools.html#Enum.F"><span class="id" title="variable">F</span></a> <a class="idref" href="Combi.SSRcomplements.tools.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="notation">\</span><span class="id" title="notation">big</span><span class="id" title="notation">[</span><a class="idref" href="Combi.SSRcomplements.tools.html#Enum.op"><span class="id" title="variable">op</span></a><span class="id" title="notation">/</span><a class="idref" href="Combi.SSRcomplements.tools.html#Enum.idx"><span class="id" title="variable">idx</span></a><span class="id" title="notation">]</span><span class="id" title="notation">_</span><span class="id" title="notation">(</span><span class="id" title="var">x</span> <span class="id" title="notation">&lt;-</span> <span class="id" title="abbreviation">enum</span> <a class="idref" href="Combi.SSRcomplements.tools.html#P"><span class="id" title="variable">P</span></a><span class="id" title="notation">)</span> <a class="idref" href="Combi.SSRcomplements.tools.html#Enum.F"><span class="id" title="variable">F</span></a> <a class="idref" href="Combi.SSRcomplements.tools.html#x"><span class="id" title="variable">x</span></a>.<br/>
  
 <br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.SSRcomplements.tools.html#Enum"><span class="id" title="section">Enum</span></a>.<br/>
@@ -357,6 +370,18 @@ TODO: these probably should be contributed to SSReflect itself
 
 <br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.SSRcomplements.tools.html#SetPartition"><span class="id" title="section">SetPartition</span></a>.<br/>
+
+<br/>
+
+<br/>
+<span class="id" title="keyword">Import</span> <span class="id" title="var">GRing.Theory</span>.<br/>
+<span class="id" title="keyword">Import</span> <span class="id" title="var">Num.Theory</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Local Open</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">ring_scope</span>.<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="iter_plus1"><span class="id" title="lemma">iter_plus1</span></a> <span class="id" title="var">n</span> : (<span class="id" title="definition">iter</span> <a class="idref" href="Combi.SSRcomplements.tools.html#n"><span class="id" title="variable">n</span></a> (<span class="id" title="notation">+%</span><span class="id" title="notation">R</span> <span class="id" title="notation">(1</span> <span class="id" title="notation">:</span> <span class="id" title="notation">rat</span><span class="id" title="notation">)</span>) 0 <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.SSRcomplements.tools.html#n"><span class="id" title="variable">n</span></a><span class="id" title="notation">%:~</span><span class="id" title="notation">R</span>)%<span class="id" title="var">R</span>.<br/>
 </div>
 </div>
 

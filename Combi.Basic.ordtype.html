@@ -28,12 +28,120 @@
 </div>
 
 <div class="doc">
-<a name="lab167"></a><h1 class="section">Ordered type</h1>
+<a name="lab199"></a><h1 class="section">Ordered type</h1>
 
 
 <div class="paragraph"> </div>
 
-Most of this should be merge with Cyril Cohen's <span class="inlinecode"><span class="id" title="definition">order</span></span>.
+TODO: Most of this should be merged with Cyril Cohen's <span class="inlinecode"><span class="id" title="definition">order</span></span> and therefore
+should be considered as unstable.
+
+<div class="paragraph"> </div>
+
+The notion defined here include:
+
+<div class="paragraph"> </div>
+
+<ul class="doclist">
+<li> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#InhOrdFinType.pordType"><span class="id" title="definition">pordType</span></a></span> == interface for partially ordered types
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#InhOrdFinType.ordType"><span class="id" title="definition">ordType</span></a></span> == interface for totally ordered types
+
+</li>
+</ul>
+
+<div class="paragraph"> </div>
+
+Inhabited variants:
+
+<div class="paragraph"> </div>
+
+<ul class="doclist">
+<li> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#InhOrdFinType.inhType"><span class="id" title="definition">inhType</span></a></span> == interface for inhabited types
+
+</li>
+<li> <span class="inlinecode"><span class="id" title="var">inhPordType</span></span> == interface for partially ordered inhabited types
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#InhOrdType.Exports.inhOrdType"><span class="id" title="abbreviation">inhOrdType</span></a></span> == interface for totally ordered inhabited types
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#InhOrdFinType.Exports.inhOrdFinType"><span class="id" title="abbreviation">inhOrdFinType</span></a></span> == interface for totally ordered finite types
+
+<div class="paragraph"> </div>
+
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#minX"><span class="id" title="definition">minX</span></a></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#StabilityProperties.m"><span class="id" title="variable">m</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span> == the minimum of two element of <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#InhOrdFinType.ordType"><span class="id" title="definition">ordType</span></a></span>
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#maxX"><span class="id" title="definition">maxX</span></a></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#StabilityProperties.m"><span class="id" title="variable">m</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span> == the maximum of two element of <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#InhOrdFinType.ordType"><span class="id" title="definition">ordType</span></a></span>
+
+<div class="paragraph"> </div>
+
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#maxL"><span class="id" title="definition">maxL</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#SetContainingBothLeft.Case.a"><span class="id" title="variable">a</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#RestrIntervBig.L"><span class="id" title="variable">L</span></a></span> == the maximum of <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#SetContainingBothLeft.Case.a"><span class="id" title="variable">a</span></a></span> and the element of the sequence <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#RestrIntervBig.L"><span class="id" title="variable">L</span></a></span>
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#allLeq"><span class="id" title="definition">allLeq</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.v"><span class="id" title="variable">v</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#SetContainingBothLeft.Case.a"><span class="id" title="variable">a</span></a></span> == a is smaller or equal than all the element of <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.v"><span class="id" title="variable">v</span></a></span>
+
+</li>
+<li> <span class="inlinecode"><span class="id" title="var">allLnt</span></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.v"><span class="id" title="variable">v</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#SetContainingBothLeft.Case.a"><span class="id" title="variable">a</span></a></span> == a is strictly smaller than all the element of <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.v"><span class="id" title="variable">v</span></a></span>
+
+<div class="paragraph"> </div>
+
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#rembig"><span class="id" title="definition">rembig</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#GreeneInvariantsRule.w"><span class="id" title="variable">w</span></a></span> == <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#GreeneInvariantsRule.w"><span class="id" title="variable">w</span></a></span> minus last occurence of its largest letter
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#posbig"><span class="id" title="definition">posbig</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#GreeneInvariantsRule.w"><span class="id" title="variable">w</span></a></span> == the position of the last occurence of the largest letter of <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#GreeneInvariantsRule.w"><span class="id" title="variable">w</span></a></span>
+
+<div class="paragraph"> </div>
+
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#shift_pos"><span class="id" title="definition">shift_pos</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Schensted.html#pos"><span class="id" title="abbreviation">pos</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span> == if <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span> <span class="inlinecode">&lt;</span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Schensted.html#pos"><span class="id" title="abbreviation">pos</span></a></span> then <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span> else <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a>.+1</span>
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#shiftinv_pos"><span class="id" title="definition">shiftinv_pos</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Schensted.html#pos"><span class="id" title="abbreviation">pos</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span> == if <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span> <span class="inlinecode">&lt;</span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Schensted.html#pos"><span class="id" title="abbreviation">pos</span></a></span> then <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span> else <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a>.-1</span>
+
+</li>
+</ul>
+
+<div class="paragraph"> </div>
+
+We define canonical <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#InhOrdFinType.inhPOrdType"><span class="id" title="definition">inhPOrdType</span></a></span> structure on <span class="inlinecode"><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a></span> which is inherited
+by the subtype <span class="inlinecode">'<span class="id" title="var">I_n</span></span> and <span class="inlinecode"><span class="id" title="library">seq</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#T"><span class="id" title="abbreviation">T</span></a></span> (with the lexicographic order).
+
+<div class="paragraph"> </div>
+
+<ul class="doclist">
+<li> <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#Dual"><span class="id" title="abbreviation">Dual</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#T"><span class="id" title="abbreviation">T</span></a></span> == the dual ordered type of <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#T"><span class="id" title="abbreviation">T</span></a></span>
+
+</li>
+</ul>
+
+<div class="paragraph"> </div>
+
+Warning: the printing of the dual order is currently very confusing.
+
+<div class="paragraph"> </div>
+
+<ul class="doclist">
+<li> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#prodlex_pordType"><span class="id" title="definition">prodlex_pordType</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#IncrMap.T1"><span class="id" title="variable">T1</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#IncrMap.T2"><span class="id" title="variable">T2</span></a></span> == the cartesian product <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#IncrMap.T1"><span class="id" title="variable">T1</span></a></span> <span class="inlinecode">×</span> <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#IncrMap.T2"><span class="id" title="variable">T2</span></a></span> ordered by
+        the lexicographic order. This is <i>not</i> a canonical order
+
+</li>
+</ul>
+
+<div class="paragraph"> </div>
+
+
+<div class="paragraph"> </div>
+
  
 </div>
 <div class="code">
@@ -44,6 +152,17 @@ Most of this should be merge with Cyril Cohen's <span class="inlinecode"><span c
 <span class="id" title="keyword">Set Implicit Arguments</span>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab200"></a><h1 class="section">The hierarchy of ordered types</h1>
+
+<div class="paragraph"> </div>
+
+<a name="lab201"></a><h2 class="section">Partially ordered types</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Module</span> <a name="PartOrder"><span class="id" title="module">PartOrder</span></a>.<br/>
 
 <br/>
@@ -112,6 +231,12 @@ Most of this should be merge with Cyril Cohen's <span class="inlinecode"><span c
 <br/>
 
 <br/>
+</div>
+
+<div class="doc">
+Declare legacy Arith operators in new scope. 
+</div>
+<div class="code">
 
 <br/>
 <span class="id" title="keyword">Delimit</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">ssr_nat_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">ssr_nat</span>.<br/>
@@ -123,6 +248,12 @@ Most of this should be merge with Cyril Cohen's <span class="inlinecode"><span c
 <span class="id" title="keyword">Notation</span> <a name="5cc348fd8d8972556584f0b84e6401b1"><span class="id" title="notation">&quot;</span></a>m &gt; n" := (<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Peano.html#gt"><span class="id" title="definition">gt</span></a> <span class="id" title="var">m</span> <span class="id" title="var">n</span>) : <span class="id" title="var">ssr_nat_scope</span>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+Rebind scope delimiters, reserving a scope for the "recursive",      i.e., unprotected version of operators.                             
+</div>
+<div class="code">
 
 <br/>
 <span class="id" title="keyword">Delimit</span> <span class="id" title="keyword">Scope</span> <span class="id" title="var">ord_scope</span> <span class="id" title="keyword">with</span> <span class="id" title="var">Ord</span>.<br/>
@@ -141,6 +272,13 @@ Most of this should be merge with Cyril Cohen's <span class="inlinecode"><span c
 <span class="id" title="keyword">Notation</span> <a name="9655c98184bc4451c1fb7ebaedb45db9"><span class="id" title="notation">&quot;</span></a>m &lt; n &lt; p" := (<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#49ac24efa716d8b0ee8943bc1d1769a9"><span class="id" title="notation">(</span></a><span class="id" title="var">m</span> <a class="idref" href="Combi.Basic.ordtype.html#623d96373a6c25dbb91864f6f78a6f09"><span class="id" title="notation">&lt;</span></a> <span class="id" title="var">n</span><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#49ac24efa716d8b0ee8943bc1d1769a9"><span class="id" title="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#49ac24efa716d8b0ee8943bc1d1769a9"><span class="id" title="notation">&amp;&amp;</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#49ac24efa716d8b0ee8943bc1d1769a9"><span class="id" title="notation">(</span></a><span class="id" title="var">n</span> <a class="idref" href="Combi.Basic.ordtype.html#623d96373a6c25dbb91864f6f78a6f09"><span class="id" title="notation">&lt;</span></a> <span class="id" title="var">p</span><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#49ac24efa716d8b0ee8943bc1d1769a9"><span class="id" title="notation">)</span></a>) : <span class="id" title="var">ord_scope</span>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab202"></a><h2 class="section">Partially ordered Sub-types</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="SubPOrdType"><span class="id" title="section">SubPOrdType</span></a>.<br/>
 
 <br/>
@@ -168,6 +306,13 @@ Most of this should be merge with Cyril Cohen's <span class="inlinecode"><span c
 &nbsp;&nbsp;(<span class="id" title="tactic">at</span> <span class="id" title="keyword">level</span> 0, <span class="id" title="var">format</span> "[ 'pordMixin'  'of'  T  'by'  &lt;: ]") : <span class="id" title="var">form_scope</span>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab203"></a><h2 class="section">Totally ordered types</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Module</span> <a name="Order"><span class="id" title="module">Order</span></a>.<br/>
 
 <br/>
@@ -236,6 +381,13 @@ Most of this should be merge with Cyril Cohen's <span class="inlinecode"><span c
 <span class="id" title="keyword">Lemma</span> <a name="leqX_total"><span class="id" title="lemma">leqX_total</span></a> (<span class="id" title="var">T</span> : <a class="idref" href="Combi.Basic.ordtype.html#ordType"><span class="id" title="abbreviation">ordType</span></a>) : <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssrbool.html#total"><span class="id" title="definition">total</span></a> (@<a class="idref" href="Combi.Basic.ordtype.html#leqX_op"><span class="id" title="definition">leqX_op</span></a> <a class="idref" href="Combi.Basic.ordtype.html#T"><span class="id" title="variable">T</span></a>).<br/>
  
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab204"></a><h2 class="section">Totally ordered Sub-types</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="SubOrdType"><span class="id" title="section">SubOrdType</span></a>.<br/>
 
 <br/>
@@ -259,6 +411,13 @@ Most of this should be merge with Cyril Cohen's <span class="inlinecode"><span c
 <br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab205"></a><h2 class="section">Partially ordered finite types</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Module</span> <a name="FinPOrdType"><span class="id" title="module">FinPOrdType</span></a>.<br/>
 
 <br/>
@@ -335,6 +494,13 @@ Most of this should be merge with Cyril Cohen's <span class="inlinecode"><span c
 <span class="id" title="keyword">Export</span> <span class="id" title="var">FinPOrdType.Exports</span>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab206"></a><h2 class="section">Inhabited types</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Module</span> <a name="Inhabited"><span class="id" title="module">Inhabited</span></a>.<br/>
 
 <br/>
@@ -397,6 +563,13 @@ Most of this should be merge with Cyril Cohen's <span class="inlinecode"><span c
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.Basic.ordtype.html#ProdInhType"><span class="id" title="section">ProdInhType</span></a>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab207"></a><h2 class="section">Inhabited partially ordered types</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Module</span> <a name="InhPOrdType"><span class="id" title="module">InhPOrdType</span></a>.<br/>
 
 <br/>
@@ -458,6 +631,13 @@ Most of this should be merge with Cyril Cohen's <span class="inlinecode"><span c
 <span class="id" title="keyword">Export</span> <span class="id" title="var">InhPOrdType.Exports</span>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab208"></a><h2 class="section">Inhabited totally ordered types</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Module</span> <a name="InhOrdType"><span class="id" title="module">InhOrdType</span></a>.<br/>
 
 <br/>
@@ -522,6 +702,13 @@ Most of this should be merge with Cyril Cohen's <span class="inlinecode"><span c
 <span class="id" title="keyword">Export</span> <span class="id" title="var">InhOrdType.Exports</span>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab209"></a><h2 class="section">Inhabited totally ordered finite types</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Module</span> <a name="InhOrdFinType"><span class="id" title="module">InhOrdFinType</span></a>.<br/>
 
 <br/>
@@ -611,6 +798,17 @@ Most of this should be merge with Cyril Cohen's <span class="inlinecode"><span c
 <span class="id" title="keyword">Export</span> <span class="id" title="var">InhOrdFinType.Exports</span>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab210"></a><h1 class="section">Theories for partially and totally ordered types</h1>
+
+<div class="paragraph"> </div>
+
+<a name="lab211"></a><h2 class="section">Basic theory</h2>
+
+</div>
+<div class="code">
 
 <br/>
 <span class="id" title="keyword">Section</span> <a name="POrderTheory"><span class="id" title="section">POrderTheory</span></a>.<br/>
@@ -776,6 +974,13 @@ Most of this should be merge with Cyril Cohen's <span class="inlinecode"><span c
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.Basic.ordtype.html#OrdNotations"><span class="id" title="module">OrdNotations</span></a>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab212"></a><h2 class="section">Increasing and nondecreasing maps</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="IncrMap"><span class="id" title="section">IncrMap</span></a>.<br/>
 
 <br/>
@@ -814,6 +1019,14 @@ Most of this should be merge with Cyril Cohen's <span class="inlinecode"><span c
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.Basic.ordtype.html#IncrMap"><span class="id" title="section">IncrMap</span></a>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab213"></a><h2 class="section">sequences over an ordered types</h2>
+<a name="lab214"></a><h3 class="section">Maximum of a sequence</h3>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="MaxSeq"><span class="id" title="section">MaxSeq</span></a>.<br/>
 
 <br/>
@@ -840,6 +1053,13 @@ Most of this should be merge with Cyril Cohen's <span class="inlinecode"><span c
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.Basic.ordtype.html#MaxSeq"><span class="id" title="section">MaxSeq</span></a>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab215"></a><h3 class="section">Comparison of the elements of a sequence to an element</h3>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="AllLeqLtn"><span class="id" title="section">AllLeqLtn</span></a>.<br/>
 
 <br/>
@@ -912,6 +1132,13 @@ Most of this should be merge with Cyril Cohen's <span class="inlinecode"><span c
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.Basic.ordtype.html#AllLeqLtn"><span class="id" title="section">AllLeqLtn</span></a>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab216"></a><h3 class="section">Removing the largest letter of a sequence</h3>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="RemoveBig"><span class="id" title="section">RemoveBig</span></a>.<br/>
 
 <br/>
@@ -921,12 +1148,24 @@ Most of this should be merge with Cyril Cohen's <span class="inlinecode"><span c
 <span class="id" title="keyword">Implicit</span> <span class="id" title="keyword">Type</span> <span class="id" title="var">u</span> <span class="id" title="var">v</span> <span class="id" title="var">w</span> <span class="id" title="var">r</span> : <span class="id" title="abbreviation">seq</span> <a class="idref" href="Combi.Basic.ordtype.html#RemoveBig.T"><span class="id" title="variable">T</span></a>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+Remove the last occurence of the largest letter from w 
+</div>
+<div class="code">
 <span class="id" title="keyword">Fixpoint</span> <a name="rembig"><span class="id" title="definition">rembig</span></a> <span class="id" title="var">w</span> :=<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">if</span> <a class="idref" href="Combi.Basic.ordtype.html#w"><span class="id" title="variable">w</span></a> <span class="id" title="keyword">is</span> <span class="id" title="var">a</span> <span class="id" title="notation">::</span> <span class="id" title="var">v</span> <span class="id" title="keyword">then</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssreflect.html#0348819abaa88c2cd747e8fa60dde7ae"><span class="id" title="notation">if</span></a> <a class="idref" href="Combi.Basic.ordtype.html#allLtn"><span class="id" title="definition">allLtn</span></a> <span class="id" title="var">v</span> <span class="id" title="var">a</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssreflect.html#0348819abaa88c2cd747e8fa60dde7ae"><span class="id" title="notation">then</span></a> <span class="id" title="var">v</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssreflect.html#0348819abaa88c2cd747e8fa60dde7ae"><span class="id" title="notation">else</span></a> <span class="id" title="var">a</span> <span class="id" title="notation">::</span> <a class="idref" href="Combi.Basic.ordtype.html#rembig"><span class="id" title="definition">rembig</span></a> <span class="id" title="var">v</span><br/>
 &nbsp;&nbsp;<span class="id" title="keyword">else</span> <span class="id" title="notation">[::]</span>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+Position of the last occurence of the largest letter of w 
+</div>
+<div class="code">
 <span class="id" title="keyword">Fixpoint</span> <a name="posbig"><span class="id" title="definition">posbig</span></a> <span class="id" title="var">w</span> :=<br/>
 &nbsp;&nbsp;<span class="id" title="keyword">if</span> <a class="idref" href="Combi.Basic.ordtype.html#w"><span class="id" title="variable">w</span></a> <span class="id" title="keyword">is</span> <span class="id" title="var">a</span> <span class="id" title="notation">::</span> <span class="id" title="var">v</span> <span class="id" title="keyword">then</span><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssreflect.html#0348819abaa88c2cd747e8fa60dde7ae"><span class="id" title="notation">if</span></a> <a class="idref" href="Combi.Basic.ordtype.html#allLtn"><span class="id" title="definition">allLtn</span></a> <span class="id" title="var">v</span> <span class="id" title="var">a</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssreflect.html#0348819abaa88c2cd747e8fa60dde7ae"><span class="id" title="notation">then</span></a> 0 <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssreflect.html#0348819abaa88c2cd747e8fa60dde7ae"><span class="id" title="notation">else</span></a> <span class="id" title="notation">(</span><a class="idref" href="Combi.Basic.ordtype.html#posbig"><span class="id" title="definition">posbig</span></a> <span class="id" title="var">v</span><span class="id" title="notation">).+1</span><br/>
@@ -1058,8 +1297,17 @@ Most of this should be merge with Cyril Cohen's <span class="inlinecode"><span c
 <br/>
 
 <br/>
+</div>
 
-<br/>
+<div class="doc">
+<a name="lab217"></a><h1 class="section">Classical ordered types</h1>
+
+<div class="paragraph"> </div>
+
+<a name="lab218"></a><h2 class="section">The order on <span class="inlinecode"><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a></span></h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Fact</span> <a name="leq_porder"><span class="id" title="lemma">leq_porder</span></a> : <a class="idref" href="Combi.Basic.ordtype.html#axiom"><span class="id" title="definition">PartOrder.axiom</span></a> <span class="id" title="definition">leq</span>.<br/>
  
 <br/>
@@ -1101,6 +1349,13 @@ Most of this should be merge with Cyril Cohen's <span class="inlinecode"><span c
 <span class="id" title="keyword">Lemma</span> <a name="rembig_iota"><span class="id" title="lemma">rembig_iota</span></a> <span class="id" title="var">n</span> <span class="id" title="var">i</span> : <a class="idref" href="Combi.Basic.ordtype.html#rembig"><span class="id" title="definition">rembig</span></a> (<span class="id" title="definition">iota</span> <a class="idref" href="Combi.Basic.ordtype.html#i"><span class="id" title="variable">i</span></a> <a class="idref" href="Combi.Basic.ordtype.html#n"><span class="id" title="variable">n</span></a><span class="id" title="notation">.+1</span>) <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <span class="id" title="definition">iota</span> <a class="idref" href="Combi.Basic.ordtype.html#i"><span class="id" title="variable">i</span></a> <a class="idref" href="Combi.Basic.ordtype.html#n"><span class="id" title="variable">n</span></a>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab219"></a><h2 class="section">The dual order</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="DualPOrder"><span class="id" title="section">DualPOrder</span></a>.<br/>
 
 <br/>
@@ -1166,23 +1421,30 @@ Most of this should be merge with Cyril Cohen's <span class="inlinecode"><span c
 &nbsp;&nbsp;<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">(</span></a><span class="id" title="keyword">∀</span> <span class="id" title="var">x</span>, <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">(</span></a><span class="id" title="keyword">∀</span> <span class="id" title="var">y</span>, <a class="idref" href="Combi.Basic.ordtype.html#y"><span class="id" title="variable">y</span></a> <a class="idref" href="Combi.Basic.ordtype.html#ab078bc9a0b50faaadd7529fce857640"><span class="id" title="notation">&gt;</span></a> <a class="idref" href="Combi.Basic.ordtype.html#x"><span class="id" title="variable">x</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.Basic.ordtype.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="Combi.Basic.ordtype.html#y"><span class="id" title="variable">y</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.Basic.ordtype.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="Combi.Basic.ordtype.html#x"><span class="id" title="variable">x</span></a><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">)</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">∀</span> <span class="id" title="var">x</span>, <a class="idref" href="Combi.Basic.ordtype.html#P"><span class="id" title="variable">P</span></a> <a class="idref" href="Combi.Basic.ordtype.html#x"><span class="id" title="variable">x</span></a>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab220"></a><h2 class="section">The order on ordinals</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Definition</span> <a name="ord_pordMixin"><span class="id" title="definition">ord_pordMixin</span></a> <span class="id" title="var">n</span> := <a class="idref" href="Combi.Basic.ordtype.html#a5d801b53c3dbf03739cd80234697c36"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.Basic.ordtype.html#a5d801b53c3dbf03739cd80234697c36"><span class="id" title="notation">pordMixin</span></a> <a class="idref" href="Combi.Basic.ordtype.html#a5d801b53c3dbf03739cd80234697c36"><span class="id" title="notation">of</span></a> <span class="id" title="notation">'</span><span class="id" title="notation">I_n</span> <a class="idref" href="Combi.Basic.ordtype.html#a5d801b53c3dbf03739cd80234697c36"><span class="id" title="notation">by</span></a> <a class="idref" href="Combi.Basic.ordtype.html#a5d801b53c3dbf03739cd80234697c36"><span class="id" title="notation">&lt;:]</span></a>.<br/>
 <span class="id" title="keyword">Canonical</span> <span class="id" title="var">ord_pordType</span> <span class="id" title="var">n</span> := <span class="id" title="keyword">Eval</span> <span class="id" title="tactic">hnf</span> <span class="id" title="tactic">in</span> <a class="idref" href="Combi.Basic.ordtype.html#POrdType"><span class="id" title="abbreviation">POrdType</span></a> <span class="id" title="notation">'</span><span class="id" title="notation">I_n</span> (<a class="idref" href="Combi.Basic.ordtype.html#ord_pordMixin"><span class="id" title="definition">ord_pordMixin</span></a> <a class="idref" href="Combi.Basic.ordtype.html#n"><span class="id" title="variable">n</span></a>).<br/>
 <span class="id" title="keyword">Definition</span> <a name="ord_ordMixin"><span class="id" title="definition">ord_ordMixin</span></a> <span class="id" title="var">n</span> := <a class="idref" href="Combi.Basic.ordtype.html#64c1c59afe70bda602b8b7c47d8cd255"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.Basic.ordtype.html#64c1c59afe70bda602b8b7c47d8cd255"><span class="id" title="notation">ordMixin</span></a> <a class="idref" href="Combi.Basic.ordtype.html#64c1c59afe70bda602b8b7c47d8cd255"><span class="id" title="notation">of</span></a> <a class="idref" href="Combi.Basic.ordtype.html#ord_pordType"><span class="id" title="definition">ord_pordType</span></a> <a class="idref" href="Combi.Basic.ordtype.html#n"><span class="id" title="variable">n</span></a> <a class="idref" href="Combi.Basic.ordtype.html#64c1c59afe70bda602b8b7c47d8cd255"><span class="id" title="notation">by</span></a> <a class="idref" href="Combi.Basic.ordtype.html#64c1c59afe70bda602b8b7c47d8cd255"><span class="id" title="notation">&lt;:]</span></a>.<br/>
 <span class="id" title="keyword">Canonical</span> <span class="id" title="var">ord_ordType</span> <span class="id" title="var">n</span> := <span class="id" title="keyword">Eval</span> <span class="id" title="tactic">hnf</span> <span class="id" title="tactic">in</span> <a class="idref" href="Combi.Basic.ordtype.html#OrdType"><span class="id" title="abbreviation">OrdType</span></a> <span class="id" title="notation">'</span><span class="id" title="notation">I_n</span> (<a class="idref" href="Combi.Basic.ordtype.html#ord_ordMixin"><span class="id" title="definition">ord_ordMixin</span></a> <a class="idref" href="Combi.Basic.ordtype.html#n"><span class="id" title="variable">n</span></a>).<br/>
-
-<br/>
 <span class="id" title="keyword">Definition</span> <a name="ord_inhMixin"><span class="id" title="definition">ord_inhMixin</span></a> <span class="id" title="var">n</span> := <a class="idref" href="Combi.Basic.ordtype.html#Mixin"><span class="id" title="constructor">Inhabited.Mixin</span></a> (<span class="id" title="definition">ord0</span> (<span class="id" title="var">n'</span> := <a class="idref" href="Combi.Basic.ordtype.html#n"><span class="id" title="variable">n</span></a>)).<br/>
 <span class="id" title="keyword">Canonical</span> <span class="id" title="var">ord_inhType</span> <span class="id" title="var">n</span> := <span class="id" title="keyword">Eval</span> <span class="id" title="tactic">hnf</span> <span class="id" title="tactic">in</span> <a class="idref" href="Combi.Basic.ordtype.html#InhType"><span class="id" title="abbreviation">InhType</span></a> <span class="id" title="notation">'</span><span class="id" title="notation">I_n</span><span class="id" title="notation">.+1</span> (<a class="idref" href="Combi.Basic.ordtype.html#ord_inhMixin"><span class="id" title="definition">ord_inhMixin</span></a> <a class="idref" href="Combi.Basic.ordtype.html#n"><span class="id" title="variable">n</span></a>).<br/>
 <span class="id" title="keyword">Canonical</span> <span class="id" title="var">ord_inhOrdType</span> <span class="id" title="var">n</span> := <a class="idref" href="Combi.Basic.ordtype.html#d701c4296e6fd9306ddbc36d28ce9b4a"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.Basic.ordtype.html#d701c4296e6fd9306ddbc36d28ce9b4a"><span class="id" title="notation">inhOrdType</span></a> <a class="idref" href="Combi.Basic.ordtype.html#d701c4296e6fd9306ddbc36d28ce9b4a"><span class="id" title="notation">of</span></a> <span class="id" title="notation">'</span><span class="id" title="notation">I_n</span><span class="id" title="notation">.+1</span><a class="idref" href="Combi.Basic.ordtype.html#d701c4296e6fd9306ddbc36d28ce9b4a"><span class="id" title="notation">]</span></a>.<br/>
 <span class="id" title="keyword">Canonical</span> <span class="id" title="var">ord_inhOrdFinType</span> <span class="id" title="var">n</span> := <a class="idref" href="Combi.Basic.ordtype.html#b4a1227b30b5e3798f33fdf3d8ff580d"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.Basic.ordtype.html#b4a1227b30b5e3798f33fdf3d8ff580d"><span class="id" title="notation">inhOrdFinType</span></a> <a class="idref" href="Combi.Basic.ordtype.html#b4a1227b30b5e3798f33fdf3d8ff580d"><span class="id" title="notation">of</span></a> <span class="id" title="notation">'</span><span class="id" title="notation">I_n</span><span class="id" title="notation">.+1</span><a class="idref" href="Combi.Basic.ordtype.html#b4a1227b30b5e3798f33fdf3d8ff580d"><span class="id" title="notation">]</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Definition</span> <a name="seq_inhMixin"><span class="id" title="definition">seq_inhMixin</span></a> (<span class="id" title="var">T</span> : <span class="id" title="abbreviation">eqType</span>) := <a class="idref" href="Combi.Basic.ordtype.html#Mixin"><span class="id" title="constructor">Inhabited.Mixin</span></a> (<span class="id" title="notation">[::]</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssreflect.html#4509b22bf26e3d6d771897e22bd8bc8f"><span class="id" title="notation">:</span></a> <span class="id" title="abbreviation">seq</span> <a class="idref" href="Combi.Basic.ordtype.html#T"><span class="id" title="variable">T</span></a>).<br/>
-<span class="id" title="keyword">Canonical</span> <span class="id" title="var">seq_inhType</span> (<span class="id" title="var">T</span> : <span class="id" title="abbreviation">eqType</span>) :=<br/>
-&nbsp;&nbsp;<span class="id" title="keyword">Eval</span> <span class="id" title="tactic">hnf</span> <span class="id" title="tactic">in</span> <a class="idref" href="Combi.Basic.ordtype.html#InhType"><span class="id" title="abbreviation">InhType</span></a> (<span class="id" title="abbreviation">seq</span> <a class="idref" href="Combi.Basic.ordtype.html#T"><span class="id" title="variable">T</span></a>) (<a class="idref" href="Combi.Basic.ordtype.html#seq_inhMixin"><span class="id" title="definition">seq_inhMixin</span></a> <a class="idref" href="Combi.Basic.ordtype.html#T"><span class="id" title="variable">T</span></a>).<br/>
+</div>
 
-<br/>
+<div class="doc">
+<a name="lab221"></a><h2 class="section">The lexicographic order on pairs</h2>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="ProdLexPOrder"><span class="id" title="section">ProdLexPOrder</span></a>.<br/>
 
 <br/>
@@ -1222,6 +1484,17 @@ Most of this should be merge with Cyril Cohen's <span class="inlinecode"><span c
 
 <br/>
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.Basic.ordtype.html#ProdLexOrder"><span class="id" title="section">ProdLexOrder</span></a>.<br/>
+
+<br/>
+</div>
+
+<div class="doc">
+The lexicographic order on <span class="inlinecode"><span class="id" title="library">seq</span></span> 
+</div>
+<div class="code">
+<span class="id" title="keyword">Definition</span> <a name="seq_inhMixin"><span class="id" title="definition">seq_inhMixin</span></a> (<span class="id" title="var">T</span> : <span class="id" title="abbreviation">eqType</span>) := <a class="idref" href="Combi.Basic.ordtype.html#Mixin"><span class="id" title="constructor">Inhabited.Mixin</span></a> (<span class="id" title="notation">[::]</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssreflect.html#4509b22bf26e3d6d771897e22bd8bc8f"><span class="id" title="notation">:</span></a> <span class="id" title="abbreviation">seq</span> <a class="idref" href="Combi.Basic.ordtype.html#T"><span class="id" title="variable">T</span></a>).<br/>
+<span class="id" title="keyword">Canonical</span> <span class="id" title="var">seq_inhType</span> (<span class="id" title="var">T</span> : <span class="id" title="abbreviation">eqType</span>) :=<br/>
+&nbsp;&nbsp;<span class="id" title="keyword">Eval</span> <span class="id" title="tactic">hnf</span> <span class="id" title="tactic">in</span> <a class="idref" href="Combi.Basic.ordtype.html#InhType"><span class="id" title="abbreviation">InhType</span></a> (<span class="id" title="abbreviation">seq</span> <a class="idref" href="Combi.Basic.ordtype.html#T"><span class="id" title="variable">T</span></a>) (<a class="idref" href="Combi.Basic.ordtype.html#seq_inhMixin"><span class="id" title="definition">seq_inhMixin</span></a> <a class="idref" href="Combi.Basic.ordtype.html#T"><span class="id" title="variable">T</span></a>).<br/>
 
 <br/>
 <span class="id" title="keyword">Section</span> <a name="ListLexOrder"><span class="id" title="section">ListLexOrder</span></a>.<br/>
@@ -1270,6 +1543,13 @@ Most of this should be merge with Cyril Cohen's <span class="inlinecode"><span c
 <span class="id" title="keyword">End</span> <a class="idref" href="Combi.Basic.ordtype.html#ListLexOrder"><span class="id" title="section">ListLexOrder</span></a>.<br/>
 
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab222"></a><h1 class="section">Tests</h1>
+
+</div>
+<div class="code">
 <span class="id" title="keyword">Section</span> <a name="Tests"><span class="id" title="section">Tests</span></a>.<br/>
 
 <br/>

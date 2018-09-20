@@ -178,11 +178,15 @@ Sigma types for integer partitions:
 </li>
 <li> <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#conj_intpartn"><span class="id" title="definition">conj_intpartn</span></a></span> == the conjugate of a <span class="inlinecode">'<span class="id" title="var">P_n</span></span> as a <span class="inlinecode">'<span class="id" title="var">P_n</span></span>
 
-</li>
-</ul>
-
 <div class="paragraph"> </div>
 
+
+</li>
+<li> <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#decr_nth_intpart"><span class="id" title="definition">decr_nth_intpart</span></a></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span> == the shape obtained by removing a box at the end
+               of the <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span>-th row if the result is a partition else <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a></span>
+
+</li>
+</ul>
 
 <div class="paragraph"> </div>
 
@@ -643,7 +647,7 @@ Removing trailing zeroes
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="is_in_conj_part_impl"><span class="id" title="lemma">is_in_conj_part_impl</span></a> <span class="id" title="var">sh</span>:<br/>
-&nbsp;&nbsp;<a class="idref" href="Combi.Combi.partition.html#is_part"><span class="id" title="definition">is_part</span></a> <a class="idref" href="Combi.Combi.partition.html#sh"><span class="id" title="variable">sh</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">∀</span> <span class="id" title="var">r</span> <span class="id" title="var">c</span> , <a class="idref" href="Combi.Combi.partition.html#is_in_shape"><span class="id" title="definition">is_in_shape</span></a> <a class="idref" href="Combi.Combi.partition.html#sh"><span class="id" title="variable">sh</span></a> <a class="idref" href="Combi.Combi.partition.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="Combi.Combi.partition.html#c"><span class="id" title="variable">c</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.Combi.partition.html#is_in_shape"><span class="id" title="definition">is_in_shape</span></a> (<a class="idref" href="Combi.Combi.partition.html#conj_part"><span class="id" title="definition">conj_part</span></a> <a class="idref" href="Combi.Combi.partition.html#sh"><span class="id" title="variable">sh</span></a>) <a class="idref" href="Combi.Combi.partition.html#c"><span class="id" title="variable">c</span></a> <a class="idref" href="Combi.Combi.partition.html#r"><span class="id" title="variable">r</span></a>.<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.Combi.partition.html#is_part"><span class="id" title="definition">is_part</span></a> <a class="idref" href="Combi.Combi.partition.html#sh"><span class="id" title="variable">sh</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="keyword">∀</span> <span class="id" title="var">r</span> <span class="id" title="var">c</span>, <a class="idref" href="Combi.Combi.partition.html#is_in_shape"><span class="id" title="definition">is_in_shape</span></a> <a class="idref" href="Combi.Combi.partition.html#sh"><span class="id" title="variable">sh</span></a> <a class="idref" href="Combi.Combi.partition.html#r"><span class="id" title="variable">r</span></a> <a class="idref" href="Combi.Combi.partition.html#c"><span class="id" title="variable">c</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.Combi.partition.html#is_in_shape"><span class="id" title="definition">is_in_shape</span></a> (<a class="idref" href="Combi.Combi.partition.html#conj_part"><span class="id" title="definition">conj_part</span></a> <a class="idref" href="Combi.Combi.partition.html#sh"><span class="id" title="variable">sh</span></a>) <a class="idref" href="Combi.Combi.partition.html#c"><span class="id" title="variable">c</span></a> <a class="idref" href="Combi.Combi.partition.html#r"><span class="id" title="variable">r</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="is_in_conj_part"><span class="id" title="lemma">is_in_conj_part</span></a> <span class="id" title="var">sh</span> :<br/>
@@ -1036,6 +1040,27 @@ Removing trailing zeroes
  <span class="id" title="keyword">Lemma</span> <a name="conj_colpartn"><span class="id" title="lemma">conj_colpartn</span></a> <span class="id" title="var">d</span> : <a class="idref" href="Combi.Combi.partition.html#conj_intpartn"><span class="id" title="definition">conj_intpartn</span></a> (<a class="idref" href="Combi.Combi.partition.html#colpartn"><span class="id" title="definition">colpartn</span></a> <a class="idref" href="Combi.Combi.partition.html#d"><span class="id" title="variable">d</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.Combi.partition.html#rowpartn"><span class="id" title="definition">rowpartn</span></a> <a class="idref" href="Combi.Combi.partition.html#d"><span class="id" title="variable">d</span></a>.<br/>
  
 <br/>
+</div>
+
+<div class="doc">
+<a name="lab17"></a><h2 class="section">Removing a corner from a partition</h2>
+
+</div>
+<div class="code">
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="is_part_decr_nth_part"><span class="id" title="lemma">is_part_decr_nth_part</span></a> (<span class="id" title="var">p</span> : <a class="idref" href="Combi.Combi.partition.html#intpart"><span class="id" title="record">intpart</span></a>) <span class="id" title="var">i</span> :<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.Combi.partition.html#is_part"><span class="id" title="definition">is_part</span></a> (<a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssreflect.html#0348819abaa88c2cd747e8fa60dde7ae"><span class="id" title="notation">if</span></a> <a class="idref" href="Combi.Combi.partition.html#is_rem_corner"><span class="id" title="definition">is_rem_corner</span></a> <a class="idref" href="Combi.Combi.partition.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="Combi.Combi.partition.html#i"><span class="id" title="variable">i</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssreflect.html#0348819abaa88c2cd747e8fa60dde7ae"><span class="id" title="notation">then</span></a> <a class="idref" href="Combi.Combi.partition.html#decr_nth"><span class="id" title="definition">decr_nth</span></a> <a class="idref" href="Combi.Combi.partition.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="Combi.Combi.partition.html#i"><span class="id" title="variable">i</span></a>  <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssreflect.html#0348819abaa88c2cd747e8fa60dde7ae"><span class="id" title="notation">else</span></a> <a class="idref" href="Combi.Combi.partition.html#p"><span class="id" title="variable">p</span></a>).<br/>
+
+<br/>
+<span class="id" title="keyword">Definition</span> <a name="decr_nth_intpart"><span class="id" title="definition">decr_nth_intpart</span></a> (<span class="id" title="var">p</span> : <a class="idref" href="Combi.Combi.partition.html#intpart"><span class="id" title="record">intpart</span></a>) <span class="id" title="var">i</span> : <a class="idref" href="Combi.Combi.partition.html#intpart"><span class="id" title="record">intpart</span></a> :=<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.Combi.partition.html#IntPart"><span class="id" title="constructor">IntPart</span></a> (<a class="idref" href="Combi.Combi.partition.html#is_part_decr_nth_part"><span class="id" title="lemma">is_part_decr_nth_part</span></a> <a class="idref" href="Combi.Combi.partition.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="Combi.Combi.partition.html#i"><span class="id" title="variable">i</span></a>).<br/>
+
+<br/>
+<span class="id" title="keyword">Lemma</span> <a name="decr_nth_intpartE"><span class="id" title="lemma">decr_nth_intpartE</span></a> (<span class="id" title="var">p</span> : <a class="idref" href="Combi.Combi.partition.html#intpart"><span class="id" title="record">intpart</span></a>) <span class="id" title="var">i</span> :<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.Combi.partition.html#is_rem_corner"><span class="id" title="definition">is_rem_corner</span></a> <a class="idref" href="Combi.Combi.partition.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="Combi.Combi.partition.html#i"><span class="id" title="variable">i</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.Combi.partition.html#decr_nth_intpart"><span class="id" title="definition">decr_nth_intpart</span></a> <a class="idref" href="Combi.Combi.partition.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="Combi.Combi.partition.html#i"><span class="id" title="variable">i</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#8f9364556521ebb498093f28eea2240f"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.Combi.partition.html#decr_nth"><span class="id" title="definition">decr_nth</span></a> <a class="idref" href="Combi.Combi.partition.html#p"><span class="id" title="variable">p</span></a> <a class="idref" href="Combi.Combi.partition.html#i"><span class="id" title="variable">i</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#8f9364556521ebb498093f28eea2240f"><span class="id" title="notation">:&gt;</span></a> <span class="id" title="abbreviation">seq</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a>.<br/>
+
+<br/>
 <span class="id" title="keyword">Module</span> <a name="IntPartNLex"><span class="id" title="module">IntPartNLex</span></a>.<br/>
 
 <br/>
@@ -1064,7 +1089,7 @@ Removing trailing zeroes
 </div>
 
 <div class="doc">
-<a name="lab17"></a><h1 class="section">Counting functions</h1>
+<a name="lab18"></a><h1 class="section">Counting functions</h1>
 
 </div>
 <div class="code">
@@ -1098,7 +1123,7 @@ Removing trailing zeroes
 </div>
 
 <div class="doc">
-<a name="lab18"></a><h1 class="section">The union of two integer partitions</h1>
+<a name="lab19"></a><h1 class="section">The union of two integer partitions</h1>
 
 </div>
 <div class="code">
@@ -1159,7 +1184,7 @@ Removing trailing zeroes
 </div>
 
 <div class="doc">
-<a name="lab19"></a><h1 class="section">Dominance order on partition</h1>
+<a name="lab20"></a><h1 class="section">Dominance order on partition</h1>
 
 </div>
 <div class="code">
@@ -1279,7 +1304,7 @@ Removing trailing zeroes
 </div>
 
 <div class="doc">
-<a name="lab20"></a><h1 class="section">Shape of set partitions and integer partitions</h1>
+<a name="lab21"></a><h1 class="section">Shape of set partitions and integer partitions</h1>
 
 </div>
 <div class="code">

@@ -28,7 +28,7 @@
 </div>
 
 <div class="doc">
-<a name="lab268"></a><h1 class="section">Definition of Schur polynomials as quotient of alternant and Kostka numbers</h1>
+<a name="lab325"></a><h1 class="section">Definition of Schur polynomials as quotient of alternant and Kostka numbers</h1>
 
 
 <div class="paragraph"> </div>
@@ -38,10 +38,10 @@ In the combinatorial definitions below, we use the following notations:
 <li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span> : an integer denoting the number of variable.
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.mu"><span class="id" title="variable">mu</span></a></span> : partitions of an integer <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#StdKostka.d"><span class="id" title="variable">d</span></a></span>
+<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#mu"><span class="id" title="projection">mu</span></a></span> : partitions of an integer <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#StdKostka.d"><span class="id" title="variable">d</span></a></span>
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.m"><span class="id" title="variable">m</span></a></span> : a monomial for the ring of polynomials {mpoly R<span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span>}
+<li> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#StabilityProperties.m"><span class="id" title="variable">m</span></a></span> : a monomial for the ring of polynomials {mpoly R<span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span>}
 
 </li>
 <li> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#GreeneInvariantsRule.w"><span class="id" title="variable">w</span></a></span> : a sequence of <span class="inlinecode">'<span class="id" title="var">I_n</span></span>
@@ -64,8 +64,8 @@ We define the following notions:
            the value is unspecified.
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#setdiff"><span class="id" title="definition">setdiff</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.mu"><span class="id" title="variable">mu</span></a></span> == the set of elements <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span> of <span class="inlinecode">'<span class="id" title="var">I_n</span></span> for which the
-           <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span>-th part of <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> is smaller than the one of <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.mu"><span class="id" title="variable">mu</span></a></span>.
+<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#setdiff"><span class="id" title="definition">setdiff</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#mu"><span class="id" title="projection">mu</span></a></span> == the set of elements <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span> of <span class="inlinecode">'<span class="id" title="var">I_n</span></span> for which the
+           <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span>-th part of <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> is smaller than the one of <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#mu"><span class="id" title="projection">mu</span></a></span>.
 
 </li>
 </ul>
@@ -80,25 +80,25 @@ Kostka numbers:
 <li> <span class="inlinecode"><span class="id" title="tactic">eval</span></span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#GreeneInvariantsRule.w"><span class="id" title="variable">w</span></a></span>        == the evaluation of <span class="inlinecode"><a class="idref" href="Combi.LRrule.Greene_inv.html#GreeneInvariantsRule.w"><span class="id" title="variable">w</span></a></span> as a <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a>.-<span class="id" title="library">tuple</span></span> <span class="inlinecode"><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a></span>.
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#KostkaTab"><span class="id" title="definition">KostkaTab</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.m"><span class="id" title="variable">m</span></a></span> == the set of tableaux of shape <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> and evaluation <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.m"><span class="id" title="variable">m</span></a></span>.
+<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#KostkaTab"><span class="id" title="definition">KostkaTab</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#StabilityProperties.m"><span class="id" title="variable">m</span></a></span> == the set of tableaux of shape <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> and evaluation <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#StabilityProperties.m"><span class="id" title="variable">m</span></a></span>.
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#KostkaMon"><span class="id" title="definition">KostkaMon</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.m"><span class="id" title="variable">m</span></a></span> == the number of Kostka tableau : <span class="inlinecode">#|<a class="idref" href="Combi.MPoly.Schur_altdef.html#KostkaTab"><span class="id" title="definition">KostkaTab</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.m"><span class="id" title="variable">m</span></a>|</span>.
+<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#KostkaMon"><span class="id" title="definition">KostkaMon</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#StabilityProperties.m"><span class="id" title="variable">m</span></a></span> == the number of Kostka tableau : <span class="inlinecode">#|<a class="idref" href="Combi.MPoly.Schur_altdef.html#KostkaTab"><span class="id" title="definition">KostkaTab</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#StabilityProperties.m"><span class="id" title="variable">m</span></a>|</span>.
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#Kostka"><span class="id" title="definition">Kostka</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.mu"><span class="id" title="variable">mu</span></a></span>    ==
+<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#Kostka"><span class="id" title="definition">Kostka</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#mu"><span class="id" title="projection">mu</span></a></span>    ==
 
 </li>
-<li> <span class="inlinecode">'<span class="id" title="var">K</span>(<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a>,</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.mu"><span class="id" title="variable">mu</span></a>)</span>      == the Kostka number associated to <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> and <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.mu"><span class="id" title="variable">mu</span></a></span>
+<li> <span class="inlinecode">'<span class="id" title="var">K</span>(<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a>,</span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#mu"><span class="id" title="projection">mu</span></a>)</span>      == the Kostka number associated to <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> and <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#mu"><span class="id" title="projection">mu</span></a></span>
            as a <span class="inlinecode"><a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a></span> in <span class="inlinecode"><span class="id" title="var">nat_scope</span></span> and as an element of <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#RingSchurSym.R"><span class="id" title="variable">R</span></a></span> (inferred from
            the context) in <span class="inlinecode"><span class="id" title="var">ring_scope</span></span>.
 
 </li>
-<li> <span class="inlinecode"><span class="id" title="var">Kostak_rec</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.mu"><span class="id" title="variable">mu</span></a></span> == a Coq implementation of the computation of the Kostka
-      number. It suppose that <span class="inlinecode"><span class="id" title="definition">sumn</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><span class="id" title="definition">sumn</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.mu"><span class="id" title="variable">mu</span></a></span>.
+<li> <span class="inlinecode"><span class="id" title="var">Kostak_rec</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#mu"><span class="id" title="projection">mu</span></a></span> == a Coq implementation of the computation of the Kostka
+      number. It suppose that <span class="inlinecode"><span class="id" title="definition">sumn</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><span class="id" title="definition">sumn</span></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#mu"><span class="id" title="projection">mu</span></a></span>.
 
 </li>
-<li> <span class="inlinecode">'<span class="id" title="var">K</span>^-1(<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a>,</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.mu"><span class="id" title="variable">mu</span></a>)</span> == the inverse Kostka number, that is the coefficient of the
+<li> <span class="inlinecode">'<span class="id" title="var">K</span>^-1(<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a>,</span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#mu"><span class="id" title="projection">mu</span></a>)</span> == the inverse Kostka number, that is the coefficient of the
            inverse Kostka matrix computed using matrix inversion.
 
 </li>
@@ -138,18 +138,18 @@ Extension of tableaux:
 
 In this section, we fix
 <ul class="doclist">
-<li> a non empty sequence of integer <span class="inlinecode"><span class="id" title="definition">rcons</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.m"><span class="id" title="variable">m</span></a></span> whose size is less than <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span>.
+<li> a non empty sequence of integer <span class="inlinecode"><span class="id" title="definition">rcons</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#StabilityProperties.m"><span class="id" title="variable">m</span></a></span> whose size is less than <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span>.
 
 </li>
 <li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> : a partition of <span class="inlinecode"><span class="id" title="definition">sumn</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> whose size is less than <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span>.
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.mu"><span class="id" title="variable">mu</span></a></span> : a partition of <span class="inlinecode">(<span class="id" title="definition">sumn</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a>)</span> <span class="inlinecode">+</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.m"><span class="id" title="variable">m</span></a></span> whose size is less than <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span>.
+<li> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#mu"><span class="id" title="projection">mu</span></a></span> : a partition of <span class="inlinecode">(<span class="id" title="definition">sumn</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a>)</span> <span class="inlinecode">+</span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#StabilityProperties.m"><span class="id" title="variable">m</span></a></span> whose size is less than <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span>.
 
 </li>
 </ul>
-We are given some proofs <span class="inlinecode"><a class="idref" href="Combi.HookFormula.Qmeasure.html#Hs"><span class="id" title="variable">Hs</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#Hla"><span class="id" title="definition">Hla</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.Hmu"><span class="id" title="variable">Hmu</span></a></span> that all these partition are of size
-less than <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span>. We suppose moreover that <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.mu"><span class="id" title="variable">mu</span></a>/<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> is an horizontal border
+We are given some proofs <span class="inlinecode"><a class="idref" href="Combi.HookFormula.hook.html#Hs"><span class="id" title="variable">Hs</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#Hla"><span class="id" title="definition">Hla</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.Hmu"><span class="id" title="variable">Hmu</span></a></span> that all these partition are of size
+less than <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span>. We suppose moreover that <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#mu"><span class="id" title="projection">mu</span></a>/<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> is an horizontal border
 strip. The proof is denoted <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.Hstrip"><span class="id" title="variable">Hstrip</span></a></span>.
 
 <div class="paragraph"> </div>
@@ -159,7 +159,7 @@ We denote by
 <li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#T"><span class="id" title="abbreviation">T</span></a></span> : any tableau of shape <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> and evaluation <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span>.
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#Tm"><span class="id" title="abbreviation">Tm</span></a></span> : any tableau of shape <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.mu"><span class="id" title="variable">mu</span></a></span> and evaluation <span class="inlinecode"><span class="id" title="definition">rcons</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.m"><span class="id" title="variable">m</span></a></span>.
+<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#Tm"><span class="id" title="abbreviation">Tm</span></a></span> : any tableau of shape <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#mu"><span class="id" title="projection">mu</span></a></span> and evaluation <span class="inlinecode"><span class="id" title="definition">rcons</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#StabilityProperties.m"><span class="id" title="variable">m</span></a></span>.
 
 </li>
 </ul>
@@ -177,7 +177,7 @@ Then we define:
       is unspecified.
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#ext_tab"><span class="id" title="definition">ext_tab</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.Hsz"><span class="id" title="variable">Hsz</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.Hmu"><span class="id" title="variable">Hmu</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.Hstrip"><span class="id" title="variable">Hstrip</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#T"><span class="id" title="abbreviation">T</span></a></span> == the tableau obtained by filling the boxes of <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.mu"><span class="id" title="variable">mu</span></a>/<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span>
+<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#ext_tab"><span class="id" title="definition">ext_tab</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.Hsz"><span class="id" title="variable">Hsz</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.Hmu"><span class="id" title="variable">Hmu</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.Hstrip"><span class="id" title="variable">Hstrip</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#T"><span class="id" title="abbreviation">T</span></a></span> == the tableau obtained by filling the boxes of <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#mu"><span class="id" title="projection">mu</span></a>/<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span>
       with <span class="inlinecode"><span class="id" title="definition">size</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.s"><span class="id" title="variable">s</span></a></span>.
 
 </li>
@@ -196,7 +196,7 @@ Then <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.ht
 <br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SSRcomplements.tools.html#"><span class="id" title="library">tools</span></a> <a class="idref" href="Combi.Basic.combclass.html#"><span class="id" title="library">combclass</span></a> <a class="idref" href="Combi.Basic.ordtype.html#"><span class="id" title="library">ordtype</span></a> <a class="idref" href="Combi.SSRcomplements.sorted.html#"><span class="id" title="library">sorted</span></a> <a class="idref" href="Combi.Combi.partition.html#"><span class="id" title="library">partition</span></a> <a class="idref" href="Combi.Combi.tableau.html#"><span class="id" title="library">tableau</span></a> <a class="idref" href="Combi.Combi.skewtab.html#"><span class="id" title="library">skewtab</span></a>.<br/>
 <span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.SymGroup.presentSn.html#"><span class="id" title="library">presentSn</span></a> <a class="idref" href="Combi.MPoly.antisym.html#"><span class="id" title="library">antisym</span></a> <a class="idref" href="Combi.MPoly.Schur_mpoly.html#"><span class="id" title="library">Schur_mpoly</span></a> <a class="idref" href="Combi.LRrule.freeSchur.html#"><span class="id" title="library">freeSchur</span></a> <a class="idref" href="Combi.LRrule.therule.html#"><span class="id" title="library">therule</span></a>.<br/>
-<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.Combi.std.html#"><span class="id" title="library">std</span></a> <a class="idref" href="Combi.Combi.stdtab.html#"><span class="id" title="library">stdtab</span></a> <a class="idref" href="Combi.SSRcomplements.unitriginv.html#"><span class="id" title="library">unitriginv</span></a>.<br/>
+<span class="id" title="keyword">Require</span> <span class="id" title="keyword">Import</span> <a class="idref" href="Combi.Combi.std.html#"><span class="id" title="library">std</span></a> <a class="idref" href="Combi.Combi.stdtab.html#"><span class="id" title="library">stdtab</span></a> <a class="idref" href="Combi.Basic.unitriginv.html#"><span class="id" title="library">unitriginv</span></a>.<br/>
 
 <br/>
 <span class="id" title="keyword">Set Implicit Arguments</span>.<br/>
@@ -292,7 +292,7 @@ Alternating and symmetric polynomial
 </div>
 
 <div class="doc">
-<a name="lab269"></a><h1 class="section">Piery's rule for alternating polynomials</h1>
+<a name="lab326"></a><h1 class="section">Piery's rule for alternating polynomials</h1>
 
 </div>
 <div class="code">
@@ -319,7 +319,7 @@ Alternating and symmetric polynomial
 </div>
 
 <div class="doc">
-<a name="lab270"></a><h1 class="section">Jacobi's definition of schur function</h1>
+<a name="lab327"></a><h1 class="section">Jacobi's definition of schur function</h1>
 
 </div>
 <div class="code">
@@ -351,7 +351,7 @@ Alternating and symmetric polynomial
 </div>
 
 <div class="doc">
-<a name="lab271"></a><h2 class="section">Schur polynomials are symmetric at last</h2>
+<a name="lab328"></a><h2 class="section">Schur polynomials are symmetric at last</h2>
 
 </div>
 <div class="code">
@@ -389,7 +389,7 @@ Alternating and symmetric polynomial
 </div>
 
 <div class="doc">
-<a name="lab272"></a><h1 class="section">Kostka numbers</h1>
+<a name="lab329"></a><h1 class="section">Kostka numbers</h1>
 
 </div>
 <div class="code">
@@ -494,7 +494,7 @@ Alternating and symmetric polynomial
 </div>
 
 <div class="doc">
-<a name="lab273"></a><h2 class="section">Comverting between standard tableau and tableau over 'I_n.</h2>
+<a name="lab330"></a><h2 class="section">Converting between standard tableau and tableau over <span class="inlinecode">'<span class="id" title="var">I_n</span></span>.</h2>
 
 
 <div class="paragraph"> </div>
@@ -580,7 +580,7 @@ of <span class="inlinecode"><span class="id" title="library">seq</span></span> <
 </div>
 
 <div class="doc">
-<a name="lab274"></a><h1 class="section">Restricting and extending tableaux</h1>
+<a name="lab331"></a><h1 class="section">Restricting and extending tableaux</h1>
 
 </div>
 <div class="code">
@@ -675,7 +675,7 @@ of <span class="inlinecode"><span class="id" title="library">seq</span></span> <
 </div>
 
 <div class="doc">
-<a name="lab275"></a><h1 class="section">Recursive computation of Kostka numbers</h1>
+<a name="lab332"></a><h1 class="section">Recursive computation of Kostka numbers</h1>
 
 </div>
 <div class="code">
@@ -723,22 +723,22 @@ of <span class="inlinecode"><span class="id" title="library">seq</span></span> <
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="Kostka_unitrig"><span class="id" title="lemma">Kostka_unitrig</span></a> (<span class="id" title="var">R</span> : <span class="id" title="abbreviation">comUnitRingType</span>) <span class="id" title="var">d</span> :<br/>
-&nbsp;&nbsp;<a class="idref" href="Combi.SSRcomplements.unitriginv.html#unitrig"><span class="id" title="definition">unitrig</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">la</span> <span class="id" title="var">mu</span> : <a class="idref" href="Combi.Combi.partition.html#IntPartNDom.intpartndom"><span class="id" title="definition">intpartndom</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#d"><span class="id" title="variable">d</span></a> ⇒ <a class="idref" href="Combi.MPoly.Schur_altdef.html#41e3bc628e5aee98da9e2e79f2eb0203"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#41e3bc628e5aee98da9e2e79f2eb0203"><span class="id" title="notation">K</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#41e3bc628e5aee98da9e2e79f2eb0203"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#41e3bc628e5aee98da9e2e79f2eb0203"><span class="id" title="notation">,</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#41e3bc628e5aee98da9e2e79f2eb0203"><span class="id" title="notation">)</span></a><span class="id" title="notation">%:</span><span class="id" title="notation">R</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssreflect.html#4509b22bf26e3d6d771897e22bd8bc8f"><span class="id" title="notation">:</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#R"><span class="id" title="variable">R</span></a>).<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.Basic.unitriginv.html#unitrig"><span class="id" title="definition">unitrig</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">la</span> <span class="id" title="var">mu</span> : <a class="idref" href="Combi.Combi.partition.html#IntPartNDom.intpartndom"><span class="id" title="definition">intpartndom</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#d"><span class="id" title="variable">d</span></a> ⇒ <a class="idref" href="Combi.MPoly.Schur_altdef.html#41e3bc628e5aee98da9e2e79f2eb0203"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#41e3bc628e5aee98da9e2e79f2eb0203"><span class="id" title="notation">K</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#41e3bc628e5aee98da9e2e79f2eb0203"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#41e3bc628e5aee98da9e2e79f2eb0203"><span class="id" title="notation">,</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#41e3bc628e5aee98da9e2e79f2eb0203"><span class="id" title="notation">)</span></a><span class="id" title="notation">%:</span><span class="id" title="notation">R</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssreflect.html#4509b22bf26e3d6d771897e22bd8bc8f"><span class="id" title="notation">:</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#R"><span class="id" title="variable">R</span></a>).<br/>
 
 <br/>
 </div>
 
 <div class="doc">
-<a name="lab276"></a><h2 class="section">Inverse Kostka numbers</h2>
+<a name="lab333"></a><h2 class="section">Inverse Kostka numbers</h2>
 
 </div>
 <div class="code">
 <span class="id" title="keyword">Definition</span> <a name="KostkaInv"><span class="id" title="definition">KostkaInv</span></a> <span class="id" title="var">d</span> : <a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">P_d</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.Combi.partition.html#965c2d763a144017170835224134925d"><span class="id" title="notation">P_d</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <span class="id" title="inductive">int</span> :=<br/>
-&nbsp;&nbsp;<a class="idref" href="Combi.SSRcomplements.unitriginv.html#Minv"><span class="id" title="definition">Minv</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">la</span> <span class="id" title="var">mu</span> : <a class="idref" href="Combi.Combi.partition.html#IntPartNDom.intpartndom"><span class="id" title="definition">intpartndom</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#d"><span class="id" title="variable">d</span></a> ⇒ <a class="idref" href="Combi.MPoly.Schur_altdef.html#41e3bc628e5aee98da9e2e79f2eb0203"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#41e3bc628e5aee98da9e2e79f2eb0203"><span class="id" title="notation">K</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#41e3bc628e5aee98da9e2e79f2eb0203"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#41e3bc628e5aee98da9e2e79f2eb0203"><span class="id" title="notation">,</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#41e3bc628e5aee98da9e2e79f2eb0203"><span class="id" title="notation">)</span></a><span class="id" title="notation">%:</span><span class="id" title="notation">R</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssreflect.html#4509b22bf26e3d6d771897e22bd8bc8f"><span class="id" title="notation">:</span></a> <span class="id" title="inductive">int</span>).<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.Basic.unitriginv.html#Minv"><span class="id" title="definition">Minv</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">la</span> <span class="id" title="var">mu</span> : <a class="idref" href="Combi.Combi.partition.html#IntPartNDom.intpartndom"><span class="id" title="definition">intpartndom</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#d"><span class="id" title="variable">d</span></a> ⇒ <a class="idref" href="Combi.MPoly.Schur_altdef.html#41e3bc628e5aee98da9e2e79f2eb0203"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#41e3bc628e5aee98da9e2e79f2eb0203"><span class="id" title="notation">K</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#41e3bc628e5aee98da9e2e79f2eb0203"><span class="id" title="notation">(</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#41e3bc628e5aee98da9e2e79f2eb0203"><span class="id" title="notation">,</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a><a class="idref" href="Combi.MPoly.Schur_altdef.html#41e3bc628e5aee98da9e2e79f2eb0203"><span class="id" title="notation">)</span></a><span class="id" title="notation">%:</span><span class="id" title="notation">R</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.ssr.ssreflect.html#4509b22bf26e3d6d771897e22bd8bc8f"><span class="id" title="notation">:</span></a> <span class="id" title="inductive">int</span>).<br/>
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="KostkaInv_unitrig"><span class="id" title="lemma">KostkaInv_unitrig</span></a> <span class="id" title="var">d</span> :<br/>
-&nbsp;&nbsp;<a class="idref" href="Combi.SSRcomplements.unitriginv.html#unitrig"><span class="id" title="definition">unitrig</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">la</span> <span class="id" title="var">mu</span> : <a class="idref" href="Combi.Combi.partition.html#IntPartNDom.intpartndom"><span class="id" title="definition">intpartndom</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#d"><span class="id" title="variable">d</span></a> ⇒ <a class="idref" href="Combi.MPoly.Schur_altdef.html#KostkaInv"><span class="id" title="definition">KostkaInv</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a>).<br/>
+&nbsp;&nbsp;<a class="idref" href="Combi.Basic.unitriginv.html#unitrig"><span class="id" title="definition">unitrig</span></a> (<span class="id" title="keyword">fun</span> <span class="id" title="var">la</span> <span class="id" title="var">mu</span> : <a class="idref" href="Combi.Combi.partition.html#IntPartNDom.intpartndom"><span class="id" title="definition">intpartndom</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#d"><span class="id" title="variable">d</span></a> ⇒ <a class="idref" href="Combi.MPoly.Schur_altdef.html#KostkaInv"><span class="id" title="definition">KostkaInv</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#la"><span class="id" title="variable">la</span></a> <a class="idref" href="Combi.MPoly.Schur_altdef.html#mu"><span class="id" title="variable">mu</span></a>).<br/>
  
 <br/>
 <span class="id" title="keyword">Notation</span> <a name="68bf1bdc88bf9c5a5260b843a3758d0f"><span class="id" title="notation">&quot;</span></a>''K^-1' ( la , mu )" := (<span class="id" title="notation">(</span><a class="idref" href="Combi.MPoly.Schur_altdef.html#KostkaInv"><span class="id" title="definition">KostkaInv</span></a> <span class="id" title="var">la</span> <span class="id" title="var">mu</span><span class="id" title="notation">)%:~</span><span class="id" title="notation">R</span>)<br/>

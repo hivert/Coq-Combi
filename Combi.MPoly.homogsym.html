@@ -28,8 +28,13 @@
 </div>
 
 <div class="doc">
-<a name="lab237"></a><h1 class="section">The Space of Homogeneous Symmetric Polynomials</h1>
+<a name="lab294"></a><h1 class="section">The Space of Homogeneous Symmetric Polynomials</h1>
 
+
+<div class="paragraph"> </div>
+
+In this file we study the vector space of homogeneous symmetric polynomials.
+The main goal is to construct its classical basis and Cauchy's scalar product.
 
 <div class="paragraph"> </div>
 
@@ -45,13 +50,19 @@
                      polynomials in <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span> variables over <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#RingSchurSym.R"><span class="id" title="variable">R</span></a></span>.
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.LeadingMonomial.p"><span class="id" title="variable">p</span></a></span> <span class="inlinecode">×<a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.HasIncr.h"><span class="id" title="variable">h</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#q"><span class="id" title="variable">q</span></a></span>        == the product of two homogeneous symmetric polynomial as a
+<li> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a></span> <span class="inlinecode">×<a class="idref" href="Combi.MPoly.Schur_altdef.html#Alternant.HasIncr.h"><span class="id" title="variable">h</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#q"><span class="id" title="variable">q</span></a></span>        == the product of two homogeneous symmetric polynomial as a
                      homogeneous symmetric polynomials.
+
+</li>
+</ul>
 
 <div class="paragraph"> </div>
 
+The classical bases:
 
-</li>
+<div class="paragraph"> </div>
+
+<ul class="doclist">
 <li> <span class="inlinecode">'<span class="id" title="var">he</span>[<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a>]</span>       == the elementary hom. sym. poly. associated to <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span>
 
 </li>
@@ -70,7 +81,7 @@
 
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.homogsym.html#in_homsym"><span class="id" title="definition">in_homsym</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#StdKostka.d"><span class="id" title="variable">d</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.LeadingMonomial.p"><span class="id" title="variable">p</span></a></span> == if <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#AlternIDomain.LeadingMonomial.p"><span class="id" title="variable">p</span></a></span> is a polynomial <span class="inlinecode">{<span class="id" title="library">mpoly</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#RingSchurSym.R"><span class="id" title="variable">R</span></a>[<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a>]}</span> which is both
+<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.homogsym.html#in_homsym"><span class="id" title="definition">in_homsym</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#StdKostka.d"><span class="id" title="variable">d</span></a></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a></span> == if <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a></span> is a polynomial <span class="inlinecode">{<span class="id" title="library">mpoly</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#RingSchurSym.R"><span class="id" title="variable">R</span></a>[<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a>]}</span> which is both
                      symmetric and homogeneous of degree <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#StdKostka.d"><span class="id" title="variable">d</span></a></span>, return it as a
                      <span class="inlinecode">{<a class="idref" href="Combi.MPoly.sympoly.html#sympol"><span class="id" title="projection">sympol</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#RingSchurSym.R"><span class="id" title="variable">R</span></a>[<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a>,</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#StdKostka.d"><span class="id" title="variable">d</span></a>]}</span>. It is canonically linear.
 
@@ -92,16 +103,25 @@
 </li>
 <li> <span class="inlinecode">'<span class="id" title="var">hs</span></span>           == the Schur      hom. sym. basis
 
+</li>
+</ul>
+
 <div class="paragraph"> </div>
 
 
-</li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.homogsym.html#monE"><span class="id" title="definition">monE</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.m"><span class="id" title="variable">m</span></a></span>        == if <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.m"><span class="id" title="variable">m</span></a></span> is the monomial <span class="inlinecode"><span class="id" title="var">x_1</span>^{<span class="id" title="var">i_1</span>}<span class="id" title="var">x_2</span>^{<span class="id" title="var">i_2</span>}...<span class="id" title="var">x_n</span>^{<span class="id" title="var">i_n</span>}</span>
+<div class="paragraph"> </div>
+
+Changing the base ring and the number of variables:
+
+<div class="paragraph"> </div>
+
+<ul class="doclist">
+<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.homogsym.html#intpart_of_mon"><span class="id" title="definition">intpart_of_mon</span></a></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#StabilityProperties.m"><span class="id" title="variable">m</span></a></span> == if <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#StabilityProperties.m"><span class="id" title="variable">m</span></a></span> is the monomial <span class="inlinecode"><span class="id" title="var">x_1</span>^{<span class="id" title="var">i_1</span>}<span class="id" title="var">x_2</span>^{<span class="id" title="var">i_2</span>}...<span class="id" title="var">x_n</span>^{<span class="id" title="var">i_n</span>}</span>
                      returns the integer partition <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a>^{<span class="id" title="var">i_n</span>}...2^{<span class="id" title="var">i_2</span>}1^{<span class="id" title="var">i_1</span>}</span>
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.homogsym.html#intpartn_of_mon"><span class="id" title="definition">intpartn_of_mon</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.sympoly.html#ChangeBasis.HandE.H"><span class="id" title="variable">H</span></a></span> == the same as an <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#intpartn"><span class="id" title="record">intpartn</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#StdKostka.d"><span class="id" title="variable">d</span></a></span> where <span class="inlinecode"><a class="idref" href="Combi.MPoly.sympoly.html#ChangeBasis.HandE.H"><span class="id" title="variable">H</span></a></span> is a proof of
-                     <span class="inlinecode"><span class="id" title="definition">mnmwgt</span></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.m"><span class="id" title="variable">m</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#StdKostka.d"><span class="id" title="variable">d</span></a></span>
+<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.homogsym.html#intpartn_of_mon"><span class="id" title="definition">intpartn_of_mon</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.sympoly.html#ChangeBasis.HandE.H"><span class="id" title="variable">H</span></a></span> == the same as an <span class="inlinecode"><a class="idref" href="Combi.MPoly.homogsym.html#intpart_of_mon"><span class="id" title="definition">intpart_of_mon</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#StdKostka.d"><span class="id" title="variable">d</span></a></span> where <span class="inlinecode"><a class="idref" href="Combi.MPoly.sympoly.html#ChangeBasis.HandE.H"><span class="id" title="variable">H</span></a></span> is a proof of
+                     <span class="inlinecode"><span class="id" title="definition">mnmwgt</span></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#StabilityProperties.m"><span class="id" title="variable">m</span></a></span> <span class="inlinecode">=</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#StdKostka.d"><span class="id" title="variable">d</span></a></span>
 
 <div class="paragraph"> </div>
 
@@ -115,15 +135,21 @@
                      <span class="inlinecode"><a class="idref" href="Combi.Basic.combclass.html#BijCard.f"><span class="id" title="variable">f</span></a></span> by sending elementary to elementary. This is
                      canonicaly linear.
 
+</li>
+</ul>
+
 <div class="paragraph"> </div>
 
+The scalar product:
 
-</li>
+<div class="paragraph"> </div>
+
+<ul class="doclist">
 <li> <span class="inlinecode">'[</span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.u"><span class="id" title="variable">u</span></a></span> <span class="inlinecode">|</span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.v"><span class="id" title="variable">v</span></a></span> <span class="inlinecode">]</span>    == the scalar product of hom. sym. poly., only defined over
                      the field <span class="inlinecode"><span class="id" title="library">algC</span></span>.
 
 </li>
-<li> <span class="inlinecode">'[</span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.u"><span class="id" title="variable">u</span></a></span> <span class="inlinecode">|</span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.v"><span class="id" title="variable">v</span></a></span> <span class="inlinecode">]</span> _(n, d) == the scalar product of hom. sym. poly. specifying
+<li> <span class="inlinecode">'[</span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.u"><span class="id" title="variable">u</span></a></span> <span class="inlinecode">|</span> <span class="inlinecode"><a class="idref" href="Combi.LRrule.plactic.html#IncrMap.v"><span class="id" title="variable">v</span></a></span> <span class="inlinecode">]</span> <span class="inlinecode"><span class="id" title="var">_</span>(<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a>,</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#StdKostka.d"><span class="id" title="variable">d</span></a>)</span> == the scalar product of hom. sym. poly. specifying
                      the number of variable and degree.
 
 </li>
@@ -185,7 +211,7 @@ of the scalar product.
 </div>
 
 <div class="doc">
-<a name="lab238"></a><h2 class="section">Homogeneous symmetric polynomials</h2>
+<a name="lab295"></a><h2 class="section">Homogeneous symmetric polynomials</h2>
 
 </div>
 <div class="code">
@@ -287,7 +313,7 @@ of the scalar product.
 </div>
 
 <div class="doc">
-<a name="lab239"></a><h2 class="section">Products of homogeneous symmetric polynomials</h2>
+<a name="lab296"></a><h2 class="section">Products of homogeneous symmetric polynomials</h2>
 
 </div>
 <div class="code">
@@ -351,7 +377,7 @@ of the scalar product.
 </div>
 
 <div class="doc">
-<a name="lab240"></a><h2 class="section">Homogeneous symmetric polynomials as a vector space</h2>
+<a name="lab297"></a><h2 class="section">Homogeneous symmetric polynomials as a vector space</h2>
 
 </div>
 <div class="code">
@@ -408,6 +434,12 @@ of the scalar product.
 <br/>
 
 <br/>
+</div>
+
+<div class="doc">
+TODO: Contribute to Pierre-Yves's multinomials 
+</div>
+<div class="code">
 <span class="id" title="keyword">Lemma</span> <a name="msym_pihomog"><span class="id" title="lemma">msym_pihomog</span></a> <span class="id" title="var">nv</span> <span class="id" title="var">s</span> (<span class="id" title="var">p</span> : <span class="id" title="notation">{</span><span class="id" title="notation">mpoly</span> <a class="idref" href="Combi.MPoly.homogsym.html#InHomSym.R"><span class="id" title="variable">R</span></a><span class="id" title="notation">[</span><a class="idref" href="Combi.MPoly.homogsym.html#nv"><span class="id" title="variable">nv</span></a><span class="id" title="notation">]}</span>) :<br/>
 &nbsp;&nbsp;<span class="id" title="definition">msym</span> <a class="idref" href="Combi.MPoly.homogsym.html#s"><span class="id" title="variable">s</span></a> (<a class="idref" href="Combi.MPoly.homogsym.html#dd19abbbbda0f24fa63f325e16008ec2"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.homogsym.html#dd19abbbbda0f24fa63f325e16008ec2"><span class="id" title="notation">pi_d</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#p"><span class="id" title="variable">p</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#dd19abbbbda0f24fa63f325e16008ec2"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.homogsym.html#dd19abbbbda0f24fa63f325e16008ec2"><span class="id" title="notation">pi_d</span></a> (<span class="id" title="definition">msym</span> <a class="idref" href="Combi.MPoly.homogsym.html#s"><span class="id" title="variable">s</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#p"><span class="id" title="variable">p</span></a>).<br/>
 
@@ -434,7 +466,7 @@ of the scalar product.
 </div>
 
 <div class="doc">
-<a name="lab241"></a><h1 class="section">The classical bases of homogeneous symmetric polynomials</h1>
+<a name="lab298"></a><h1 class="section">The classical bases of homogeneous symmetric polynomials</h1>
 
 </div>
 <div class="code">
@@ -478,21 +510,21 @@ of the scalar product.
 <br/>
 
 <br/>
-<span class="id" title="keyword">Definition</span> <a name="monE"><span class="id" title="definition">monE</span></a> <span class="id" title="var">m</span> : <span class="id" title="abbreviation">seq</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a> :=<br/>
+<span class="id" title="keyword">Definition</span> <a name="intpart_of_mon"><span class="id" title="definition">intpart_of_mon</span></a> <span class="id" title="var">m</span> : <span class="id" title="abbreviation">seq</span> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Datatypes.html#nat"><span class="id" title="inductive">nat</span></a> :=<br/>
 &nbsp;&nbsp;<span class="id" title="definition">rev</span> (<span class="id" title="definition">flatten</span> <span class="id" title="notation">[</span><span class="id" title="notation">tuple</span> <span class="id" title="definition">nseq</span> (<a class="idref" href="Combi.MPoly.homogsym.html#m"><span class="id" title="variable">m</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#i"><span class="id" title="variable">i</span></a>) <a class="idref" href="Combi.MPoly.homogsym.html#i"><span class="id" title="variable">i</span></a><span class="id" title="notation">.+1</span> <span class="id" title="notation">|</span> <span class="id" title="var">i</span> <span class="id" title="notation">&lt;</span> <a class="idref" href="Combi.MPoly.homogsym.html#n"><span class="id" title="abbreviation">n</span></a><span class="id" title="notation">]</span>).<br/>
 
 <br/>
-<span class="id" title="keyword">Lemma</span> <a name="monEP"><span class="id" title="lemma">monEP</span></a> <span class="id" title="var">m</span> : <span class="id" title="definition">mnmwgt</span> <a class="idref" href="Combi.MPoly.homogsym.html#m"><span class="id" title="variable">m</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#HomSymField.d"><span class="id" title="variable">d</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.Combi.partition.html#is_part_of_n"><span class="id" title="definition">is_part_of_n</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#HomSymField.d"><span class="id" title="variable">d</span></a> (<a class="idref" href="Combi.MPoly.homogsym.html#monE"><span class="id" title="definition">monE</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#m"><span class="id" title="variable">m</span></a>).<br/>
-<span class="id" title="keyword">Definition</span> <a name="intpartn_of_mon"><span class="id" title="definition">intpartn_of_mon</span></a> <span class="id" title="var">m</span> (<span class="id" title="var">H</span> : <span class="id" title="definition">mnmwgt</span> <a class="idref" href="Combi.MPoly.homogsym.html#m"><span class="id" title="variable">m</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#HomSymField.d"><span class="id" title="variable">d</span></a>) := <a class="idref" href="Combi.Combi.partition.html#IntPartN"><span class="id" title="constructor">IntPartN</span></a> (<a class="idref" href="Combi.MPoly.homogsym.html#monEP"><span class="id" title="lemma">monEP</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#H"><span class="id" title="variable">H</span></a>).<br/>
+<span class="id" title="keyword">Lemma</span> <a name="intpart_of_monP"><span class="id" title="lemma">intpart_of_monP</span></a> <span class="id" title="var">m</span> : <span class="id" title="definition">mnmwgt</span> <a class="idref" href="Combi.MPoly.homogsym.html#m"><span class="id" title="variable">m</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#HomSymField.d"><span class="id" title="variable">d</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#d43e996736952df71ebeeae74d10a287"><span class="id" title="notation">→</span></a> <a class="idref" href="Combi.Combi.partition.html#is_part_of_n"><span class="id" title="definition">is_part_of_n</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#HomSymField.d"><span class="id" title="variable">d</span></a> (<a class="idref" href="Combi.MPoly.homogsym.html#intpart_of_mon"><span class="id" title="definition">intpart_of_mon</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#m"><span class="id" title="variable">m</span></a>).<br/>
+<span class="id" title="keyword">Canonical</span> <span class="id" title="var">intpartn_of_mon</span> <span class="id" title="var">m</span> (<span class="id" title="var">H</span> : <span class="id" title="definition">mnmwgt</span> <a class="idref" href="Combi.MPoly.homogsym.html#m"><span class="id" title="variable">m</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#HomSymField.d"><span class="id" title="variable">d</span></a>) := <a class="idref" href="Combi.Combi.partition.html#IntPartN"><span class="id" title="constructor">IntPartN</span></a> (<a class="idref" href="Combi.MPoly.homogsym.html#intpart_of_monP"><span class="id" title="lemma">intpart_of_monP</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#H"><span class="id" title="variable">H</span></a>).<br/>
 
 <br/>
 
 <br/>
-<span class="id" title="keyword">Lemma</span> <a name="intpartn_of_monE"><span class="id" title="lemma">intpartn_of_monE</span></a> <span class="id" title="var">m</span> (<span class="id" title="var">H</span> : <span class="id" title="definition">mnmwgt</span> <a class="idref" href="Combi.MPoly.homogsym.html#m"><span class="id" title="variable">m</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#HomSymField.d"><span class="id" title="variable">d</span></a>) :<br/>
+<span class="id" title="keyword">Lemma</span> <a name="comp_symbe"><span class="id" title="lemma">comp_symbe</span></a> <span class="id" title="var">m</span> (<span class="id" title="var">H</span> : <span class="id" title="definition">mnmwgt</span> <a class="idref" href="Combi.MPoly.homogsym.html#m"><span class="id" title="variable">m</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#HomSymField.d"><span class="id" title="variable">d</span></a>) :<br/>
 &nbsp;&nbsp;<span class="id" title="notation">'</span><span class="id" title="notation">X_</span><span class="id" title="notation">[</span><a class="idref" href="Combi.MPoly.homogsym.html#m"><span class="id" title="variable">m</span></a><span class="id" title="notation">]</span> <span class="id" title="notation">\</span><span class="id" title="notation">mPo</span> <a class="idref" href="Combi.MPoly.homogsym.html#E"><span class="id" title="abbreviation">E</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#6ab98c5090ed9574ef19c3a5f6e302df"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.homogsym.html#6ab98c5090ed9574ef19c3a5f6e302df"><span class="id" title="notation">he</span></a><a class="idref" href="Combi.MPoly.homogsym.html#6ab98c5090ed9574ef19c3a5f6e302df"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.MPoly.homogsym.html#intpartn_of_mon"><span class="id" title="definition">intpartn_of_mon</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#H"><span class="id" title="variable">H</span></a><a class="idref" href="Combi.MPoly.homogsym.html#6ab98c5090ed9574ef19c3a5f6e302df"><span class="id" title="notation">]</span></a>.<br/>
 
 <br/>
-<span class="id" title="keyword">Lemma</span> <a name="pisymhomog_monE"><span class="id" title="lemma">pisymhomog_monE</span></a> <span class="id" title="var">m</span> (<span class="id" title="var">H</span> : <span class="id" title="definition">mnmwgt</span> <a class="idref" href="Combi.MPoly.homogsym.html#m"><span class="id" title="variable">m</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#HomSymField.d"><span class="id" title="variable">d</span></a>) :<br/>
+<span class="id" title="keyword">Lemma</span> <a name="in_homsym_comp_symbe"><span class="id" title="lemma">in_homsym_comp_symbe</span></a> <span class="id" title="var">m</span> (<span class="id" title="var">H</span> : <span class="id" title="definition">mnmwgt</span> <a class="idref" href="Combi.MPoly.homogsym.html#m"><span class="id" title="variable">m</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#HomSymField.d"><span class="id" title="variable">d</span></a>) :<br/>
 &nbsp;&nbsp;<a class="idref" href="Combi.MPoly.homogsym.html#in_homsym"><span class="id" title="definition">in_homsym</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#HomSymField.d"><span class="id" title="variable">d</span></a> (<span class="id" title="notation">'</span><span class="id" title="notation">X_</span><span class="id" title="notation">[</span><a class="idref" href="Combi.MPoly.homogsym.html#m"><span class="id" title="variable">m</span></a><span class="id" title="notation">]</span> <span class="id" title="notation">\</span><span class="id" title="notation">mPo</span> <a class="idref" href="Combi.MPoly.homogsym.html#E"><span class="id" title="abbreviation">E</span></a>) <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#6ab98c5090ed9574ef19c3a5f6e302df"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.homogsym.html#6ab98c5090ed9574ef19c3a5f6e302df"><span class="id" title="notation">he</span></a><a class="idref" href="Combi.MPoly.homogsym.html#6ab98c5090ed9574ef19c3a5f6e302df"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.MPoly.homogsym.html#intpartn_of_mon"><span class="id" title="definition">intpartn_of_mon</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#H"><span class="id" title="variable">H</span></a><a class="idref" href="Combi.MPoly.homogsym.html#6ab98c5090ed9574ef19c3a5f6e302df"><span class="id" title="notation">]</span></a>.<br/>
 
 <br/>
@@ -525,7 +557,7 @@ of the scalar product.
 </div>
 
 <div class="doc">
-<a name="lab242"></a><h2 class="section">Changing the base field</h2>
+<a name="lab299"></a><h2 class="section">Changing the base field</h2>
 
 </div>
 <div class="code">
@@ -571,7 +603,7 @@ of the scalar product.
 </div>
 
 <div class="doc">
-<a name="lab243"></a><h2 class="section">Changing the number of variables</h2>
+<a name="lab300"></a><h2 class="section">Changing the number of variables</h2>
 
 </div>
 <div class="code">
@@ -594,17 +626,9 @@ of the scalar product.
 
 <br/>
 <span class="id" title="keyword">Lemma</span> <a name="cnvarhomsyme"><span class="id" title="lemma">cnvarhomsyme</span></a> <span class="id" title="var">la</span> : <a class="idref" href="Combi.MPoly.homogsym.html#cnvarhomsym"><span class="id" title="definition">cnvarhomsym</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#6ab98c5090ed9574ef19c3a5f6e302df"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.homogsym.html#6ab98c5090ed9574ef19c3a5f6e302df"><span class="id" title="notation">he</span></a><a class="idref" href="Combi.MPoly.homogsym.html#6ab98c5090ed9574ef19c3a5f6e302df"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.MPoly.homogsym.html#la"><span class="id" title="variable">la</span></a><a class="idref" href="Combi.MPoly.homogsym.html#6ab98c5090ed9574ef19c3a5f6e302df"><span class="id" title="notation">]</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#6ab98c5090ed9574ef19c3a5f6e302df"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.homogsym.html#6ab98c5090ed9574ef19c3a5f6e302df"><span class="id" title="notation">he</span></a><a class="idref" href="Combi.MPoly.homogsym.html#6ab98c5090ed9574ef19c3a5f6e302df"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.MPoly.homogsym.html#la"><span class="id" title="variable">la</span></a><a class="idref" href="Combi.MPoly.homogsym.html#6ab98c5090ed9574ef19c3a5f6e302df"><span class="id" title="notation">]</span></a>.<br/>
-
-<br/>
 <span class="id" title="keyword">Lemma</span> <a name="cnvarhomsymh"><span class="id" title="lemma">cnvarhomsymh</span></a> <span class="id" title="var">la</span> : <a class="idref" href="Combi.MPoly.homogsym.html#cnvarhomsym"><span class="id" title="definition">cnvarhomsym</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#bac4c3379fb11b9b4201c219022532b7"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.homogsym.html#bac4c3379fb11b9b4201c219022532b7"><span class="id" title="notation">hh</span></a><a class="idref" href="Combi.MPoly.homogsym.html#bac4c3379fb11b9b4201c219022532b7"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.MPoly.homogsym.html#la"><span class="id" title="variable">la</span></a><a class="idref" href="Combi.MPoly.homogsym.html#bac4c3379fb11b9b4201c219022532b7"><span class="id" title="notation">]</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#bac4c3379fb11b9b4201c219022532b7"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.homogsym.html#bac4c3379fb11b9b4201c219022532b7"><span class="id" title="notation">hh</span></a><a class="idref" href="Combi.MPoly.homogsym.html#bac4c3379fb11b9b4201c219022532b7"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.MPoly.homogsym.html#la"><span class="id" title="variable">la</span></a><a class="idref" href="Combi.MPoly.homogsym.html#bac4c3379fb11b9b4201c219022532b7"><span class="id" title="notation">]</span></a>.<br/>
-
-<br/>
 <span class="id" title="keyword">Lemma</span> <a name="cnvarhomsymp"><span class="id" title="lemma">cnvarhomsymp</span></a> <span class="id" title="var">la</span> : <a class="idref" href="Combi.MPoly.homogsym.html#cnvarhomsym"><span class="id" title="definition">cnvarhomsym</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#c87af1659a98c7c20bdca54d836044e2"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.homogsym.html#c87af1659a98c7c20bdca54d836044e2"><span class="id" title="notation">hp</span></a><a class="idref" href="Combi.MPoly.homogsym.html#c87af1659a98c7c20bdca54d836044e2"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.MPoly.homogsym.html#la"><span class="id" title="variable">la</span></a><a class="idref" href="Combi.MPoly.homogsym.html#c87af1659a98c7c20bdca54d836044e2"><span class="id" title="notation">]</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#c87af1659a98c7c20bdca54d836044e2"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.homogsym.html#c87af1659a98c7c20bdca54d836044e2"><span class="id" title="notation">hp</span></a><a class="idref" href="Combi.MPoly.homogsym.html#c87af1659a98c7c20bdca54d836044e2"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.MPoly.homogsym.html#la"><span class="id" title="variable">la</span></a><a class="idref" href="Combi.MPoly.homogsym.html#c87af1659a98c7c20bdca54d836044e2"><span class="id" title="notation">]</span></a>.<br/>
-
-<br/>
 <span class="id" title="keyword">Lemma</span> <a name="cnvarhomsymm"><span class="id" title="lemma">cnvarhomsymm</span></a> <span class="id" title="var">la</span> : <a class="idref" href="Combi.MPoly.homogsym.html#cnvarhomsym"><span class="id" title="definition">cnvarhomsym</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#e228289514c50ff328198ffc7d960c7b"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.homogsym.html#e228289514c50ff328198ffc7d960c7b"><span class="id" title="notation">hm</span></a><a class="idref" href="Combi.MPoly.homogsym.html#e228289514c50ff328198ffc7d960c7b"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.MPoly.homogsym.html#la"><span class="id" title="variable">la</span></a><a class="idref" href="Combi.MPoly.homogsym.html#e228289514c50ff328198ffc7d960c7b"><span class="id" title="notation">]</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#e228289514c50ff328198ffc7d960c7b"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.homogsym.html#e228289514c50ff328198ffc7d960c7b"><span class="id" title="notation">hm</span></a><a class="idref" href="Combi.MPoly.homogsym.html#e228289514c50ff328198ffc7d960c7b"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.MPoly.homogsym.html#la"><span class="id" title="variable">la</span></a><a class="idref" href="Combi.MPoly.homogsym.html#e228289514c50ff328198ffc7d960c7b"><span class="id" title="notation">]</span></a>.<br/>
-
-<br/>
 <span class="id" title="keyword">Lemma</span> <a name="cnvarhomsyms"><span class="id" title="lemma">cnvarhomsyms</span></a> <span class="id" title="var">la</span> : <a class="idref" href="Combi.MPoly.homogsym.html#cnvarhomsym"><span class="id" title="definition">cnvarhomsym</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#98f453e48c1f0303bf443f30f97a558f"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.homogsym.html#98f453e48c1f0303bf443f30f97a558f"><span class="id" title="notation">hs</span></a><a class="idref" href="Combi.MPoly.homogsym.html#98f453e48c1f0303bf443f30f97a558f"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.MPoly.homogsym.html#la"><span class="id" title="variable">la</span></a><a class="idref" href="Combi.MPoly.homogsym.html#98f453e48c1f0303bf443f30f97a558f"><span class="id" title="notation">]</span></a> <a class="idref" href="http://coq.inria.fr/distrib/8.8.1/stdlib//Coq.Init.Logic.html#1c39bf18749e5cc609e83c0a0ba5a372"><span class="id" title="notation">=</span></a> <a class="idref" href="Combi.MPoly.homogsym.html#98f453e48c1f0303bf443f30f97a558f"><span class="id" title="notation">'</span></a><a class="idref" href="Combi.MPoly.homogsym.html#98f453e48c1f0303bf443f30f97a558f"><span class="id" title="notation">hs</span></a><a class="idref" href="Combi.MPoly.homogsym.html#98f453e48c1f0303bf443f30f97a558f"><span class="id" title="notation">[</span></a><a class="idref" href="Combi.MPoly.homogsym.html#la"><span class="id" title="variable">la</span></a><a class="idref" href="Combi.MPoly.homogsym.html#98f453e48c1f0303bf443f30f97a558f"><span class="id" title="notation">]</span></a>.<br/>
 
 <br/>
@@ -614,7 +638,7 @@ of the scalar product.
 </div>
 
 <div class="doc">
-<a name="lab244"></a><h1 class="section">The scalar product</h1>
+<a name="lab301"></a><h1 class="section">The scalar product</h1>
 
 </div>
 <div class="code">
