@@ -28,24 +28,24 @@
 </div>
 
 <div class="doc">
-<a name="lab286"></a><h1 class="section">Cauchy formula for symmetric polynomials</h1>
+<a name="lab297"></a><h1 class="section">Cauchy formula for symmetric polynomials</h1>
 
 
 <div class="paragraph"> </div>
 
 In this file we fix two non zero natural <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#StabilityProperties.m"><span class="id" title="variable">m</span></a></span> and <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span> and consider the two sets
-of variables <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#X"><span class="id" title="variable">X</span></a></span> <span class="inlinecode">:=</span> <span class="inlinecode">(<span class="id" title="var">x_i</span>)<span class="id" title="var">_</span>{<a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a>&lt;<a class="idref" href="ALEA.Qmeasure.html#StabilityProperties.m"><span class="id" title="variable">m</span></a>}</span> and <span class="inlinecode"><span class="id" title="var">Y</span></span> <span class="inlinecode">:=</span> <span class="inlinecode">(<span class="id" title="var">y_j</span>)<span class="id" title="var">_</span>{<a class="idref" href="Combi.Combi.partition.html#j"><span class="id" title="variable">j</span></a>&lt;<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a>}</span>. We also consider the
-variable <span class="inlinecode"><span class="id" title="var">z_</span>{<a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a>,<a class="idref" href="Combi.Combi.partition.html#j"><span class="id" title="variable">j</span></a>}</span> <span class="inlinecode">:=</span> <span class="inlinecode"><span class="id" title="var">x_i</span></span> <span class="inlinecode">×</span> <span class="inlinecode"><span class="id" title="var">y_j</span></span>.
+of variables <span class="inlinecode"><a class="idref" href="Combi.Combi.bintree.html#X"><span class="id" title="variable">X</span></a></span> <span class="inlinecode">:=</span> <span class="inlinecode">(<span class="id" title="var">x_i</span>)<span class="id" title="var">_</span>{<a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a>&lt;<a class="idref" href="ALEA.Qmeasure.html#StabilityProperties.m"><span class="id" title="variable">m</span></a>}</span> and <span class="inlinecode"><span class="id" title="var">Y</span></span> <span class="inlinecode">:=</span> <span class="inlinecode">(<span class="id" title="var">y_j</span>)<span class="id" title="var">_</span>{<a class="idref" href="Combi.Combi.bintree.html#j"><span class="id" title="variable">j</span></a>&lt;<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a>}</span>. We also consider the
+variable <span class="inlinecode"><span class="id" title="var">z_</span>{<a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a>,<a class="idref" href="Combi.Combi.bintree.html#j"><span class="id" title="variable">j</span></a>}</span> <span class="inlinecode">:=</span> <span class="inlinecode"><span class="id" title="var">x_i</span></span> <span class="inlinecode">×</span> <span class="inlinecode"><span class="id" title="var">y_j</span></span>.
 
 <div class="paragraph"> </div>
 
-We encode polynomial in <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#X"><span class="id" title="variable">X</span></a></span> <span class="inlinecode">\<span class="id" title="var">cup</span></span> <span class="inlinecode"><span class="id" title="var">Y</span></span> as polynomials in <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#X"><span class="id" title="variable">X</span></a></span> whose coefficient are
+We encode polynomial in <span class="inlinecode"><a class="idref" href="Combi.Combi.bintree.html#X"><span class="id" title="variable">X</span></a></span> <span class="inlinecode">\<span class="id" title="var">cup</span></span> <span class="inlinecode"><span class="id" title="var">Y</span></span> as polynomials in <span class="inlinecode"><a class="idref" href="Combi.Combi.bintree.html#X"><span class="id" title="variable">X</span></a></span> whose coefficient are
 polynomials in <span class="inlinecode"><span class="id" title="var">Y</span></span>. We denote by <span class="inlinecode"><a class="idref" href="Combi.MPoly.Cauchy.html#mz"><span class="id" title="variable">mz</span></a></span> a monomial in the <span class="inlinecode"><a class="idref" href="Combi.Basic.ordtype.html#RemoveBig.Z"><span class="id" title="variable">Z</span></a></span>.
 
 <div class="paragraph"> </div>
 
 <ul class="doclist">
-<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Cauchy.html#monX"><span class="id" title="definition">monX</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Cauchy.html#mz"><span class="id" title="variable">mz</span></a></span>     == the monomial in <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#X"><span class="id" title="variable">X</span></a></span>, obtained by setting all the <span class="inlinecode"><span class="id" title="var">x_i</span></span> to <span class="inlinecode">1</span>.
+<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Cauchy.html#monX"><span class="id" title="definition">monX</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Cauchy.html#mz"><span class="id" title="variable">mz</span></a></span>     == the monomial in <span class="inlinecode"><a class="idref" href="Combi.Combi.bintree.html#X"><span class="id" title="variable">X</span></a></span>, obtained by setting all the <span class="inlinecode"><span class="id" title="var">x_i</span></span> to <span class="inlinecode">1</span>.
 
 </li>
 <li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Cauchy.html#monsY"><span class="id" title="definition">monsY</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Cauchy.html#mz"><span class="id" title="variable">mz</span></a></span>    == the <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#StabilityProperties.m"><span class="id" title="variable">m</span></a>.-<span class="id" title="library">tuple</span></span> of whose <span class="inlinecode"><a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a></span>-th element is the monomial in <span class="inlinecode"><span class="id" title="var">Y</span></span>
@@ -57,14 +57,14 @@ polynomials in <span class="inlinecode"><span class="id" title="var">Y</span></s
 
 </li>
 <li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Cauchy.html#polXY"><span class="id" title="abbreviation">polXY</span></a></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#StabilityProperties.m"><span class="id" title="variable">m</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#RingSchurSym.R"><span class="id" title="variable">R</span></a></span> == polynomial in <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#StabilityProperties.m"><span class="id" title="variable">m</span></a></span> variable whose coefficients are polynomials
-                   in <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span> over the commutative ring <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#RingSchurSym.R"><span class="id" title="variable">R</span></a></span>. This is canonicaly a
+                   in <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span> over the commutative ring <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#RingSchurSym.R"><span class="id" title="variable">R</span></a></span>. This is canonically a
                    <span class="inlinecode"><span class="id" title="abbreviation">AlgType</span></span> over <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#RingSchurSym.R"><span class="id" title="variable">R</span></a></span>.
 
 </li>
 <li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Cauchy.html#polXY_scale"><span class="id" title="definition">polXY_scale</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.homogsym.html#HomogSymProd.c"><span class="id" title="variable">c</span></a></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a></span> == ring multiplication for elements of <span class="inlinecode"><a class="idref" href="Combi.MPoly.Cauchy.html#polXY"><span class="id" title="abbreviation">polXY</span></a></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#StabilityProperties.m"><span class="id" title="variable">m</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.n"><span class="id" title="variable">n</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#RingSchurSym.R"><span class="id" title="variable">R</span></a></span>
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a>(<a class="idref" href="Combi.Combi.partition.html#X"><span class="id" title="variable">X</span></a>)</span>        == the image of <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a></span> by the canonical inclusion algebra morphism
+<li> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a>(<a class="idref" href="Combi.Combi.bintree.html#X"><span class="id" title="variable">X</span></a>)</span>        == the image of <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a></span> by the canonical inclusion algebra morphism
                    <span class="inlinecode"><a class="idref" href="Combi.MPoly.Cauchy.html#polX"><span class="id" title="abbreviation">polX</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Cauchy.html#polXY"><span class="id" title="abbreviation">polXY</span></a></span>
 
 </li>
@@ -72,19 +72,19 @@ polynomials in <span class="inlinecode"><span class="id" title="var">Y</span></s
                    <span class="inlinecode"><a class="idref" href="Combi.MPoly.Cauchy.html#polY"><span class="id" title="abbreviation">polY</span></a></span> <span class="inlinecode">→</span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Cauchy.html#polXY"><span class="id" title="abbreviation">polXY</span></a></span>
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a>(<span class="id" title="var">XY</span>)</span>       == the polynomial of <span class="inlinecode"><a class="idref" href="Combi.MPoly.Cauchy.html#polXY"><span class="id" title="abbreviation">polXY</span></a></span> from a polynomials in the <span class="inlinecode"><span class="id" title="var">Z_</span>{<a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a>,<a class="idref" href="Combi.Combi.partition.html#j"><span class="id" title="variable">j</span></a>}</span>.
+<li> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a>(<span class="id" title="var">XY</span>)</span>       == the polynomial of <span class="inlinecode"><a class="idref" href="Combi.MPoly.Cauchy.html#polXY"><span class="id" title="abbreviation">polXY</span></a></span> from a polynomials in the <span class="inlinecode"><span class="id" title="var">Z_</span>{<a class="idref" href="Combi.MPoly.antisym.html#EltrP.i"><span class="id" title="variable">i</span></a>,<a class="idref" href="Combi.Combi.bintree.html#j"><span class="id" title="variable">j</span></a>}</span>.
 
 </li>
 <li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Cauchy.html#Cauchy_kernel"><span class="id" title="definition">Cauchy_kernel</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#StdKostka.d"><span class="id" title="variable">d</span></a></span> == the Cauchy kernel in degree <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#StdKostka.d"><span class="id" title="variable">d</span></a></span> that is the sum of all
                    monomial in <span class="inlinecode"><span class="id" title="var">x_i</span>×<span class="id" title="var">y_i</span></span> of degree <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#StdKostka.d"><span class="id" title="variable">d</span></a></span> that is <span class="inlinecode">'<span class="id" title="var">h_d</span>(<span class="id" title="var">XY</span>)</span>
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Cauchy.html#co_hp"><span class="id" title="definition">co_hp</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a></span> == if <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a></span> is symmetric in <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#X"><span class="id" title="variable">X</span></a></span>, returns the coefficient of <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a></span> on
+<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Cauchy.html#co_hp"><span class="id" title="definition">co_hp</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a></span> == if <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a></span> is symmetric in <span class="inlinecode"><a class="idref" href="Combi.Combi.bintree.html#X"><span class="id" title="variable">X</span></a></span>, returns the coefficient of <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a></span> on
                    <span class="inlinecode">'<span class="id" title="var">hp</span>[<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a>]</span>
 
 </li>
-<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Cauchy.html#co_hpXY"><span class="id" title="definition">co_hpXY</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#mu"><span class="id" title="projection">mu</span></a></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a></span> == if <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a></span> is symmetric both in <span class="inlinecode"><a class="idref" href="Combi.Combi.partition.html#X"><span class="id" title="variable">X</span></a></span> and <span class="inlinecode"><span class="id" title="var">Y</span></span>, returns the
-                   coefficient of <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a></span> on <span class="inlinecode">'<span class="id" title="var">hp</span>[<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a>](<a class="idref" href="Combi.Combi.partition.html#X"><span class="id" title="variable">X</span></a>)</span> <span class="inlinecode">'<span class="id" title="var">hp</span>[<a class="idref" href="ALEA.Qmeasure.html#mu"><span class="id" title="projection">mu</span></a>](<span class="id" title="var">Y</span>)</span>.
+<li> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Cauchy.html#co_hpXY"><span class="id" title="definition">co_hpXY</span></a></span> <span class="inlinecode"><a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#mu"><span class="id" title="projection">mu</span></a></span> <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a></span> == if <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a></span> is symmetric both in <span class="inlinecode"><a class="idref" href="Combi.Combi.bintree.html#X"><span class="id" title="variable">X</span></a></span> and <span class="inlinecode"><span class="id" title="var">Y</span></span>, returns the
+                   coefficient of <span class="inlinecode"><a class="idref" href="ALEA.Qmeasure.html#FiniteDistributions.p"><span class="id" title="variable">p</span></a></span> on <span class="inlinecode">'<span class="id" title="var">hp</span>[<a class="idref" href="Combi.MPoly.Schur_altdef.html#BijectionExtTab.la"><span class="id" title="variable">la</span></a>](<a class="idref" href="Combi.Combi.bintree.html#X"><span class="id" title="variable">X</span></a>)</span> <span class="inlinecode">'<span class="id" title="var">hp</span>[<a class="idref" href="ALEA.Qmeasure.html#mu"><span class="id" title="projection">mu</span></a>](<span class="id" title="var">Y</span>)</span>.
 
 </li>
 </ul>
@@ -121,7 +121,7 @@ orthonormal for the scalar product.
 </div>
 
 <div class="doc">
-<a name="lab287"></a><h2 class="section">Polynomials in two sets of variables</h2>
+<a name="lab298"></a><h2 class="section">Polynomials in two sets of variables</h2>
 
 </div>
 <div class="code">
@@ -267,7 +267,7 @@ orthonormal for the scalar product.
 </div>
 
 <div class="doc">
-<a name="lab288"></a><h2 class="section">The Cauchy reproducing kernel</h2>
+<a name="lab299"></a><h2 class="section">The Cauchy reproducing kernel</h2>
 
 </div>
 <div class="code">
@@ -302,7 +302,7 @@ orthonormal for the scalar product.
 </div>
 
 <div class="doc">
-<a name="lab289"></a><h3 class="section">Cauchy formula for complete and monomial symmetric polynomials</h3>
+<a name="lab300"></a><h3 class="section">Cauchy formula for complete and monomial symmetric polynomials</h3>
 
 </div>
 <div class="code">
@@ -317,7 +317,7 @@ orthonormal for the scalar product.
 </div>
 
 <div class="doc">
-<a name="lab290"></a><h3 class="section">Cauchy formula for Schur symmetric polynomials</h3>
+<a name="lab301"></a><h3 class="section">Cauchy formula for Schur symmetric polynomials</h3>
 
 </div>
 <div class="code">
@@ -369,7 +369,7 @@ Unused lemma
 </div>
 
 <div class="doc">
-<a name="lab291"></a><h3 class="section">Cauchy formula for power sum symmetric polynomials</h3>
+<a name="lab302"></a><h3 class="section">Cauchy formula for power sum symmetric polynomials</h3>
 
 </div>
 <div class="code">
@@ -385,7 +385,7 @@ Unused lemma
 </div>
 
 <div class="doc">
-<a name="lab292"></a><h1 class="section">Cauchy kernel and scalar product of symmetric functions</h1>
+<a name="lab303"></a><h1 class="section">Cauchy kernel and scalar product of symmetric functions</h1>
 
 </div>
 <div class="code">
@@ -441,7 +441,7 @@ Unused lemma
 </div>
 
 <div class="doc">
-<a name="lab293"></a><h2 class="section">Schur function are orthonormal</h2>
+<a name="lab304"></a><h2 class="section">Schur function are orthonormal</h2>
 
 </div>
 <div class="code">

@@ -45,738 +45,751 @@
 <!-- combclass -->
 <g id="node4" class="node"><title>combclass</title>
 <g id="a_node4"><a xlink:href="Combi.Basic.combclass.html" xlink:title="combclass">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="826,-108 734,-108 734,-72 826,-72 826,-108"/>
-<text text-anchor="middle" x="780" y="-85.6" font-family="Times,serif" font-size="18.00">combclass</text>
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1192,-108 1100,-108 1100,-72 1192,-72 1192,-108"/>
+<text text-anchor="middle" x="1146" y="-85.6" font-family="Times,serif" font-size="18.00">combclass</text>
 </a>
 </g>
 </g>
 <!-- tools -->
-<g id="node43" class="node"><title>tools</title>
-<g id="a_node43"><a xlink:href="Combi.SSRcomplements.tools.html" xlink:title="tools">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="495,-36 441,-36 441,-0 495,-0 495,-36"/>
-<text text-anchor="middle" x="468" y="-13.6" font-family="Times,serif" font-size="18.00">tools</text>
+<g id="node44" class="node"><title>tools</title>
+<g id="a_node44"><a xlink:href="Combi.SSRcomplements.tools.html" xlink:title="tools">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="480,-36 426,-36 426,-0 480,-0 480,-36"/>
+<text text-anchor="middle" x="453" y="-13.6" font-family="Times,serif" font-size="18.00">tools</text>
 </a>
 </g>
 </g>
 <!-- combclass&#45;&gt;tools -->
 <g id="edge29" class="edge"><title>combclass&#45;&gt;tools</title>
-<path fill="none" stroke="black" d="M733.963,-78.6713C671.888,-64.7442 562.55,-40.2131 505.315,-27.3718"/>
-<polygon fill="black" stroke="black" points="505.781,-23.8895 495.257,-25.1153 504.248,-30.7197 505.781,-23.8895"/>
+<path fill="none" stroke="black" d="M1099.99,-84.3529C971.024,-71.3257 607.771,-34.6334 490.212,-22.7588"/>
+<polygon fill="black" stroke="black" points="490.554,-19.2756 480.253,-21.7528 489.85,-26.2401 490.554,-19.2756"/>
 </g>
 <!-- congr -->
 <g id="node5" class="node"><title>congr</title>
 <g id="a_node5"><a xlink:href="Combi.Basic.congr.html" xlink:title="congr">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="366.5,-396 307.5,-396 307.5,-360 366.5,-360 366.5,-396"/>
-<text text-anchor="middle" x="337" y="-373.6" font-family="Times,serif" font-size="18.00">congr</text>
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="484.5,-396 425.5,-396 425.5,-360 484.5,-360 484.5,-396"/>
+<text text-anchor="middle" x="455" y="-373.6" font-family="Times,serif" font-size="18.00">congr</text>
 </a>
 </g>
 </g>
 <!-- permuted -->
-<g id="node13" class="node"><title>permuted</title>
-<g id="a_node13"><a xlink:href="Combi.Combi.permuted.html" xlink:title="permuted">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="374,-324 288,-324 288,-288 374,-288 374,-324"/>
-<text text-anchor="middle" x="331" y="-301.6" font-family="Times,serif" font-size="18.00">permuted</text>
+<g id="node14" class="node"><title>permuted</title>
+<g id="a_node14"><a xlink:href="Combi.Combi.permuted.html" xlink:title="permuted">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="497,-324 411,-324 411,-288 497,-288 497,-324"/>
+<text text-anchor="middle" x="454" y="-301.6" font-family="Times,serif" font-size="18.00">permuted</text>
 </a>
 </g>
 </g>
 <!-- congr&#45;&gt;permuted -->
 <g id="edge27" class="edge"><title>congr&#45;&gt;permuted</title>
-<path fill="none" stroke="black" d="M335.517,-359.697C334.856,-351.983 334.061,-342.712 333.324,-334.112"/>
-<polygon fill="black" stroke="black" points="336.807,-333.769 332.466,-324.104 329.833,-334.367 336.807,-333.769"/>
+<path fill="none" stroke="black" d="M454.753,-359.697C454.643,-351.983 454.51,-342.712 454.387,-334.112"/>
+<polygon fill="black" stroke="black" points="457.887,-334.053 454.244,-324.104 450.888,-334.153 457.887,-334.053"/>
 </g>
 <!-- vectNK -->
-<g id="node19" class="node"><title>vectNK</title>
-<g id="a_node19"><a xlink:href="Combi.Combi.vectNK.html" xlink:title="vectNK">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="183,-180 109,-180 109,-144 183,-144 183,-180"/>
-<text text-anchor="middle" x="146" y="-157.6" font-family="Times,serif" font-size="18.00">vectNK</text>
+<g id="node20" class="node"><title>vectNK</title>
+<g id="a_node20"><a xlink:href="Combi.Combi.vectNK.html" xlink:title="vectNK">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="183,-108 109,-108 109,-72 183,-72 183,-108"/>
+<text text-anchor="middle" x="146" y="-85.6" font-family="Times,serif" font-size="18.00">vectNK</text>
 </a>
 </g>
 </g>
 <!-- congr&#45;&gt;vectNK -->
 <g id="edge28" class="edge"><title>congr&#45;&gt;vectNK</title>
-<path fill="none" stroke="black" d="M307.256,-362.594C289.849,-353.208 268.182,-339.787 252,-324 210.358,-283.374 176.392,-223.682 158.879,-189.552"/>
-<polygon fill="black" stroke="black" points="161.809,-187.589 154.182,-180.235 155.558,-190.74 161.809,-187.589"/>
+<path fill="none" stroke="black" d="M425.49,-366.185C380.073,-348.327 292.396,-308.901 236,-252 196.711,-212.359 169.202,-152.066 155.645,-117.618"/>
+<polygon fill="black" stroke="black" points="158.888,-116.3 152.04,-108.216 152.352,-118.807 158.888,-116.3"/>
 </g>
 <!-- ordtype -->
 <g id="node6" class="node"><title>ordtype</title>
 <g id="a_node6"><a xlink:href="Combi.Basic.ordtype.html" xlink:title="ordtype">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="972,-108 898,-108 898,-72 972,-72 972,-108"/>
-<text text-anchor="middle" x="935" y="-85.6" font-family="Times,serif" font-size="18.00">ordtype</text>
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="877,-108 803,-108 803,-72 877,-72 877,-108"/>
+<text text-anchor="middle" x="840" y="-85.6" font-family="Times,serif" font-size="18.00">ordtype</text>
 </a>
 </g>
 </g>
 <!-- ordtype&#45;&gt;tools -->
 <g id="edge26" class="edge"><title>ordtype&#45;&gt;tools</title>
-<path fill="none" stroke="black" d="M897.631,-79.5774C886.239,-76.8998 873.648,-74.1346 862,-72 731.885,-48.154 575.754,-30.3065 505.495,-22.8417"/>
-<polygon fill="black" stroke="black" points="505.68,-19.342 495.368,-21.7748 504.946,-26.3034 505.68,-19.342"/>
+<path fill="none" stroke="black" d="M802.893,-82.2881C729.143,-68.9483 564.863,-39.2335 490.662,-25.8122"/>
+<polygon fill="black" stroke="black" points="490.852,-22.2899 480.389,-23.9541 489.606,-29.1782 490.852,-22.2899"/>
 </g>
 <!-- unitriginv -->
 <g id="node7" class="node"><title>unitriginv</title>
 <g id="a_node7"><a xlink:href="Combi.Basic.unitriginv.html" xlink:title="unitriginv">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1405.5,-900 1316.5,-900 1316.5,-864 1405.5,-864 1405.5,-900"/>
-<text text-anchor="middle" x="1361" y="-877.6" font-family="Times,serif" font-size="18.00">unitriginv</text>
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="912.5,-900 823.5,-900 823.5,-864 912.5,-864 912.5,-900"/>
+<text text-anchor="middle" x="868" y="-877.6" font-family="Times,serif" font-size="18.00">unitriginv</text>
 </a>
 </g>
 </g>
 <!-- unitriginv&#45;&gt;ordtype -->
 <g id="edge25" class="edge"><title>unitriginv&#45;&gt;ordtype</title>
-<path fill="none" stroke="black" d="M1405.92,-864.97C1455.08,-844.203 1527,-802.904 1527,-739 1527,-739 1527,-739 1527,-233 1527,-114.369 1124.67,-129.491 1008,-108 999.63,-106.458 990.771,-104.594 982.221,-102.674"/>
-<polygon fill="black" stroke="black" points="982.902,-99.2394 972.372,-100.409 981.333,-106.061 982.902,-99.2394"/>
+<path fill="none" stroke="black" d="M911.041,-863.816C957.216,-842.204 1024,-800.344 1024,-739 1024,-739 1024,-739 1024,-593 1024,-377.091 761.35,-451.172 678,-252 668.809,-230.038 682.46,-149.605 687,-144 712.606,-112.389 758.155,-99.5806 792.916,-94.4182"/>
+<polygon fill="black" stroke="black" points="793.411,-97.8834 802.865,-93.1022 792.493,-90.9438 793.411,-97.8834"/>
 </g>
 <!-- Yamanouchi -->
 <g id="node8" class="node"><title>Yamanouchi</title>
 <g id="a_node8"><a xlink:href="Combi.Combi.Yamanouchi.html" xlink:title="Yamanouchi">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1130,-252 1020,-252 1020,-216 1130,-216 1130,-252"/>
-<text text-anchor="middle" x="1075" y="-229.6" font-family="Times,serif" font-size="18.00">Yamanouchi</text>
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1276,-252 1166,-252 1166,-216 1276,-216 1276,-252"/>
+<text text-anchor="middle" x="1221" y="-229.6" font-family="Times,serif" font-size="18.00">Yamanouchi</text>
 </a>
 </g>
 </g>
 <!-- partition -->
-<g id="node12" class="node"><title>partition</title>
-<g id="a_node12"><a xlink:href="Combi.Combi.partition.html" xlink:title="partition">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1115,-180 1035,-180 1035,-144 1115,-144 1115,-180"/>
-<text text-anchor="middle" x="1075" y="-157.6" font-family="Times,serif" font-size="18.00">partition</text>
+<g id="node13" class="node"><title>partition</title>
+<g id="a_node13"><a xlink:href="Combi.Combi.partition.html" xlink:title="partition">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1261,-180 1181,-180 1181,-144 1261,-144 1261,-180"/>
+<text text-anchor="middle" x="1221" y="-157.6" font-family="Times,serif" font-size="18.00">partition</text>
 </a>
 </g>
 </g>
 <!-- Yamanouchi&#45;&gt;partition -->
 <g id="edge55" class="edge"><title>Yamanouchi&#45;&gt;partition</title>
-<path fill="none" stroke="black" d="M1075,-215.697C1075,-207.983 1075,-198.712 1075,-190.112"/>
-<polygon fill="black" stroke="black" points="1078.5,-190.104 1075,-180.104 1071.5,-190.104 1078.5,-190.104"/>
+<path fill="none" stroke="black" d="M1221,-215.697C1221,-207.983 1221,-198.712 1221,-190.112"/>
+<polygon fill="black" stroke="black" points="1224.5,-190.104 1221,-180.104 1217.5,-190.104 1224.5,-190.104"/>
+</g>
+<!-- bintree -->
+<g id="node9" class="node"><title>bintree</title>
+<g id="a_node9"><a xlink:href="Combi.Combi.bintree.html" xlink:title="bintree">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1564,-180 1496,-180 1496,-144 1564,-144 1564,-180"/>
+<text text-anchor="middle" x="1530" y="-157.6" font-family="Times,serif" font-size="18.00">bintree</text>
+</a>
+</g>
+</g>
+<!-- bintree&#45;&gt;combclass -->
+<g id="edge75" class="edge"><title>bintree&#45;&gt;combclass</title>
+<path fill="none" stroke="black" d="M1495.77,-154.188C1479.5,-151.001 1459.76,-147.209 1442,-144 1347.09,-126.852 1322.79,-125.793 1228,-108 1219.68,-106.439 1210.9,-104.708 1202.31,-102.966"/>
+<polygon fill="black" stroke="black" points="1202.84,-99.5022 1192.34,-100.926 1201.44,-106.36 1202.84,-99.5022"/>
 </g>
 <!-- composition -->
-<g id="node9" class="node"><title>composition</title>
-<g id="a_node9"><a xlink:href="Combi.Combi.composition.html" xlink:title="composition">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="802,-252 694,-252 694,-216 802,-216 802,-252"/>
-<text text-anchor="middle" x="748" y="-229.6" font-family="Times,serif" font-size="18.00">composition</text>
+<g id="node10" class="node"><title>composition</title>
+<g id="a_node10"><a xlink:href="Combi.Combi.composition.html" xlink:title="composition">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="948,-252 840,-252 840,-216 948,-216 948,-252"/>
+<text text-anchor="middle" x="894" y="-229.6" font-family="Times,serif" font-size="18.00">composition</text>
 </a>
 </g>
 </g>
 <!-- composition&#45;&gt;partition -->
 <g id="edge74" class="edge"><title>composition&#45;&gt;partition</title>
-<path fill="none" stroke="black" d="M802.364,-221.362C864.34,-208.095 964.817,-186.586 1024.94,-173.716"/>
-<polygon fill="black" stroke="black" points="1025.91,-177.088 1034.95,-171.573 1024.44,-170.243 1025.91,-177.088"/>
+<path fill="none" stroke="black" d="M948.364,-221.362C1010.34,-208.095 1110.82,-186.586 1170.94,-173.716"/>
+<polygon fill="black" stroke="black" points="1171.91,-177.088 1180.95,-171.573 1170.44,-170.243 1171.91,-177.088"/>
 </g>
 <!-- fibered_set -->
-<g id="node10" class="node"><title>fibered_set</title>
-<g id="a_node10"><a xlink:href="Combi.Combi.fibered_set.html" xlink:title="fibered_set">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="690,-396 592,-396 592,-360 690,-360 690,-396"/>
-<text text-anchor="middle" x="641" y="-373.6" font-family="Times,serif" font-size="18.00">fibered_set</text>
+<g id="node11" class="node"><title>fibered_set</title>
+<g id="a_node11"><a xlink:href="Combi.Combi.fibered_set.html" xlink:title="fibered_set">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="353,-396 255,-396 255,-360 353,-360 353,-396"/>
+<text text-anchor="middle" x="304" y="-373.6" font-family="Times,serif" font-size="18.00">fibered_set</text>
 </a>
 </g>
 </g>
 <!-- multinomial -->
-<g id="node11" class="node"><title>multinomial</title>
-<g id="a_node11"><a xlink:href="Combi.Combi.multinomial.html" xlink:title="multinomial">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="359,-180 255,-180 255,-144 359,-144 359,-180"/>
-<text text-anchor="middle" x="307" y="-157.6" font-family="Times,serif" font-size="18.00">multinomial</text>
+<g id="node12" class="node"><title>multinomial</title>
+<g id="a_node12"><a xlink:href="Combi.Combi.multinomial.html" xlink:title="multinomial">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="505,-180 401,-180 401,-144 505,-144 505,-180"/>
+<text text-anchor="middle" x="453" y="-157.6" font-family="Times,serif" font-size="18.00">multinomial</text>
 </a>
 </g>
 </g>
 <!-- multinomial&#45;&gt;tools -->
 <g id="edge67" class="edge"><title>multinomial&#45;&gt;tools</title>
-<path fill="none" stroke="black" d="M326.42,-143.871C354.948,-118.711 408.301,-71.6535 440.742,-43.0415"/>
-<polygon fill="black" stroke="black" points="443.326,-45.4289 448.511,-36.1893 438.696,-40.1791 443.326,-45.4289"/>
+<path fill="none" stroke="black" d="M453,-143.871C453,-119.67 453,-75.2108 453,-46.3932"/>
+<polygon fill="black" stroke="black" points="456.5,-46.1892 453,-36.1893 449.5,-46.1893 456.5,-46.1892"/>
 </g>
 <!-- partition&#45;&gt;combclass -->
 <g id="edge71" class="edge"><title>partition&#45;&gt;combclass</title>
-<path fill="none" stroke="black" d="M1034.91,-151.487C983.53,-139.295 894.179,-118.093 836.077,-104.306"/>
-<polygon fill="black" stroke="black" points="836.858,-100.895 826.32,-101.991 835.242,-107.705 836.858,-100.895"/>
+<path fill="none" stroke="black" d="M1202.46,-143.697C1193.2,-135.05 1181.84,-124.449 1171.74,-115.027"/>
+<polygon fill="black" stroke="black" points="1174.02,-112.369 1164.33,-108.104 1169.25,-117.486 1174.02,-112.369"/>
 </g>
 <!-- partition&#45;&gt;ordtype -->
 <g id="edge72" class="edge"><title>partition&#45;&gt;ordtype</title>
-<path fill="none" stroke="black" d="M1040.75,-143.876C1021.94,-134.469 998.415,-122.708 978.334,-112.667"/>
-<polygon fill="black" stroke="black" points="979.889,-109.531 969.38,-108.19 976.759,-115.792 979.889,-109.531"/>
+<path fill="none" stroke="black" d="M1180.95,-153.641C1110.15,-140.633 963.23,-113.641 887.467,-99.7209"/>
+<polygon fill="black" stroke="black" points="887.732,-96.2111 877.264,-97.8463 886.467,-103.096 887.732,-96.2111"/>
 </g>
 <!-- sorted -->
-<g id="node42" class="node"><title>sorted</title>
-<g id="a_node42"><a xlink:href="Combi.SSRcomplements.sorted.html" xlink:title="sorted">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1106,-108 1044,-108 1044,-72 1106,-72 1106,-108"/>
-<text text-anchor="middle" x="1075" y="-85.6" font-family="Times,serif" font-size="18.00">sorted</text>
+<g id="node43" class="node"><title>sorted</title>
+<g id="a_node43"><a xlink:href="Combi.SSRcomplements.sorted.html" xlink:title="sorted">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1326,-108 1264,-108 1264,-72 1326,-72 1326,-108"/>
+<text text-anchor="middle" x="1295" y="-85.6" font-family="Times,serif" font-size="18.00">sorted</text>
 </a>
 </g>
 </g>
 <!-- partition&#45;&gt;sorted -->
 <g id="edge73" class="edge"><title>partition&#45;&gt;sorted</title>
-<path fill="none" stroke="black" d="M1075,-143.697C1075,-135.983 1075,-126.712 1075,-118.112"/>
-<polygon fill="black" stroke="black" points="1078.5,-118.104 1075,-108.104 1071.5,-118.104 1078.5,-118.104"/>
+<path fill="none" stroke="black" d="M1239.29,-143.697C1248.43,-135.05 1259.64,-124.449 1269.6,-115.027"/>
+<polygon fill="black" stroke="black" points="1272.06,-117.519 1276.92,-108.104 1267.25,-112.434 1272.06,-117.519"/>
 </g>
 <!-- permuted&#45;&gt;composition -->
 <g id="edge68" class="edge"><title>permuted&#45;&gt;composition</title>
-<path fill="none" stroke="black" d="M374.172,-298.369C436.797,-288.667 556.461,-269.815 658,-252 666.33,-250.538 675.084,-248.95 683.726,-247.351"/>
-<polygon fill="black" stroke="black" points="684.597,-250.749 693.787,-245.476 683.315,-243.868 684.597,-250.749"/>
+<path fill="none" stroke="black" d="M497.187,-298.976C563.351,-289.632 693.733,-270.757 804,-252 812.338,-250.582 821.096,-249.019 829.74,-247.433"/>
+<polygon fill="black" stroke="black" points="830.608,-250.832 839.802,-245.568 829.332,-243.949 830.608,-250.832"/>
 </g>
 <!-- permuted&#45;&gt;multinomial -->
 <g id="edge69" class="edge"><title>permuted&#45;&gt;multinomial</title>
-<path fill="none" stroke="black" d="M328.105,-287.871C324.015,-263.67 316.5,-219.211 311.63,-190.393"/>
-<polygon fill="black" stroke="black" points="315.023,-189.466 309.905,-180.189 308.121,-190.633 315.023,-189.466"/>
+<path fill="none" stroke="black" d="M453.879,-287.871C453.709,-263.67 453.396,-219.211 453.193,-190.393"/>
+<polygon fill="black" stroke="black" points="456.691,-190.164 453.121,-180.189 449.692,-190.214 456.691,-190.164"/>
 </g>
 <!-- cycles -->
-<g id="node45" class="node"><title>cycles</title>
-<g id="a_node45"><a xlink:href="Combi.SymGroup.cycles.html" xlink:title="cycles">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="496,-252 434,-252 434,-216 496,-216 496,-252"/>
-<text text-anchor="middle" x="465" y="-229.6" font-family="Times,serif" font-size="18.00">cycles</text>
+<g id="node46" class="node"><title>cycles</title>
+<g id="a_node46"><a xlink:href="Combi.SymGroup.cycles.html" xlink:title="cycles">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="334,-252 272,-252 272,-216 334,-216 334,-252"/>
+<text text-anchor="middle" x="303" y="-229.6" font-family="Times,serif" font-size="18.00">cycles</text>
 </a>
 </g>
 </g>
 <!-- permuted&#45;&gt;cycles -->
 <g id="edge70" class="edge"><title>permuted&#45;&gt;cycles</title>
-<path fill="none" stroke="black" d="M363.78,-287.876C382.241,-278.232 405.441,-266.113 424.97,-255.911"/>
-<polygon fill="black" stroke="black" points="426.696,-258.958 433.939,-251.226 423.455,-252.754 426.696,-258.958"/>
+<path fill="none" stroke="black" d="M417.061,-287.876C394.807,-277.56 366.443,-264.411 343.567,-253.806"/>
+<polygon fill="black" stroke="black" points="345,-250.612 334.455,-249.582 342.055,-256.963 345,-250.612"/>
 </g>
 <!-- skewtab -->
-<g id="node14" class="node"><title>skewtab</title>
-<g id="a_node14"><a xlink:href="Combi.Combi.skewtab.html" xlink:title="skewtab">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="915.5,-828 838.5,-828 838.5,-792 915.5,-792 915.5,-828"/>
-<text text-anchor="middle" x="877" y="-805.6" font-family="Times,serif" font-size="18.00">skewtab</text>
+<g id="node15" class="node"><title>skewtab</title>
+<g id="a_node15"><a xlink:href="Combi.Combi.skewtab.html" xlink:title="skewtab">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1214.5,-828 1137.5,-828 1137.5,-792 1214.5,-792 1214.5,-828"/>
+<text text-anchor="middle" x="1176" y="-805.6" font-family="Times,serif" font-size="18.00">skewtab</text>
 </a>
 </g>
 </g>
 <!-- stdtab -->
-<g id="node16" class="node"><title>stdtab</title>
-<g id="a_node16"><a xlink:href="Combi.Combi.stdtab.html" xlink:title="stdtab">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1122,-324 1060,-324 1060,-288 1122,-288 1122,-324"/>
-<text text-anchor="middle" x="1091" y="-301.6" font-family="Times,serif" font-size="18.00">stdtab</text>
+<g id="node17" class="node"><title>stdtab</title>
+<g id="a_node17"><a xlink:href="Combi.Combi.stdtab.html" xlink:title="stdtab">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1252,-324 1190,-324 1190,-288 1252,-288 1252,-324"/>
+<text text-anchor="middle" x="1221" y="-301.6" font-family="Times,serif" font-size="18.00">stdtab</text>
 </a>
 </g>
 </g>
 <!-- skewtab&#45;&gt;stdtab -->
 <g id="edge66" class="edge"><title>skewtab&#45;&gt;stdtab</title>
-<path fill="none" stroke="black" d="M903.241,-791.736C960.385,-751.823 1091,-647.028 1091,-523 1091,-523 1091,-523 1091,-449 1091,-408.996 1091,-362.653 1091,-334.08"/>
-<polygon fill="black" stroke="black" points="1094.5,-334.049 1091,-324.049 1087.5,-334.049 1094.5,-334.049"/>
+<path fill="none" stroke="black" d="M1177.38,-791.964C1179.42,-765.323 1183,-712.169 1183,-667 1183,-667 1183,-667 1183,-449 1183,-407.633 1198.23,-361.722 1209.41,-333.605"/>
+<polygon fill="black" stroke="black" points="1212.76,-334.673 1213.31,-324.093 1206.28,-332.019 1212.76,-334.673"/>
 </g>
 <!-- std -->
-<g id="node15" class="node"><title>std</title>
-<g id="a_node15"><a xlink:href="Combi.Combi.std.html" xlink:title="std">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="622,-252 568,-252 568,-216 622,-216 622,-252"/>
-<text text-anchor="middle" x="595" y="-229.6" font-family="Times,serif" font-size="18.00">std</text>
+<g id="node16" class="node"><title>std</title>
+<g id="a_node16"><a xlink:href="Combi.Combi.std.html" xlink:title="std">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="768,-252 714,-252 714,-216 768,-216 768,-252"/>
+<text text-anchor="middle" x="741" y="-229.6" font-family="Times,serif" font-size="18.00">std</text>
 </a>
 </g>
 </g>
 <!-- std&#45;&gt;combclass -->
 <g id="edge63" class="edge"><title>std&#45;&gt;combclass</title>
-<path fill="none" stroke="black" d="M622.204,-224.002C646.119,-215.23 681.058,-200.255 707,-180 729.811,-162.189 750.175,-136.048 763.561,-116.701"/>
-<polygon fill="black" stroke="black" points="766.508,-118.59 769.203,-108.344 760.707,-114.673 766.508,-118.59"/>
+<path fill="none" stroke="black" d="M768.122,-225.167C801.989,-215.255 861.607,-197.373 912,-180 975.238,-158.198 1047.01,-130.445 1094.2,-111.775"/>
+<polygon fill="black" stroke="black" points="1095.59,-114.99 1103.59,-108.051 1093.01,-108.483 1095.59,-114.99"/>
 </g>
 <!-- std&#45;&gt;ordtype -->
 <g id="edge64" class="edge"><title>std&#45;&gt;ordtype</title>
-<path fill="none" stroke="black" d="M622.257,-225.584C670.058,-212.52 765.345,-186.198 780,-180 823.7,-161.518 870.494,-133.363 901.095,-113.684"/>
-<polygon fill="black" stroke="black" points="903.183,-116.501 909.666,-108.121 899.372,-110.63 903.183,-116.501"/>
+<path fill="none" stroke="black" d="M768.178,-223.93C798.12,-213.321 843.334,-195.267 853,-180 864.753,-161.435 859.659,-136.39 852.686,-117.598"/>
+<polygon fill="black" stroke="black" points="855.849,-116.083 848.832,-108.145 849.367,-118.726 855.849,-116.083"/>
 </g>
 <!-- permcomp -->
-<g id="node41" class="node"><title>permcomp</title>
-<g id="a_node41"><a xlink:href="Combi.SSRcomplements.permcomp.html" xlink:title="permcomp">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="671,-180 577,-180 577,-144 671,-144 671,-180"/>
-<text text-anchor="middle" x="624" y="-157.6" font-family="Times,serif" font-size="18.00">permcomp</text>
+<g id="node42" class="node"><title>permcomp</title>
+<g id="a_node42"><a xlink:href="Combi.SSRcomplements.permcomp.html" xlink:title="permcomp">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="817,-180 723,-180 723,-144 817,-144 817,-180"/>
+<text text-anchor="middle" x="770" y="-157.6" font-family="Times,serif" font-size="18.00">permcomp</text>
 </a>
 </g>
 </g>
 <!-- std&#45;&gt;permcomp -->
 <g id="edge65" class="edge"><title>std&#45;&gt;permcomp</title>
-<path fill="none" stroke="black" d="M602.169,-215.697C605.435,-207.813 609.374,-198.304 613.002,-189.546"/>
-<polygon fill="black" stroke="black" points="616.32,-190.683 616.914,-180.104 609.853,-188.003 616.32,-190.683"/>
+<path fill="none" stroke="black" d="M748.169,-215.697C751.435,-207.813 755.374,-198.304 759.002,-189.546"/>
+<polygon fill="black" stroke="black" points="762.32,-190.683 762.914,-180.104 755.853,-188.003 762.32,-190.683"/>
 </g>
 <!-- stdtab&#45;&gt;Yamanouchi -->
 <g id="edge60" class="edge"><title>stdtab&#45;&gt;Yamanouchi</title>
-<path fill="none" stroke="black" d="M1087.04,-287.697C1085.28,-279.983 1083.16,-270.712 1081.2,-262.112"/>
-<polygon fill="black" stroke="black" points="1084.55,-261.073 1078.91,-252.104 1077.73,-262.633 1084.55,-261.073"/>
+<path fill="none" stroke="black" d="M1221,-287.697C1221,-279.983 1221,-270.712 1221,-262.112"/>
+<polygon fill="black" stroke="black" points="1224.5,-262.104 1221,-252.104 1217.5,-262.104 1224.5,-262.104"/>
 </g>
 <!-- stdtab&#45;&gt;std -->
 <g id="edge61" class="edge"><title>stdtab&#45;&gt;std</title>
-<path fill="none" stroke="black" d="M1059.78,-302.707C988.227,-297.118 807.038,-281.077 658,-252 649.449,-250.332 640.35,-248.131 631.804,-245.87"/>
-<polygon fill="black" stroke="black" points="632.66,-242.475 622.091,-243.214 630.814,-249.228 632.66,-242.475"/>
+<path fill="none" stroke="black" d="M1189.9,-302.517C1120.29,-296.639 946.832,-280.21 804,-252 795.453,-250.312 786.355,-248.104 777.809,-245.841"/>
+<polygon fill="black" stroke="black" points="778.666,-242.446 768.097,-243.186 776.82,-249.199 778.666,-242.446"/>
 </g>
 <!-- tableau -->
-<g id="node18" class="node"><title>tableau</title>
-<g id="a_node18"><a xlink:href="Combi.Combi.tableau.html" xlink:title="tableau">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1272,-252 1202,-252 1202,-216 1272,-216 1272,-252"/>
-<text text-anchor="middle" x="1237" y="-229.6" font-family="Times,serif" font-size="18.00">tableau</text>
+<g id="node19" class="node"><title>tableau</title>
+<g id="a_node19"><a xlink:href="Combi.Combi.tableau.html" xlink:title="tableau">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1418,-252 1348,-252 1348,-216 1418,-216 1418,-252"/>
+<text text-anchor="middle" x="1383" y="-229.6" font-family="Times,serif" font-size="18.00">tableau</text>
 </a>
 </g>
 </g>
 <!-- stdtab&#45;&gt;tableau -->
 <g id="edge62" class="edge"><title>stdtab&#45;&gt;tableau</title>
-<path fill="none" stroke="black" d="M1122.32,-289.983C1142.87,-280.132 1170.04,-267.105 1192.77,-256.204"/>
-<polygon fill="black" stroke="black" points="1194.39,-259.313 1201.89,-251.833 1191.36,-253.001 1194.39,-259.313"/>
+<path fill="none" stroke="black" d="M1252.24,-291.503C1276.74,-280.913 1311.18,-266.034 1338.56,-254.202"/>
+<polygon fill="black" stroke="black" points="1340.13,-257.336 1347.92,-250.157 1337.36,-250.91 1340.13,-257.336"/>
 </g>
 <!-- subseq -->
-<g id="node17" class="node"><title>subseq</title>
-<g id="a_node17"><a xlink:href="Combi.Combi.subseq.html" xlink:title="subseq">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1415.5,-324 1348.5,-324 1348.5,-288 1415.5,-288 1415.5,-324"/>
-<text text-anchor="middle" x="1382" y="-301.6" font-family="Times,serif" font-size="18.00">subseq</text>
+<g id="node18" class="node"><title>subseq</title>
+<g id="a_node18"><a xlink:href="Combi.Combi.subseq.html" xlink:title="subseq">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1556.5,-324 1489.5,-324 1489.5,-288 1556.5,-288 1556.5,-324"/>
+<text text-anchor="middle" x="1523" y="-301.6" font-family="Times,serif" font-size="18.00">subseq</text>
 </a>
 </g>
 </g>
 <!-- subseq&#45;&gt;combclass -->
 <g id="edge58" class="edge"><title>subseq&#45;&gt;combclass</title>
-<path fill="none" stroke="black" d="M1371.28,-287.957C1358.3,-268.441 1334.8,-236.526 1308,-216 1146.08,-91.9923 1063.21,-141.333 862,-108 853.649,-106.617 844.856,-104.983 836.253,-103.285"/>
-<polygon fill="black" stroke="black" points="836.774,-99.8198 826.28,-101.273 835.39,-106.682 836.774,-99.8198"/>
+<path fill="none" stroke="black" d="M1513.27,-287.917C1501.41,-268.363 1479.73,-236.413 1454,-216 1377.56,-155.362 1267.75,-120.298 1201.98,-103.476"/>
+<polygon fill="black" stroke="black" points="1202.76,-100.063 1192.21,-101.028 1201.06,-106.853 1202.76,-100.063"/>
 </g>
 <!-- subseq&#45;&gt;sorted -->
 <g id="edge59" class="edge"><title>subseq&#45;&gt;sorted</title>
-<path fill="none" stroke="black" d="M1406.93,-287.861C1418.06,-278.67 1430,-266.293 1436,-252 1454.58,-207.74 1467.38,-180.323 1436,-144 1395.05,-96.6039 1201.96,-90.8063 1116.2,-90.6217"/>
-<polygon fill="black" stroke="black" points="1116.05,-87.1217 1106.05,-90.6253 1116.05,-94.1217 1116.05,-87.1217"/>
+<path fill="none" stroke="black" d="M1548.34,-287.77C1560.21,-278.476 1573.55,-266.037 1582,-252 1607.1,-210.311 1631.33,-181.239 1600,-144 1566.75,-104.474 1411.49,-94.4241 1336.18,-91.8698"/>
+<polygon fill="black" stroke="black" points="1336.21,-88.3691 1326.11,-91.5569 1335.99,-95.3657 1336.21,-88.3691"/>
 </g>
 <!-- tableau&#45;&gt;partition -->
 <g id="edge57" class="edge"><title>tableau&#45;&gt;partition</title>
-<path fill="none" stroke="black" d="M1201.85,-217.811C1178.99,-207.935 1148.87,-194.92 1123.72,-184.051"/>
-<polygon fill="black" stroke="black" points="1124.91,-180.755 1114.35,-180.002 1122.14,-187.181 1124.91,-180.755"/>
+<path fill="none" stroke="black" d="M1347.85,-217.811C1324.99,-207.935 1294.87,-194.92 1269.72,-184.051"/>
+<polygon fill="black" stroke="black" points="1270.91,-180.755 1260.35,-180.002 1268.14,-187.181 1270.91,-180.755"/>
 </g>
 <!-- vectNK&#45;&gt;tools -->
 <g id="edge56" class="edge"><title>vectNK&#45;&gt;tools</title>
-<path fill="none" stroke="black" d="M183.252,-144.572C245.48,-117.13 369.814,-62.2993 431.522,-35.0864"/>
-<polygon fill="black" stroke="black" points="433.132,-38.2019 440.869,-30.9644 430.307,-31.7971 433.132,-38.2019"/>
+<path fill="none" stroke="black" d="M183.031,-80.5564C242.006,-67.1094 356.622,-40.9754 415.74,-27.4958"/>
+<polygon fill="black" stroke="black" points="416.793,-30.8457 425.764,-25.2101 415.236,-24.0208 416.793,-30.8457"/>
 </g>
 <!-- Erdos_Szekeres -->
-<g id="node20" class="node"><title>Erdos_Szekeres</title>
-<g id="a_node20"><a xlink:href="Combi.Erdos_Szekeres.Erdos_Szekeres.html" xlink:title="Erdos_Szekeres">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="421.5,-684 288.5,-684 288.5,-648 421.5,-648 421.5,-684"/>
-<text text-anchor="middle" x="355" y="-661.6" font-family="Times,serif" font-size="18.00">Erdos_Szekeres</text>
+<g id="node21" class="node"><title>Erdos_Szekeres</title>
+<g id="a_node21"><a xlink:href="Combi.Erdos_Szekeres.Erdos_Szekeres.html" xlink:title="Erdos_Szekeres">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="547.5,-684 414.5,-684 414.5,-648 547.5,-648 547.5,-684"/>
+<text text-anchor="middle" x="481" y="-661.6" font-family="Times,serif" font-size="18.00">Erdos_Szekeres</text>
 </a>
 </g>
 </g>
 <!-- Greene_inv -->
-<g id="node24" class="node"><title>Greene_inv</title>
-<g id="a_node24"><a xlink:href="Combi.LRrule.Greene_inv.html" xlink:title="Greene_inv">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="405.5,-612 304.5,-612 304.5,-576 405.5,-576 405.5,-612"/>
-<text text-anchor="middle" x="355" y="-589.6" font-family="Times,serif" font-size="18.00">Greene_inv</text>
+<g id="node25" class="node"><title>Greene_inv</title>
+<g id="a_node25"><a xlink:href="Combi.LRrule.Greene_inv.html" xlink:title="Greene_inv">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="531.5,-612 430.5,-612 430.5,-576 531.5,-576 531.5,-612"/>
+<text text-anchor="middle" x="481" y="-589.6" font-family="Times,serif" font-size="18.00">Greene_inv</text>
 </a>
 </g>
 </g>
 <!-- Erdos_Szekeres&#45;&gt;Greene_inv -->
 <g id="edge54" class="edge"><title>Erdos_Szekeres&#45;&gt;Greene_inv</title>
-<path fill="none" stroke="black" d="M355,-647.697C355,-639.983 355,-630.712 355,-622.112"/>
-<polygon fill="black" stroke="black" points="358.5,-622.104 355,-612.104 351.5,-622.104 358.5,-622.104"/>
+<path fill="none" stroke="black" d="M481,-647.697C481,-639.983 481,-630.712 481,-622.112"/>
+<polygon fill="black" stroke="black" points="484.5,-622.104 481,-612.104 477.5,-622.104 484.5,-622.104"/>
 </g>
 <!-- Frobenius_ident -->
-<g id="node21" class="node"><title>Frobenius_ident</title>
-<g id="a_node21"><a xlink:href="Combi.HookFormula.Frobenius_ident.html" xlink:title="Frobenius_ident">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1377.5,-468 1240.5,-468 1240.5,-432 1377.5,-432 1377.5,-468"/>
-<text text-anchor="middle" x="1309" y="-445.6" font-family="Times,serif" font-size="18.00">Frobenius_ident</text>
+<g id="node22" class="node"><title>Frobenius_ident</title>
+<g id="a_node22"><a xlink:href="Combi.HookFormula.Frobenius_ident.html" xlink:title="Frobenius_ident">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1433.5,-468 1296.5,-468 1296.5,-432 1433.5,-432 1433.5,-468"/>
+<text text-anchor="middle" x="1365" y="-445.6" font-family="Times,serif" font-size="18.00">Frobenius_ident</text>
 </a>
 </g>
 </g>
 <!-- hook -->
-<g id="node22" class="node"><title>hook</title>
-<g id="a_node22"><a xlink:href="Combi.HookFormula.hook.html" xlink:title="hook">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1418,-396 1364,-396 1364,-360 1418,-360 1418,-396"/>
-<text text-anchor="middle" x="1391" y="-373.6" font-family="Times,serif" font-size="18.00">hook</text>
+<g id="node23" class="node"><title>hook</title>
+<g id="a_node23"><a xlink:href="Combi.HookFormula.hook.html" xlink:title="hook">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1533,-396 1479,-396 1479,-360 1533,-360 1533,-396"/>
+<text text-anchor="middle" x="1506" y="-373.6" font-family="Times,serif" font-size="18.00">hook</text>
 </a>
 </g>
 </g>
 <!-- Frobenius_ident&#45;&gt;hook -->
 <g id="edge33" class="edge"><title>Frobenius_ident&#45;&gt;hook</title>
-<path fill="none" stroke="black" d="M1329.27,-431.697C1339.5,-422.965 1352.06,-412.24 1363.18,-402.75"/>
-<polygon fill="black" stroke="black" points="1365.63,-405.259 1370.96,-396.104 1361.09,-399.935 1365.63,-405.259"/>
+<path fill="none" stroke="black" d="M1399.49,-431.876C1420.8,-421.299 1448.1,-407.744 1469.73,-397.007"/>
+<polygon fill="black" stroke="black" points="1471.52,-400.025 1478.92,-392.444 1468.41,-393.755 1471.52,-400.025"/>
 </g>
 <!-- Schensted -->
-<g id="node25" class="node"><title>Schensted</title>
-<g id="a_node25"><a xlink:href="Combi.LRrule.Schensted.html" xlink:title="Schensted">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1292,-396 1200,-396 1200,-360 1292,-360 1292,-396"/>
-<text text-anchor="middle" x="1246" y="-373.6" font-family="Times,serif" font-size="18.00">Schensted</text>
+<g id="node26" class="node"><title>Schensted</title>
+<g id="a_node26"><a xlink:href="Combi.LRrule.Schensted.html" xlink:title="Schensted">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1398,-396 1306,-396 1306,-360 1398,-360 1398,-396"/>
+<text text-anchor="middle" x="1352" y="-373.6" font-family="Times,serif" font-size="18.00">Schensted</text>
 </a>
 </g>
 </g>
 <!-- Frobenius_ident&#45;&gt;Schensted -->
 <g id="edge34" class="edge"><title>Frobenius_ident&#45;&gt;Schensted</title>
-<path fill="none" stroke="black" d="M1293.43,-431.697C1285.8,-423.22 1276.48,-412.864 1268.12,-403.583"/>
-<polygon fill="black" stroke="black" points="1270.69,-401.196 1261.39,-396.104 1265.48,-405.879 1270.69,-401.196"/>
+<path fill="none" stroke="black" d="M1361.79,-431.697C1360.35,-423.983 1358.63,-414.712 1357.04,-406.112"/>
+<polygon fill="black" stroke="black" points="1360.44,-405.297 1355.18,-396.104 1353.56,-406.575 1360.44,-405.297"/>
 </g>
 <!-- hook&#45;&gt;Qmeasure -->
 <g id="edge30" class="edge"><title>hook&#45;&gt;Qmeasure</title>
-<path fill="none" stroke="black" d="M1418.17,-372.461C1486.09,-361.113 1664.34,-331.334 1755.14,-316.165"/>
-<polygon fill="black" stroke="black" points="1755.95,-319.578 1765.24,-314.478 1754.8,-312.674 1755.95,-319.578"/>
+<path fill="none" stroke="black" d="M1533.25,-370.726C1583.12,-359.243 1689.95,-334.644 1755.32,-319.59"/>
+<polygon fill="black" stroke="black" points="1756.49,-322.914 1765.45,-317.259 1754.92,-316.092 1756.49,-322.914"/>
 </g>
 <!-- hook&#45;&gt;stdtab -->
 <g id="edge31" class="edge"><title>hook&#45;&gt;stdtab</title>
-<path fill="none" stroke="black" d="M1363.78,-369.377C1352.71,-366.348 1339.77,-362.902 1328,-360 1259.54,-343.118 1179.39,-325.676 1132.03,-315.609"/>
-<polygon fill="black" stroke="black" points="1132.67,-312.165 1122.16,-313.515 1131.21,-319.013 1132.67,-312.165"/>
+<path fill="none" stroke="black" d="M1478.93,-370.351C1428.76,-358.028 1321.05,-331.574 1261.93,-317.053"/>
+<polygon fill="black" stroke="black" points="1262.72,-313.644 1252.18,-314.657 1261.05,-320.441 1262.72,-313.644"/>
 </g>
 <!-- hook&#45;&gt;subseq -->
 <g id="edge32" class="edge"><title>hook&#45;&gt;subseq</title>
-<path fill="none" stroke="black" d="M1388.78,-359.697C1387.78,-351.983 1386.59,-342.712 1385.49,-334.112"/>
-<polygon fill="black" stroke="black" points="1388.95,-333.576 1384.2,-324.104 1382,-334.469 1388.95,-333.576"/>
+<path fill="none" stroke="black" d="M1510.2,-359.697C1512.1,-351.898 1514.38,-342.509 1516.48,-333.829"/>
+<polygon fill="black" stroke="black" points="1519.89,-334.648 1518.85,-324.104 1513.08,-332.996 1519.89,-334.648"/>
 </g>
 <!-- Greene -->
-<g id="node23" class="node"><title>Greene</title>
-<g id="a_node23"><a xlink:href="Combi.LRrule.Greene.html" xlink:title="Greene">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="373.5,-540 304.5,-540 304.5,-504 373.5,-504 373.5,-540"/>
-<text text-anchor="middle" x="339" y="-517.6" font-family="Times,serif" font-size="18.00">Greene</text>
+<g id="node24" class="node"><title>Greene</title>
+<g id="a_node24"><a xlink:href="Combi.LRrule.Greene.html" xlink:title="Greene">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="485.5,-540 416.5,-540 416.5,-504 485.5,-504 485.5,-540"/>
+<text text-anchor="middle" x="451" y="-517.6" font-family="Times,serif" font-size="18.00">Greene</text>
 </a>
 </g>
 </g>
 <!-- plactic -->
-<g id="node30" class="node"><title>plactic</title>
-<g id="a_node30"><a xlink:href="Combi.LRrule.plactic.html" xlink:title="plactic">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="371.5,-468 306.5,-468 306.5,-432 371.5,-432 371.5,-468"/>
-<text text-anchor="middle" x="339" y="-445.6" font-family="Times,serif" font-size="18.00">plactic</text>
+<g id="node31" class="node"><title>plactic</title>
+<g id="a_node31"><a xlink:href="Combi.LRrule.plactic.html" xlink:title="plactic">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="486.5,-468 421.5,-468 421.5,-432 486.5,-432 486.5,-468"/>
+<text text-anchor="middle" x="454" y="-445.6" font-family="Times,serif" font-size="18.00">plactic</text>
 </a>
 </g>
 </g>
 <!-- Greene&#45;&gt;plactic -->
 <g id="edge48" class="edge"><title>Greene&#45;&gt;plactic</title>
-<path fill="none" stroke="black" d="M339,-503.697C339,-495.983 339,-486.712 339,-478.112"/>
-<polygon fill="black" stroke="black" points="342.5,-478.104 339,-468.104 335.5,-478.104 342.5,-478.104"/>
+<path fill="none" stroke="black" d="M451.742,-503.697C452.072,-495.983 452.469,-486.712 452.838,-478.112"/>
+<polygon fill="black" stroke="black" points="456.335,-478.245 453.267,-468.104 449.342,-477.945 456.335,-478.245"/>
 </g>
 <!-- ordcast -->
-<g id="node40" class="node"><title>ordcast</title>
-<g id="a_node40"><a xlink:href="Combi.SSRcomplements.ordcast.html" xlink:title="ordcast">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="214.5,-468 143.5,-468 143.5,-432 214.5,-432 214.5,-468"/>
-<text text-anchor="middle" x="179" y="-445.6" font-family="Times,serif" font-size="18.00">ordcast</text>
+<g id="node41" class="node"><title>ordcast</title>
+<g id="a_node41"><a xlink:href="Combi.SSRcomplements.ordcast.html" xlink:title="ordcast">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="189.5,-468 118.5,-468 118.5,-432 189.5,-432 189.5,-468"/>
+<text text-anchor="middle" x="154" y="-445.6" font-family="Times,serif" font-size="18.00">ordcast</text>
 </a>
 </g>
 </g>
 <!-- Greene&#45;&gt;ordcast -->
 <g id="edge49" class="edge"><title>Greene&#45;&gt;ordcast</title>
-<path fill="none" stroke="black" d="M304.282,-505.811C280.811,-495.542 249.586,-481.881 224.181,-470.767"/>
-<polygon fill="black" stroke="black" points="225.322,-467.446 214.758,-466.644 222.516,-473.859 225.322,-467.446"/>
+<path fill="none" stroke="black" d="M416.308,-512.834C372.114,-502.43 293.379,-483.89 226,-468 217.372,-465.965 208.162,-463.792 199.311,-461.702"/>
+<polygon fill="black" stroke="black" points="200.059,-458.283 189.522,-459.391 198.45,-465.095 200.059,-458.283"/>
 </g>
 <!-- Greene_inv&#45;&gt;Greene -->
 <g id="edge47" class="edge"><title>Greene_inv&#45;&gt;Greene</title>
-<path fill="none" stroke="black" d="M351.045,-575.697C349.282,-567.983 347.163,-558.712 345.197,-550.112"/>
-<polygon fill="black" stroke="black" points="348.55,-549.073 342.91,-540.104 341.726,-550.633 348.55,-549.073"/>
+<path fill="none" stroke="black" d="M473.584,-575.697C470.206,-567.813 466.13,-558.304 462.377,-549.546"/>
+<polygon fill="black" stroke="black" points="465.487,-547.917 458.33,-540.104 459.053,-550.675 465.487,-547.917"/>
 </g>
 <!-- Schensted&#45;&gt;stdtab -->
 <g id="edge42" class="edge"><title>Schensted&#45;&gt;stdtab</title>
-<path fill="none" stroke="black" d="M1208.08,-359.876C1184.85,-349.382 1155.12,-335.956 1131.43,-325.26"/>
-<polygon fill="black" stroke="black" points="1132.57,-321.935 1122.02,-321.009 1129.69,-328.315 1132.57,-321.935"/>
+<path fill="none" stroke="black" d="M1319.95,-359.876C1302.25,-350.415 1280.08,-338.572 1261.22,-328.493"/>
+<polygon fill="black" stroke="black" points="1262.73,-325.332 1252.26,-323.706 1259.43,-331.505 1262.73,-325.332"/>
 </g>
 <!-- Schensted&#45;&gt;subseq -->
 <g id="edge43" class="edge"><title>Schensted&#45;&gt;subseq</title>
-<path fill="none" stroke="black" d="M1279.27,-359.876C1297.46,-350.512 1320.19,-338.814 1339.64,-328.803"/>
-<polygon fill="black" stroke="black" points="1341.31,-331.878 1348.6,-324.19 1338.11,-325.654 1341.31,-331.878"/>
+<path fill="none" stroke="black" d="M1393.83,-359.876C1419.99,-349.17 1453.59,-335.413 1479.97,-324.615"/>
+<polygon fill="black" stroke="black" points="1481.4,-327.809 1489.33,-320.782 1478.75,-321.331 1481.4,-327.809"/>
 </g>
 <!-- Yam_plact -->
-<g id="node26" class="node"><title>Yam_plact</title>
-<g id="a_node26"><a xlink:href="Combi.LRrule.Yam_plact.html" xlink:title="Yam_plact">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="625,-756 529,-756 529,-720 625,-720 625,-756"/>
-<text text-anchor="middle" x="577" y="-733.6" font-family="Times,serif" font-size="18.00">Yam_plact</text>
+<g id="node27" class="node"><title>Yam_plact</title>
+<g id="a_node27"><a xlink:href="Combi.LRrule.Yam_plact.html" xlink:title="Yam_plact">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="621,-756 525,-756 525,-720 621,-720 621,-756"/>
+<text text-anchor="middle" x="573" y="-733.6" font-family="Times,serif" font-size="18.00">Yam_plact</text>
 </a>
 </g>
 </g>
 <!-- stdplact -->
-<g id="node32" class="node"><title>stdplact</title>
-<g id="a_node32"><a xlink:href="Combi.LRrule.stdplact.html" xlink:title="stdplact">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="568,-684 494,-684 494,-648 568,-648 568,-684"/>
-<text text-anchor="middle" x="531" y="-661.6" font-family="Times,serif" font-size="18.00">stdplact</text>
+<g id="node33" class="node"><title>stdplact</title>
+<g id="a_node33"><a xlink:href="Combi.LRrule.stdplact.html" xlink:title="stdplact">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="694,-684 620,-684 620,-648 694,-648 694,-684"/>
+<text text-anchor="middle" x="657" y="-661.6" font-family="Times,serif" font-size="18.00">stdplact</text>
 </a>
 </g>
 </g>
 <!-- Yam_plact&#45;&gt;stdplact -->
 <g id="edge37" class="edge"><title>Yam_plact&#45;&gt;stdplact</title>
-<path fill="none" stroke="black" d="M565.629,-719.697C560.282,-711.559 553.796,-701.689 547.889,-692.701"/>
-<polygon fill="black" stroke="black" points="550.657,-690.539 542.24,-684.104 544.807,-694.384 550.657,-690.539"/>
+<path fill="none" stroke="black" d="M593.764,-719.697C604.241,-710.965 617.111,-700.24 628.5,-690.75"/>
+<polygon fill="black" stroke="black" points="631.033,-693.195 636.475,-684.104 626.552,-687.817 631.033,-693.195"/>
 </g>
 <!-- extract -->
-<g id="node27" class="node"><title>extract</title>
-<g id="a_node27"><a xlink:href="Combi.LRrule.extract.html" xlink:title="extract">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="912.5,-1044 845.5,-1044 845.5,-1008 912.5,-1008 912.5,-1044"/>
-<text text-anchor="middle" x="879" y="-1021.6" font-family="Times,serif" font-size="18.00">extract</text>
+<g id="node28" class="node"><title>extract</title>
+<g id="a_node28"><a xlink:href="Combi.LRrule.extract.html" xlink:title="extract">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1061.5,-1044 994.5,-1044 994.5,-1008 1061.5,-1008 1061.5,-1044"/>
+<text text-anchor="middle" x="1028" y="-1021.6" font-family="Times,serif" font-size="18.00">extract</text>
 </a>
 </g>
 </g>
 <!-- implem -->
-<g id="node29" class="node"><title>implem</title>
-<g id="a_node29"><a xlink:href="Combi.LRrule.implem.html" xlink:title="implem">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="911.5,-972 840.5,-972 840.5,-936 911.5,-936 911.5,-972"/>
-<text text-anchor="middle" x="876" y="-949.6" font-family="Times,serif" font-size="18.00">implem</text>
+<g id="node30" class="node"><title>implem</title>
+<g id="a_node30"><a xlink:href="Combi.LRrule.implem.html" xlink:title="implem">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1063.5,-972 992.5,-972 992.5,-936 1063.5,-936 1063.5,-972"/>
+<text text-anchor="middle" x="1028" y="-949.6" font-family="Times,serif" font-size="18.00">implem</text>
 </a>
 </g>
 </g>
 <!-- extract&#45;&gt;implem -->
 <g id="edge53" class="edge"><title>extract&#45;&gt;implem</title>
-<path fill="none" stroke="black" d="M878.258,-1007.7C877.928,-999.983 877.531,-990.712 877.162,-982.112"/>
-<polygon fill="black" stroke="black" points="880.658,-981.945 876.733,-972.104 873.665,-982.245 880.658,-981.945"/>
+<path fill="none" stroke="black" d="M1028,-1007.7C1028,-999.983 1028,-990.712 1028,-982.112"/>
+<polygon fill="black" stroke="black" points="1031.5,-982.104 1028,-972.104 1024.5,-982.104 1031.5,-982.104"/>
 </g>
 <!-- freeSchur -->
-<g id="node28" class="node"><title>freeSchur</title>
-<g id="a_node28"><a xlink:href="Combi.LRrule.freeSchur.html" xlink:title="freeSchur">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="693.5,-828 606.5,-828 606.5,-792 693.5,-792 693.5,-828"/>
-<text text-anchor="middle" x="650" y="-805.6" font-family="Times,serif" font-size="18.00">freeSchur</text>
+<g id="node29" class="node"><title>freeSchur</title>
+<g id="a_node29"><a xlink:href="Combi.LRrule.freeSchur.html" xlink:title="freeSchur">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="840.5,-828 753.5,-828 753.5,-792 840.5,-792 840.5,-828"/>
+<text text-anchor="middle" x="797" y="-805.6" font-family="Times,serif" font-size="18.00">freeSchur</text>
 </a>
 </g>
 </g>
 <!-- freeSchur&#45;&gt;Yam_plact -->
 <g id="edge50" class="edge"><title>freeSchur&#45;&gt;Yam_plact</title>
-<path fill="none" stroke="black" d="M631.955,-791.697C622.938,-783.05 611.882,-772.449 602.057,-763.027"/>
-<polygon fill="black" stroke="black" points="604.478,-760.499 594.837,-756.104 599.633,-765.552 604.478,-760.499"/>
+<path fill="none" stroke="black" d="M753.279,-795.337C718.45,-784.453 669.375,-769.117 631.22,-757.194"/>
+<polygon fill="black" stroke="black" points="631.86,-753.727 621.271,-754.085 629.772,-760.408 631.86,-753.727"/>
 </g>
 <!-- shuffle -->
-<g id="node31" class="node"><title>shuffle</title>
-<g id="a_node31"><a xlink:href="Combi.LRrule.shuffle.html" xlink:title="shuffle">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="456.5,-756 391.5,-756 391.5,-720 456.5,-720 456.5,-756"/>
-<text text-anchor="middle" x="424" y="-733.6" font-family="Times,serif" font-size="18.00">shuffle</text>
+<g id="node32" class="node"><title>shuffle</title>
+<g id="a_node32"><a xlink:href="Combi.LRrule.shuffle.html" xlink:title="shuffle">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="758.5,-756 693.5,-756 693.5,-720 758.5,-720 758.5,-756"/>
+<text text-anchor="middle" x="726" y="-733.6" font-family="Times,serif" font-size="18.00">shuffle</text>
 </a>
 </g>
 </g>
 <!-- freeSchur&#45;&gt;shuffle -->
 <g id="edge51" class="edge"><title>freeSchur&#45;&gt;shuffle</title>
-<path fill="none" stroke="black" d="M606.425,-795.503C566.103,-783.014 506.525,-764.561 466.538,-752.175"/>
-<polygon fill="black" stroke="black" points="467.405,-748.78 456.817,-749.165 465.334,-755.467 467.405,-748.78"/>
+<path fill="none" stroke="black" d="M779.449,-791.697C770.766,-783.135 760.137,-772.656 750.652,-763.304"/>
+<polygon fill="black" stroke="black" points="752.927,-760.633 743.349,-756.104 748.012,-765.617 752.927,-760.633"/>
 </g>
 <!-- Schur_mpoly -->
-<g id="node36" class="node"><title>Schur_mpoly</title>
-<g id="a_node36"><a xlink:href="Combi.MPoly.Schur_mpoly.html" xlink:title="Schur_mpoly">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="791,-612 677,-612 677,-576 791,-576 791,-612"/>
-<text text-anchor="middle" x="734" y="-589.6" font-family="Times,serif" font-size="18.00">Schur_mpoly</text>
+<g id="node37" class="node"><title>Schur_mpoly</title>
+<g id="a_node37"><a xlink:href="Combi.MPoly.Schur_mpoly.html" xlink:title="Schur_mpoly">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="915,-612 801,-612 801,-576 915,-576 915,-612"/>
+<text text-anchor="middle" x="858" y="-589.6" font-family="Times,serif" font-size="18.00">Schur_mpoly</text>
 </a>
 </g>
 </g>
 <!-- freeSchur&#45;&gt;Schur_mpoly -->
 <g id="edge52" class="edge"><title>freeSchur&#45;&gt;Schur_mpoly</title>
-<path fill="none" stroke="black" d="M656.732,-791.849C671.324,-754.675 705.959,-666.439 723.472,-621.82"/>
-<polygon fill="black" stroke="black" points="726.84,-622.82 727.236,-612.232 720.324,-620.262 726.84,-622.82"/>
+<path fill="none" stroke="black" d="M801.889,-791.849C812.463,-754.753 837.531,-666.81 850.274,-622.103"/>
+<polygon fill="black" stroke="black" points="853.713,-622.809 853.088,-612.232 846.981,-620.89 853.713,-622.809"/>
 </g>
 <!-- therule -->
-<g id="node33" class="node"><title>therule</title>
-<g id="a_node33"><a xlink:href="Combi.LRrule.therule.html" xlink:title="therule">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="909.5,-900 842.5,-900 842.5,-864 909.5,-864 909.5,-900"/>
-<text text-anchor="middle" x="876" y="-877.6" font-family="Times,serif" font-size="18.00">therule</text>
+<g id="node34" class="node"><title>therule</title>
+<g id="a_node34"><a xlink:href="Combi.LRrule.therule.html" xlink:title="therule">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1055.5,-900 988.5,-900 988.5,-864 1055.5,-864 1055.5,-900"/>
+<text text-anchor="middle" x="1022" y="-877.6" font-family="Times,serif" font-size="18.00">therule</text>
 </a>
 </g>
 </g>
 <!-- implem&#45;&gt;therule -->
 <g id="edge46" class="edge"><title>implem&#45;&gt;therule</title>
-<path fill="none" stroke="black" d="M876,-935.697C876,-927.983 876,-918.712 876,-910.112"/>
-<polygon fill="black" stroke="black" points="879.5,-910.104 876,-900.104 872.5,-910.104 879.5,-910.104"/>
+<path fill="none" stroke="black" d="M1026.52,-935.697C1025.86,-927.983 1025.06,-918.712 1024.32,-910.112"/>
+<polygon fill="black" stroke="black" points="1027.81,-909.769 1023.47,-900.104 1020.83,-910.367 1027.81,-909.769"/>
 </g>
 <!-- plactic&#45;&gt;congr -->
 <g id="edge44" class="edge"><title>plactic&#45;&gt;congr</title>
-<path fill="none" stroke="black" d="M338.506,-431.697C338.285,-423.983 338.02,-414.712 337.775,-406.112"/>
-<polygon fill="black" stroke="black" points="341.273,-406 337.489,-396.104 334.276,-406.2 341.273,-406"/>
+<path fill="none" stroke="black" d="M454.247,-431.697C454.357,-423.983 454.49,-414.712 454.613,-406.112"/>
+<polygon fill="black" stroke="black" points="458.112,-406.153 454.756,-396.104 451.113,-406.053 458.112,-406.153"/>
 </g>
 <!-- plactic&#45;&gt;Schensted -->
 <g id="edge45" class="edge"><title>plactic&#45;&gt;Schensted</title>
-<path fill="none" stroke="black" d="M371.539,-441.159C386.518,-437.833 404.575,-434.219 421,-432 708.292,-393.187 1055.83,-382.627 1189.69,-379.899"/>
-<polygon fill="black" stroke="black" points="1189.78,-383.398 1199.71,-379.701 1189.64,-376.399 1189.78,-383.398"/>
+<path fill="none" stroke="black" d="M486.612,-439.573C497.749,-436.695 510.337,-433.815 522,-432 671.817,-408.687 1134.42,-387.955 1295.78,-381.259"/>
+<polygon fill="black" stroke="black" points="1296.12,-384.748 1305.96,-380.839 1295.83,-377.754 1296.12,-384.748"/>
 </g>
 <!-- shuffle&#45;&gt;stdplact -->
 <g id="edge41" class="edge"><title>shuffle&#45;&gt;stdplact</title>
-<path fill="none" stroke="black" d="M450.175,-719.876C464.036,-710.808 481.241,-699.552 496.211,-689.759"/>
-<polygon fill="black" stroke="black" points="498.272,-692.593 504.724,-684.19 494.44,-686.735 498.272,-692.593"/>
+<path fill="none" stroke="black" d="M708.944,-719.697C700.505,-711.135 690.175,-700.656 680.957,-691.304"/>
+<polygon fill="black" stroke="black" points="683.373,-688.769 673.86,-684.104 678.387,-693.683 683.373,-688.769"/>
 </g>
 <!-- stdplact&#45;&gt;Greene_inv -->
 <g id="edge40" class="edge"><title>stdplact&#45;&gt;Greene_inv</title>
-<path fill="none" stroke="black" d="M493.675,-650.155C468.582,-640.175 435.15,-626.878 407.399,-615.841"/>
-<polygon fill="black" stroke="black" points="408.429,-612.484 397.843,-612.04 405.842,-618.988 408.429,-612.484"/>
+<path fill="none" stroke="black" d="M619.675,-650.155C594.582,-640.175 561.15,-626.878 533.399,-615.841"/>
+<polygon fill="black" stroke="black" points="534.429,-612.484 523.843,-612.04 531.842,-618.988 534.429,-612.484"/>
 </g>
 <!-- therule&#45;&gt;skewtab -->
 <g id="edge38" class="edge"><title>therule&#45;&gt;skewtab</title>
-<path fill="none" stroke="black" d="M876.247,-863.697C876.357,-855.983 876.49,-846.712 876.613,-838.112"/>
-<polygon fill="black" stroke="black" points="880.112,-838.153 876.756,-828.104 873.113,-838.053 880.112,-838.153"/>
+<path fill="none" stroke="black" d="M1055.8,-865.638C1077.37,-855.832 1105.63,-842.985 1129.33,-832.213"/>
+<polygon fill="black" stroke="black" points="1130.85,-835.369 1138.5,-828.044 1127.95,-828.996 1130.85,-835.369"/>
 </g>
 <!-- therule&#45;&gt;freeSchur -->
 <g id="edge39" class="edge"><title>therule&#45;&gt;freeSchur</title>
-<path fill="none" stroke="black" d="M842.166,-870.52C805.495,-859.162 746.471,-840.88 703.503,-827.572"/>
-<polygon fill="black" stroke="black" points="704.361,-824.173 693.773,-824.558 702.29,-830.86 704.361,-824.173"/>
+<path fill="none" stroke="black" d="M988.315,-870.52C951.807,-859.162 893.044,-840.88 850.267,-827.572"/>
+<polygon fill="black" stroke="black" points="851.168,-824.187 840.579,-824.558 849.088,-830.871 851.168,-824.187"/>
 </g>
 <!-- Cauchy -->
-<g id="node34" class="node"><title>Cauchy</title>
-<g id="a_node34"><a xlink:href="Combi.MPoly.Cauchy.html" xlink:title="Cauchy">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1005,-1188 933,-1188 933,-1152 1005,-1152 1005,-1188"/>
-<text text-anchor="middle" x="969" y="-1165.6" font-family="Times,serif" font-size="18.00">Cauchy</text>
+<g id="node35" class="node"><title>Cauchy</title>
+<g id="a_node35"><a xlink:href="Combi.MPoly.Cauchy.html" xlink:title="Cauchy">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="416,-1188 344,-1188 344,-1152 416,-1152 416,-1188"/>
+<text text-anchor="middle" x="380" y="-1165.6" font-family="Times,serif" font-size="18.00">Cauchy</text>
 </a>
 </g>
 </g>
 <!-- homogsym -->
-<g id="node38" class="node"><title>homogsym</title>
-<g id="a_node38"><a xlink:href="Combi.MPoly.homogsym.html" xlink:title="homogsym">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1041,-1116 943,-1116 943,-1080 1041,-1080 1041,-1116"/>
-<text text-anchor="middle" x="992" y="-1093.6" font-family="Times,serif" font-size="18.00">homogsym</text>
+<g id="node39" class="node"><title>homogsym</title>
+<g id="a_node39"><a xlink:href="Combi.MPoly.homogsym.html" xlink:title="homogsym">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="436,-1116 338,-1116 338,-1080 436,-1080 436,-1116"/>
+<text text-anchor="middle" x="387" y="-1093.6" font-family="Times,serif" font-size="18.00">homogsym</text>
 </a>
 </g>
 </g>
 <!-- Cauchy&#45;&gt;homogsym -->
 <g id="edge10" class="edge"><title>Cauchy&#45;&gt;homogsym</title>
-<path fill="none" stroke="black" d="M974.685,-1151.7C977.248,-1143.9 980.333,-1134.51 983.185,-1125.83"/>
-<polygon fill="black" stroke="black" points="986.584,-1126.7 986.38,-1116.1 979.933,-1124.51 986.584,-1126.7"/>
+<path fill="none" stroke="black" d="M381.73,-1151.7C382.502,-1143.98 383.429,-1134.71 384.289,-1126.11"/>
+<polygon fill="black" stroke="black" points="387.777,-1126.4 385.29,-1116.1 380.812,-1125.71 387.777,-1126.4"/>
 </g>
 <!-- Schur_altdef -->
-<g id="node35" class="node"><title>Schur_altdef</title>
-<g id="a_node35"><a xlink:href="Combi.MPoly.Schur_altdef.html" xlink:title="Schur_altdef">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1250,-972 1140,-972 1140,-936 1250,-936 1250,-972"/>
-<text text-anchor="middle" x="1195" y="-949.6" font-family="Times,serif" font-size="18.00">Schur_altdef</text>
+<g id="node36" class="node"><title>Schur_altdef</title>
+<g id="a_node36"><a xlink:href="Combi.MPoly.Schur_altdef.html" xlink:title="Schur_altdef">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="920,-972 810,-972 810,-936 920,-936 920,-972"/>
+<text text-anchor="middle" x="865" y="-949.6" font-family="Times,serif" font-size="18.00">Schur_altdef</text>
 </a>
 </g>
 </g>
 <!-- Schur_altdef&#45;&gt;unitriginv -->
 <g id="edge3" class="edge"><title>Schur_altdef&#45;&gt;unitriginv</title>
-<path fill="none" stroke="black" d="M1235.61,-935.876C1258.4,-926.264 1287.03,-914.193 1311.17,-904.013"/>
-<polygon fill="black" stroke="black" points="1312.67,-907.179 1320.52,-900.068 1309.95,-900.729 1312.67,-907.179"/>
+<path fill="none" stroke="black" d="M865.742,-935.697C866.072,-927.983 866.469,-918.712 866.838,-910.112"/>
+<polygon fill="black" stroke="black" points="870.335,-910.245 867.267,-900.104 863.342,-909.945 870.335,-910.245"/>
 </g>
 <!-- Schur_altdef&#45;&gt;therule -->
 <g id="edge4" class="edge"><title>Schur_altdef&#45;&gt;therule</title>
-<path fill="none" stroke="black" d="M1139.8,-940.887C1077.22,-927.155 976.496,-905.052 919.316,-892.505"/>
-<polygon fill="black" stroke="black" points="920.023,-889.077 909.505,-890.352 918.523,-895.914 920.023,-889.077"/>
+<path fill="none" stroke="black" d="M903.407,-935.876C926.226,-925.702 955.224,-912.773 978.833,-902.246"/>
+<polygon fill="black" stroke="black" points="980.547,-905.315 988.255,-898.046 977.696,-898.921 980.547,-905.315"/>
 </g>
 <!-- Schur_mpoly&#45;&gt;stdtab -->
 <g id="edge5" class="edge"><title>Schur_mpoly&#45;&gt;stdtab</title>
-<path fill="none" stroke="black" d="M755.263,-575.966C816.134,-527.201 991.19,-386.959 1061.37,-330.735"/>
-<polygon fill="black" stroke="black" points="1063.78,-333.29 1069.4,-324.306 1059.4,-327.827 1063.78,-333.29"/>
+<path fill="none" stroke="black" d="M875.336,-575.904C916.796,-535.512 1025.84,-432.158 1128,-360 1144.65,-348.24 1164.1,-336.827 1180.9,-327.624"/>
+<polygon fill="black" stroke="black" points="1182.79,-330.581 1189.93,-322.749 1179.47,-324.422 1182.79,-330.581"/>
 </g>
 <!-- antisym -->
-<g id="node37" class="node"><title>antisym</title>
-<g id="a_node37"><a xlink:href="Combi.MPoly.antisym.html" xlink:title="antisym">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="541,-540 467,-540 467,-504 541,-504 541,-540"/>
-<text text-anchor="middle" x="504" y="-517.6" font-family="Times,serif" font-size="18.00">antisym</text>
+<g id="node38" class="node"><title>antisym</title>
+<g id="a_node38"><a xlink:href="Combi.MPoly.antisym.html" xlink:title="antisym">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="769,-540 695,-540 695,-504 769,-504 769,-540"/>
+<text text-anchor="middle" x="732" y="-517.6" font-family="Times,serif" font-size="18.00">antisym</text>
 </a>
 </g>
 </g>
 <!-- Schur_mpoly&#45;&gt;antisym -->
 <g id="edge6" class="edge"><title>Schur_mpoly&#45;&gt;antisym</title>
-<path fill="none" stroke="black" d="M678.03,-575.966C639.136,-564.128 587.883,-548.53 551.086,-537.331"/>
-<polygon fill="black" stroke="black" points="551.699,-533.859 541.113,-534.295 549.661,-540.555 551.699,-533.859"/>
+<path fill="none" stroke="black" d="M827.177,-575.876C810.55,-566.639 789.835,-555.131 771.981,-545.212"/>
+<polygon fill="black" stroke="black" points="773.383,-541.987 762.942,-540.19 769.983,-548.106 773.383,-541.987"/>
 </g>
 <!-- presentSn -->
-<g id="node48" class="node"><title>presentSn</title>
-<g id="a_node48"><a xlink:href="Combi.SymGroup.presentSn.html" xlink:title="presentSn">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="546.5,-468 457.5,-468 457.5,-432 546.5,-432 546.5,-468"/>
-<text text-anchor="middle" x="502" y="-445.6" font-family="Times,serif" font-size="18.00">presentSn</text>
+<g id="node49" class="node"><title>presentSn</title>
+<g id="a_node49"><a xlink:href="Combi.SymGroup.presentSn.html" xlink:title="presentSn">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="647.5,-468 558.5,-468 558.5,-432 647.5,-432 647.5,-468"/>
+<text text-anchor="middle" x="603" y="-445.6" font-family="Times,serif" font-size="18.00">presentSn</text>
 </a>
 </g>
 </g>
 <!-- antisym&#45;&gt;presentSn -->
 <g id="edge11" class="edge"><title>antisym&#45;&gt;presentSn</title>
-<path fill="none" stroke="black" d="M503.506,-503.697C503.285,-495.983 503.02,-486.712 502.775,-478.112"/>
-<polygon fill="black" stroke="black" points="506.273,-478 502.489,-468.104 499.276,-478.2 506.273,-478"/>
+<path fill="none" stroke="black" d="M700.443,-503.876C683.342,-494.596 662.018,-483.025 643.681,-473.075"/>
+<polygon fill="black" stroke="black" points="645.137,-469.883 634.678,-468.19 641.798,-476.035 645.137,-469.883"/>
 </g>
 <!-- sympoly -->
-<g id="node39" class="node"><title>sympoly</title>
-<g id="a_node39"><a xlink:href="Combi.MPoly.sympoly.html" xlink:title="sympoly">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1065,-1044 987,-1044 987,-1008 1065,-1008 1065,-1044"/>
-<text text-anchor="middle" x="1026" y="-1021.6" font-family="Times,serif" font-size="18.00">sympoly</text>
+<g id="node40" class="node"><title>sympoly</title>
+<g id="a_node40"><a xlink:href="Combi.MPoly.sympoly.html" xlink:title="sympoly">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="426,-1044 348,-1044 348,-1008 426,-1008 426,-1044"/>
+<text text-anchor="middle" x="387" y="-1021.6" font-family="Times,serif" font-size="18.00">sympoly</text>
 </a>
 </g>
 </g>
 <!-- homogsym&#45;&gt;sympoly -->
 <g id="edge9" class="edge"><title>homogsym&#45;&gt;sympoly</title>
-<path fill="none" stroke="black" d="M1000.4,-1079.7C1004.27,-1071.73 1008.95,-1062.1 1013.24,-1053.26"/>
-<polygon fill="black" stroke="black" points="1016.47,-1054.63 1017.69,-1044.1 1010.17,-1051.57 1016.47,-1054.63"/>
+<path fill="none" stroke="black" d="M387,-1079.7C387,-1071.98 387,-1062.71 387,-1054.11"/>
+<polygon fill="black" stroke="black" points="390.5,-1054.1 387,-1044.1 383.5,-1054.1 390.5,-1054.1"/>
 </g>
 <!-- sympoly&#45;&gt;Schur_altdef -->
 <g id="edge7" class="edge"><title>sympoly&#45;&gt;Schur_altdef</title>
-<path fill="none" stroke="black" d="M1065.2,-1008.76C1088.8,-998.988 1119.1,-986.437 1144.49,-975.922"/>
-<polygon fill="black" stroke="black" points="1146.06,-979.061 1153.96,-972.001 1143.38,-972.594 1146.06,-979.061"/>
+<path fill="none" stroke="black" d="M426.117,-1019.27C508.14,-1007.26 698.86,-979.33 799.74,-964.557"/>
+<polygon fill="black" stroke="black" points="800.421,-967.995 809.808,-963.082 799.406,-961.068 800.421,-967.995"/>
 </g>
 <!-- permcent -->
-<g id="node47" class="node"><title>permcent</title>
-<g id="a_node47"><a xlink:href="Combi.SymGroup.permcent.html" xlink:title="permcent">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="1068,-972 984,-972 984,-936 1068,-936 1068,-972"/>
-<text text-anchor="middle" x="1026" y="-949.6" font-family="Times,serif" font-size="18.00">permcent</text>
+<g id="node48" class="node"><title>permcent</title>
+<g id="a_node48"><a xlink:href="Combi.SymGroup.permcent.html" xlink:title="permcent">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="347,-972 263,-972 263,-936 347,-936 347,-972"/>
+<text text-anchor="middle" x="305" y="-949.6" font-family="Times,serif" font-size="18.00">permcent</text>
 </a>
 </g>
 </g>
 <!-- sympoly&#45;&gt;permcent -->
 <g id="edge8" class="edge"><title>sympoly&#45;&gt;permcent</title>
-<path fill="none" stroke="black" d="M1026,-1007.7C1026,-999.983 1026,-990.712 1026,-982.112"/>
-<polygon fill="black" stroke="black" points="1029.5,-982.104 1026,-972.104 1022.5,-982.104 1029.5,-982.104"/>
+<path fill="none" stroke="black" d="M366.73,-1007.7C356.502,-998.965 343.939,-988.24 332.822,-978.75"/>
+<polygon fill="black" stroke="black" points="334.915,-975.935 325.037,-972.104 330.37,-981.259 334.915,-975.935"/>
 </g>
 <!-- ordcast&#45;&gt;tools -->
 <g id="edge36" class="edge"><title>ordcast&#45;&gt;tools</title>
-<path fill="none" stroke="black" d="M143.207,-438.508C90.9701,-420.736 0,-379.393 0,-307 0,-307 0,-307 0,-161 0,-71.1371 319.957,-32.7982 430.763,-22.2152"/>
-<polygon fill="black" stroke="black" points="431.184,-25.6913 440.815,-21.2769 430.533,-18.7216 431.184,-25.6913"/>
+<path fill="none" stroke="black" d="M118.282,-434.817C72.7891,-414.121 0,-371.006 0,-307 0,-307 0,-307 0,-161 0,-109.841 28.3812,-97.029 73,-72 131.358,-39.2639 332.161,-25.2672 415.886,-20.759"/>
+<polygon fill="black" stroke="black" points="416.162,-24.2494 425.966,-20.2319 415.796,-17.259 416.162,-24.2494"/>
 </g>
 <!-- sorted&#45;&gt;tools -->
 <g id="edge35" class="edge"><title>sorted&#45;&gt;tools</title>
-<path fill="none" stroke="black" d="M1043.85,-80.0588C1032.63,-77.114 1019.82,-74.0677 1008,-72 820.749,-39.2474 593.168,-25.198 505.19,-20.7169"/>
-<polygon fill="black" stroke="black" points="505.327,-17.2195 495.165,-20.2173 504.979,-24.2108 505.327,-17.2195"/>
+<path fill="none" stroke="black" d="M1263.88,-79.864C1252.67,-76.9008 1239.85,-73.8928 1228,-72 947.074,-27.1299 602.904,-20.22 490.461,-19.1776"/>
+<polygon fill="black" stroke="black" points="490.341,-15.6766 480.313,-19.094 490.284,-22.6764 490.341,-15.6766"/>
 </g>
 <!-- Frobenius_char -->
-<g id="node44" class="node"><title>Frobenius_char</title>
-<g id="a_node44"><a xlink:href="Combi.SymGroup.Frobenius_char.html" xlink:title="Frobenius_char">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="950.5,-1260 819.5,-1260 819.5,-1224 950.5,-1224 950.5,-1260"/>
-<text text-anchor="middle" x="885" y="-1237.6" font-family="Times,serif" font-size="18.00">Frobenius_char</text>
+<g id="node45" class="node"><title>Frobenius_char</title>
+<g id="a_node45"><a xlink:href="Combi.SymGroup.Frobenius_char.html" xlink:title="Frobenius_char">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="369.5,-1260 238.5,-1260 238.5,-1224 369.5,-1224 369.5,-1260"/>
+<text text-anchor="middle" x="304" y="-1237.6" font-family="Times,serif" font-size="18.00">Frobenius_char</text>
 </a>
 </g>
 </g>
 <!-- Frobenius_char&#45;&gt;Cauchy -->
 <g id="edge18" class="edge"><title>Frobenius_char&#45;&gt;Cauchy</title>
-<path fill="none" stroke="black" d="M905.764,-1223.7C916.241,-1214.97 929.111,-1204.24 940.5,-1194.75"/>
-<polygon fill="black" stroke="black" points="943.033,-1197.19 948.475,-1188.1 938.552,-1191.82 943.033,-1197.19"/>
+<path fill="none" stroke="black" d="M322.787,-1223.7C332.174,-1215.05 343.684,-1204.45 353.913,-1195.03"/>
+<polygon fill="black" stroke="black" points="356.445,-1197.45 361.43,-1188.1 351.703,-1192.3 356.445,-1197.45"/>
 </g>
 <!-- towerSn -->
-<g id="node50" class="node"><title>towerSn</title>
-<g id="a_node50"><a xlink:href="Combi.SymGroup.towerSn.html" xlink:title="towerSn">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="773.5,-1044 694.5,-1044 694.5,-1008 773.5,-1008 773.5,-1044"/>
-<text text-anchor="middle" x="734" y="-1021.6" font-family="Times,serif" font-size="18.00">towerSn</text>
+<g id="node51" class="node"><title>towerSn</title>
+<g id="a_node51"><a xlink:href="Combi.SymGroup.towerSn.html" xlink:title="towerSn">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="268.5,-1044 189.5,-1044 189.5,-1008 268.5,-1008 268.5,-1044"/>
+<text text-anchor="middle" x="229" y="-1021.6" font-family="Times,serif" font-size="18.00">towerSn</text>
 </a>
 </g>
 </g>
 <!-- Frobenius_char&#45;&gt;towerSn -->
 <g id="edge19" class="edge"><title>Frobenius_char&#45;&gt;towerSn</title>
-<path fill="none" stroke="black" d="M872.898,-1223.85C846.392,-1186.28 783.093,-1096.58 751.941,-1052.43"/>
-<polygon fill="black" stroke="black" points="754.784,-1050.39 746.159,-1044.23 749.065,-1054.42 754.784,-1050.39"/>
+<path fill="none" stroke="black" d="M297.989,-1223.85C284.961,-1186.68 254.037,-1098.44 238.4,-1053.82"/>
+<polygon fill="black" stroke="black" points="241.65,-1052.51 235.039,-1044.23 235.044,-1054.83 241.65,-1052.51"/>
 </g>
 <!-- cycles&#45;&gt;permcomp -->
 <g id="edge23" class="edge"><title>cycles&#45;&gt;permcomp</title>
-<path fill="none" stroke="black" d="M496.034,-219.337C518.732,-209.344 549.954,-195.599 575.875,-184.187"/>
-<polygon fill="black" stroke="black" points="577.418,-187.332 585.16,-180.099 574.597,-180.926 577.418,-187.332"/>
+<path fill="none" stroke="black" d="M334.003,-228.353C411.228,-216.777 613.108,-186.517 712.72,-171.586"/>
+<polygon fill="black" stroke="black" points="713.531,-175.004 722.901,-170.06 712.493,-168.081 713.531,-175.004"/>
 </g>
 <!-- cycles&#45;&gt;tools -->
 <g id="edge24" class="edge"><title>cycles&#45;&gt;tools</title>
-<path fill="none" stroke="black" d="M465.24,-215.849C465.759,-178.832 466.988,-91.1809 467.616,-46.3863"/>
-<polygon fill="black" stroke="black" points="471.118,-46.2806 467.758,-36.2325 464.118,-46.1824 471.118,-46.2806"/>
+<path fill="none" stroke="black" d="M314.861,-215.921C327.321,-197.991 347.501,-168.988 365,-144 389.105,-109.58 417.055,-69.9211 434.873,-44.6701"/>
+<polygon fill="black" stroke="black" points="437.823,-46.5599 440.73,-36.3716 432.104,-42.5234 437.823,-46.5599"/>
 </g>
 <!-- cycletype -->
-<g id="node46" class="node"><title>cycletype</title>
-<g id="a_node46"><a xlink:href="Combi.SymGroup.cycletype.html" xlink:title="cycletype">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="705,-468 619,-468 619,-432 705,-432 705,-468"/>
-<text text-anchor="middle" x="662" y="-445.6" font-family="Times,serif" font-size="18.00">cycletype</text>
+<g id="node47" class="node"><title>cycletype</title>
+<g id="a_node47"><a xlink:href="Combi.SymGroup.cycletype.html" xlink:title="cycletype">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="348,-468 262,-468 262,-432 348,-432 348,-468"/>
+<text text-anchor="middle" x="305" y="-445.6" font-family="Times,serif" font-size="18.00">cycletype</text>
 </a>
 </g>
 </g>
 <!-- cycletype&#45;&gt;fibered_set -->
 <g id="edge20" class="edge"><title>cycletype&#45;&gt;fibered_set</title>
-<path fill="none" stroke="black" d="M656.809,-431.697C654.469,-423.898 651.653,-414.509 649.049,-405.829"/>
-<polygon fill="black" stroke="black" points="652.357,-404.677 646.131,-396.104 645.652,-406.688 652.357,-404.677"/>
+<path fill="none" stroke="black" d="M304.753,-431.697C304.643,-423.983 304.51,-414.712 304.387,-406.112"/>
+<polygon fill="black" stroke="black" points="307.887,-406.053 304.244,-396.104 300.888,-406.153 307.887,-406.053"/>
 </g>
 <!-- cycletype&#45;&gt;partition -->
 <g id="edge21" class="edge"><title>cycletype&#45;&gt;partition</title>
-<path fill="none" stroke="black" d="M684.105,-431.832C735.545,-392.143 867.75,-291.648 984,-216 1000.27,-205.413 1018.69,-194.493 1034.69,-185.335"/>
-<polygon fill="black" stroke="black" points="1036.83,-188.147 1043.79,-180.163 1033.37,-182.061 1036.83,-188.147"/>
+<path fill="none" stroke="black" d="M348.027,-439.185C391.571,-429.066 460.74,-412.484 520,-396 728.027,-338.134 779.731,-321.985 984,-252 1049.16,-229.677 1123.35,-201.335 1171.1,-182.707"/>
+<polygon fill="black" stroke="black" points="1172.54,-185.901 1180.58,-179 1169.99,-179.382 1172.54,-185.901"/>
 </g>
 <!-- cycletype&#45;&gt;cycles -->
 <g id="edge22" class="edge"><title>cycletype&#45;&gt;cycles</title>
-<path fill="none" stroke="black" d="M618.929,-434.311C598.102,-425.612 573.822,-412.938 556,-396 515.331,-357.347 487.782,-296.444 474.391,-261.678"/>
-<polygon fill="black" stroke="black" points="477.624,-260.332 470.841,-252.193 471.069,-262.786 477.624,-260.332"/>
+<path fill="none" stroke="black" d="M261.715,-433.153C245.294,-424.777 228.32,-412.691 219,-396 192.249,-348.091 240.699,-290.908 274.461,-259.205"/>
+<polygon fill="black" stroke="black" points="277.229,-261.418 282.252,-252.09 272.508,-256.25 277.229,-261.418"/>
 </g>
 <!-- permcent&#45;&gt;cycletype -->
 <g id="edge17" class="edge"><title>permcent&#45;&gt;cycletype</title>
-<path fill="none" stroke="black" d="M1026,-935.951C1026,-909.292 1026,-856.115 1026,-811 1026,-811 1026,-811 1026,-737 1026,-580.667 815.835,-496.785 714.894,-465.512"/>
-<polygon fill="black" stroke="black" points="715.771,-462.121 705.185,-462.562 713.736,-468.818 715.771,-462.121"/>
+<path fill="none" stroke="black" d="M305,-935.951C305,-909.292 305,-856.115 305,-811 305,-811 305,-811 305,-593 305,-552.996 305,-506.653 305,-478.08"/>
+<polygon fill="black" stroke="black" points="308.5,-478.049 305,-468.049 301.5,-478.049 308.5,-478.049"/>
 </g>
 <!-- presentSn&#45;&gt;congr -->
 <g id="edge16" class="edge"><title>presentSn&#45;&gt;congr</title>
-<path fill="none" stroke="black" d="M461.636,-431.876C435.58,-420.822 401.858,-406.516 376.063,-395.572"/>
-<polygon fill="black" stroke="black" points="377.17,-392.24 366.597,-391.556 374.436,-398.684 377.17,-392.24"/>
+<path fill="none" stroke="black" d="M566.795,-431.876C544.781,-421.464 516.666,-408.166 494.138,-397.511"/>
+<polygon fill="black" stroke="black" points="495.396,-394.234 484.86,-393.123 492.403,-400.562 495.396,-394.234"/>
 </g>
 <!-- reprSn -->
-<g id="node49" class="node"><title>reprSn</title>
-<g id="a_node49"><a xlink:href="Combi.SymGroup.reprSn.html" xlink:title="reprSn">
-<polygon fill="#dbc3b6" stroke="#dbc3b6" points="685.5,-540 620.5,-540 620.5,-504 685.5,-504 685.5,-540"/>
-<text text-anchor="middle" x="653" y="-517.6" font-family="Times,serif" font-size="18.00">reprSn</text>
+<g id="node50" class="node"><title>reprSn</title>
+<g id="a_node50"><a xlink:href="Combi.SymGroup.reprSn.html" xlink:title="reprSn">
+<polygon fill="#dbc3b6" stroke="#dbc3b6" points="622.5,-540 557.5,-540 557.5,-504 622.5,-504 622.5,-540"/>
+<text text-anchor="middle" x="590" y="-517.6" font-family="Times,serif" font-size="18.00">reprSn</text>
 </a>
 </g>
 </g>
 <!-- reprSn&#45;&gt;cycletype -->
 <g id="edge14" class="edge"><title>reprSn&#45;&gt;cycletype</title>
-<path fill="none" stroke="black" d="M655.225,-503.697C656.217,-495.983 657.408,-486.712 658.514,-478.112"/>
-<polygon fill="black" stroke="black" points="661.997,-478.469 659.801,-468.104 655.054,-477.576 661.997,-478.469"/>
+<path fill="none" stroke="black" d="M557.359,-512.951C545.867,-510.119 532.861,-506.916 521,-504 465.342,-490.315 401.608,-474.681 357.876,-463.959"/>
+<polygon fill="black" stroke="black" points="358.58,-460.528 348.034,-461.547 356.913,-467.327 358.58,-460.528"/>
 </g>
 <!-- reprSn&#45;&gt;presentSn -->
 <g id="edge15" class="edge"><title>reprSn&#45;&gt;presentSn</title>
-<path fill="none" stroke="black" d="M620.235,-505.811C599.118,-496.022 571.35,-483.149 548.031,-472.339"/>
-<polygon fill="black" stroke="black" points="549.219,-469.032 538.675,-468.002 546.275,-475.383 549.219,-469.032"/>
+<path fill="none" stroke="black" d="M593.213,-503.697C594.646,-495.983 596.368,-486.712 597.965,-478.112"/>
+<polygon fill="black" stroke="black" points="601.439,-478.575 599.823,-468.104 594.556,-477.297 601.439,-478.575"/>
 </g>
 <!-- towerSn&#45;&gt;ordcast -->
 <g id="edge12" class="edge"><title>towerSn&#45;&gt;ordcast</title>
-<path fill="none" stroke="black" d="M694.086,-1023.38C566.829,-1017.15 179,-989.42 179,-883 179,-883 179,-883 179,-593 179,-552.996 179,-506.653 179,-478.08"/>
-<polygon fill="black" stroke="black" points="182.5,-478.049 179,-468.049 175.5,-478.049 182.5,-478.049"/>
+<path fill="none" stroke="black" d="M212.726,-1007.73C190.668,-982.446 154,-932.905 154,-883 154,-883 154,-883 154,-593 154,-552.996 154,-506.653 154,-478.08"/>
+<polygon fill="black" stroke="black" points="157.5,-478.049 154,-468.049 150.5,-478.049 157.5,-478.049"/>
 </g>
 <!-- towerSn&#45;&gt;permcent -->
 <g id="edge13" class="edge"><title>towerSn&#45;&gt;permcent</title>
-<path fill="none" stroke="black" d="M773.684,-1015.49C825.464,-1003.07 916.211,-981.319 973.6,-967.562"/>
-<polygon fill="black" stroke="black" points="974.652,-970.909 983.56,-965.174 973.02,-964.102 974.652,-970.909"/>
+<path fill="none" stroke="black" d="M247.787,-1007.7C257.174,-999.05 268.684,-988.449 278.913,-979.027"/>
+<polygon fill="black" stroke="black" points="281.445,-981.454 286.43,-972.104 276.703,-976.305 281.445,-981.454"/>
 </g>
 </g>
 </svg>
