@@ -1,6 +1,6 @@
 (** * Combi.Combi.std : Standard Words, i.e. Permutation as Words *)
 (******************************************************************************)
-(*       Copyright (C) 2014 Florent Hivert <florent.hivert@lri.fr>            *)
+(*      Copyright (C) 2014-2018 Florent Hivert <florent.hivert@lri.fr>        *)
 (*                                                                            *)
 (*  Distributed under the terms of the GNU General Public License (GPL)       *)
 (*                                                                            *)
@@ -13,35 +13,39 @@
 (*                                                                            *)
 (*                  http://www.gnu.org/licenses/                              *)
 (******************************************************************************)
-(** Standard words : words wich are permutations of [0, 1, ..., n-1]:
+(** * Standard words
 
-- [is_std s] == s is a standard word
-- [is_std_of_n n s] == s is a standard word of size n
+That is words wich are permutations of [0, 1, ..., n-1]:
+
+- [is_std s] == [s] is a standard word
+- [is_std_of_n n s] == [s] is a standard word of size [n]
 - [wordperm p] == the standard word associated with a permutation [p] of ['S_n]
 
 Sigma types for standard word
 
-- [stdwordn n] == a type for [seq nat] which standard words size n;
+- [stdwordn n] == a type for [seq nat] which standard words size [n];
                   it is canonically a [finType]
 
 Inversions and standardisation of a word over a totally ordered alphabet
 
 - [std s] == given a word w over an [ordType] returns the standard word with
              the same set of inversion (lemmas [stdP] and [std_eq_invP])
-- [versions w i j] == i j is an non-inversion of w that is
+- [versions w i j] == [i j] is an non-inversion of [w] that is
                         <<i <= j < size w and w_i <= w_j>>
 
-- [eq_inv w1 w2] == w1 and w2 have the same versions which is equivalent
-                    to the same set of inversions; in particular w1 and w2
+- [eq_inv w1 w2] == [w1] and [w2] have the same versions which is equivalent
+                    to the same set of inversions; in particular [w1] and [w2]
                     have the same size.
+
+- [std_spec s p] == [p] is a standard word with the same versions as [s]
 
 The main result here is [std_eq_invP] which says that having the same inversions
 is the same as having the same standardized.
 
-- [linvseq s t] == t is the left inverse of s
-- [invseq s t] == s and t are inverse on of each other
-- [invstd w] == the inverse of the standardized of w that is the permutation
-                which sorts w in a stable way.
+- [linvseq s t] == [t] is the left inverse of [s]
+- [invseq s t] == [s] and [t] are inverse on of each other
+- [invstd w] == the inverse of the standardized of [w] that is the permutation
+                which sorts [w] in a stable way.
 
 *****)
 Require Import mathcomp.ssreflect.ssreflect.
@@ -59,7 +63,7 @@ Import OrdNotations.
 Open Scope nat_scope.
 
 
-(** * Standard words *)
+(** * Standard words and permutations *)
 Section StandardWords.
 
 Implicit Type n : nat.
@@ -226,7 +230,7 @@ Proof using.
 by rewrite/enum_stdwordn (map_inj_uniq wordperm_inj); exact: enum_uniq.
 Qed.
 
-Canonical stdwordn_finMixin :=
+Definition stdwordn_finMixin :=
   Eval hnf in sub_uniq_finMixin
                 stdwordnn_subCountType enum_stdwordn_uniq enum_stdwordnE.
 Canonical stdwordn_finType := Eval hnf in FinType stdwordn stdwordn_finMixin.
@@ -240,7 +244,7 @@ End StdCombClass.
 (** * Standardisation of a word over a totally ordered alphabet *)
 Section Standardisation.
 
-Variable Alph : ordType.
+Context {Alph : ordType}.
 Implicit Type s u v w : seq Alph.
 
 Fixpoint std_rec n s :=
@@ -575,7 +579,7 @@ case (altP (i =P posbig u)) => Hipos.
     by rewrite Hn Hszrem ltnS.
 Qed.
 
-CoInductive std_spec T (s : seq T) (p : seq nat) : Prop :=
+Variant std_spec T (s : seq T) (p : seq nat) : Prop :=
   | StdSpec : is_std p -> eq_inv s p -> std_spec s p.
 
 Lemma std_spec_uniq T (u : seq T) p q :
@@ -1008,15 +1012,15 @@ Proof. by move=> Hs Ht /(congr1 invstd); rewrite !invstdK. Qed.
 End InvSeq.
 
 
-Section Test.
+Section Examples.
 
-Let u := [:: 4;1;2;2;5;3].
-Let v := [:: 0;4;3;3].
+Let u := [:: 4; 1; 2; 2; 5; 3].
+Let v := [:: 0; 4; 3; 3].
 
-Goal std u = [:: 4; 0; 1; 2; 5; 3].
-Proof using. compute; exact: erefl. Qed.
+Example std_expl1 : std u = [:: 4; 0; 1; 2; 5; 3].
+Proof. by compute. Qed.
+Example std_expl2 :
+  invstd (std u) = filter (gtn (size u)) (invstd (std (u ++ v))).
+Proof. by compute. Qed.
 
-Goal invstd (std u) = filter (gtn (size u)) (invstd (std (u ++ v))).
-Proof using. compute; exact: erefl. Qed.
-
-End Test.
+End Examples.

@@ -1,6 +1,6 @@
 (** * Combi.Basic.ordtype : Ordered Types *)
 (******************************************************************************)
-(*       Copyright (C) 2014 Florent Hivert <florent.hivert@lri.fr>            *)
+(*      Copyright (C) 2014-2018 Florent Hivert <florent.hivert@lri.fr>        *)
 (*                                                                            *)
 (*  Distributed under the terms of the GNU General Public License (GPL)       *)
 (*                                                                            *)
@@ -13,6 +13,48 @@
 (*                                                                            *)
 (*                  http://www.gnu.org/licenses/                              *)
 (******************************************************************************)
+(** * Ordered type
+
+TODO: Most of this should be merged with Cyril Cohen's [order] and therefore
+should be considered as unstable.
+
+The notion defined here include:
+
+- [pordType] == interface for partially ordered types
+- [ordType] == interface for totally ordered types
+
+Inhabited variants:
+
+- [inhType] == interface for inhabited types
+- [inhPordType] == interface for partially ordered inhabited types
+- [inhOrdType] == interface for totally ordered inhabited types
+- [inhOrdFinType] == interface for totally ordered finite types
+
+- [minX m n] == the minimum of two element of [ordType]
+- [maxX m n] == the maximum of two element of [ordType]
+
+- [maxL a L] == the maximum of [a] and the element of the sequence [L]
+- [allLeq v a] == a is smaller or equal than all the element of [v]
+- [allLnt v a] == a is strictly smaller than all the element of [v]
+
+- [rembig w] == [w] minus last occurence of its largest letter
+- [posbig w] == the position of the last occurence of the largest letter of [w]
+
+- [shift_pos pos i] == if [i < pos] then [i] else [i.+1]
+- [shiftinv_pos pos i] == if [i < pos] then [i] else [i.-1]
+
+We define canonical [inhPOrdType] structure on [nat] which is inherited
+by the subtype ['I_n] and [seq T] (with the lexicographic order).
+
+- [Dual T] == the dual ordered type of [T]
+
+Warning: the printing of the dual order is currently very confusing.
+
+- [prodlex_pordType T1 T2] == the cartesian product [T1 * T2] ordered by
+        the lexicographic order. This is _not_ a canonical order
+
+
+ ********)
 Require Import mathcomp.ssreflect.ssreflect.
 From mathcomp Require Import ssrbool ssrfun ssrnat eqtype choice fintype seq.
 From mathcomp Require Import finset div.
@@ -22,8 +64,10 @@ Set Implicit Arguments.
 Unset Strict Implicit.
 Unset Printing Implicit Defensive.
 
+(** * The hierarchy of ordered types *)
+
 (******************************************************************************)
-(* Partially ordered types                                                    *)
+(** ** Partially ordered types                                                *)
 (******************************************************************************)
 Module PartOrder.
 
@@ -84,7 +128,7 @@ Definition ltnX_op T m n := ((m != n) && (@leqX_op T m n)).
 
 Prenex Implicits leqX_op leqXpordP ltnX_op.
 
-(* Declare legacy Arith operators in new scope. *)
+(** Declare legacy Arith operators in new scope. *)
 
 Delimit Scope ssr_nat_scope with ssr_nat.
 
@@ -93,8 +137,8 @@ Notation "m < n" := (lt m n) : ssr_nat_scope.
 Notation "m >= n" := (ge m n) : ssr_nat_scope.
 Notation "m > n" := (gt m n) : ssr_nat_scope.
 
-(* Rebind scope delimiters, reserving a scope for the "recursive",     *)
-(* i.e., unprotected version of operators.                             *)
+(** Rebind scope delimiters, reserving a scope for the "recursive",     *)
+(** i.e., unprotected version of operators.                             *)
 
 Delimit Scope ord_scope with Ord.
 Open Scope ord_scope.
@@ -111,7 +155,7 @@ Notation "m < n < p" := ((m < n) && (n < p)) : ord_scope.
 
 
 (******************************************************************************)
-(* Partially ordered Sub-types                                                *)
+(** ** Partially ordered Sub-types                                            *)
 (******************************************************************************)
 Section SubPOrdType.
 
@@ -143,7 +187,7 @@ Notation "[ 'pordMixin' 'of' T 'by' <: ]" :=
 
 
 (******************************************************************************)
-(* Totally ordered types                                                      *)
+(** ** Totally ordered types                                                  *)
 (******************************************************************************)
 Module Order.
 
@@ -207,7 +251,7 @@ Arguments leqXpordP [T].
 
 
 (******************************************************************************)
-(* Totally ordered Sub-types                                                *)
+(** ** Totally ordered Sub-types                                              *)
 (******************************************************************************)
 Section SubOrdType.
 
@@ -234,7 +278,7 @@ Notation "[ 'ordMixin' 'of' T 'by' <: ]" :=
 
 
 (******************************************************************************)
-(* Partially ordered finite types                                             *)
+(** ** Partially ordered finite types                                         *)
 (******************************************************************************)
 Module FinPOrdType.
 
@@ -305,7 +349,7 @@ Export FinPOrdType.Exports.
 
 
 (******************************************************************************)
-(* Inhabited types                                                            *)
+(** ** Inhabited types                                                        *)
 (******************************************************************************)
 Module Inhabited.
 
@@ -358,7 +402,7 @@ End ProdInhType.
 
 
 (******************************************************************************)
-(* Inhabited partially ordered types                                          *)
+(** ** Inhabited partially ordered types                                      *)
 (******************************************************************************)
 Module InhPOrdType.
 
@@ -426,7 +470,7 @@ Export InhPOrdType.Exports.
 
 
 (******************************************************************************)
-(* Inhabited totally ordered types                                            *)
+(** ** Inhabited totally ordered types                                        *)
 (******************************************************************************)
 Module InhOrdType.
 
@@ -497,7 +541,7 @@ Export InhOrdType.Exports.
 
 
 (******************************************************************************)
-(* Inhabited totally ordered finite types                                     *)
+(** ** Inhabited totally ordered finite types                                 *)
 (******************************************************************************)
 Module InhOrdFinType.
 
@@ -565,7 +609,7 @@ Canonical ordType.
 Coercion inhType : type >-> Inhabited.type.
 Canonical inhType.
 
-Canonical ord_inhType.
+(* Canonical ord_inhType. Redundant ?? *)
 
 Notation inhOrdFinType := type.
 Notation "[ 'inhOrdFinType' 'of' T ]" := (@pack T _ _ id _ _ id _ _ id)
@@ -578,8 +622,10 @@ Export InhOrdFinType.Exports.
 
 
 (******************************************************************************)
-(* Theories for partially and totally ordered types                           *)
+(** * Theories for partially and totally ordered types                        *)
 (******************************************************************************)
+
+(** ** Basic theory *)
 
 Section POrderTheory.
 
@@ -690,7 +736,7 @@ Lemma ltnXNgeqX m n : (m < n) = ~~ (n <= m).
 Proof using. by rewrite [n <= m]leqXNgtnX negbK. Qed.
 
 (* Comparison predicates. *)
-CoInductive leqX_xor_gtnX m n : bool -> bool -> Set :=
+Variant leqX_xor_gtnX m n : bool -> bool -> Set :=
   | LeqXNotGtnX of m <= n : leqX_xor_gtnX m n true false
   | GtnXNotLeqX of n < m  : leqX_xor_gtnX m n false true.
 
@@ -700,14 +746,14 @@ rewrite ltnXNgeqX.
 by case le_mn: (m <= n); constructor; rewrite // ltnXNgeqX le_mn.
 Qed.
 
-CoInductive ltnX_xor_geqX m n : bool -> bool -> Set :=
+Variant ltnX_xor_geqX m n : bool -> bool -> Set :=
   | LtnXNotGeqX of m < n  : ltnX_xor_geqX m n false true
   | GeqXNotLtnX of n <= m : ltnX_xor_geqX m n true false.
 
 Lemma ltnXP m n : ltnX_xor_geqX m n (n <= m) (m < n).
 Proof using. by case: leqXP; constructor. Qed.
 
-CoInductive compareX m n : bool -> bool -> bool -> Set :=
+Variant compareX m n : bool -> bool -> bool -> Set :=
   | CompareXLt of m < n : compareX m n true false false
   | CompareXGt of m > n : compareX m n false true false
   | CompareXEq of m = n : compareX m n false false true.
@@ -786,7 +832,7 @@ Notation "x >A y"  := (x > y)%Ord (at level 70, y at next level, only parsing).
 End OrdNotations.
 
 (******************************************************************************)
-(* Increassing and nondecreassing maps                                         *)
+(** ** Increasing and nondecreasing maps                                      *)
 (******************************************************************************)
 Section IncrMap.
 
@@ -838,9 +884,9 @@ End IncrMap.
 
 
 (******************************************************************************)
-(* Seq over an ordered types                                                  *)
+(** ** sequences over an ordered types                                        *)
 (******************************************************************************)
-(* Maximum of a sequence *)
+(** *** Maximum of a sequence *)
 Section MaxSeq.
 
 Variable T : ordType.
@@ -876,7 +922,7 @@ Qed.
 
 End MaxSeq.
 
-(* Comprarison of the elements of a sequence to an element *)
+(** *** Comparison of the elements of a sequence to an element *)
 Section AllLeqLtn.
 
 Variable T : ordType.
@@ -1032,6 +1078,7 @@ Qed.
 End AllLeqLtn.
 
 
+(** *** Removing the largest letter of a sequence *)
 Section RemoveBig.
 
 Variable T : ordType.
@@ -1039,13 +1086,13 @@ Variable Z : T.
 Implicit Type a b c : T.
 Implicit Type u v w r : seq T.
 
-(* Remove the last occurence of the largest letter from w *)
+(** Remove the last occurence of the largest letter from w *)
 Fixpoint rembig w :=
   if w is a :: v then
     if allLtn v a then v else a :: rembig v
   else [::].
 
-(* Position of the last occurence of the largest letter of w *)
+(** Position of the last occurence of the largest letter of w *)
 Fixpoint posbig w :=
   if w is a :: v then
     if allLtn v a then 0 else (posbig v).+1
@@ -1416,10 +1463,10 @@ Prenex Implicits rembig posbig.
 
 
 (******************************************************************************)
-(* Classical ordered types                                                    *)
+(** * Classical ordered types                                                 *)
 (******************************************************************************)
 
-(* nat *****)
+(** ** The order on [nat] *)
 Fact leq_porder : PartOrder.axiom leq.
 Proof. by split; [exact: leqnn | exact: anti_leq | exact: leq_trans]. Qed.
 
@@ -1465,7 +1512,7 @@ move/(_  i.+1) : IHn => /= ->.
 by rewrite ltnXnatE ltnNge leqnSn /=.
 Qed.
 
-(* Dual *****)
+(** ** The dual order*****)
 Section DualPOrder.
 
 Variable T : pordType.
@@ -1556,27 +1603,18 @@ move=> H; apply (@finord_wf [finPOrdType of dual_pordType T]) => x Hx.
 by apply H => y Hy; apply Hx; rewrite -dual_ltnX.
 Qed.
 
-(* Ordinal ***)
+(** ** The order on ordinals ***)
 Definition ord_pordMixin n := [pordMixin of 'I_n by <:].
 Canonical ord_pordType n := Eval hnf in POrdType 'I_n (ord_pordMixin n).
 Definition ord_ordMixin n := [ordMixin of ord_pordType n by <:].
 Canonical ord_ordType n := Eval hnf in OrdType 'I_n (ord_ordMixin n).
-
-
-
 Definition ord_inhMixin n := Inhabited.Mixin (ord0 (n' := n)).
 Canonical ord_inhType n := Eval hnf in InhType 'I_n.+1 (ord_inhMixin n).
 Canonical ord_inhOrdType n := [inhOrdType of 'I_n.+1].
 Canonical ord_inhOrdFinType n := [inhOrdFinType of 'I_n.+1].
 
 
-
-(* Seq ***)
-Definition seq_inhMixin (T : eqType) := Inhabited.Mixin ([::] : seq T).
-Canonical seq_inhType (T : eqType) :=
-  Eval hnf in InhType (seq T) (seq_inhMixin T).
-
-
+(** ** The lexicographic order on pairs *)
 Section ProdLexPOrder.
 
 Variable T R : pordType.
@@ -1635,6 +1673,10 @@ Definition prodlex_ordType :=
 End ProdLexOrder.
 
 
+(** The lexicographic order on [seq] ***)
+Definition seq_inhMixin (T : eqType) := Inhabited.Mixin ([::] : seq T).
+Canonical seq_inhType (T : eqType) :=
+  Eval hnf in InhType (seq T) (seq_inhMixin T).
 
 Section ListLexOrder.
 
@@ -1696,7 +1738,7 @@ Canonical listlex_ordType := Eval hnf in OrdType (seq T) listlex_ordMixin.
 
 End ListLexOrder.
 
-
+(** * Tests *)
 Section Tests.
 
 Definition nat_div := nat.

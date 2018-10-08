@@ -1,6 +1,6 @@
 (** * Combi.Combi.skewtab : Skew Tableaux *)
 (******************************************************************************)
-(*       Copyright (C) 2014 Florent Hivert <florent.hivert@lri.fr>            *)
+(*      Copyright (C) 2014-2018 Florent Hivert <florent.hivert@lri.fr>        *)
 (*                                                                            *)
 (*  Distributed under the terms of the GNU General Public License (GPL)       *)
 (*                                                                            *)
@@ -13,22 +13,20 @@
 (*                                                                            *)
 (*                  http://www.gnu.org/licenses/                              *)
 (******************************************************************************)
-(** * Skew tableau and yamanouchi words:
+(** * Skew tableau and skew yamanouchi words:
 
 - [is_skew_yam inn out y] == [y ++ y0] is Yamanouchi of evaluation [out] for
          any [y0] of evaluation [inn].
 - [skew_dominate s u v] == the row [u] dominate the row [v] when shifted by [s].
 - [is_skew_tableau inn t] == [t] is a skew tableau with inner shape [t].
 - [skew_reshape inn out s] == reshape the sequence [s] by the skew shape [out/inn].
-- filter_leqX_tab n t] == keeps only the entries greater than [n] in [t].
+- [filter_leqX_tab n t] == keeps only the entries greater than [n] in [t].
 - [join_tab t st] == join the tableau [t] with the skew tableau [st].
        this gives a tableau if the inner shape of [st] is the shape of [t] and
        the entries of [t] are smaller than the entries of [st].
 - [hb_strip inn out] == [inn/out] is an horizontal border strip.
 - [vb_strip inn out] == [inn/out] is a vertical border strip.
 ******)
-
-
 Require Import mathcomp.ssreflect.ssreflect.
 From mathcomp Require Import ssrfun ssrbool eqtype ssrnat seq fintype.
 From mathcomp Require Import tuple finfun finset bigop path.
@@ -39,6 +37,7 @@ Set Implicit Arguments.
 Unset Strict Implicit.
 Unset Printing Implicit Defensive.
 
+(** ** Skew Yamanouchi words *)
 Open Scope N.
 Open Scope Combi.
 
@@ -133,6 +132,7 @@ rewrite (decr_nthK (is_part_skew_yam Hpart Hskew) Hcorn).
 exact: included_trans.
 Qed.
 
+(** ** Skew tableaux *)
 Section Dominate.
 
 Variable T : inhOrdType.
@@ -147,40 +147,27 @@ Proof using. by move=> u v /=; rewrite /skew_dominate drop0. Qed.
 
 Lemma skew_dominate_take n sh u v :
   skew_dominate sh u (take n v) -> skew_dominate sh u v.
-Proof using.
-move/dominateP => [].
-rewrite size_take -/(minn _ _) => Hsize Hdom.
-apply/dominateP; split.
-- by apply (leq_trans Hsize); exact: geq_minr.
-- move=> i Hi; move/(_ i Hi) : Hdom.
-  rewrite nth_take //.
-  by have:= leq_trans Hi Hsize; rewrite leq_min => /andP [].
-Qed.
+Proof using. exact: dominate_take. Qed.
 
 Lemma skew_dominate_no_overlap sh u v :
   size u <= sh -> skew_dominate sh u v.
-Proof using.
-by rewrite /skew_dominate => /drop_oversize ->; exact: dominate_nil.
-Qed.
+Proof using. by rewrite /skew_dominate => /drop_oversize ->. Qed.
 
 Lemma skew_dominate_consl sh l u v :
   skew_dominate sh u v -> skew_dominate sh.+1 (l :: u) v.
-Proof using.
-move/dominateP => [] Hsize Hdom.
-apply/dominateP; split; first by move: Hsize; rewrite !size_drop.
-by move=> i /= /Hdom.
-Qed.
+Proof using. by []. Qed.
 
 Lemma skew_dominate_cut sh u v :
   skew_dominate sh u v = skew_dominate sh u (take (size u - sh) v).
 Proof using.
-rewrite /skew_dominate /dominate; congr (_ &&_ ).
-- rewrite size_drop size_take -/(minn _ _).
-  case: leqP => [/minn_idPl -> | H]; first by rewrite leqnn.
-  have /minn_idPr -> := ltnW H.
-  by rewrite leqNgt H.
-- apply eq_in_all => i; rewrite mem_iota add0n /= size_drop => Hi.
-  by rewrite nth_take.
+rewrite /skew_dominate /=.
+apply/idP/idP.
+- move=> Hdom; have/dominateP [Hsz _] := Hdom.
+  move: Hdom; rewrite -{1}(cat_take_drop (size u - sh) v).
+  apply dominate_cut.
+  move: Hsz; rewrite size_drop size_take -/(minn _ _).
+  by rewrite minnC /minn ltnNge => ->.
+- exact: dominate_take.
 Qed.
 
 Fixpoint is_skew_tableau inner t :=
@@ -307,6 +294,7 @@ rewrite -(size_map size) => H.
 by rewrite /skew_reshape (outer_shapeK H) -shape_rev flattenK revK.
 Qed.
 
+(** ** Horizontal and vertical border strips *)
 Fixpoint hb_strip inner outer :=
   if inner is inn0 :: inn then
     if outer is out0 :: out then
@@ -455,19 +443,6 @@ rewrite -{2}(conj_partK Hinn) -{2}(conj_partK Hout).
 exact: vb_strip_conj (is_part_conj Hinn) (is_part_conj Hout).
 Qed.
 
-Lemma row_dominate u v :
-  is_row (u ++ v) -> dominate u v -> u = [::].
-Proof using.
-case: u => [//= | u0 u] /=.
-case: v => [//= | v0 v] /= /order_path_min Hpath.
-have {Hpath} /Hpath /allP Hall : transitive (@leqX_op T)
-  by move=> i j k; apply leqX_trans.
-move=> /dominateP [] /=.
-rewrite ltnS => Hsize /(_ _ (ltn0Sn (size u))) /= H0; exfalso.
-have /Hall : v0 \in u ++ v0 :: v by rewrite mem_cat in_cons eq_refl /= orbT.
-by rewrite leqXNgtnX H0.
-Qed.
-
 Lemma row_hb_strip inner t :
   is_part inner ->
   is_skew_tableau inner t -> is_row (to_word t) ->
@@ -551,6 +526,7 @@ Qed.
 
 End Dominate.
 
+(** ** Skewing and joining tableaux *)
 Section FilterLeqGeq.
 
 Variable T : inhOrdType.
@@ -559,19 +535,6 @@ Notation Z := (inhabitant T).
 Implicit Type l : T.
 Implicit Type r w : seq T.
 Implicit Type t : seq (seq T).
-
-Lemma filter_leqX_row n r :
-  is_row r -> filter (leqX n) r = drop (count (gtnX n) r) r.
-Proof using.
-elim: r => //= r0 r IHr Hrow /=.
-case: (leqXP n r0) => Hr0.
-- rewrite add0n; have Hcount : count (gtnX n) r = 0.
-  elim: r r0 Hr0 Hrow {IHr} => //= r1 r IHr r0 Hr0 /andP [] Hr0r1 Hpath.
-  have Hr1 := leqX_trans Hr0 Hr0r1.
-    by rewrite ltnXNgeqX Hr1 (IHr r1 Hr1 Hpath).
-  by rewrite Hcount (IHr (is_row_consK Hrow)) Hcount drop0.
-- by rewrite add1n (IHr (is_row_consK Hrow)).
-Qed.
 
 Lemma filter_leqX_dominate n r1 r0 :
   is_row r0 -> is_row r1 -> dominate r1 r0 ->
@@ -835,6 +798,7 @@ Qed.
 
 End FilterLeqGeq.
 
+(** ** Standardisation of a tableau *)
 Section EqInvSkewTab.
 
 Implicit Type T : inhOrdType.
@@ -964,16 +928,15 @@ Qed.
 
 Theorem is_tableau_reshape_std sh T (u : seq T) :
   size u = sumn sh ->
-  is_tableau (rev (reshape (rev sh) u)) =
-  is_tableau (rev (reshape (rev sh) (std u))).
+  is_tableau (skew_reshape [::] sh u) =
+  is_tableau (skew_reshape [::] sh (std u)).
 Proof.
 move=> Hsz.
-rewrite -!is_skew_tableau0 -[sh]/(sh / [::]) -!/(skew_reshape _ _ _).
-by apply is_skew_tableau_reshape_std.
+by rewrite -!is_skew_tableau0; rewrite is_skew_tableau_reshape_std.
 Qed.
 
 Theorem is_tableau_std T (t : seq (seq T)) :
-  is_tableau t = is_tableau (rev (reshape (rev (shape t)) (std (to_word t)))).
+  is_tableau t = is_tableau (skew_reshape [::] (shape t) (std (to_word t))).
 Proof.
 rewrite -{1}(to_wordK t); apply is_tableau_reshape_std.
 by rewrite size_to_word.

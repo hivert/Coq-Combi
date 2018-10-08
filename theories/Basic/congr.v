@@ -1,6 +1,6 @@
 (** * Combi.Basic.congr : Rewriting rule and congruencies of words *)
 (******************************************************************************)
-(*       Copyright (C) 2014 Florent Hivert <florent.hivert@lri.fr>            *)
+(*      Copyright (C) 2014-2018 Florent Hivert <florent.hivert@lri.fr>        *)
 (*                                                                            *)
 (*  Distributed under the terms of the GNU General Public License (GPL)       *)
 (*                                                                            *)
@@ -12,12 +12,6 @@
 (*  The full text of the GPL is available at:                                 *)
 (*                                                                            *)
 (*                  http://www.gnu.org/licenses/                              *)
-(******************************************************************************)
-Require Import mathcomp.ssreflect.ssreflect.
-From mathcomp Require Import ssrbool ssrfun ssrnat eqtype fintype seq.
-From mathcomp Require Import path tuple.
-Require Import Recdef.
-Require Import permcomp permuted multinomial vectNK.
 (******************************************************************************)
 (** * Equivalence and congruence closure of a rewriting rule on words
 
@@ -35,7 +29,7 @@ congruence closure as well as its congruence classes. We therefore suppose
 that equivalence classes are _finite_. This also ensure that the generated
 equivalence relation is decidable by bounding the length of the rewriting
 paths. Concretely, this is done by requiring that [rule] is included in a
-refexive relation [invar] which is invariant by rewriting rule, that is:
+reflexive relation [invar] which is invariant by rewriting rule, that is:
 
   [Hypothesis Hinvar : forall x0 x, invar x0 x -> all (invar x0) (rule x).]
 
@@ -73,10 +67,15 @@ the congruence transitive closure of rule. The main results here are
 - [gencongr_ind] : induction principle on classes for gencongr, any property
                    preserved along the rewriting rule holds for classes.      *)
 (******************************************************************************)
-
+Require Import mathcomp.ssreflect.ssreflect.
+From mathcomp Require Import ssrbool ssrfun ssrnat eqtype fintype seq.
+From mathcomp Require Import path tuple.
+Require Import Recdef.
+Require Import permcomp permuted multinomial vectNK.
 
 Set Implicit Arguments.
 Unset Strict Implicit.
+Unset Printing Implicit Defensive.
 
 
 (** ** Transitive closure of a rule with finite classes                       *)
@@ -171,7 +170,7 @@ apply trans_ind => //= {s}.
 - by move=> s _ tmp _ {tmp} x; rewrite mem_undup.
 Qed.
 
-CoInductive rewrite_path x y : Prop :=
+Variant rewrite_path x y : Prop :=
   Rew : forall l, path [rel of rule] x l -> y = last x l -> rewrite_path x y.
 
 Lemma invar_rewrite_path x y : invar x -> rewrite_path x y -> invar y.
@@ -250,7 +249,7 @@ Qed.
 End Transitive.
 
 
-(** ** Deals with the dependance of invar on x *)
+(** ** Dealing with the dependance of [invar] on [x] *)
 Section Depend.
 
 Variable T : eqType.
@@ -510,7 +509,7 @@ move: v; apply rtrans_ind; first exact: Hinvar_refl.
 by move=> v w /congrrule_invar /allP; apply.
 Qed.
 
-CoInductive Generated_EquivCongruence (grel : rel word) :=
+Variant Generated_EquivCongruence (grel : rel word) :=
   GenCongr : equivalence_rel grel ->
              congruence_rel grel ->
              ( forall u v, v \in rule u -> grel u v ) ->
@@ -603,7 +602,7 @@ End InvarContMultHom.
 Section InvarContHom.
 
 Variable Alph : finType.
-Notation word := (seq_eqType Alph).
+Notation word := (seq Alph).
 
 Variable rule : word -> seq word.
 Let szinvar (u : word) := [pred v : word | size v == size u].

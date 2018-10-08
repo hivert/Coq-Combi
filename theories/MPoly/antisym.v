@@ -1,6 +1,6 @@
 (** * Combi.MPoly.antisym : Antisymmetric polynomials and Vandermonde product *)
 (******************************************************************************)
-(*       Copyright (C) 2014 Florent Hivert <florent.hivert@lri.fr>            *)
+(*      Copyright (C) 2015-2018 Florent Hivert <florent.hivert@lri.fr>        *)
 (*                                                                            *)
 (*  Distributed under the terms of the GNU General Public License (GPL)       *)
 (*                                                                            *)
@@ -17,27 +17,27 @@
 
 Monomials and partitions:
 
-- mpart s == the multi-monomial whose exponent are [s] if [size s] is smaller
+- [mpart s] == the multi-monomial whose exponent are [s] if [size s] is smaller
            than the number of variables.
-- partm m == the partition obtained by sorting the exponent of [m].
-- m \is dominant == the exponent of [m] are sorted in reverse order.
+- [partm m] == the partition obtained by sorting the exponent of [m].
+- [m \is dominant] == the exponent of [m] are sorted in reverse order.
 
 Antisymmetric polynomials:
 
-- p \is antisym == p is an antisymmetric polynomial. This is a keyed predicate
+- [p \is antisym] == [p] is an antisymmetric polynomial. This is a keyed predicate
            closed by submodule operations [submodPred].
 
 Vandermonde products and determinants:
 
-- alternpol f == the alternating sunm of the permuted of f.
-- rho            == the multi-monomial [[n-1, n-2, ..., 1, 0]]
-- Vanprod n R == the Vandermonde product in [{mpoly R[n]}], that is the product
+- [alternpol f] == the alternating sunm of the permuted of f.
+- [rho]            == the multi-monomial [[n-1, n-2, ..., 1, 0]]
+- [Vanprod n R] == the Vandermonde product in [{mpoly R[n]}], that is the product
                  << \prod_(i < j) ('X_i - 'X_j) >>.
 
-- antim s     == the n x n - matrix whose (i, j) coefficient is
+- [antim s]     == the n x n - matrix whose (i, j) coefficient is
                  << 'X_i^(s j - rho j) >>
-- Vanmx       == the Vandermonde matrix << 'X_i^(n - 1 - j) = 'X_i^(rho j) >>.
-- Vandet      == the Vandermonde determinant
+- [Vanmx]       == the Vandermonde matrix << 'X_i^(n - 1 - j) = 'X_i^(rho j) >>.
+- [Vandet]      == the Vandermonde determinant
 
 The main results are the Vandermonde determinant expansion:
 
@@ -223,9 +223,9 @@ symmetry; rewrite big_filter /mdeg.
 by rewrite (bigID (fun i => i == 0)) /= big1 ?add0n // => i /eqP.
 Qed.
 
+
 Local Notation "m # s" := [multinom m (s i) | i < n]
   (at level 40, left associativity, format "m # s").
-
 
 Lemma mnm_perm_eq m1 m2 : perm_eq m1 m2 -> {s : 'S_n | m1 == m2 # s}.
 Proof.
@@ -250,6 +250,7 @@ End MonomPart.
 
 Arguments mpart [n] s.
 Arguments dominant [n].
+
 
 Import GRing.Theory.
 Local Open Scope ring_scope.
@@ -282,7 +283,6 @@ End ScalarChange.
 
 
 (** ** Characteristic of multivariate polynomials *)
-
 Lemma char_mpoly n (R : ringType) : [char R] =i [char {mpoly R[n]}].
 Proof using.
 move=> p; rewrite !unfold_in /= -mpolyC_nat.
@@ -454,11 +454,11 @@ Lemma isantisym_eltrP n (R : ringType) (p : {mpoly R[n.+1]}) :
 Proof.
 apply/(iffP forallP) => [Hanti i Hi | Heltr].
 - have /eqP -> := Hanti (eltr n i).
-  by rewrite /eltr odd_tperm (inordi1 Hi) !simplexp.
+  by rewrite /eltr odd_tperm (inordi_neq_i1 Hi) !simplexp.
 - elim/eltr_ind => [| S i Hi /eqP IH].
   + by rewrite odd_perm1 /= msym1m !simplexp.
   + rewrite msymMm (Heltr i Hi).
-    rewrite msymN IH odd_mul_tperm (inordi1 Hi) addTb.
+    rewrite msymN IH odd_mul_tperm (inordi_neq_i1 Hi) addTb.
     by case: (odd_perm _); rewrite !simplexp.
 Qed.
 
@@ -473,6 +473,8 @@ Variable n : nat.
 Variable R : idomainType.
 Hypothesis Hchar : ~~ (2 \in [char R]).
 
+Local Notation "''a_' k" := (@alternpol n R 'X_[k])
+                              (at level 8, k at level 2, format "''a_' k").
 
 Lemma sym_antisym_char_not2 :
   n >= 2 -> forall p : {mpoly R[n]}, p \is symmetric -> p \is antisym -> p = 0.
@@ -487,7 +489,55 @@ by exfalso; move: Hchp; rewrite negb_and H2 eq_refl.
 Qed.
 
 
-Section Lead.
+Definition rho := [multinom (n - 1 - i)%N | i < n].
+
+Local Notation "m # s" := [multinom m (s i) | i < n]
+  (at level 40, left associativity, format "m # s").
+
+Lemma rho_iota : rho = rev (iota 0 n) :> seq nat.
+Proof using.
+apply (eq_from_nth (x0 := 0%N)).
+  by rewrite size_rev size_iota size_map size_enum_ord.
+move=> i; rewrite size_map size_enum_ord => Hi.
+rewrite nth_rev size_iota // (nth_map (Ordinal Hi)); last by rewrite size_enum_ord.
+rewrite nth_enum_ord // nth_iota; first last.
+  by case: n Hi => [// | m] _; rewrite ltnS subSS; apply: leq_subr.
+by rewrite add0n; case: n Hi => [// | m] _; rewrite !subSS subn0.
+Qed.
+
+Lemma rho_uniq : uniq rho.
+Proof using .
+suff : perm_eq rho (iota 0 n) by move/perm_eq_uniq ->; exact: iota_uniq.
+rewrite rho_iota perm_eq_sym; exact: perm_eq_rev.
+Qed.
+
+Lemma mdeg_rho : mdeg rho = 'C(n, 2).
+Proof.
+rewrite /mdeg binomial_sumn_iota -sumnE.
+by apply eq_big_perm; rewrite rho_iota perm_eq_sym; apply: perm_eq_rev.
+Qed.
+
+Lemma alt_homog : 'a_(rho) \is 'C(n, 2).-homog.
+Proof using.
+apply rpred_sum => s _; rewrite rpredZsign msymX dhomogX /=.
+have -> : mdeg (rho#(s^-1)%g) = mdeg rho.
+  by rewrite /mdeg; apply/eq_big_perm/tuple_perm_eqP; exists (s^-1)%g.
+by rewrite mdeg_rho.
+Qed.
+
+Lemma alt_anti m : 'a_m \is antisym.
+Proof using.
+apply/isantisymP => S.
+rewrite /alternpol (big_morph (msym S) (@msymD _ _ _) (@msym0 _ _ _)).
+rewrite scaler_sumr.
+rewrite [RHS](reindex_inj (mulIg S)); apply: eq_big => //= s _.
+rewrite msymZ -msymMm scalerA; congr (_ *: _).
+by rewrite odd_permM signr_addb [X in (_  = _ * X)]mulrC signrMK.
+Qed.
+
+
+(** ** The leading monomial of an antisymmetric polynomial *)
+Section LeadingMonomial.
 
 Variable p : {mpoly R[n]}.
 
@@ -506,10 +556,6 @@ have:= Hpq s; rewrite msymM Hsym => H; apply (mulfI Hpn0).
 move: H; case: (odd_perm s); rewrite !simplexp //.
 by move/oppr_inj.
 Qed.
-
-
-Local Notation "m # s" := [multinom m (s i) | i < n]
-  (at level 40, left associativity, format "m # s").
 
 Lemma isantisym_msupp_uniq (m : 'X_{1..n}) : m \in msupp p -> uniq m.
 Proof using Hchar Hpanti.
@@ -547,55 +593,12 @@ have /= := H (Ordinal (leq_ltn_trans Hij Hj)) (Ordinal Hj) Hij.
 by rewrite !(mnm_nth 0) /=; apply.
 Qed.
 
-Definition rho := [multinom (n - 1 - i)%N | i < n].
-
-Local Notation "''a_' k" := (@alternpol n R 'X_[k])
-                              (at level 8, k at level 2, format "''a_' k").
-
-Lemma rho_iota : rho = rev (iota 0 n) :> seq nat.
-Proof using.
-apply (eq_from_nth (x0 := 0%N)).
-  by rewrite size_rev size_iota size_map size_enum_ord.
-move=> i; rewrite size_map size_enum_ord => Hi.
-rewrite nth_rev size_iota // (nth_map (Ordinal Hi)); last by rewrite size_enum_ord.
-rewrite nth_enum_ord // nth_iota; first last.
-  by case: n Hi => [// | m] _; rewrite ltnS subSS; apply: leq_subr.
-by rewrite add0n; case: n Hi => [// | m] _; rewrite !subSS subn0.
-Qed.
-
-Lemma mdeg_rho : mdeg rho = 'C(n, 2).
-Proof.
-rewrite /mdeg binomial_sumn_iota -sumnE.
-by apply eq_big_perm; rewrite rho_iota perm_eq_sym; apply: perm_eq_rev.
-Qed.
-
-Lemma alt_homog : 'a_(rho) \is 'C(n, 2).-homog.
-Proof using.
-apply rpred_sum => s _; rewrite rpredZsign msymX dhomogX /=.
-have -> : mdeg (rho#(s^-1)%g) = mdeg rho.
-  by rewrite /mdeg; apply/eq_big_perm/tuple_perm_eqP; exists (s^-1)%g.
-by rewrite mdeg_rho.
-Qed.
-
-Lemma alt_anti m : 'a_m \is antisym.
-Proof using.
-apply/isantisymP => S.
-rewrite /alternpol (big_morph (msym S) (@msymD _ _ _) (@msym0 _ _ _)).
-rewrite scaler_sumr.
-rewrite [RHS](reindex_inj (mulIg S)); apply: eq_big => //= s _.
-rewrite msymZ -msymMm scalerA; congr (_ *: _).
-by rewrite odd_permM signr_addb [X in (_  = _ * X)]mulrC signrMK.
-Qed.
-
 Lemma isantisym_mlead_rho : mlead p = rho.
 Proof using Hchar Hpanti Hphomog Hpn0.
 by apply/val_inj/val_inj; rewrite /= isantisym_mlead_iota rho_iota.
 Qed.
 
-End Lead.
-
-Local Notation "''a_' k" := (alternpol 'X_[k])
-                              (at level 8, k at level 2, format "''a_' k").
+End LeadingMonomial.
 
 
 Lemma isantisym_alt (p : {mpoly R[n]}) :
@@ -657,7 +660,7 @@ case: (altP (inord i =P u)) => Hu.
 case: (altP (inord i.+1 =P u)) => Hu1.
   subst u; rewrite tpermR /=.
   rewrite tpermD; first last.
-  - move: Hlt; by rewrite ltn_neqAle => /andP [].
+  - by move: Hlt; rewrite ltn_neqAle => /andP [].
   - move: Hlt; rewrite Hii1 => /ltnW.
     by rewrite ltn_neqAle => /andP [].
   apply/andP; split.
@@ -665,13 +668,13 @@ case: (altP (inord i.+1 =P u)) => Hu1.
   - rewrite /eq_op /= eq_refl /= eq_sym.
     by move: Hlt; rewrite ltn_neqAle => /andP [].
 rewrite (tpermD Hu Hu1); apply/andP; split; first last.
-  apply/nandP => /=; left; by rewrite eq_sym.
+  by apply/nandP => /=; left; rewrite eq_sym.
 case: (altP (inord i =P v)) => Hv.
   subst v; rewrite tpermL Hii1.
   by apply (leq_trans Hlt).
 case: (altP (inord i.+1 =P v)) => Hv1.
   subst v; rewrite tpermR.
-  move: Hlt; by rewrite Hii1 ltnS ltn_neqAle eq_sym Hu /=.
+  by move: Hlt; rewrite Hii1 ltnS ltn_neqAle eq_sym Hu /=.
 by rewrite tpermD.
 Qed.
 
@@ -695,8 +698,8 @@ rewrite /Vanprod.
 rewrite (bigD1 (inord i, inord i.+1)) /=; first last.
   by rewrite !inordK //=; apply (leq_trans Hi).
 rewrite msymM -mulNr; congr (_ * _).
-  rewrite msymB opprB; congr (_ - _);
-  by rewrite /msym mmapX mmap1U /eltr ?tpermL ?tpermR.
+  rewrite msymB opprB.
+  by congr (_ - _); rewrite /msym mmapX mmap1U /eltr ?tpermL ?tpermR.
 rewrite (big_morph _ (msymM (eltr n i)) (msym1 _ (eltr n i))) /=.
 rewrite (eq_bigl (fun p : 'II_n.+1 => predi i (eltrp i p))); first last.
   by move=> [u v]; rewrite -/(predi i (u,v)) (predi_eltrpE (u, v) Hi) /=.
@@ -802,15 +805,15 @@ case: (boolP (U_(ordc) <= k)%MM) => Hck.
   rewrite big1 ?addr0; first last.
     move=> m /andP [Hmk Hmc1].
     rewrite coeffXdiff; last exact: lepm_trans Hmk Hk.
-    move: Hmc1; rewrite {1}/eq_op /= => /= /negbTE /= ->; by rewrite mul0r.
-    rewrite -{2}(submK Hck).
-    have -> : mesymlm n c.+1 = (mesymlm n c + U_(ordc))%MM.
-      rewrite mnmP => i; rewrite !mnmE !inE ltnS leq_eqVlt.
-      rewrite orbC eq_sym {2}/eq_op/=.
-      case: eqP => [->|_]; first by rewrite ltnn.
-      by rewrite orbF addn0.
-    congr (nat_of_bool _)%:R; apply/eqP/eqP => [ <- // | Heq].
-    by rewrite -[RHS](addmK (U_(ordc))%MM) -[LHS](addmK (U_(ordc))%MM) Heq.
+    by move: Hmc1; rewrite {1}/eq_op /= => /= /negbTE /= ->; rewrite mul0r.
+  rewrite -{2}(submK Hck).
+  have -> : mesymlm n c.+1 = (mesymlm n c + U_(ordc))%MM.
+    rewrite mnmP => i; rewrite !mnmE !inE ltnS leq_eqVlt.
+    rewrite orbC eq_sym {2}/eq_op/=.
+    case: eqP => [->|_]; first by rewrite ltnn.
+    by rewrite orbF addn0.
+  congr (nat_of_bool _)%:R; apply/eqP/eqP => [ <- // | Heq].
+  by rewrite -[RHS](addmK (U_(ordc))%MM) -[LHS](addmK (U_(ordc))%MM) Heq.
 - rewrite big1; first last.
     move=> m /= Hm; rewrite coeffXdiff; last exact: lepm_trans Hm Hk.
     suff -> : m == U_(ordc)%MM :> 'X_{1..n} = false by rewrite mul0r.
@@ -878,7 +881,7 @@ case: leqP => /= Hi.
 - by rewrite subn0; move: Hi (ltnW Hi); rewrite /leq => /eqP -> /eqP ->.
 Qed.
 
-Lemma Vanprod_coeff_rho : Delta @_ rho = 1.
+Lemma Vanprod_coeff_rho : Delta@_rho = 1.
 Proof using.
 rewrite /Vanprod.
 case: (altP (n =P 0%N)) => [Hn |].
@@ -943,7 +946,7 @@ Section VandermondeDet.
 Variable n : nat.
 Variable R : comRingType.
 
-Local Notation "''a_' k" := (alternpol 'X_[k])
+Local Notation "''a_' k" := (@alternpol n R 'X_[k])
                               (at level 8, k at level 2, format "''a_' k").
 Local Notation rho := (rho n).
 
@@ -977,6 +980,77 @@ rewrite /Vandet Vanmx_antimE.
 suff -> : antim [::] = antim (0%MM : 'X_{1..n}).
   by rewrite -alt_detE add0m Vanprod_alt.
 by apply/matrixP => i j; rewrite !mxE nth_nil -mnm_nth mnm0E.
+Qed.
+
+
+Lemma mcoeff_alt (m : 'X_{1..n}) : uniq m -> ('a_m)@_m = 1.
+Proof.
+move=> Huniq.
+rewrite /alternpol (reindex_inj invg_inj) /=.
+rewrite raddf_sum /= (bigID (pred1 1%g)) /=.
+rewrite big_pred1_eq odd_permV odd_perm1 expr0 scale1r invg1 msym1m.
+rewrite mcoeffX eq_refl /=.
+rewrite (eq_bigr (fun => 0)); first by rewrite big1_eq addr0.
+move=> s Hs; rewrite mcoeffZ msymX mcoeffX invgK.
+suff : [multinom m (s i) | i < n] != m by move=> /negbTE ->; rewrite mulr0.
+move: Hs; apply contra => /eqP; rewrite mnmP => Heq.
+apply/eqP; rewrite -permP => i; rewrite perm1; apply val_inj => /=.
+have /eqP := Heq i; rewrite !mnmE !(mnm_nth 0).
+rewrite nth_uniq; last exact: Huniq.
+- by move=> /eqP ->.
+- rewrite size_tuple; exact: ltn_ord.
+- rewrite size_tuple; exact: ltn_ord.
+Qed.
+
+Lemma alt_uniq_non0 (m : 'X_{1..n}) : uniq m -> 'a_m != 0.
+Proof using .
+move=> Huniq.
+suff : mcoeff m 'a_m == 1.
+  apply contraL => /eqP ->; rewrite mcoeff0 eq_sym.
+  exact: oner_neq0.
+by rewrite mcoeff_alt.
+Qed.
+
+Lemma alt_rho_non0 : 'a_rho != 0.
+Proof using . exact: alt_uniq_non0 (rho_uniq _). Qed.
+
+Lemma alt_alternate (m : 'X_{1..n}) (i j : 'I_n) :
+  i != j -> m i = m j -> 'a_m = 0.
+Proof using .
+move=> H Heq.
+pose t := tperm i j.
+have oddMt s: (t * s)%g = ~~ s :> bool by rewrite odd_permM odd_tperm H.
+rewrite [alternpol _](bigID (@odd_perm _)) /=.
+apply: canLR (subrK _) _; rewrite add0r -sumrN.
+rewrite (reindex_inj (mulgI t)); apply: eq_big => //= s.
+rewrite oddMt => /negPf ->; rewrite scaleN1r scale1r; congr (- _).
+rewrite msymMm.
+suff -> : msym t 'X_[m] = ('X_[m] : {mpoly R[n]}) by [].
+rewrite msymX; congr mpolyX.
+rewrite mnmP => k /=.
+rewrite !mnmE /= tpermV.
+by case: (tpermP i j k) => Hk //; rewrite Hk Heq.
+Qed.
+
+Lemma alt_add1_0 (m : 'X_{1..n}) i :
+  (nth 0%N m i).+1 = nth 0%N m i.+1 -> 'a_(m + rho) = 0.
+Proof using .
+move=> Heq.
+have Hi1n : i.+1 < n.
+  rewrite ltnNge; apply (introN idP) => Hi.
+  by move: Heq; rewrite [RHS]nth_default // size_tuple.
+have Hi : i < n by rewrite ltnW.
+pose i0 := Ordinal Hi; pose i1 := Ordinal Hi1n.
+have /alt_alternate : i0 != i1.
+  apply (introN idP) => /eqP/(congr1 val)/=/eqP.
+  by rewrite ieqi1F.
+apply.
+rewrite !mnmDE !mnmE !(mnm_nth 0%N) -Heq -(mnm_nth 0%N m i0).
+rewrite addSn -addnS subn1 /= subnS prednK //.
+have -> : (n.-1 - i = n - i.+1)%N.
+  case: n Hi1n Hi {i0 i1} => [//= | n' _] /=.
+  by rewrite subSS.
+by rewrite subn_gt0.
 Qed.
 
 End VandermondeDet.

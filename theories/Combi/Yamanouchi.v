@@ -1,6 +1,6 @@
 (** * Combi.Combi.Yamanouchi : Yamanouchi Words *)
 (******************************************************************************)
-(*       Copyright (C) 2014 Florent Hivert <florent.hivert@lri.fr>            *)
+(*      Copyright (C) 2014-2018 Florent Hivert <florent.hivert@lri.fr>        *)
 (*                                                                            *)
 (*  Distributed under the terms of the GNU General Public License (GPL)       *)
 (*                                                                            *)
@@ -26,7 +26,7 @@ Yamanouchi words are stored as [seq nat].
 - [is_yam_of_eval ev s] == s is a Yamanouchi word of evaluation ev.
 - [decr_yam s] == the Yamanouchi word obtained by removing the zero and
                  decrassing all the other entries by 1
-- [hyper_yam ev] == the hyperstandard (decreassing) Yamanouchi word of
+- [hyper_yam ev] == the hyperstandard (decreasing) Yamanouchi word of
                  evaluation ev such as 33 2222 11111 0000000
 
 Enumeration of Yamanouchi words:
@@ -42,7 +42,7 @@ Sigma types of Yamanouchi words:
                  evaluation ev; it is canonically a [finType]
 - [yamn n] == a type for [seq nat] which are Yamanouchi words of
                  size n; it is canonically a [finType]
-- [hyper_yameval ev] == the the hyperstandard (decreassing) Yamanouchi word of
+- [hyper_yameval ev] == the the hyperstandard (decreasing) Yamanouchi word of
                  evaluation ev such as 33 2222 11111 0000000 as a [yameval]
 
 ******)
@@ -53,6 +53,9 @@ Require Import tools combclass partition.
 
 Set Implicit Arguments.
 Unset Strict Implicit.
+Unset Printing Implicit Defensive.
+
+
 
 Section Yama.
 

@@ -1,6 +1,6 @@
 (** * Combi.Basic.combclass : Fintypes for Combinatorics *)
 (******************************************************************************)
-(*     Copyright (C) 2014 2015 Florent Hivert <florent.hivert@lri.fr>         *)
+(*      Copyright (C) 2014-2018 Florent Hivert <florent.hivert@lri.fr>        *)
 (*                                                                            *)
 (*  Distributed under the terms of the GNU General Public License (GPL)       *)
 (*                                                                            *)
@@ -13,7 +13,9 @@
 (*                                                                            *)
 (*                  http://www.gnu.org/licenses/                              *)
 (******************************************************************************)
-(** The goal of this file is to define various way to easily build finite
+(** * Fintypes for Combinatorics
+
+The goal of this file is to define various way to easily build finite
 subtype of a countable type knowing a lists of its elements. We provide four
 ways, three from a list (see [sub_subFinType], [sub_uniq_subFinType] and
 [sub_undup_subFinType] below) and one by taking the disjoint union of already
@@ -27,6 +29,7 @@ Require Import tools.
 
 Set Implicit Arguments.
 Unset Strict Implicit.
+Unset Printing Implicit Defensive.
 
 (** A missing lemma: fintypes in bijection have the same cardinality          *)
 

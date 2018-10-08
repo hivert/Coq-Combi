@@ -1,6 +1,6 @@
 (** * Combi.Combi.fibered_set : Bijection beetween fibered sets *)
 (******************************************************************************)
-(*       Copyright (C) 2014 Florent Hivert <florent.hivert@lri.fr>            *)
+(*      Copyright (C) 2016-2018 Florent Hivert <florent.hivert@lri.fr>        *)
 (*                                                                            *)
 (*  Distributed under the terms of the GNU General Public License (GPL)       *)
 (*                                                                            *)
@@ -38,6 +38,9 @@ From mathcomp Require Import tuple finfun path bigop finset binomial.
 
 Set Implicit Arguments.
 Unset Strict Implicit.
+Unset Printing Implicit Defensive.
+
+
 
 Section BijFiberedSet.
 

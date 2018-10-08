@@ -1,6 +1,6 @@
 (** * Combi.MPoly.Schur_mpoly : Schur symmetric polynomials *)
 (******************************************************************************)
-(*       Copyright (C) 2014 Florent Hivert <florent.hivert@lri.fr>            *)
+(*      Copyright (C) 2016-2018 Florent Hivert <florent.hivert@lri.fr>        *)
 (*                                                                            *)
 (*  Distributed under the terms of the GNU General Public License (GPL)       *)
 (*                                                                            *)
@@ -17,10 +17,10 @@
 
 - [Schur n0 R la] == The Schur polynomial associated to the partition [la] in
                      [{mpoly R[n0.+1]}] as the sum of all tableau of shape
-                     [la] over the alphabet ['I_n0.+1]. 
+                     [la] over the alphabet ['I_n0.+1].
 
-We give some values for particular partition such as row and column.
- *)
+We give some values for particular partition such as small one, rows and columns.
+***********)
 Require Import mathcomp.ssreflect.ssreflect.
 From mathcomp Require Import ssrfun ssrbool eqtype ssrnat seq choice fintype.
 From mathcomp Require Import tuple finfun finset bigop ssralg path perm fingroup.
@@ -42,19 +42,21 @@ Local Notation n := n0.+1.
 Variable R : ringType.
 
 Definition Schur d (sh : 'P_d) : {mpoly R[n]} :=
-  \sum_(t : tabsh n0 sh) \prod_(v <- to_word t) 'X_v.
+  \sum_(t : tabsh n0 sh) \prod_(i <- to_word t) 'X_i.
 
 Lemma Schur_tabsh_readingE  d (sh : 'P_d) :
   Schur sh =
-  \sum_(t : d.-tuple 'I_n | tabsh_reading sh t) \prod_(v <- t) 'X_v.
+  \sum_(t : d.-tuple 'I_n | tabsh_reading sh t) \prod_(i <- t) 'X_i.
 Proof using.
 rewrite /Schur /index_enum -!enumT.
-pose prodw := fun w => \prod_(v <- w) 'X_v : {mpoly R[n]}.
+pose prodw := fun w => \prod_(i <- w) 'X_i : {mpoly R[n]}.
 rewrite -[LHS](big_map (fun t => to_word (val t)) xpredT prodw).
 rewrite -[RHS](big_map val (tabsh_reading sh) prodw).
 rewrite -[RHS]big_filter.
 by rewrite (eq_big_perm _ (to_word_enum_tabsh _ sh)).
 Qed.
+
+(** ** Some particular Schur functions *)
 
 Lemma Schur0 (sh : 'P_0) : Schur sh = 1.
 Proof using.
@@ -70,6 +72,8 @@ have:= size_tabsh t; rewrite -(size_map size) -/(shape t) shape_tabsh.
 by move=> /(leq_trans Hn); rewrite ltnn.
 Qed.
 
+(** Equivalent definition of symh symmetric function *)
+
 Lemma tabwordshape_row d (w : d.-tuple 'I_n) :
   tabsh_reading (rowpartn d) w = sorted leq [seq val i | i <- w].
 Proof using.
@@ -81,6 +85,27 @@ rewrite take_size; apply esym; apply (map_path (b := pred0)) => /=.
 - move=> i j /= _ ; exact: leqXnatE.
 - by apply/hasPn => x /=.
 Qed.
+
+Lemma symh_basisE d :
+  \sum_(s in (basis n d)) 'X_[s2m s] = Schur (rowpartn d).
+Proof using.
+rewrite Schur_tabsh_readingE (eq_bigl _ _ (@tabwordshape_row d)).
+rewrite [RHS](eq_bigr (fun s : d.-tuple 'I_n => 'X_[s2m s])); first last.
+  move=> [s _] /= _; rewrite /s2m; elim: s => [| s0 s IHs]/=.
+    by rewrite big_nil -/mnm0 mpolyX0.
+  rewrite big_cons {}IHs -mpolyXD; congr ('X_[_]).
+  by rewrite mnmP => i; rewrite mnmDE !mnmE.
+by apply eq_bigl => m; rewrite inE /=.
+Qed.
+
+End Schur.
+
+
+Section SchurComRingType.
+
+Variable n0 : nat.
+Local Notation n := (n0.+1).
+Variable R : comRingType.
 
 
 Lemma perm_eq_enum_basis d :
@@ -105,28 +130,6 @@ move=> m; apply/mapP/mapP => [[] s | [] mb].
   rewrite mem_enum inE /=; exact: srt_m2s.
 Qed.
 
-(** Equivalent definition of symh symmetric function *)
-Lemma symh_basisE d :
-  \sum_(s in (basis n d)) 'X_[s2m s] = Schur (rowpartn d).
-Proof using.
-rewrite Schur_tabsh_readingE (eq_bigl _ _ (@tabwordshape_row d)).
-rewrite [RHS](eq_bigr (fun s : d.-tuple 'I_n => 'X_[s2m s])); first last.
-  move=> [s _] /= _; rewrite /s2m; elim: s => [| s0 s IHs]/=.
-    by rewrite big_nil -/mnm0 mpolyX0.
-  rewrite big_cons {}IHs -mpolyXD; congr ('X_[_]).
-  by rewrite mnmP => i; rewrite mnmDE !mnmE.
-by apply eq_bigl => m; rewrite inE /=.
-Qed.
-
-End Schur.
-
-
-Section SchurComRingType.
-
-Variable n0 : nat.
-Local Notation n := (n0.+1).
-Variable R : comRingType.
-
 Lemma Schur_rowpartn d :
   \sum_(m : 'X_{1..n < d.+1} | mdeg m == d) 'X_[m] = Schur n0 R (rowpartn d).
 Proof using.
@@ -138,9 +141,13 @@ rewrite [filter _ _](_ : _ =
     first last.
   rewrite /enum_mem filter_map -filter_predI; congr map.
   by apply eq_filter => s /=; rewrite !inE andbT.
-rewrite -(eq_big_perm _ (perm_eq_enum_basis _ d)) /=.
+rewrite -(eq_big_perm _ (perm_eq_enum_basis d)) /=.
 by rewrite big_map -[RHS]big_filter.
 Qed.
+
+
+(** The definition of column Schur symmetric polynomials agrees with mesym
+    from mpoly *)
 
 Lemma tabwordshape_col d (w : d.-tuple 'I_n) :
   tabsh_reading (colpartn d) w = sorted gtnX w.
@@ -159,9 +166,6 @@ case: {w} (rev w) {d Hw} => [|w0 w] //=.
 elim: w w0 => [//= | w1 w /= <-] w0 /=.
 by congr andb; rewrite /dominate /= andbT {w}.
 Qed.
-
-(** The definition of column Schur symmetric polynomials agrees with mesym
-    from mpoly *)
 
 Lemma mesym_SchurE d :
   mesym n R d = Schur n0 R (colpartn d).
