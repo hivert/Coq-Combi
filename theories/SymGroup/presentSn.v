@@ -51,7 +51,7 @@ Inverse Lehmer code
 
 Reduced words
 
-- [w \is reduced] == [w] is a word of size [lenght 's_[w]].
+- [w \is reduced] == [w] is a word of size [length 's_[w]].
 
 Braid relations
 
@@ -101,6 +101,15 @@ Require Import permcomp tools permuted combclass congr.
 Notation "''SG_' n" := [set: 'S_n]
   (at level 8, n at level 2, format "''SG_' n").
 
+Local Reserved Notation "''s_' i"
+      (at level 8, i at level 2, format "''s_' i").
+Local Reserved Notation "''s_' [ w ] "
+      (at level 8, w at level 100, format "''s_' [ w ]").
+Local Reserved Notation "''II_' n" (at level 8, n at level 2).
+Local Reserved Notation "a =Br b" (at level 70).
+Local Reserved Notation "''I[' a '..' b ']'" (at level 0, a, b at level 2).
+
+
 Set Implicit Arguments.
 Unset Strict Implicit.
 Unset Printing Implicit Defensive.
@@ -110,15 +119,24 @@ Lemma ieqi2F i : (i == i.+2) = false. Proof. by apply: negbTE; elim i. Qed.
 Lemma i1eqiF i : (i.+1 == i) = false. Proof. by apply: negbTE; elim i. Qed.
 Lemma i2eqiF i : (i.+2 == i) = false. Proof. by apply: negbTE; elim i. Qed.
 
-Definition trivSimpl := (eq_refl, eqSS, ieqi1F, ieqi2F, i1eqiF, i2eqiF).
+Lemma inordi n i : i < n -> (@inord n i = i :> nat).
+Proof. move=> Hi; rewrite inordK // ltnS; exact: ltnW. Qed.
 
-Lemma inordi1 n i : i < n -> (@inord n i != @inord n i.+1).
+Lemma inordi1 n i : i < n -> (@inord n i.+1 = i.+1 :> nat).
+Proof. move=> Hi; by rewrite inordK. Qed.
+
+Lemma inord1i n i : i.+1 < n -> (@inord n i = i :> nat).
+Proof. move=> Hi; rewrite inordK //; apply ltnW; exact: ltnW. Qed.
+
+Lemma inordi_neq_i1 n i : i < n -> (@inord n i != @inord n i.+1).
 Proof.
 move=> Hi.
 rewrite /eq_op /= inordK; last by apply (leq_trans Hi).
 rewrite inordK; last exact: Hi.
 by rewrite ieqi1F.
 Qed.
+
+Definition trivSimpl := (eq_refl, eqSS, ieqi1F, ieqi2F, i1eqiF, i2eqiF).
 
 
 (** * Codes for permutations *)
@@ -335,10 +353,8 @@ Variable n : nat.
 
 Definition eltr i : 'S_n.+1 := tperm (inord i) (inord i.+1).
 
-Local Notation "''s_' i" :=
-  (eltr i) (at level 8, i at level 2, format "''s_' i").
-Local Notation "''s_' [ w ]" :=
-  (\prod_(i <- w) 's_i) (at level 8, w at level 100, format "''s_' [ w ]").
+Local Notation "''s_' i" := (eltr i).
+Local Notation "''s_' [ w ]" := (\prod_(i <- w) 's_i).
 
 Implicit Type s t : 'S_n.+1.
 
@@ -347,30 +363,21 @@ Lemma eltr_braid i :
 Proof using.
 rewrite /eltr => Hi.
 apply: tperm_braid; rewrite /eq_op /=.
-- rewrite inordK; last by rewrite ltnS; apply ltnW; apply ltnW.
-  rewrite inordK; last by rewrite ltnS; apply ltnW.
-  by rewrite !trivSimpl.
-- rewrite inordK; last by rewrite ltnS; apply ltnW.
-  rewrite inordK; last by rewrite ltnS.
-  by rewrite !trivSimpl.
+- by rewrite inord1i // inordi // !trivSimpl.
+- by rewrite inordi // inordi1 // !trivSimpl.
 Qed.
 
 Lemma eltr_comm i j :
   i.+1 < j < n -> 's_i * 's_j = 's_j * 's_i.
 Proof using.
 move => /andP [Hij Hj].
+have Hi := ltn_trans Hij Hj.
 apply: tpermC; rewrite /eq_op /=.
-- rewrite inordK; last by apply (leq_trans (ltnW Hij)); apply ltnW; apply ltnW.
-  rewrite inordK; last by apply ltnW.
-  by rewrite (ltn_eqF (ltnW Hij)).
-- rewrite inordK; last by apply (leq_trans (ltnW Hij)); apply ltnW.
-  rewrite inordK; last by apply ltnW.
-  by rewrite (ltn_eqF Hij).
-- rewrite inordK; last by apply (leq_trans (ltnW Hij)); apply ltnW; apply ltnW.
-  rewrite inordK; last exact Hj.
+- by rewrite inord1i // inordi // (ltn_eqF (ltnW Hij)).
+- by rewrite !inordi // (ltn_eqF Hij).
+- rewrite inord1i // inordi1 //.
   by rewrite (ltn_eqF (leq_trans (ltnW Hij) (leqnSn j))).
-- rewrite inordK; last by apply (leq_trans (ltnW Hij)); apply ltnW.
-  rewrite inordK; last exact Hj.
+- rewrite inordi // inordi1 //.
   by rewrite eqSS (ltn_eqF (ltnW Hij)).
 Qed.
 
@@ -429,7 +436,7 @@ Qed.
 
 (** * Length of a permutation *)
 
-Local Notation "''II_' n" := ('I_n * 'I_n)%type (at level 8, n at level 2).
+Local Notation "''II_' n" := ('I_n * 'I_n)%type.
 
 Definition invset (s : 'S_n.+1) :=
   [set p : 'I_n.+1 * 'I_n.+1 | (p.1 < p.2) && (s p.1 > s p.2) ].
@@ -464,86 +471,83 @@ Qed.
 Lemma eltr_exchange i (a b : 'I_(n.+1)) :
   i < n -> a < b -> 's_i a < 's_i b = (i != a) || (i.+1 != b).
 Proof using.
-rewrite -ltnS => Hi1n Hab.
-have : (inord i) = Ordinal (ltnW Hi1n).
-  by apply val_inj => /=; rewrite inordK //; exact: ltnW.
-set io  := Ordinal (ltnW Hi1n) => Hi.
-have : (inord i.+1) = Ordinal Hi1n by apply val_inj => /=; rewrite inordK.
-set i1o := Ordinal Hi1n => Hi1.
-move: Hab; rewrite /eltr Hi Hi1.
+rewrite /eltr => Hi.
 case: tpermP => [-> | -> | /eqP Ha1 /eqP Hai1];
   case: tpermP => [-> | -> | /eqP Hb1 /eqP Hbi1];
-  rewrite /= ?ltnn ?trivSimpl //=.
+  rewrite ?(inordi Hi) ?(inordi1 Hi) /= ?ltnn ?trivSimpl //=.
 - by move=> /ltnW; rewrite leqNgt => /negbTE ->.
 - by rewrite (ltn_neqAle i.+1 b) => ->; rewrite andbT.
 - by rewrite ltnS leqnn.
-- by rewrite ltn_neqAle eq_sym Hbi1 /= => ->.
+- by move/ltnW => ->.
 - by rewrite ltnS (ltn_neqAle a i) eq_sym => /andP [-> ->].
 - by rewrite ltnS ltn_neqAle => -> /=; rewrite eq_sym andbT orbF.
-- by rewrite eq_sym Ha1 eq_sym Hbi1 => ->.
+- move=> ->; apply esym; apply/orP; left.
+  move: Ha1; apply contra => /eqP Hia.
+  by apply/eqP/val_inj; rewrite /= -Hia inordi.
 Qed.
 
 Lemma length_add1L s (i : 'I_(n.+1)) :
   i < n -> s i < s (inord (i.+1)) -> length ('s_i * s) = (length s).+1.
 Proof using.
-rewrite -ltnS => Hi1n.
-have Hi : (inord i) = i by apply val_inj => /=; rewrite inordK.
-have : (inord i.+1) = Ordinal Hi1n by apply val_inj => /=; rewrite inordK.
-set i1 := Ordinal Hi1n => Hi1.
-rewrite /length Hi1 => Hfwd.
+move=> Hi.
+have Hio : (inord i) = i by apply val_inj => /=; rewrite inordK.
+rewrite /length => Hfwd.
 suff -> : invset ('s_i * s) =
-          (i, Ordinal Hi1n) |: [set ('s_i p.1, 's_i p.2) | p in invset s].
+          (i, inord i.+1) |: [set ('s_i p.1, 's_i p.2) | p in invset s].
   rewrite cardsU1 (card_imset _ (@inv_inj _ _ _)); first last.
-    by move=> [u v] /=; rewrite !tpermK.
+    move=> [u v] /=; by rewrite !tpermK.
   rewrite (_ : (_, _) \in _ = false) //.
   apply (introF idP) => /imsetP [[u v]].
   rewrite inE /= => /andP [Huv Hsvu] [].
-  move/(congr1 's_i); rewrite /eltr Hi Hi1 tpermK tpermL => Hu; subst u.
-  move/(congr1 's_i); rewrite /eltr Hi Hi1 tpermK tpermR => Hv; subst v.
-  by move: Huv => /ltnW /=; rewrite ltnn.
-apply setP => [[u v]] /=; rewrite !inE /= !permM.
+  move/(congr1 's_i); rewrite /eltr Hio tpermK tpermL => Hu; subst u.
+  move/(congr1 's_i); rewrite /eltr Hio tpermK tpermR => Hv; subst v.
+  by move: Huv => /ltnW; rewrite inordi1 // ltnn.
+rewrite -setP => [[u v]] /=; rewrite !inE /= !permM.
 apply/idP/idP.
 - move=> /andP [Huv].
-  rewrite /eltr Hi Hi1 -/i1; case: tpermP => /= [Hv | Hv | /eqP Hvi /eqP Hvi1].
+  rewrite /eltr Hio; case: tpermP => /= [Hv | Hv | /eqP Hvi /eqP Hvi1].
   + subst v.
-    have Htu : tperm i i1 u = u.
-      by rewrite tpermD // eq_sym; move: Huv; apply contraL => /eqP ->;
-         rewrite /= -leqNgt.
-    rewrite Htu => Hs; apply/orP; right; apply/imsetP.
-    exists (u, i1); last by rewrite /= tpermR Htu.
-    by rewrite inE /= Hs andbT; apply/(ltn_trans Huv).
+    have Htu : tperm i (inord i.+1) u = u.
+      rewrite tpermD // eq_sym.
+      * by move: Huv; apply contraL => /eqP ->; rewrite ltnn.
+      * by move: Huv; apply contraL => /eqP ->; rewrite /= -leqNgt inordi1.
+    rewrite Htu => Hs; apply/orP; right; apply/imsetP;
+                     exists (u, inord i.+1); first last.
+      by rewrite /= tpermR Htu.
+    by rewrite inE /= Hs andbT inordi1 //; apply/(ltn_trans Huv).
   + subst v; case: tpermP.
     * by move=> ->; rewrite eq_refl.
     * by move=> Hu; move: Huv; rewrite Hu ltnn.
     move=> /eqP Hiu /eqP Hi1u.
-    have Htu : tperm i i1 u = u by rewrite tpermD // eq_sym.
+    have Htu : tperm i (inord i.+1) u = u by rewrite tpermD // eq_sym.
     move=> Hsiu; apply/orP; right; apply/imsetP; exists (u, i); first last.
       by rewrite tpermL Htu.
-    by rewrite inE /= Hsiu andbT ltn_neqAle Hiu -ltnS /= Huv.
+    by rewrite inE /= Hsiu andbT ltn_neqAle Hiu -ltnS -(inordi1 Hi) /= Huv.
   case: tpermP => [Hu | Hu | /eqP Hui /eqP Hui1].
   + subst u => Hsvi1.
-    have Htv : tperm i i1 v = v by rewrite tpermD // eq_sym.
-    apply/orP; right; apply/imsetP; exists (i1, v); first last.
+    have Htv : tperm i (inord i.+1) v = v by rewrite tpermD // eq_sym.
+    apply/orP; right; apply/imsetP; exists ((inord i.+1), v); first last.
       by rewrite Htv tpermR.
-    by rewrite inE /= Hsvi1 ltn_neqAle Huv !andbT eq_sym Hvi1.
+    by rewrite inE /= Hsvi1 ltn_neqAle inordi1 // Huv
+               !andbT eq_sym -(inordi1 Hi) Hvi1.
   + subst u => Hsvi1.
-    have Htv : tperm i i1 v = v by rewrite tpermD // eq_sym.
+    have Htv : tperm i (inord i.+1) v = v by rewrite tpermD // eq_sym.
     apply/orP; right; apply/imsetP; exists (i, v); first last.
       by rewrite Htv tpermL.
     rewrite inE /= Hsvi1 ltn_neqAle eq_sym Hvi !andbT /=.
-    by apply: ltnW; apply ltnW.
+    by move: Huv; rewrite inordi1 // => /ltnW/ltnW.
   + move=> Hsvu.
     apply/orP; right; apply/imsetP; exists (u, v); first last.
       by rewrite !tpermD // eq_sym.
     by rewrite inE /= Huv Hsvu.
 - move/orP => [].
     move=> /eqP [-> ->].
-    by rewrite /eltr Hi Hi1 tpermL tpermR /= ltnS leqnn Hfwd.
-  move=> /imsetP [[a b]]; rewrite inE /= => /andP [Hab Hsba] [-> -> {u v}].
-  rewrite !tpermK Hsba andbT (eltr_exchange Hi1n Hab) -negb_and.
+    by rewrite /eltr inordi1 // Hio ltnS leqnn /= tpermL tpermR.
+  move=> /imsetP [[a b]]; rewrite inE /= => /andP [Hab Hsba] [-> ->] {u v}.
+  rewrite !tpermK Hsba andbT (eltr_exchange Hi Hab) -negb_and.
   move: Hsba; apply contraL; rewrite -leqNgt => /andP [/eqP Hia /eqP Hib].
   have -> : a = i by apply val_inj.
-  have -> : b = i1 by apply val_inj.
+  have -> : b = (inord i.+1) by apply val_inj; rewrite /= -Hib inordi1.
   exact: ltnW.
 Qed.
 
@@ -837,12 +841,13 @@ of [s] is indeed a word whose [length] is the size of [s], that is a reduced
 word (defined later).
  *)
 
-Lemma canwordE s : [seq (i : nat) | i : 'I_n <- canword s] = wordcd (cocode s).
+Lemma canwordE s :
+  [seq (i : nat) | i : 'I_n <- canword s] = wordcd (cocode s).
 Proof using. by apply (insub_wordcdK (cocodeP _)); rewrite size_cocode. Qed.
 
-Theorem canwordP s : s = 's_[canword s].
+Theorem canwordP s : 's_[canword s] = s.
 Proof using.
-rewrite /= {1}(cocodeE s).
+rewrite /= {2}(cocodeE s).
 rewrite -(big_map nat_of_ord xpredT) /=; apply congr_big => //.
 by rewrite canwordE.
 Qed.
@@ -854,7 +859,7 @@ apply/setP => s; apply/idP/gen_prodgP => /=.
 - move=> Hs; exists (size (canword s)).
   exists (fun i => 's_(tnth (in_tuple (canword s)) i)).
   + by move=> i; apply: mem_imset.
-  + rewrite {1}(canwordP s).
+  + rewrite -{1}(canwordP s).
     by rewrite -{1}[canword s]/(tval (in_tuple (canword s))) big_tuple.
 - move=> [l [fi Hfi] ->{s}]; apply group_prod => i _.
   by rewrite inE.
@@ -864,7 +869,7 @@ Corollary morph_eltr (gT : finGroupType)
           (f g : {morphism 'SG_n.+1 >-> gT}) :
   (forall i : 'I_n, f 's_i = g 's_i) -> f =1 g.
 Proof.
-move=> Heq /= s; rewrite (canwordP s) !morph_prod; first last.
+move=> Heq /= s; rewrite -(canwordP s) !morph_prod; first last.
 - by move=> i _; rewrite inE.
 - by move=> i _; rewrite inE.
 by apply eq_bigr => i _; apply Heq.
@@ -875,7 +880,7 @@ Theorem eltr_ind (P : 'S_n.+1 -> Type) :
   P 1 -> (forall s i, i < n -> P s -> P ('s_i * s)) ->
   forall s, P s.
 Proof using.
-move=> H1 IH s; rewrite (canwordP s).
+move=> H1 IH s; rewrite -(canwordP s).
 elim: (canword s)  => [| t0 t IHt] /=; first by rewrite big_nil.
 by rewrite big_cons; apply IH; first exact: ltn_ord.
 Qed.
@@ -886,7 +891,7 @@ Lemma odd_size_permE ts :
 Proof using.
 elim: ts => [_ | t0 t IHt] /=; first by rewrite big_nil odd_perm1.
 move=> /andP [Ht0 /IHt{IHt} ->].
-by rewrite big_cons odd_mul_tperm (inordi1 Ht0) addTb.
+by rewrite big_cons odd_mul_tperm (inordi_neq_i1 Ht0) addTb.
 Qed.
 
 
@@ -896,6 +901,14 @@ rewrite -(size_map val) canwordE size_wordcd.
 have /= := cocode2P s => [] [Hcode {1}->].
 by rewrite -length_permcd // size_cocode.
 Qed.
+
+Corollary lengthM s t : length (s * t) <= length s + length t.
+Proof.
+rewrite (size_canword s) (size_canword t) -size_cat.
+have -> : s * t = 's_[canword s ++ canword t] by rewrite big_cat /= !canwordP.
+exact: length_prods.
+Qed.
+
 
 Definition prods_codesz (c : codesz n.+1) : 'S_n.+1 := 's_[wordcd c].
 
@@ -937,10 +950,8 @@ From mathcomp Require Import ssralg poly ssrint.
 
 Section Combi.
 
-Local Notation "''s_' i" :=
-  (eltr i) (at level 8, i at level 2, format "''s_' i").
-Local Notation "''s_' [ w ]" :=
-  (\prod_(i <- w) 's_i) (at level 8, w at level 100, format "''s_' [ w ]").
+Local Notation "''s_' i" := (eltr i).
+Local Notation "''s_' [ w ]" := (\prod_(i <- w) 's_i).
 
 Import GRing.Theory.
 Open Scope ring_scope.
@@ -975,10 +986,8 @@ Section Reduced.
 
 Variable n : nat.
 
-Local Notation "''s_' i" :=
-  (eltr n i) (at level 8, i at level 2, format "''s_' i").
-Local Notation "''s_' [ w ]" :=
-  (\prod_(i <- w) 's_i) (at level 8, w at level 100, format "''s_' [ w ]").
+Local Notation "''s_' i" := (eltr n i).
+Local Notation "''s_' [ w ]" := (\prod_(i <- w) 's_i).
 Local Notation length := (length (n := n)).
 
 Definition reduced_word := [qualify w : seq 'I_n | length 's_[w] == size w ].
@@ -1020,14 +1029,6 @@ Proof using.
 by apply: (reduced_sprod_code (cocodeP _)); rewrite size_cocode.
 Qed.
 
-Corollary lengthM u v : length (u * v) <= length u + length v.
-Proof using.
-have:= canword_reduced u; have:= canword_reduced v.
-rewrite !unfold_in -!canwordP => /eqP -> /eqP ->.
-rewrite {1}(canwordP u) {1}(canwordP v) -big_cat /=.
-by apply: (leq_trans (length_prods _)); rewrite size_cat.
-Qed.
-
 Lemma reduced_catr u v : u ++ v \is reduced -> v \is reduced.
 Proof using.
 rewrite !unfold_in size_cat => /eqP H.
@@ -1049,10 +1050,17 @@ Proof using. by rewrite -cat1s; exact: reduced_catr. Qed.
 Lemma reduced_rconsK u i : rcons u i \is reduced -> u \is reduced.
 Proof using. by rewrite -cats1; exact: reduced_catl. Qed.
 
+Lemma reducedM (s t : 'S_(n.+1)) :
+  length (s * t) = length s + length t -> canword s ++ canword t \is reduced.
+Proof.
+rewrite unfold_in big_cat /= size_cat !size_canword => <-.
+by rewrite !canwordP.
+Qed.
+
 Lemma canword1 : canword (1 : 'S_n.+1) = [::].
 Proof using.
 have:= canword_reduced 1.
-by rewrite unfold_in -canwordP length1 eq_sym => /nilP.
+by rewrite unfold_in canwordP length1 eq_sym => /nilP.
 Qed.
 
 
@@ -1125,7 +1133,7 @@ Qed.
 Definition braidcongr := gencongr_hom braidrule_homog.
 Definition braidclass := genclass_hom braidrule_homog.
 
-Local Notation "a =Br b" := (braidcongr a b) (at level 70).
+Local Notation "a =Br b" := (braidcongr a b).
 
 Lemma braid_equiv : equivalence_rel braidcongr.
 Proof using. by apply: gencongr_equiv; exact: braidrule_sym. Qed.
@@ -1287,11 +1295,9 @@ Section Nnon0.
 Variable (n0 : nat).
 Local Notation n := n0.+1.
 
-Local Notation "''s_' i" :=
-  (eltr n i) (at level 8, i at level 2, format "''s_' i").
-Local Notation "''s_' [ w ]" :=
-  (\prod_(i <- w) 's_i) (at level 8, w at level 100, format "''s_' [ w ]").
-Local Notation "a =Br b" := (braidcongr a b) (at level 70).
+Local Notation "''s_' i" := (eltr n i).
+Local Notation "''s_' [ w ]" := (\prod_(i <- w) 's_i).
+Local Notation "a =Br b" := (braidcongr a b).
 
 Fixpoint inscode (c : seq nat) (i : 'I_n) :=
   if c is c0 :: c' then
@@ -1429,8 +1435,8 @@ rewrite -{2}(subnKC Hbli1) -iota_add addnC (addnBA _ Hbli1).
 by rewrite (subnK Hi2) (subKn Hbl).
 Qed.
 
-Reserved Notation "''I[' a '..' b ']'" (at level 0, a, b at level 2).
-Local Notation "''I[' a '..' b ']'" :=  [seq inord i | i <- rev (iota (b - a) a)].
+Local Notation "''I[' a '..' b ']'" :=
+  [seq inord i | i <- rev (iota (b - a) a)].
 
 Lemma braid_pred_lineC (i : 'I_n) (sz c : nat) :
   sz <= n -> i < sz -> c <= sz -> sz - c < i ->
@@ -1480,10 +1486,8 @@ Qed.
 
 Implicit Type (u v w : seq 'I_n).
 
-Definition path_catl p w := [seq v ++ w | v <- p].
-
-Lemma path_catlP p u w :
-  path braidred u p -> path braidred (u ++ w) (path_catl p w).
+Lemma path_braidred_catl p u w :
+  path braidred u p -> path braidred (u ++ w) [seq v ++ w | v <- p].
 Proof using.
 elim: p u => [//= | p0 p IHp] u /= /andP [Hbr /IHp ->].
 by rewrite braidred_catl.
@@ -1503,13 +1507,13 @@ case: ltnP => Hi.
   rewrite !wcord_cons -cat1s size_inscode cats0.
   move=> [pth] [Hpath <-].
   exists ((wcord c ++ [:: inord i.-1] ++ 'I[c0 .. (size c)]) ::
-          path_catl pth 'I[c0 .. (size c)]); split => [| {Hpath}].
-  - have /= := path_catlP 'I[c0 .. (size c)] Hpath.
+          [seq v ++ 'I[c0 .. (size c)] | v <- pth]); split => [| {Hpath}].
+  - have /= := path_braidred_catl 'I[c0 .. (size c)] Hpath.
     rewrite -catA /= => ->; rewrite andbT.
     rewrite /braidred braid_catr // braid_sym.
     exact: braid_pred_lineC.
-  - rewrite /path_catl !catA; case: pth => [//= | p0 p] /=.
-    by rewrite (last_map (fun v => v ++ 'I[c0 .. (size c)])).
+  - rewrite !catA; case: pth => [| p0 p] //=.
+    exact: last_map.
 case: eqP => [{Hi Hrec} Hi | /eqP Hi1].
   case: c0 Hc0 Hi Hisz => [Hc0 | c0 Hc0 Hi Hisz /=].
     by rewrite subn0 => ->; rewrite ltnn.
@@ -1530,13 +1534,13 @@ have {Hi Hi1} Hi : i.+1 < size c - c0 by rewrite ltn_neqAle Hi Hi1.
   rewrite wcord_cons size_inscode.
   move=> [pth] [Hpath <-].
   exists ((wcord c ++ [:: i] ++ 'I[c0 .. (size c)]) ::
-          path_catl pth 'I[c0 .. (size c)]); split => [| {Hpath}].
-  - have /= := path_catlP 'I[c0 .. (size c)] Hpath.
+          [seq v ++ 'I[c0 .. (size c)] | v <- pth]); split => [| {Hpath}].
+  - have /= := path_braidred_catl 'I[c0 .. (size c)] Hpath.
     rewrite -catA /= => ->; rewrite andbT.
     rewrite /braidred braid_catr // braid_sym.
     exact: braid_ltn_lineC.
-  - rewrite /path_catl !catA; case: pth => [//= | p0 p] /=.
-    by rewrite (last_map (fun v => v ++ 'I[c0 .. (size c)])).
+  - rewrite !catA; case: pth => [| p0 p] //=.
+    exact: last_map.
 Qed.
 
 (** ** Straigthening a word *)
@@ -1576,9 +1580,9 @@ have : size (straighten w) <= n0.+2 by rewrite size_straighten.
 move=> /(braidred_inscode_path (is_code_straighten w)) => Hins.
 have : wn.+1 < size (straighten w) by rewrite size_straighten ltnS.
 move=> /Hins{Hins} [pins] [Hpathins Hlastins].
-exists (path_catl prec [:: wn] ++ pins); split => [| {Hpath Hpathins}].
+exists ([seq v ++ [:: wn] | v <- prec] ++ pins); split => [| {Hpath Hpathins}].
 - rewrite cat_path (last_map (fun v => v ++ [:: wn])) Hlast Hpathins andbT.
-  exact: path_catlP.
+  exact: path_braidred_catl.
 - by rewrite last_cat (last_map (fun v => v ++ [:: wn])) Hlast.
 Qed.
 
@@ -1592,7 +1596,7 @@ Qed.
 Corollary cocode_straightenE w :
   rev (straighten w) = cocode 's_[w].
 Proof using.
-have:= (prods_straighten w); rewrite {1}(canwordP 's_[w]).
+have:= (prods_straighten w); rewrite -{1}(canwordP 's_[w]).
 rewrite -!(big_map nat_of_ord xpredT) /= canwordE /wcord -map_comp.
 rewrite [map _ _](_ : _ = wordcd (rev (straighten w))); first last.
   rewrite -[RHS](map_id) -eq_in_map => i.
@@ -1619,10 +1623,10 @@ Proof using. by rewrite -canword_straightenE; exact: straighten_path_npos. Qed.
 
 End Nnon0.
 
-Local Notation "''s_' i" := (eltr _ i) (at level 8, i at level 2).
-Local Notation "''s_[' w ']'" := (\prod_(i <- w) 's_i) (at level 8, w at level 2).
-Local Notation "''II_' n" := ('I_n * 'I_n)%type (at level 8, n at level 2).
-Local Notation "a =Br b" := (braidcongr a b) (at level 70) : bool_scope.
+Local Notation "''s_' i" := (eltr _ i).
+Local Notation "''s_[' w ']'" := (\prod_(i <- w) 's_i).
+Local Notation "''II_' n" := ('I_n * 'I_n)%type.
+Local Notation "a =Br b" := (braidcongr a b) : bool_scope.
 
 Theorem braidred_to_canword n (w : seq 'I_n) :
   { p | path braidred w p /\ last w p = canword 's_[w] }.
@@ -1696,7 +1700,7 @@ by rewrite size_cat /= !addnS.
 Qed.
 
 (** * The presentation of the symmetric groups *)
-Section PresentatioSn.
+Section PresentationSn.
 
 Variable n : nat.
 Variable gT : finGroupType.
@@ -1721,7 +1725,7 @@ pose morph_eltr_fun (s : 'S_n.+1) := \prod_(i <- canword s) 'g_i.
 have morph_eltrP : {morph morph_eltr_fun : x y / x * y}.
   move=> i j.
   have:= braidred_to_canword (canword i ++ canword j) => [[redpath [Hpath]]].
-  rewrite big_cat /= -!canwordP /morph_eltr_fun -big_cat /= => Hlast.
+  rewrite big_cat /= !canwordP /morph_eltr_fun -big_cat /= => Hlast.
   elim: redpath (_ ++ _) Hpath Hlast =>
       [c _ <- //|] w0 wp IHwp /= c /andP [Hbr] /IHwp H/H{IHwp H} ->.
   move: Hbr => /orP [].
@@ -1747,7 +1751,7 @@ rewrite /morph_eltr_fun; have /= -> := (canword_eltr (Ordinal Hi)).
 by rewrite big_seq1.
 Qed.
 
-End PresentatioSn.
+End PresentationSn.
 
 Lemma presentation_S2 :
   'SG_2 \isog Grp ( s0 : s0^+2 ).
@@ -1755,8 +1759,8 @@ Proof.
 apply intro_isoGrp.
 - apply/existsP; exists (eltr 1 0).
   rewrite /= !xpair_eqE /=; apply/andP; split; try by rewrite expgS expg1 tperm2.
-  rewrite eqEsubset subsetT /=; apply/subsetP => s _.
-  have /= -> := canwordP s.
+  rewrite eqEsubset subsetT /=; apply/subsetP => /= s _.
+  rewrite -(canwordP s).
   elim: (canword s) => [| t0 t IHt] /=; first by rewrite big_nil group1.
   rewrite big_cons; apply groupM => /=; last exact: IHt.
   apply (subsetP (subset_gen _)); rewrite !inE.
@@ -1785,8 +1789,8 @@ have Gen2 (gt : finGroupType) (a b : gt) :
 apply intro_isoGrp.
 - apply/existsP; exists (eltr 2 0, eltr 2 1).
   rewrite /= !xpair_eqE /=; apply/and4P; split; try by rewrite expgS expg1 tperm2.
-  + rewrite Gen2 eqEsubset subsetT /=; apply/subsetP => s _.
-    have /= -> := canwordP s.
+  + rewrite Gen2 eqEsubset subsetT /=; apply/subsetP => /= s _.
+    rewrite -(canwordP s).
     elim: (canword s) => [| t0 t IHt] /=; first by rewrite big_nil group1.
     rewrite big_cons; apply groupM; last exact: IHt.
     apply (subsetP (subset_gen _)); rewrite !inE.
@@ -1824,8 +1828,8 @@ have Gen3 (gt : finGroupType) (a b c : gt) :
 apply intro_isoGrp.
 - apply/existsP; exists (eltr 3 0, eltr 3 1, eltr 3 2).
   rewrite /= !xpair_eqE /=; apply/and5P; split; try by rewrite expgS expg1 tperm2.
-  + rewrite Gen3 eqEsubset subsetT /=; apply/subsetP => s _.
-    have /= -> := canwordP s.
+  + rewrite Gen3 eqEsubset subsetT /=; apply/subsetP => /= s _.
+    rewrite -(canwordP s).
     elim: (canword s) => [| t0 t IHt] /=; first by rewrite big_nil group1.
     rewrite big_cons; apply groupM; last exact: IHt.
     apply (subsetP (subset_gen _)); rewrite !inE.
@@ -1850,3 +1854,5 @@ apply intro_isoGrp.
   + exists 's_2; rewrite ?setTI ?Hf //.
     by apply/imsetP => /=; exists (inord 2); rewrite //= inordK.
 Qed.
+
+
